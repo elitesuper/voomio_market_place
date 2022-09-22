@@ -1,67 +1,82 @@
 import React, { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import logodark from '../../assets/images/logo/logo_dark.png'
-import logofooter from '../../assets/images/logo/logo2.png'
+import logodark from '../../assets/images/logo/voomio_logo.png'
+import logofooter from '../../assets/images/logo/voomio_logo.png'
 const Footer = () => {
     const accountList = [
         {
-            title: "Authors",
-            link: "/authors-01"
+            title: "Marketing",
+            link: "/#"
         },
         {
-            title: "Collection",
-            link: "/wallet-connect"
+            title: "Analytics",
+            link: "/#"
         },
         {
-            title: "Author Profile",
-            link: "/edit-profile"
+            title: "Commerce",
+            link: "/#"
         },
         {
-            title: "Create Item",
-            link: "/create-item"
+            title: "Insights",
+            link: "/#"
         },
     ]
     const resourcesList = [
         {
-            title: "Help & Support",
+            title: "Pricing",
             link: "/help-center"
         },
         {
-            title: "Live Auctions",
+            title: "Documentation",
             link: "/live-auctions"
         },
         {
-            title: "Item Details",
+            title: "Guides",
             link: "/item-details-01"
         },
         {
-            title: "Activity",
+            title: "API Status",
             link: "/activity-01"
         },
     ]
     const companyList = [
         {
-            title: "Explore",
+            title: "About",
             link: "/explore-01"
         },
         {
-            title: "Contact Us",
+            title: "Blog",
             link: "/contact-01"
         },
         {
             title: "Our Blog",
-            link: "/blog"
+            link: "/Jobs"
         },
         {
-            title: "FAQ",
+            title: "Press",
+            link: "/faq"
+        },
+        {
+            title: "Partnerrs",
             link: "/faq"
         },
     ]
-    const socialList = [
+    const legalList = [
         {
-            icon: "fab fa-twitter",
-            link: "#"
+            title: "Claim",
+            link: "/faq"
         },
+        {
+            title: "Privacy",
+            link: "/faq"
+        },
+        {
+            title: "Terms",
+            link: "/faq"
+        },
+    ] 
+    const socialList = [
+
         {
             icon: "fab fa-facebook",
             link: "#"
@@ -114,64 +129,30 @@ const Footer = () => {
         <div>
             <footer id="footer" className="footer-light-style clearfix bg-style">
                 <div className="themesflat-container">
-                    <div className="row">
+                    <div className="row voomio-border-bottom">
+                        <div className="col-12 voomio-pb-3 voomio-border-bottom">
+                            <div className="widget widget-subcribe sign-up">
+                                <h5 className="title-widget voomio-text-col1">Stay in the Loop</h5>
+                                <h6 className='voomio-pb-3'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops and tips and tricks for navigating Voomio.</h6>
+                                <div className="form-subcribe flex voomio-just-center">
+                                    <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8" className="form-submit voomio-m-r-1 voomio-wp-70">
+                                        <input name="email"  className="email" type="email" placeholder="info@yourgmail.com" required />
+                                        <button id="submit" name="submit" type="submit" className='mobilesignbtn'><i className="icon-fl-send"></i></button>
+                                    </form>
+                                    <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3 voomio-wp-30 text-center signup-btn"><span>Sign up</span></Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-md-12 voomio-pb-3'></div>
                         <div className="col-lg-3 col-md-12 col-12">
                             <div className="widget widget-logo">
                                 <div className="logo-footer" id="logo-footer">
                                     <Link to="/">
                                         <img className='logo-dark' id="logo_footer" src={logodark} alt="nft-gaming" />
                                         <img className='logo-light' id="logo_footer" src={logofooter} alt="nft-gaming" />
-                                        
                                     </Link>
                                 </div>
-                                <p className="sub-widget-logo">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-5 col-5">
-                            <div className="widget widget-menu style-1">
-                                <h5 className="title-widget">My Account</h5>
-                                <ul>
-                                    {
-                                        accountList.map((item,index) =>(
-                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-7 col-7">
-                            <div className="widget widget-menu style-2">
-                                <h5 className="title-widget">Resources</h5>
-                                <ul>
-                                    {
-                                        resourcesList.map((item,index) =>(
-                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-4 col-sm-5 col-5">
-                            <div className="widget widget-menu fl-st-3">
-                                <h5 className="title-widget">Company</h5>
-                                <ul>
-                                    {
-                                        companyList.map((item,index) =>(
-                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 col-sm-7 col-12">
-                            <div className="widget widget-subcribe">
-                                <h5 className="title-widget">Subscribe Us</h5>
-                                <div className="form-subcribe">
-                                    <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8" className="form-submit">
-                                        <input name="email"  className="email" type="email" placeholder="info@yourgmail.com" required />
-                                        <button id="submit" name="submit" type="submit"><i className="icon-fl-send"></i></button>
-                                    </form>
-                                </div>
+                                <p className="sub-widget-logo">Voomio is an omni-friendly shop for buying and selling NFTs.</p>
                                 <div className="widget-social style-1 mg-t32">
                                     <ul>
                                         {
@@ -183,6 +164,57 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-lg-2 col-md-3 col-sm-5 col-5">
+                            <div className="widget widget-menu style-1">
+                                <h5 className="title-widget">SOLUTIONS</h5>
+                                <ul>
+                                    {
+                                        accountList.map((item,index) =>(
+                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-3 col-sm-7 col-7">
+                            <div className="widget widget-menu style-2">
+                                <h5 className="title-widget">SUPPORT</h5>
+                                <ul>
+                                    {
+                                        resourcesList.map((item,index) =>(
+                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-3 col-sm-5 col-5">
+                            <div className="widget widget-menu fl-st-3">
+                                <h5 className="title-widget">COMPANY</h5>
+                                <ul>
+                                    {
+                                        companyList.map((item,index) =>(
+                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-3 col-sm-5 col-5">
+                            <div className="widget widget-menu fl-st-3">
+                                <h5 className="title-widget">LEGAL</h5>
+                                <ul>
+                                    {
+                                        legalList.map((item,index) =>(
+                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <h6 className='voomio-end'>© 2022 Voomio, LLC. All rights reserved.</h6>
                     </div>
                 </div>
             </footer>

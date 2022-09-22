@@ -5229,8 +5229,8 @@ button.accordion-button {
   box-shadow: 0px 3px 16px rgba(47, 83, 109, 0.12);
   border-radius: 12px;
   padding: 20px 27px 20px 20px;
-  height: 120px;
-  margin-bottom: 24px;
+  /* height: 120px; */
+  /* margin-bottom: 24px; */
 }
 
 .is_dark .table-ranking .item {
@@ -5468,7 +5468,7 @@ button.accordion-button {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  left: 11.2%;
+  left: 13.2%;
 }
 
 .question-form form {

@@ -15,9 +15,9 @@ import img3right2 from '../images/box-item/img-collection25.jpg'
 import img3right3 from '../images/box-item/img-collection17.jpg'
 import img1right4 from '../images/box-item/img-collection8.jpg'
 import img2right4 from '../images/box-item/img-collection1.jpg'
-import imgtop1 from '../images/box-item/v-collection_1.png'
-import imgtop2 from '../images/box-item/v-collection_2.png'
-import imgtop3 from '../images/box-item/v-collection_3.png'
+import imgtop1 from '../images/box-item/alpha1.png'
+import imgtop2 from '../images/box-item/alpha2.png'
+import imgtop3 from '../images/box-item/alpha3.png'
 import img4left from '../images/box-item/image-box-15.jpg'
 import img4right1 from '../images/box-item/image-box-18.jpg'
 import img4right2 from '../images/box-item/image-box-14.jpg'
@@ -36,11 +36,12 @@ import img6right3 from '../images/box-item/img-collection20.jpg'
 
 
 
-const popularCollectionData = [
+const popularAlphaData = [
     {
-        title: "Bored Ape Yacht Club",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor1,
-        name: "Ralph Garraway",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img1left,
         imgright1: img1right1,
         imgright2: img1right2,
@@ -51,9 +52,10 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
-        title: "CryptoPunks",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor2,
-        name: "Mason Woodward",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img2left,
         imgright1: img2right1,
         imgright2: img2right2,
@@ -64,9 +66,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "Doodles",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor3,
-        name: "Freddie Carpenter",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img3left,
         imgright1: img3right1,
         imgright2: img3right2,
@@ -77,9 +80,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "Moonbirds",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor1,
-        name: "Ralph Garraway",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img4left,
         imgright1: img4right1,
         imgright2: img4right2,
@@ -90,9 +94,10 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
-        title: "Doodles",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor2,
-        name: "Mason Woodward",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img5left,
         imgright1: img5right1,
         imgright2: img5right2,
@@ -103,9 +108,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "CryptoPunks",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor3,
-        name: "Freddie Carpenter",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img6left,
         imgright1: img6right1,
         imgright2: img6right2,
@@ -116,9 +122,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "Bored Ape Yacht Club",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor1,
-        name: "Ralph Garraway",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img1left,
         imgright1: img1right1,
         imgright2: img1right2,
@@ -129,9 +136,10 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
-        title: "Doodles",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor2,
-        name: "Mason Woodward",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img2left,
         imgright1: img2right1,
         imgright2: img2right2,
@@ -142,9 +150,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "Bored Ape Yacht Club",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor3,
-        name: "Freddie Carpenter",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img3left,
         imgright1: img3right1,
         imgright2: img3right2,
@@ -155,9 +164,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "Creative Art Collection",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor1,
-        name: "Ralph Garraway",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img4left,
         imgright1: img4right1,
         imgright2: img4right2,
@@ -168,9 +178,10 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
-        title: "Colorful Abstract",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor2,
-        name: "Mason Woodward",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img5left,
         imgright1: img5right1,
         imgright2: img5right2,
@@ -181,9 +192,10 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
-        title: "Modern Art Collection",
+        title: "These upcoming NFTS will 10x!",
         imgAuthor: imgAuthor3,
-        name: "Freddie Carpenter",
+        name: "CryptoGuruTV",
+        period: "1M views - 8 hours ago",
         imgleft: img6left,
         imgright1: img6right1,
         imgright2: img6right2,
@@ -196,4 +208,4 @@ const popularCollectionData = [
 
 ]
 
-export default popularCollectionData;
+export default popularAlphaData;

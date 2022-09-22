@@ -12,6 +12,7 @@
 
   .question-form{
     width: 18%;
+    left: 20% !important;
   }
 }
 @media only screen and (max-width: 1700px) {
@@ -35,7 +36,7 @@
       padding: 26px 12px 26px 12px ;
     }
     .header_1.header_2 #main-nav {
-      left: 30%;
+      left: 45%;
   }
 }
 
@@ -891,6 +892,7 @@
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .side-bar.item {
   width: 100%;
   margin-top: 0;

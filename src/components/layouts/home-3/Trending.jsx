@@ -10,7 +10,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-const LiveAuction = props => {
+const Trending = props => {
     const data = props.data;
 
     const [modalShow, setModalShow] = useState(false);
@@ -20,10 +20,20 @@ const LiveAuction = props => {
             <section className="tf-section live-auctions">
                 <div className="themesflat-container">
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-12 voomio-title voomio-just-between">
                             <div className="">
-                                <h2 className="tf-title">Live Auctions</h2>
+                                <h2 className="tf-title">Trending</h2>
                                 <div className="heading-line"></div>
+                            </div>
+                            <div className="seclect-box style3">
+                                <div id="artworks" className="dropdown">
+                                    <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
+                                    <ul className='voomio-zindex'>
+                                        <li><span>Past 24 hours</span></li>
+                                        <li><span>Past 24 hours</span></li>
+                                        <li><span>Past 24 hours</span></li>
+                                    </ul>
+                                </div>  
                             </div>
                         </div>
                         <div className="col-md-12">
@@ -56,38 +66,24 @@ const LiveAuction = props => {
                                                     <div className="swiper-wrapper">
                                                         <div className="swiper-slide">
                                                             <div className="slider-item">										
-                                                                <div className="sc-card-product">
+                                                                <div className="sc-card-product collection-card">
                                                                     <div className="card-media">
                                                                         <Link to="/item-details-01"><img src={item.img} alt="axies" /></Link>
-                                                                        <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
-                                                                        <div className="featured-countdown">
-                                                                            <span className="slogan"></span>
-                                                                            <Countdown date={Date.now() + 500000000}>
-                                                                                <span>You are good to go!</span>
-                                                                            </Countdown>
-                                                                        </div>
-                                                                        <div className="button-place-bid">
-                                                                            <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></button>
-                                                                        </div>
                                                                     </div>
-                                                                    <div className="card-title">
-                                                                        <h5><Link to="/item-details-01">"{item.title}"</Link></h5>
-                                                                        <div className="tags">{item.tags}</div>
+                                                                    <div className="card-title voomio-pl-1 voomio-just-left">
+                                                                        <h5>{item.title}</h5>
+                                                                        <img src={item.checkicon} alt={item.etherium_icon}></img>
                                                                     </div>
-                                                                    <div className="meta-info">
+                                                                    <div className="meta-info voomio-pl-1">
                                                                         <div className="author">
-                                                                            <div className="avatar">
-                                                                                <img src={item.imgAuthor} alt="axies" />
-                                                                            </div>
-                                                                            <div className="info">
-                                                                                <span>Creator</span>
-                                                                                <h6> <Link to="/authors-02">{item.nameAuthor}
-                                                                                </Link> </h6>
+                                                                            <div className="info voomio-flex">
+                                                                                <span>Vol</span>
+                                                                                <h6><img src={item.etherium_icon} alt={item.etherium_icon}></img>{item.nameAuthor}</h6>
                                                                             </div>
                                                                         </div>
-                                                                        <div className="price">
-                                                                            <span>Current Bid</span>
-                                                                            <h5> {item.price}</h5>
+                                                                        <div className="info voomio-flex">
+                                                                            <span>Floor</span>
+                                                                            <h6><img src={item.etherium_icon} alt={item.etherium_icon}></img>{item.price}</h6>
                                                                         </div>
                                                                     </div>
                                                                 </div>    	
@@ -111,9 +107,9 @@ const LiveAuction = props => {
     );
 }
 
-LiveAuction.propTypes = {
+Trending.propTypes = {
     data: PropTypes.array.isRequired,
 }
 
 
-export default LiveAuction;
+export default Trending;

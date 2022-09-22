@@ -2,7 +2,8 @@ import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
 import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
-import logodark from '../../assets/images/logo/logo_dark.png'
+import voomio_logo from '../../assets/images/logo/voomio_logo.png'
+import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 import avt from '../../assets/images/avatar/avt-2.jpg'
 import coin from '../../assets/images/logo/coin.svg'
 
@@ -48,7 +49,7 @@ const HeaderStyle2 = () => {
                                 <div id="site-logo" className="clearfix">
                                     <div id="site-logo-inner">
                                         <Link to="/" rel="home" className="main-logo">
-                                            <img   id="logo_header" src={logodark} alt="nft-gaming" />
+                                            <img className='logo_header' id='logo_header' src={voomio_logo} srcSet={`${voomio_logo2x}`} alt="voomio"></img>
                                         </Link>
                                     </div>
                                 </div>

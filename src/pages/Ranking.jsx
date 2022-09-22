@@ -10,150 +10,153 @@ import img5 from '../assets/images/box-item/img1rank.jpg'
 import img6 from '../assets/images/box-item/img2rank.jpg'
 import imga1 from '../assets/images/avatar/author_rank.jpg'
 
+import etherium_icon from '../assets/images/icon/etherium_icon.png'
+import check_icon from '../assets/images/icon/check_icon.png' 
+
 const Ranking = () => {
     const [data] = useState(
         [
             {
                 img: img1,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img2,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img3,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img4,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img5,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img6,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img1,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img2,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img3,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img4,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img5,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
             {
                 img: img6,
-                title: "Hamlet Contemplates Yorick's Yorick's",
+                title: "Sample Collection",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
-                volume: '12,4353',
+                volume: '134',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                price: '134',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -165,36 +168,58 @@ const Ranking = () => {
     }
     return (
         <div>
-            <Header />
-            <section className="flat-title-page inner">
-                <div className="overlay"></div>
-                <div className="themesflat-container">
+            <section className="tf-section tf-rank">
+                <div className="container-fluid voomio-nfts">
                     <div className="row">
-                        <div className="col-md-12">
-                            <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Ranking</h1>
+                        <div className="col-md-12 voomio-pd-t-4">
+                            <div className="">
+                                <h2 className="tf-title">Top NFTs</h2>
+                                <div className="heading-line"></div>
+                                <div>
+                        </div>
+                        <div className='col-md-12 voomio-flex voomio-just-center voomio-pb-3'>
+                        <div>
+                                <div className="seclect-box style3 voomio-pl-1 ">
+                                <div id="artworks" className="dropdown">
+                                    <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
+                                    <ul className='voomio-zindex'>
+                                        <li><span>Past 24 hours</span></li>
+                                        <li><span>Past 24 hours</span></li>
+                                        <li><span>Past 24 hours</span></li>
+                                    </ul>
+                                </div>  
+                            </div>                        
+                            <div className="seclect-box style3 voomio-pl-1 ">
+                                <div id="artworks" className="dropdown">
+                                    <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
+                                    <ul className='voomio-zindex'>
+                                        <li><span>All Categories</span></li>
+                                        <li><span>All Categories</span></li>
+                                        <li><span>All Categories</span></li>
+                                    </ul>
+                                </div>  
+                            </div>                        
+                            <div className="seclect-box style3 voomio-pl-1">
+                                <div id="artworks" className="dropdown">
+                                    <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
+                                    <ul className='voomio-zindex'>
+                                        <li><span>All Chains</span></li>
+                                        <li><span>All Chains</span></li>
+                                        <li><span>All Chains</span></li>
+                                    </ul>
+                                </div>  
                             </div>
-                            <div className="breadcrumbs style2">
-                                <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="#">Pages</Link></li>
-                                    <li>Ranking</li>
-                                </ul>
-                            </div>
+                                </div>
                         </div>
                     </div>
-                </div>                    
-            </section>
-            <section className="tf-section tf-rank">
-                <div className="container-fluid">
-                    <div className="row">
+                        </div>
                         <div className="col-md-12">
                             <div className="table-ranking">
                                 <div className="flex th-title">
-                                    <div className="column1">
+                                    <div className="column1 pl2">
                                         <h3>Collection</h3>
                                     </div>
-                                    <div className="column">
+                                    <div className="column pl2">
                                         <h3>Volume</h3>
                                     </div>
                                     <div className="column">
@@ -203,55 +228,33 @@ const Ranking = () => {
                                     <div className="column">
                                     <h3>7d %</h3>
                                     </div>
-                                    <div className="column">
+                                    <div className="column pr2">
                                     <h3>Floor Price</h3>
-                                    </div>
-                                    <div className="column">
-                                    <h3>Owners</h3>
-                                    </div>
-                                    <div className="column">
-                                    <h3>Assets</h3>
                                     </div>
                                 </div>
                                 {
                                     data.slice(0,visible).map((item,index) => (
-                                        <div key={index} className="fl-item2">
-                                            <div className="item flex">
+                                        <div key={index} className="fl-item2 nfts-list-item">
+                                            <div className="item flex voomio-just-center">
                                                 <div className="infor-item flex column1">
-                                                    <div className="media">
-                                                        <img src={item.img} alt="Axies" />
-                                                    </div>
-                                                    <div className="content-collection pad-t-4">
+                                                    <div className="content-collection pad-t-4 voomio-flex">
                                                         <h5 className="title mb-15"><Link to="/item-detail">"{item.title}"</Link></h5>
-                                                        <div className="author flex">
-                                                            <div className="author-avatar">
-                                                                <img src={item.imgAuthor} alt="Axies" />
-                                                                <div className="badge"><i className="ripple"></i></div>
-                                                            </div>
-                                                            <div className="content">
-                                                                <p>Owned By</p>
-                                                                <h6><Link to="/authors-01">{item.nameAuthor}</Link></h6>
-                                                            </div>
-                                                        </div>
+                                                        <img className='ranking-imgs' src={check_icon} alt={check_icon}></img>
                                                     </div>
                                                 </div>
-                                                <div className="column">
+                                                <div className="column voomio-text-center voomio-text-col1 flex voomio-just-center">
+                                                <div className='nft-icon-margin-auto'><img className='rankingetherium-imgs' src={etherium_icon} alt={etherium_icon}></img></div>
                                                     <span>{item.volume}</span>
                                                 </div>
-                                                <div className="column td2">
-                                                    <span>{item.day}</span>
+                                                <div className="column voomio-text-center">
+                                                    <span className='voomio-span-1'>{item.day}</span>
                                                 </div>
-                                                <div className="column td3">
-                                                    <span>{item.week}</span>
+                                                <div className="column voomio-text-center">
+                                                    <span className='voomio-span-2' >{item.week}</span>
                                                 </div>
-                                                <div className="column td4">
+                                                <div className="column voomio-text-right voomio-text-col1 flex voomio-just-right">
+                                                    <div className='nft-icon-margin-auto'><img className='rankingetherium-imgs' src={etherium_icon} alt={etherium_icon}></img></div>
                                                     <span>{item.price}</span>
-                                                </div>
-                                                <div className="column td5">
-                                                    <span>{item.owners}</span>
-                                                </div>
-                                                <div className="column td6">
-                                                    <span>{item.assets}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,7 +262,7 @@ const Ranking = () => {
                                 }
                                 {
                                     visible < data.length && 
-                                    <div className="col-md-12 wrap-inner load-more text-center"> 
+                                    <div className="col-md-12 wrap-inner load-more text-center voomio-mt-40"> 
                                         <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                     </div>
                                 }
@@ -268,7 +271,6 @@ const Ranking = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     );
 }

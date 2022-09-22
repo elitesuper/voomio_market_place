@@ -58,9 +58,18 @@ const SliderItem = props => (
         <div className="swiper-container mainslider home">
             <div className="swiper-wrapper">
                 <div className="swiper-slide">
-                    <div className="slider-item">	
+                    <div className="slider-item voomio-theme">
+                        {(props.item.voomiotheme === true)&&(
+                            <div className='image-anims'>
+                                <img className='image-anim left-1' src={props.item.leftimage1}></img>
+                                <img className='image-anim left-2' src={props.item.leftimage2}></img>
+                                <img className='image-anim right-1' src={props.item.rightimage1}></img>
+                                <img className='image-anim right-2' src={props.item.rightimage2}></img>
+                            </div>
+                        )}
                         <div className="themesflat-container ">
                             <div className="wrap-heading flat-slider flex">
+                                {/* {(props.item.)} */}
                                 <div className="content">
                                     <h2 className="heading">{props.item.title_1}</h2>	
                                     <h1 className="heading mb-style"><span className="tf-text s1">{props.item.title_2}</span>                                          

@@ -6,6 +6,8 @@ import logoheader from '../../assets/images/logo/logo.png'
 import logoheader2x from '../../assets/images/logo/logo@2x.png'
 import logodark from '../../assets/images/logo/logo_dark.png'
 import logodark2x from '../../assets/images/logo/logo_dark@2x.png'
+import voomio_logo from '../../assets/images/logo/voomio_logo.png'
+import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 import imgsun from '../../assets/images/icon/sun.png'
 import avt from '../../assets/images/avatar/avt-2.jpg'
 
@@ -55,8 +57,8 @@ const Header = () => {
                                 <div id="site-logo" className="clearfix">
                                     <div id="site-logo-inner">
                                         <Link to="/" rel="home" className="main-logo">
-                                            <img className='logo-dark'  id="logo_header" src={logodark} srcSet={`${logodark2x}`} alt="nft-gaming" />
-                                            <img className='logo-light'  id="logo_header" src={logoheader} srcSet={`${logoheader2x}`} alt="nft-gaming" />
+                                            <img className='logo-dark'  id="logo_header" src={voomio_logo} srcSet={`${voomio_logo2x}`} alt="nft-gaming" />
+                                            <img className='logo-light'  id="logo_header" src={voomio_logo} srcSet={`${voomio_logo2x}`} alt="nft-gaming" />
                                         </Link>
                                     </div>
                                 </div>
