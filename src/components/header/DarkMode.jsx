@@ -15,7 +15,7 @@ const DarkMode = () => {
     if (theme === lightTheme || theme === darkTheme) {
         body.classList.add(theme)
     } else {
-        body.classList.add(darkTheme)
+        body.classList.add(lightTheme)
     }
 
     const switchTheme = e => {

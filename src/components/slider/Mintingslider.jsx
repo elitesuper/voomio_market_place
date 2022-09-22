@@ -74,8 +74,8 @@ const SliderItem = props => (
                                             <div className='flex'><img className='voomio-ma' src={shape1}></img></div>
                                         </div>
                                         <div className='col-md-8 col-sm-9'>
-                                            <h5 className="voomio-font-1">{props.item.subtitle_1}</h5>
-                                            <p className="sub-heading minting-subhead voomio-mt-10">{props.item.description_1}</p>
+                                            <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_1}</h5>
+                                            <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_1}</p>
                                         </div>
                                     </div>
                                     <div className='col-md-12 flex voomio-mt-20'>
@@ -83,8 +83,8 @@ const SliderItem = props => (
                                             <div className='flex'><img className='voomio-ma' src={shape2}></img></div>
                                         </div>
                                         <div className='col-md-8 col-sm-9 '>
-                                            <h5 className="voomio-font-1">{props.item.subtitle_2}</h5>
-                                            <p className="sub-heading minting-subhead voomio-mt-10">{props.item.description_2}</p>
+                                            <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_2}</h5>
+                                            <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_2}</p>
                                         </div>
                                     </div>
                                     <div className='col-md-12 flex voomio-mt-20'>
@@ -92,8 +92,8 @@ const SliderItem = props => (
                                             <div className='flex'><img className='voomio-ma' src={shape3}></img></div>
                                         </div>
                                         <div className='col-md-8 col-sm-9'>
-                                            <h5 className="voomio-font-1">{props.item.subtitle_3}</h5>
-                                            <p className="sub-heading minting-subhead voomio-mt-10">{props.item.description_3}</p>
+                                            <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_3}</h5>
+                                            <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_3}</p>
                                         </div>
                                     </div>
 

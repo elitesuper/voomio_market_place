@@ -2,14 +2,8 @@ import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
 import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
-import logoheader from '../../assets/images/logo/logo.png'
-import logoheader2x from '../../assets/images/logo/logo@2x.png'
-import logodark from '../../assets/images/logo/logo_dark.png'
-import logodark2x from '../../assets/images/logo/logo_dark@2x.png'
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
-import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
-import imgsun from '../../assets/images/icon/sun.png'
-import avt from '../../assets/images/avatar/avt-2.jpg'
+import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png' 
 
 
 const Header = () => {
@@ -115,7 +109,7 @@ const Header = () => {
                                             </div>
                                             <img
                                                 className="avatar"
-                                                src={avt}
+                                                src="avatar"
                                                 alt="avatar"
                                                 />
                                             <div className="avatar_popup mt-20">
@@ -128,7 +122,7 @@ const Header = () => {
                                                 <div className="d-flex align-items-center mt-10">
                                                     <img
                                                         className="coin"
-                                                        src={imgsun}
+                                                        src="imgsun"
                                                         alt="/"
                                                         />
                                                     <div className="info ml-10">

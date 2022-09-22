@@ -4,9 +4,6 @@ import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
 import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
-import avt from '../../assets/images/avatar/avt-2.jpg'
-import coin from '../../assets/images/logo/coin.svg'
-
 
 const HeaderStyle2 = () => {
     const { pathname } = useLocation();
@@ -75,6 +72,16 @@ const HeaderStyle2 = () => {
                                                 </g>
                                                 </svg>
                                         </button>
+                                        <div className="seclect-box style3 voomio-pl-1 header-selector">
+                                            <div id="artworks" className="dropdown">
+                                                <Link to="#" className="btn-selector nolink voomio-select">ETH</Link>
+                                                <ul className='voomio-zindex'>
+                                                    <li><span>Polygon</span></li>
+                                                    <li><span>ADA</span></li>
+                                                    <li><span>SOL</span></li>
+                                                </ul>
+                                            </div>  
+                                        </div>
                                     </form>
                                 </div>
                                 <nav id="main-nav" className="main-nav" ref={menuLeft} >
@@ -115,7 +122,7 @@ const HeaderStyle2 = () => {
                                             </div>
                                             <img
                                                 className="avatar"
-                                                src={avt}
+                                                src="avatar"
                                                 alt="avatar"
                                                 />
                                             <div className="avatar_popup mt-20">
@@ -128,7 +135,7 @@ const HeaderStyle2 = () => {
                                                 <div className="d-flex align-items-center mt-10">
                                                     <img
                                                         className="coin"
-                                                        src={coin}
+                                                        src="coin"
                                                         alt="/"
                                                         />
                                                     <div className="info ml-10">

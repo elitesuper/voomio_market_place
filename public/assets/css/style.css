@@ -3467,6 +3467,9 @@ header{
 .voomio-zindex{
     z-index: 999 !important;
 }
+#scroll-top{
+    z-index: 1000 !important;
+}
 .voomio-flex span{
     margin: auto;
     padding-right: 0.5rem !important;
@@ -3571,6 +3574,9 @@ header{
 .voomio-text-col1{
     color: #6549F6 !important;
 }
+.voomio-text-col2{
+    color: #000000 !important;
+}
 .mintingslide{
     padding: 111px 0 320px !important;
 }
@@ -3645,6 +3651,9 @@ header{
 .voomio-mt-40{
     margin-top: 40px !important;
 }
+.voomio-mb-40{
+    margin-bottom: 40px !important;
+}
 .nfts-list-item:nth-child(odd) .item{
     background-color: #F0F0F0 !important;
 }
@@ -3682,4 +3691,31 @@ header{
 }
 .collection .swiper-button-next::after, .collection .swiper-button-prev::after{
     color: white !important;
+}
+
+.header-selector{
+    position: absolute;
+    top: 0;
+    right: -1rem;
+}
+.header-selector #artworks a{
+    min-width: 70px !important;
+    background-color: transparent;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    color: white !important;
+    border-color: white;
+    border-radius: 0px;
+}
+.mode_switcher{
+    display: none !important;
+}
+.voomio-text-col2{
+    color: #000000 !important;
+}
+
+.sc-button.style-1{
+    background: linear-gradient(98.93deg, #7B61FF -6.98%, #00DAD9 108.86%) !important;
+    border-color: #7B61FF;
 }
