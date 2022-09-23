@@ -1716,6 +1716,9 @@ header{
     top: 12rem;
 }
 @media only screen and (max-width: 1920px){
+    .header_1.header_2 #main-nav {
+        left: 50%;
+    }
     .sign-up {
         width: 50%;
         margin: auto;
@@ -1737,12 +1740,15 @@ header{
       }
 }
 
-@media only screen and (max-width: 1366px){
+@media only screen and (max-width: 1450px){
     .flat-slider .heading{
-        font-size: 7rem !important;
+        font-size: 8rem !important;
     }
+}
+
+@media only screen and (max-width: 1366px){
     .header_1.header_2 #main-nav {
-        left: 45%;
+        left: 40%;
     }
     .info-panel{
         right: 22rem;
@@ -1750,6 +1756,9 @@ header{
 }
 
 @media only screen and (max-width: 1200px){
+    .header_1.header_2 #main-nav {
+        left: 40%;
+    }
     .flat-slider .heading{
         font-size: 5rem !important;
     }
@@ -3449,7 +3458,7 @@ header{
     width: 20rem;
     animation: move6 10s infinite linear;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 920px) {
     .image-anim{
         display: none;
     }

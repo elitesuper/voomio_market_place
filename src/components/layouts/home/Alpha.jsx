@@ -31,11 +31,8 @@ const Alpha = props => {
                                 771:{
                                     slidesPerView: 3,
                                 },
-                                850:{
-                                    slidesPerview: 4
-                                },
                                 1000:{
-                                    slidesPerview:5
+                                    slidesPerview:4
                                 },
                                 1200: {
                                   slidesPerView: 6,
