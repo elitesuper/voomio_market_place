@@ -2,18 +2,18 @@ import React, {useState} from 'react';
 import Footer from '../components/footer/Footer';
 import liveAuctionData from '../assets/fake-data/data-live-auction';
 import {heroSliderData, secondSliderData} from '../assets/fake-data/data-slider-3';
-import Trending from '../components/layouts/home-3/Trending';
+import Trending from '../components/layouts/home/Trending';
 import Slider from '../components/slider/Slider';
-import Alpha from '../components/layouts/home-3/Alpha';
-import PopularCollection from '../components/layouts/home-3/PopularCollection';
+import Alpha from '../components/layouts/home/Alpha';
+import PopularCollection from '../components/layouts/home/PopularCollection';
 import popularCollectionData from '../assets/fake-data/data-popular-collection';
 import popularAlphaData from '../assets/fake-data/data-alpha';
 import HeaderStyle2 from '../components/header/HeaderStyle2';
-import Ranking from './Ranking';
-import Creator from '../components/layouts/home-3/Creator';
+import Ranking from '../components/layouts/home/Ranking';
+import Creator from '../components/layouts/home/Creator';
 import Mintingslider from '../components/slider/Mintingslider';
 
-const Home03 = () => {
+const Home = () => {
 
     const [currentAccount, setCurrentAccount] = useState(null);    
     const setAccount = (_account) => {
@@ -37,4 +37,4 @@ const Home03 = () => {
     );
 }
 
-export default Home03;
+export default Home;

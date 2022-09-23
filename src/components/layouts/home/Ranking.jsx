@@ -1,15 +1,15 @@
 import React , { useState } from 'react';
 import { Link } from 'react-router-dom';
-import img1 from '../assets/images/box-item/img3rank.jpg'
-import img2 from '../assets/images/box-item/img4rank.jpg'
-import img3 from '../assets/images/box-item/img5rank.jpg'
-import img4 from '../assets/images/box-item/img6rank.jpg'
-import img5 from '../assets/images/box-item/img1rank.jpg'
-import img6 from '../assets/images/box-item/img2rank.jpg'
-import imga1 from '../assets/images/avatar/author_rank.jpg'
+import img1 from '../../../assets/images/box-item/img3rank.jpg'
+import img2 from '../../../assets/images/box-item/img4rank.jpg'
+import img3 from '../../../assets/images/box-item/img5rank.jpg'
+import img4 from '../../../assets/images/box-item/img6rank.jpg'
+import img5 from '../../../assets/images/box-item/img1rank.jpg'
+import img6 from '../../../assets/images/box-item/img2rank.jpg'
+import imga1 from '../../../assets/images/avatar/author_rank.jpg'
 
-import etherium_icon from '../assets/images/icon/etherium_icon.png'
-import check_icon from '../assets/images/icon/check_icon.png' 
+import etherium_icon from '../../../assets/images/icon/etherium_icon.png'
+import check_icon from '../../../assets/images/icon/check_icon.png' 
 
 const Ranking = () => {
     const [data] = useState(
