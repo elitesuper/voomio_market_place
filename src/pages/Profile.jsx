@@ -521,10 +521,11 @@ const Profile = () => {
                                     <div className="row">
                                     {
                                         panelTab.map((item, index) => (
-                                            <TabPanel key={index}>
+
+                                            (index != 2)?(<TabPanel key={index}>
                                                 {
                                                     item.dataContent.slice(0,visible).map((data,index) => (
-                                                        <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
+                                                        <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
                                                                 <div className="sc-card-product collection-card">
                                                                     <div className="card-media">
                                                                         <Link to="/item-details-01"><img src={data.img} alt="axies" /></Link>
@@ -533,7 +534,7 @@ const Profile = () => {
                                                                         <h5>{data.title}</h5>
                                                                         <img src={check_icon} alt={data.check_icon}></img>
                                                                     </div>
-                                                                    <div className="meta-info voomio-pl-1">
+                                                                    <div className="meta-info voomio-pl-1 voomio-justend">
                                                                         <div className="info voomio-flex">
                                                                             <span>Floor</span>
                                                                             <h6><img src={etherium_icon} alt={data.etherium_icon}></img>{data.price}</h6>
@@ -549,7 +550,13 @@ const Profile = () => {
                                                         <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                                     </div>
                                                 }
+                                            </TabPanel>):(
+                                                <TabPanel key={index}>
+                                                {
+                                                    <div>Activity</div>
+                                                }
                                             </TabPanel>
+                                            )
                                         ))
                                     }
                                     </div>

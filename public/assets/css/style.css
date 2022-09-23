@@ -3595,6 +3595,9 @@ header{
 .voomio-end{
     margin: 4rem auto 2rem auto;
 }
+.voomio-justend{
+    justify-content: end !important;
+}
 .voomio-ma{
     margin:auto !important;
 }
