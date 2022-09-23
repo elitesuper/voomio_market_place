@@ -1956,6 +1956,9 @@ header{
 }
 
 @media only screen and (max-width:500px){
+    .v-feature img{
+        top: 0px !important;
+    }
     .v-mobile-btn{
         display: block;
     }
@@ -3766,6 +3769,8 @@ header{
 
 .v-feature img{
     border-radius: 50% !important;
+    border: solid 1rem white;
+    top: -12rem;
 }
 .authors{
     padding: 0px !important;

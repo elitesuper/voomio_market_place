@@ -38,23 +38,23 @@ const Profile = () => {
         [
             {
                 class: 'active',
-                name: 'ALL'
+                name: 'Collection'
             },
             {
                 class: '',
-                name: 'ART'
+                name: 'Created'
             },
             {
                 class: '',
-                name: 'MUSIC'
+                name: 'Activity'
             },
             {
                 class: '',
-                name: 'COLLECTIBLES'
+                name: 'Favorited'
             },
             {
                 class: '',
-                name: 'SPORTS'
+                name: 'More'
             },
         ]
     )
