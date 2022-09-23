@@ -2,6 +2,9 @@ import React , { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import IconButton from '@mui/material/IconButton';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
@@ -527,7 +530,17 @@ const Profile = () => {
                                     <h5>@extrasoho</h5>
                                     <span>JOINED MAY 2022</span>
                                 </div>
-                                <p className="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                                <p className="content profile-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                                <div className='info-panel flex'>
+                                    <div className='voomio-mta voomio-m-r-1'><h6>Following</h6><h5>12</h5></div>
+                                    <div className='voomio-mta voomio-m-r-1'><h6>Followers</h6><h5>1.2m</h5></div>
+                                    <IconButton color="primary" aria-label="Twitter" component="label" size="large">
+                                        <TwitterIcon fontSize="inherit"/>
+                                    </IconButton>
+                                    <IconButton color="primary" aria-label="Instagram" component="label" size="large">
+                                        <InstagramIcon fontSize="inherit"/>
+                                    </IconButton>
+                                </div>
                             </div>
                             <div className="widget-social style-3">
                                 <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow profile-btn profile-out v-desktop-btn">0x007..373xys..</Link></div>

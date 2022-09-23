@@ -1708,13 +1708,22 @@ header{
     font-family: 'MyTermina';
     font-size: 10rem !important;
 }
+
+
+.info-panel{
+    position: absolute;
+    right: 22rem;
+    top: 12rem;
+}
 @media only screen and (max-width: 1920px){
     .sign-up {
         width: 50%;
         margin: auto;
     }
+    .info-panel{
+        right: 25rem;
+    }
 }
-
 @media only screen and (max-width: 1600px) {
     .sign-up{
         width: 60%;
@@ -1735,16 +1744,25 @@ header{
     .header_1.header_2 #main-nav {
         left: 45%;
     }
+    .info-panel{
+        right: 22rem;
+    }
 }
 
 @media only screen and (max-width: 1200px){
     .flat-slider .heading{
         font-size: 5rem !important;
     }
+    .info-panel{
+        right: 18rem;
+    }
 }
 
 /* Mobile Menu */
 @media only screen and (max-width: 991px) {
+    .info-panel{
+        right: 5rem;
+    }
     .sign-up{
         width: 80%;
     }
@@ -1941,6 +1959,9 @@ header{
     display: none;
 }
 @media only screen and (max-width: 767px) {
+    .info-panel{
+        position: inherit;
+    }
     .sign-up{
         width: 90%;
     }
@@ -3565,7 +3586,9 @@ header{
 .voomio-ma{
     margin:auto !important;
 }
-
+.voomio-mta{
+    margin: auto 0;
+}
 .mode_switcher{
     top: 100px !important;
 }
@@ -3775,6 +3798,9 @@ header{
 .authors{
     padding: 0px !important;
 }
-.overlay{
+.profile-inner .overlay{
     background: linear-gradient(93.69deg, #7B61FF 0%, #00DAD9 107.12%) !important;
+}
+.profile-content{
+    margin-bottom: 1rem !important;
 }
