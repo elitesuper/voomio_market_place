@@ -1,11 +1,230 @@
 import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
 import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 
-const HeaderStyle2 = () => {
+import img1 from '../../assets/images/avatar/ic_land_1.png'
+import img2 from '../../assets/images/avatar/ic_land_2.png'
+import img3 from '../../assets/images/avatar/ic_land_3.png'
+
+import Web3 from 'web3';
+import Web3Modal from "web3modal";
+import { ethers } from "ethers";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+
+let web3Modal;
+let provider;
+let selectedAccount;
+
+function init() {
+    const providerOptions = {
+        walletconnect: {
+        package: WalletConnectProvider,
+        options: {
+            networ:'rinkeby',
+            rpc: {
+                4:"https://rinkeby.infura.io/v3/"
+            },
+            chainId:4
+        }
+        },           
+    };
+
+    web3Modal = new Web3Modal({
+        network: "mainnet", // optional
+        cacheProvider: true,
+        providerOptions // required
+    });
+
+    window.w3m = web3Modal;
+}
+
+async function fetchAccountData() {
+    const web3Provider = new ethers.providers.Web3Provider(provider);
+    const signer = web3Provider.getSigner();
+    selectedAccount = await signer.getAddress();
+    console.log(selectedAccount);    
+    return selectedAccount;
+}
+
+async function refreshAccountData() {
+    await fetchAccountData(provider);
+    window.location.reload();
+}
+
+async function onConnect() {
+    console.log("Opening a dialog", web3Modal);
+    try {
+        provider = await web3Modal.connect({ cacheProvider: true });
+    } catch (e) {
+        console.log("Could not get a wallet connection", e);
+        return;
+    }
+
+    provider.on("accountsChanged", (accounts) => {
+        console.log('chainchan',accounts)
+        fetchAccountData();
+        window.location.reload();
+    });
+
+    provider.on("chainChanged", (chainId) => {
+        fetchAccountData();
+        window.location.reload();
+    });
+
+    provider.on("networkChanged", (networkId) => {
+        fetchAccountData();
+        window.location.reload();
+    });
+    // window.location.reload()
+
+    await refreshAccountData();
+}
+
+async function disconnet() {
+    console.log("Opening a dialog", web3Modal);
+    try {
+        // provider = await web3Modal.connect();
+        await web3Modal.clearCachedProvider();
+        // await window.ethereum.disable()
+        window.location.reload()
+    } catch (e) {
+        console.log("Could not get a wallet connection", e);
+        return;
+    }   
+}
+
+const HeaderStyle2 = (props) => {
+
+
+    const [modalShow, setModalShow] = useState(false);
+
+   /*****************************  wallet connection ***************************/
+   const [acc,setacc] = useState()
+   const [accountid, setaccountid] = useState();
+   const [web3, setWeb3] = useState();
+   
+   // iniit web3 provider
+   useEffect(async () => {
+       if (acc) {
+           // const accounts1 = await window.ethereum.request({ method: 'eth_requestAccounts' });
+           // setaccountid(accounts1[0])
+           provider = await web3Modal.connect();
+           let web3_2 = new Web3(provider);
+           const accounts = await web3_2.eth.getAccounts();
+           setWeb3(web3_2);
+           props.setWeb3Api(web3_2);
+           setaccountid(accounts[0]);
+           props.setAccount(accounts[0]);
+           setProviderEvent();
+       }
+
+   }, [acc]);
+
+   useEffect(() => {
+       init();
+       getAccount();
+       if (web3Modal.cachedProvider) {
+           setacc(true)
+       }
+   }, []); 
+
+   function setProviderEvent() {
+       provider.on("accountsChanged", (accounts) => {
+           console.log('chainchan',accounts)
+           fetchAccountData();
+           window.location.reload();
+       });
+   
+       provider.on("chainChanged", (chainId) => {
+           fetchAccountData();
+           window.location.reload();
+       });
+   
+       provider.on("networkChanged", (networkId) => {
+           fetchAccountData();
+       });
+   }
+
+   async function getAccount() {
+       // const web3_2 = new Web3(window.ethereum, null, { transactionConfirmationBlocks: 1 })
+       if (window.ethereum) {
+           // request change chain
+           try {
+               await window.ethereum.request({
+                   method: 'wallet_switchEthereumChain',
+                   params: [{ chainId: '0x04' }],
+               });
+           } catch (switchError) {
+               // This error code indicates that the chain has not been added to MetaMask.
+               if (switchError.code === 4902) {
+                   try {
+                       const data = [{
+                           chainId: '0x01',
+                           chainName: 'Ethereum Chain',
+                           nativeCurrency: {
+                           name: 'ETH',
+                           symbol: 'ETH',
+                           decimals: 18,
+                           },
+                           rpcUrls: ['https://mainnet.infura.io/v3/'],
+                           blockExplorerUrls: ['https://etherscan.io'],
+                       }]
+
+                       await window.ethereum.request({
+                           method: 'wallet_addEthereumChain',
+                           params: data,
+                       });
+                   } catch (addError) {
+                       
+                   }
+               }
+           }
+       } 
+   }
+
+   /****************************  wallet connection end *************************/
+
+
+    /**************************  get all tokens for wallet ***********************/
+    const [tokensSmall, setTokensSmall] = useState();
+    const [tokensMedium, setTokensMedium] = useState();
+    const [tokensLarge, setTokensLarge] = useState();
+
+    const getAllTokens = async () => {
+         //Paths of Json File
+         const nftContratFile = await fetch("/abis/BGLandNFT.json");
+         //Convert all to json
+         const convertNftContratFileToJson = await nftContratFile.json();
+         //Get The ABI
+         const nFTAbi = convertNftContratFileToJson.abi;
+         const netWorkId = await web3.eth.net.getId();
+         const nftNetWorkObject = convertNftContratFileToJson.networks[netWorkId];        
+
+         if (nftNetWorkObject) {
+             const nftAddress = nftNetWorkObject.address;
+             console.log('nftAddress -- ', nftAddress);
+             const deployedNftContract = await new web3.eth.Contract(nFTAbi, nftAddress);
+             const tokensSmall = await deployedNftContract.methods.readTokenIdsByType(accountid, 's').call();
+             const tokensMedium = await deployedNftContract.methods.readTokenIdsByType(accountid, 'm').call();
+             const tokensLarge = await deployedNftContract.methods.readTokenIdsByType(accountid, 'l').call();
+             setTokensSmall(tokensSmall);
+             setTokensMedium(tokensMedium);
+             setTokensLarge(tokensLarge);
+             
+         } else {
+             window.alert("You are at Wrong Netweok, Connect with Rinkeby Please")
+         }
+    }
+
+    useEffect(() => {
+        web3 && getAllTokens();
+    }, [modalShow]);
+//***************************************************************** */
+
     const { pathname } = useLocation();
 
     const headerRef = useRef (null)
@@ -15,6 +234,9 @@ const HeaderStyle2 = () => {
             window.removeEventListener('scroll', isSticky);
         };
     });
+    useEffect(() => {
+        init();
+    }, []); 
     const isSticky = (e) => {
         const header = document.querySelector('.js-header');
         const scrollTop = window.scrollY;
@@ -31,10 +253,19 @@ const HeaderStyle2 = () => {
     }
 
 
+
+    let totalNfts = tokensSmall?.length + tokensMedium?.length + tokensLarge?.length;
+
+
     const [activeIndex, setActiveIndex] = useState(null);
     const handleOnClick = index => {
         setActiveIndex(index); 
     };
+
+        
+    const onHideModal = () => {
+        setModalShow(false);
+    }
 
     return (
         <header id="header_main" className="header_1 header_2 style2 js-header" ref={headerRef}>
@@ -110,54 +341,15 @@ const HeaderStyle2 = () => {
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
-                                    <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
-                                        </span></Link>
-                                    </div>
-
-                                    <div className="admin_active" id="header_admin">
-                                        <div className="header_avatar">
-                                            <div className="price">
-                                                <span>2.45 <strong>ETH</strong> </span>
-                                            </div>
-                                            <img
-                                                className="avatar"
-                                                src="avatar"
-                                                alt="avatar"
-                                                />
-                                            <div className="avatar_popup mt-20">
-                                                <div className="d-flex align-items-center copy-text justify-content-between">
-                                                    <span> 13b9ebda035r178... </span>
-                                                    <Link to="/" className="ml-2">
-                                                        <i className="fal fa-copy"></i>
-                                                    </Link>
-                                                </div>
-                                                <div className="d-flex align-items-center mt-10">
-                                                    <img
-                                                        className="coin"
-                                                        src="coin"
-                                                        alt="/"
-                                                        />
-                                                    <div className="info ml-10">
-                                                        <p className="text-sm font-book text-gray-400">Balance</p>
-                                                        <p className="w-full text-sm font-bold text-green-500">16.58 ETH</p>
-                                                    </div>
-                                                </div>
-                                                <div className="hr"></div>
-                                                <div className="links mt-20">
-                                                    <Link to="#">
-                                                        <i className="fab fa-accusoft"></i> <span> My items</span>
-                                                    </Link>
-                                                    <a className="mt-10" href="/edit-profile">
-                                                        <i className="fas fa-pencil-alt"></i> <span> Edit Profile</span>
-                                                    </a>
-                                                    <a className="mt-10" href="/login" id="logout">
-                                                        <i className="fal fa-sign-out"></i> <span> Logout</span>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                    {
+                                        !accountid ? <div className="sc-btn-top mg-r-12" id="site-header">
+                                        <button onClick={()=>{onConnect()}} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                                        </span></button>
+                                        </div> : <div className="sc-btn-top mg-r-12" id="site-header">
+                                        <button onClick={()=> setModalShow(true)} className="sc-button header-slider style style-1 fl-button pri-1"><span>{accountid?.substr(0, 6) + '....' + accountid?.substr(accountid?.length - 4, accountid?.length)}
+                                        </span></button>
                                         </div>
-                                    </div>
+                                    }
                                 </div>
                             </div> 
                         </div>
@@ -165,6 +357,82 @@ const HeaderStyle2 = () => {
                 </div>
             </div>
             <DarkMode />
+            <Modal
+                show={modalShow}
+                onHide={onHideModal}
+            >
+                <Modal.Header closeButton></Modal.Header>
+
+                <div className="modal-body space-y-20 pd-40">
+                <h2>My Account</h2>
+                    <div className="" id="header_admin">
+                        
+                        <div className="header_avatar">
+                            <div className="flex justify-content-between">
+                                <span className='fs-16'> {accountid?.substr(0, 6) + '....' + accountid?.substr(accountid?.length - 4, accountid?.length)}</span>
+                                <i className="fal fa-copy fs-16"></i>
+                            </div>
+                            {/* <img
+                                className="avatar"
+                                src={avt}
+                                alt="avatar"
+                                /> */}
+                            <div className="avatar_popup mt-20">
+                                <div className="d-flex align-items-center copy-text justify-content-between">
+                                    
+                                </div>
+                                <div className='item-title'>
+                                    <span className='fs-18'> My Land NFTs ( {totalNfts} )</span>
+                                </div>
+                                <div style={{minHeight:180}} className='col-md-12 flex mg-t-10'>
+                                    {
+                                        <div className='col-md-4 nft-item-wrap'>
+                                            {tokensSmall?.map(tokenid=> (
+                                                <div className='mg-t-10'>
+                                                    <img src={img1} className='ic-nft-item'></img>
+                                                    <span className='fs-16'>Small #{tokenid}</span>
+                                                </div>                                            
+                                            ))}
+                                        </div>                                        
+                                    }
+
+                                    {
+                                        <div className='col-md-4 nft-item-wrap'>
+                                            {tokensMedium?.map(tokenid=> (
+                                                <div className='mg-t-10'>
+                                                    <img src={img2} className='ic-nft-item'></img>
+                                                    <span className='fs-16'>Medium #{tokenid}</span>
+                                                </div>                                            
+                                            ))}
+                                        </div>
+                                    }
+
+                                    {
+                                        <div className='col-md-4 nft-item-wrap'>
+                                            {tokensLarge?.map(tokenid=> (
+                                                <div className='mg-t-10'>
+                                                    <img src={img3} className='ic-nft-item'></img>
+                                                    <span className='fs-16'>Large #{tokenid}</span>
+                                                </div>                                            
+                                            ))}
+                                        </div>
+                                    }
+
+                                </div>
+                                <div className="hr"></div>
+                                <div className='card-bottom flex justify-content-center'>                                    
+                                    {/* <button className="mt-10" href="/edit-profile">
+                                        <i className="fas fa-pencil-alt"></i> <span> Edit Profile</span>
+                                    </button> */}
+                                    <button onClick={()=> disconnet()} id="logout" className='mt-10'>
+                                        <i className="fal fa-sign-out"></i> <span>{'  '} Logout</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Modal>
         </header>
     );
 }

@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Navigation, Scrollbar, A11y   } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import 'swiper/swiper.scss';
+import 'swiper/modules/navigation/navigation.scss';
+import 'swiper/modules/pagination/pagination.scss';
 import shape1 from '../../assets/images/icon/Vector.png'
 import shape2 from '../../assets/images/icon/Vector1.png'
 import shape3 from '../../assets/images/icon/Vector2.png'

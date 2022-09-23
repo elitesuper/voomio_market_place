@@ -1,14 +1,14 @@
 import React , { useState , Fragment } from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Countdown from "react-countdown";
 import CardModal from '../CardModal';
 
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import 'swiper/swiper.scss';
+import 'swiper/modules/navigation/navigation.scss';
+import 'swiper/modules/pagination/pagination.scss';
 
 const Creator = props => {
     const data = props.data;

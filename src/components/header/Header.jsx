@@ -3,13 +3,224 @@ import { Link , useLocation } from "react-router-dom";
 import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
-import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png' 
+import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 
+// import Web3 from "web3"
+import Web3Modal from "web3modal";
+import { ethers } from "ethers";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
-const Header = () => {
+let web3Modal;
+let provider;
+let selectedAccount;
+
+function init() {
+    const providerOptions = {
+        walletconnect: {
+        package: WalletConnectProvider,
+        options: {
+            networ:'rinkeby',
+            rpc: {
+                4:"https://rinkeby.infura.io/v3/"
+            },
+            chainId:4
+        }
+        },           
+    };
+
+    web3Modal = new Web3Modal({
+        network: "mainnet", // optional
+        cacheProvider: true, // optional
+        providerOptions // required
+    });
+
+    window.w3m = web3Modal;
+}
+
+async function fetchAccountData() {
+    const web3Provider = new ethers.providers.Web3Provider(provider);
+    const signer = web3Provider.getSigner();
+    selectedAccount = await signer.getAddress();
+    console.log(selectedAccount);    
+    return selectedAccount;
+}
+
+async function refreshAccountData() {
+    await fetchAccountData(provider);
+    window.location.reload();
+}
+
+async function onConnect() {
+    console.log("Opening a dialog", web3Modal);
+    try {
+        provider = await web3Modal.connect({ cacheProvider: true });
+    } catch (e) {
+        console.log("Could not get a wallet connection", e);
+        return;
+    }
+
+    provider.on("accountsChanged", (accounts) => {
+        console.log('chainchan',accounts)
+        fetchAccountData();
+        window.location.reload();
+    });
+
+    provider.on("chainChanged", (chainId) => {
+        fetchAccountData();
+        window.location.reload();
+    });
+
+    provider.on("networkChanged", (networkId) => {
+        fetchAccountData();
+        window.location.reload();
+    });
+    // window.location.reload()
+
+    await refreshAccountData();
+}
+
+async function disconnet() {
+    console.log("Opening a dialog", web3Modal);
+    try {
+        // provider = await web3Modal.connect();
+        await web3Modal.clearCachedProvider();
+        // await window.ethereum.disable()
+        window.location.reload()
+    } catch (e) {
+        console.log("Could not get a wallet connection", e);
+        return;
+    }   
+}
+
+const Header = (props) => {
     const { pathname } = useLocation();
 
-    const headerRef = useRef (null)
+    const headerRef = useRef (null);
+// ********************************Wallet Connection********************************
+    const [acc,setacc] = useState()
+    const [accountid, setaccountid] = useState();
+    const [web3, setWeb3] = useState();
+
+     
+    // // iniit web3 provider
+    // useEffect(async () => {
+    //     if (acc) {
+    //         // const accounts1 = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    //         // setaccountid(accounts1[0])
+    //         provider = await web3Modal.connect();
+    //         let web3_2 = new Web3(provider);
+    //         const accounts = await web3_2.eth.getAccounts();
+    //         setWeb3(web3_2);
+    //         props.setWeb3Api(web3_2);
+    //         setaccountid(accounts[0]);
+    //         props.setAccount(accounts[0]);
+    //         setProviderEvent();
+    //     }
+
+    // }, [acc]);
+    useEffect(() => {
+        init();
+        getAccount();
+        if (web3Modal.cachedProvider) {
+            setacc(true)
+        }
+    }, []); 
+
+    function setProviderEvent() {
+        provider.on("accountsChanged", (accounts) => {
+            console.log('chainchan',accounts)
+            fetchAccountData();
+            window.location.reload();
+        });
+    
+        provider.on("chainChanged", (chainId) => {
+            fetchAccountData();
+            window.location.reload();
+        });
+    
+        provider.on("networkChanged", (networkId) => {
+            fetchAccountData();
+        });
+    }
+
+    async function getAccount() {
+        // const web3_2 = new Web3(window.ethereum, null, { transactionConfirmationBlocks: 1 })
+        if (window.ethereum) {
+            // request change chain
+            try {
+                await window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: '0x04' }],
+                });
+            } catch (switchError) {
+                // This error code indicates that the chain has not been added to MetaMask.
+                if (switchError.code === 4902) {
+                    try {
+                        const data = [{
+                            chainId: '0x01',
+                            chainName: 'Ethereum Chain',
+                            nativeCurrency: {
+                            name: 'ETH',
+                            symbol: 'ETH',
+                            decimals: 18,
+                            },
+                            rpcUrls: ['https://mainnet.infura.io/v3/'],
+                            blockExplorerUrls: ['https://etherscan.io'],
+                        }]
+
+                        await window.ethereum.request({
+                            method: 'wallet_addEthereumChain',
+                            params: data,
+                        });
+                    } catch (addError) {
+                        
+                    }
+                }
+            }
+        } 
+    }
+
+    /****************************  wallet connection end *************************/
+
+    /**************************  get all tokens for wallet ***********************/
+    const [tokensSmall, setTokensSmall] = useState();
+    const [tokensMedium, setTokensMedium] = useState();
+    const [tokensLarge, setTokensLarge] = useState();
+
+    const getAllTokens = async () => {
+         //Paths of Json File
+         const nftContratFile = await fetch("/abis/BGLandNFT.json");
+         //Convert all to json
+         const convertNftContratFileToJson = await nftContratFile.json();
+         //Get The ABI
+         const nFTAbi = convertNftContratFileToJson.abi;
+         const netWorkId = await web3.eth.net.getId();
+         const nftNetWorkObject = convertNftContratFileToJson.networks[netWorkId];        
+
+         if (nftNetWorkObject) {
+             const nftAddress = nftNetWorkObject.address;
+             console.log('nftAddress -- ', nftAddress);
+             const deployedNftContract = await new web3.eth.Contract(nFTAbi, nftAddress);
+             const tokensSmall = await deployedNftContract.methods.readTokenIdsByType(accountid, 's').call();
+             const tokensMedium = await deployedNftContract.methods.readTokenIdsByType(accountid, 'm').call();
+             const tokensLarge = await deployedNftContract.methods.readTokenIdsByType(accountid, 'l').call();
+             setTokensSmall(tokensSmall);
+             setTokensMedium(tokensMedium);
+             setTokensLarge(tokensLarge);
+             
+         } else {
+             window.alert("You are at Wrong Netweok, Connect with Rinkeby Please")
+         }
+    }
+
+    // useEffect(() => {
+    //     web3 && getAllTokens();
+    // }, [modalShow]);
+
+// *******************************************wallet connection end**************************
+    useEffect(() => {
+        init();
+    }, []); 
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
@@ -98,8 +309,8 @@ const Header = () => {
                                         </div>
                                     </div>
                                     <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
-                                        </span></Link>
+                                        <button onClick={()=>{onConnect()}} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                                        </span></button>
                                     </div>
 
                                     <div className="admin_active" id="header_admin">
