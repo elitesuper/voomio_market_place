@@ -1937,7 +1937,9 @@ header{
         left: 0;
     }
 }
-
+.v-mobile-btn{
+    display: none;
+}
 @media only screen and (max-width: 767px) {
     .sign-up{
         width: 90%;
@@ -1954,6 +1956,12 @@ header{
 }
 
 @media only screen and (max-width:500px){
+    .v-mobile-btn{
+        display: block;
+    }
+    .v-desktop-btn{
+        display: none;
+    }
     .minting-home{
         margin-top: -8rem;
     }
@@ -2499,8 +2507,8 @@ header{
 }
 
 .widget-social.style-3 ul li a {
-    background-color: #fff;
-    color: #14141F;
+    background-color: #F4EEFF;
+    color: #6549F6;
 }
 
 .widget-social.style-3 ul li a:hover {
@@ -2519,7 +2527,7 @@ header{
 .widget-social.style-3 ul li a {
     width: 40px;
     height: 40px;
-    border-radius: 8px;
+    border-radius: 50%;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -2528,7 +2536,7 @@ header{
     display: -ms-flexbox;   
     display: -webkit-flex; 
     display: flex;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .widget-social.style-3 ul li.style-2 a {
@@ -3715,7 +3723,53 @@ header{
     color: #000000 !important;
 }
 
+
+
 .sc-button.style-1{
-    background: linear-gradient(98.93deg, #7B61FF -6.98%, #00DAD9 108.86%) !important;
+    background: linear-gradient(98.93deg, #7B61FF -6.98%, #00DAD9 108.86%);
     border-color: #7B61FF;
+}
+.tab-authors .author-profile{
+    background: none;
+}
+.title-info span{
+    /* margin: auto 10px auto; */
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #F4EEFF;
+    color: #6549F6 !important;
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+    border-radius: 10px;
+}
+.title-info h5{
+    margin: auto 0px;
+    color: #6549F6;
+}
+.tab-authors .author-profile .infor-profile h2, p{
+    color: black !important;
+}
+.tab-authors .author-profile .widget-social{
+    width: 40%;
+}
+.profile-btn{
+    width: 140px;
+    text-align: center;
+}
+.profile-fill{
+    background: linear-gradient(98.79deg, #9B53E0 20.34%, #8551E6 77.89%) !important;
+}
+.profile-out{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), linear-gradient(98.79deg, #9B53E0 20.34%, #8551E6 77.89%) !important;
+    color: #8551E6 !important;
+}
+
+.v-feature img{
+    border-radius: 50% !important;
+}
+.authors{
+    padding: 0px !important;
+}
+.overlay{
+    background: linear-gradient(93.69deg, #7B61FF 0%, #00DAD9 107.12%) !important;
 }
