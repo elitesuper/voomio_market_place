@@ -57,7 +57,7 @@ const SliderItem = props => (
                         <div className="themesflat-container ">
                             <div className="wrap-heading flat-slider flex">
                                 {/* {(props.item.)} */}
-                                <div className="content">
+                                <div className="content main-home">
                                     <h2 className="heading">{props.item.title_1}</h2>	
                                     <h1 className="heading mb-style"><span className="tf-text s1 voomio-text-col2">{props.item.title_2}</span>                                          
                                     </h1>

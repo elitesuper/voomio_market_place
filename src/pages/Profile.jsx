@@ -10,31 +10,22 @@ import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
 
 import avt from '../assets/images/avatar/character1.png'
-import img1 from '../assets/images/box-item/card-item-3.jpg'
-import imga1 from '../assets/images/avatar/avt-1.jpg'
+import img1 from '../assets/images/avatar/character1.png'
 import imgCollection1 from '../assets/images/avatar/avt-18.jpg'
-import img2 from '../assets/images/box-item/card-item-4.jpg'
-import imga2 from '../assets/images/avatar/avt-2.jpg'
+import img2 from '../assets/images/avatar/character2.png'
 import imgCollection2 from '../assets/images/avatar/avt-18.jpg'
-import img3 from '../assets/images/box-item/card-item-2.jpg'
-import imga3 from '../assets/images/avatar/avt-4.jpg'
+import img3 from '../assets/images/avatar/character3.png'
 import imgCollection3 from '../assets/images/avatar/avt-18.jpg'
-import img4 from '../assets/images/box-item/card-item-7.jpg'
-import imga4 from '../assets/images/avatar/avt-3.jpg'
+import img4 from '../assets/images/avatar/character4.png'
 import imgCollection4 from '../assets/images/avatar/avt-18.jpg'
-import img5 from '../assets/images/box-item/card-item8.jpg'
-import imga5 from '../assets/images/avatar/avt-12.jpg'
+import img5 from '../assets/images/avatar/character1.png'
 import imgCollection5 from '../assets/images/avatar/avt-18.jpg'
-import img6 from '../assets/images/box-item/card-item-9.jpg'
-import imga6 from '../assets/images/avatar/avt-1.jpg'
+import img6 from '../assets/images/avatar/character2.png'
 import imgCollection6 from '../assets/images/avatar/avt-18.jpg'
-import img7 from '../assets/images/box-item/image-box-6.jpg'
-import imga7 from '../assets/images/avatar/avt-4.jpg'
-import imgCollection7 from '../assets/images/avatar/avt-18.jpg'
-import img8 from '../assets/images/box-item/image-box-11.jpg'
-import imga8 from '../assets/images/avatar/avt-3.jpg'
-import imgCollection8 from '../assets/images/avatar/avt-18.jpg'
-
+import img7 from '../assets/images/avatar/character3.png'
+import img8 from '../assets/images/avatar/character4.png'
+import etherium_icon from '../assets/images/icon/etherium_icon.png'
+import check_icon from '../assets/images/icon/check_icon.png' 
 
 const Profile = () => {
     const [menuTab] = useState(
@@ -68,57 +59,52 @@ const Profile = () => {
                 dataContent: [
                     {
                         img: img1,
-                        title: "The RenaiXance Rising the sun ",
+                        title: "Bored Ape Yacht Club",
                         tags: "bsc",
-                        imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection1,
-                        nameCollection: "Creative Art 3D"
+                        nameCollection: "Creative Art 3D",
                     },
                     {
                         img: img2,
-                        title: "The RenaiXance Rising the sun ",
+                        title: "CryptoPunks",
                         tags: "bsc",
-                        imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection2,
-                        nameCollection: "Creative Art 3D"
+                        nameCollection: "Creative Art 3D",
                     },
                     {
                         img: img3,
-                        title: "The RenaiXance Rising the sun ",
+                        title: "Doodles",
                         tags: "bsc",
-                        imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
-                        nameCollection: "Creative Art 3D"
+                        nameCollection: "Creative Art 3D",
                     },
                     {
                         img: img4,
-                        title: "The RenaiXance Rising the sun ",
+                        title: "Moonbirds",
                         tags: "bsc",
-                        imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection4,
-                        nameCollection: "Creative Art 3D"
+                        nameCollection: "Creative Art 3D",
                     },
                     {
                         img: img5,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -130,7 +116,6 @@ const Profile = () => {
                         img: img6,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga6,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -142,31 +127,26 @@ const Profile = () => {
                         img: img7,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga7,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
-                        imgCollection: imgCollection7,
                         nameCollection: "Creative Art 3D"
                     },
                     {
                         img: img8,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga8,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
-                        imgCollection: imgCollection8,
                         nameCollection: "Creative Art 3D"
                     },
                     {
                         img: img1,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -178,7 +158,6 @@ const Profile = () => {
                         img: img2,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -190,7 +169,6 @@ const Profile = () => {
                         img: img3,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -202,7 +180,6 @@ const Profile = () => {
                         img: img4,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -214,7 +191,6 @@ const Profile = () => {
                         img: img5,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -226,7 +202,6 @@ const Profile = () => {
                         img: img6,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga6,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -238,24 +213,20 @@ const Profile = () => {
                         img: img7,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga7,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
-                        imgCollection: imgCollection7,
                         nameCollection: "Creative Art 3D"
                     },
                     {
                         img: img8,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga8,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
-                        imgCollection: imgCollection8,
                         nameCollection: "Creative Art 3D"
                     },
                 ]
@@ -268,7 +239,6 @@ const Profile = () => {
                         img: img2,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -281,7 +251,6 @@ const Profile = () => {
                         img: img3,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -294,7 +263,6 @@ const Profile = () => {
                         img: img4,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -307,7 +275,6 @@ const Profile = () => {
                         img: img5,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -325,7 +292,6 @@ const Profile = () => {
                         img: img1,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -338,7 +304,6 @@ const Profile = () => {
                         img: img3,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -351,7 +316,6 @@ const Profile = () => {
                         img: img4,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -364,7 +328,6 @@ const Profile = () => {
                         img: img5,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -382,7 +345,7 @@ const Profile = () => {
                         img: img1,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga1,
+
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -395,7 +358,6 @@ const Profile = () => {
                         img: img2,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -408,7 +370,6 @@ const Profile = () => {
                         img: img3,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -421,7 +382,6 @@ const Profile = () => {
                         img: img5,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -434,12 +394,10 @@ const Profile = () => {
                         img: img7,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga7,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
                         wishlist: "100",
-                        imgCollection: imgCollection7,
                         nameCollection: "Creative Art 3D"
                     },
                 ]
@@ -452,7 +410,6 @@ const Profile = () => {
                         img: img2,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -465,7 +422,6 @@ const Profile = () => {
                         img: img3,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -478,7 +434,6 @@ const Profile = () => {
                         img: img4,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -491,7 +446,6 @@ const Profile = () => {
                         img: img5,
                         title: "The RenaiXance Rising the sun ",
                         tags: "bsc",
-                        imgAuthor: imga6,
                         nameAuthor: "SalvadorDali",
                         price: "4.89 ETH",
                         priceChange: "$12.246",
@@ -519,7 +473,7 @@ const Profile = () => {
             </section>
             <section className="tf-section authors">
                 <div className="themesflat-container">
-                    <div className="flat-tabs tab-authors">
+                    <div className="flat-tabs tab-authors voomio-pb-10">
                         <div className="author-profile flex">
                             <div className="feature-profile v-feature">
                                 <img src={avt} alt="Axies" className="avatar" />
@@ -571,40 +525,21 @@ const Profile = () => {
                                                 {
                                                     item.dataContent.slice(0,visible).map((data,index) => (
                                                         <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
-                                                            <div className="sc-card-product explode ">
-                                                                <div className="card-media">
-                                                                    <Link to="/item-details-01"><img src={data.img} alt="Axies" /></Link>
-                                                                    <div className="button-place-bid ">
-                                                                        <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></button>
+                                                                <div className="sc-card-product collection-card">
+                                                                    <div className="card-media">
+                                                                        <Link to="/item-details-01"><img src={data.img} alt="axies" /></Link>
                                                                     </div>
-                                                                    <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link>
-                                                                </div>
-                                                                <div className="card-title mg-bt-16">
-                                                                    <h5><Link to="/item-details-01">"{data.title}"</Link></h5>
-                                                                </div>
-                                                                <div className="meta-info">
-                                                                    <div className="author">
-                                                                        <div className="avatar">
-                                                                            <img src={data.imgAuthor} alt="Axies" />
-                                                                        </div>
-                                                                        <div className="info">
-                                                                            <span>Creator</span>
-                                                                            <h6> <Link to="/author-02">{data.nameAuthor}</Link> </h6>
+                                                                    <div className="card-title voomio-pl-1 voomio-just-left">
+                                                                        <h5>{data.title}</h5>
+                                                                        <img src={check_icon} alt={data.check_icon}></img>
+                                                                    </div>
+                                                                    <div className="meta-info voomio-pl-1">
+                                                                        <div className="info voomio-flex">
+                                                                            <span>Floor</span>
+                                                                            <h6><img src={etherium_icon} alt={data.etherium_icon}></img>{data.price}</h6>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="tags">{data.tags}</div>
-                                                                </div>
-                                                                <div className="card-bottom style-explode">
-                                                                    <div className="price">
-                                                                        <span>Current Bid</span>
-                                                                        <div className="price-details">
-                                                                            <h5>{data.price}</h5>
-                                                                            <span>= {data.priceChange}</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <Link to="/activity-01" className="view-history reload">View History</Link>
-                                                                </div>
-                                                            </div>
+                                                                </div>    
                                                         </div>
                                                     ))
                                                 }

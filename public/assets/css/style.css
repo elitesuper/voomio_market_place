@@ -3477,6 +3477,9 @@ header{
 .voomio-pb-3{
     padding-bottom: 3rem;
 }
+.voomio-pb-10{
+    padding-bottom: 10rem;
+}
 .voomio-pd-none{
     padding: 0px !important;
 }
@@ -3803,4 +3806,8 @@ header{
 }
 .profile-content{
     margin-bottom: 1rem !important;
+}
+
+.react-tabs__tab-list{
+    padding: 0 2% 0 4.5% !important;
 }

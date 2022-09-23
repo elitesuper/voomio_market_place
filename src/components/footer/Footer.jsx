@@ -164,7 +164,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-3 col-sm-5 col-5">
+                        <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                             <div className="widget widget-menu style-1">
                                 <h5 className="title-widget">SOLUTIONS</h5>
                                 <ul>
@@ -176,7 +176,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-3 col-sm-7 col-7">
+                        <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                             <div className="widget widget-menu style-2">
                                 <h5 className="title-widget">SUPPORT</h5>
                                 <ul>
@@ -188,7 +188,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-3 col-sm-5 col-5">
+                        <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                             <div className="widget widget-menu fl-st-3">
                                 <h5 className="title-widget">COMPANY</h5>
                                 <ul>
