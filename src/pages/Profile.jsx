@@ -5,9 +5,14 @@ import 'react-tabs/style/react-tabs.css';
 import IconButton from '@mui/material/IconButton';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import TuneIcon from '@mui/icons-material/Tune';
+import SearchIcon from '@mui/icons-material/Search';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
+import { ProfileCard } from '../components/layouts/ProfileCard';
+
+import '../scss/style.scss'
 
 import avt from '../assets/images/avatar/character1.png'
 import img1 from '../assets/images/avatar/character1.png'
@@ -473,7 +478,7 @@ const Profile = () => {
             </section>
             <section className="tf-section authors">
                 <div className="themesflat-container">
-                    <div className="flat-tabs tab-authors voomio-pb-10">
+                    <div className="flat-tabs tab-authors">
                         <div className="author-profile flex">
                             <div className="feature-profile v-feature">
                                 <img src={avt} alt="Axies" className="avatar" />
@@ -507,64 +512,85 @@ const Profile = () => {
                                 </ul>    
                             </div>
                         </div>
-                        <Tabs>
-                            <TabList>
-                                {
-                                    menuTab.map((item,index) => (
-                                        <Tab key={index}>{item.name}</Tab>
-                                    ))
-                                }
-                            </TabList>
-
-                            <div className="content-tab">
-                                <div className="content-inner">
-                                    <div className="row">
-                                    {
-                                        panelTab.map((item, index) => (
-
-                                            (index != 2)?(<TabPanel key={index}>
-                                                {
-                                                    item.dataContent.slice(0,visible).map((data,index) => (
-                                                        <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
-                                                                <div className="sc-card-product collection-card">
-                                                                    <div className="card-media">
-                                                                        <Link to="/item-details-01"><img src={data.img} alt="axies" /></Link>
-                                                                    </div>
-                                                                    <div className="card-title voomio-pl-1 voomio-just-left">
-                                                                        <h5>{data.title}</h5>
-                                                                        <img src={check_icon} alt={data.check_icon}></img>
-                                                                    </div>
-                                                                    <div className="meta-info voomio-pl-1 voomio-justend">
-                                                                        <div className="info voomio-flex">
-                                                                            <span>Floor</span>
-                                                                            <h6><img src={etherium_icon} alt={data.etherium_icon}></img>{data.price}</h6>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>    
-                                                        </div>
-                                                    ))
-                                                }
-                                                {
-                                                    visible < item.dataContent.length && 
-                                                    <div className="col-md-12 wrap-inner load-more text-center"> 
-                                                        <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
-                                                    </div>
-                                                }
-                                            </TabPanel>):(
-                                                <TabPanel key={index}>
-                                                {
-                                                    <div>Activity</div>
-                                                }
-                                            </TabPanel>
-                                            )
-                                        ))
-                                    }
-                                    </div>
-                                </div>
-                            </div>
-                        </Tabs>
                     </div>
                 </div>
+                <Tabs>
+                    <TabList>
+                        {
+                            menuTab.map((item,index) => (
+                                <Tab key={index}>{item.name}</Tab>
+                            ))
+                        }
+                    </TabList>
+                    <div className="themesflat-container content-tab">
+                        <div className="content-inner">
+                            <div className="row">
+                            {
+                                panelTab.map((item, index) => (
+
+                                    (index != 2)?(<TabPanel key={index}>
+                                        <div className="col-md-12 wrap-inner load-more voomio-pb-5 voomio-flex"> 
+                                            <div className="flex">
+                                                <IconButton color="primary" component="label" size="large">
+                                                    <TuneIcon fontSize='inherit'/>
+                                                </IconButton>
+                                                <div className="input-group flex-nowrap profile-search">
+            
+                                                    <input type="text" class="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
+                                                    <SearchIcon className='profile-search-icon'/>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="seclect-box style3 voomio-pl-1 ">
+                                                    <div id="artworks" className="dropdown">
+                                                        <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
+                                                        <ul className='voomio-zindex'>
+                                                            <li><span>Past 24 hours</span></li>
+                                                            <li><span>Past 24 hours</span></li>
+                                                            <li><span>Past 24 hours</span></li>
+                                                        </ul>
+                                                    </div>  
+                                                </div>   
+                                            </div>
+                                        </div>
+                                        {
+                                            item.dataContent.slice(0,visible).map((data,index) => (
+                                                <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
+                                                    <ProfileCard 
+                                                        mainimg={data.img} 
+                                                        title={data.title} 
+                                                        checkicon={check_icon} 
+                                                        etheriumicon={etherium_icon} 
+                                                        price={data.price}
+                                                    />
+                                                </div>
+                                            ))
+                                        }
+                                        {
+                                            visible < item.dataContent.length && 
+                                            <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
+                                                <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
+                                            </div>
+                                        }
+                                        {
+                                            index == 1 &&
+                                            <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
+                                                <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>+ Create New</span></Link>
+                                            </div>
+                                        }
+                                    </TabPanel>):(
+                                        <TabPanel key={index}>
+                                        {
+                                            <div>Activity</div>
+                                        }
+                                    </TabPanel>
+                                    )
+                                ))
+                            }
+                            </div>
+                        </div>
+                    </div>
+                </Tabs>
             </section>
             <CardModal
                 show={modalShow}

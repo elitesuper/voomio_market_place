@@ -177,7 +177,7 @@ const Ranking = () => {
                         </div>
                         <div className='col-md-12 voomio-flex voomio-just-center voomio-pb-3'>
                         <div>
-                                <div className="seclect-box style3 voomio-pl-1 ">
+                            <div className="seclect-box style3 voomio-pl-1 ">
                                 <div id="artworks" className="dropdown">
                                     <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
                                     <ul className='voomio-zindex'>

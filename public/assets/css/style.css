@@ -1781,7 +1781,7 @@ header{
         height: 100vh;
         position        : absolute;
         top             : 0;
-        left            : 0;
+        left            : -10px;
         z-index         : 999999;
         background-color: #fff;
         box-shadow: 0px 3px 16px rgb(47 83 109 / 12%);
@@ -3489,11 +3489,14 @@ header{
 .voomio-pb-10{
     padding-bottom: 10rem;
 }
+.voomio-pb-5{
+    padding-bottom: 5rem;
+}
 .voomio-pd-none{
     padding: 0px !important;
 }
 .voomio-flex{
-    display: flex;
+    display: flex !important;
 }
 .voomio-just-left{
     justify-content: left !important;
@@ -3822,4 +3825,27 @@ header{
 
 .react-tabs__tab-list{
     padding: 0 2% 0 4.5% !important;
+}
+
+.profile-search{
+    position: relative;
+    width: 35rem;
+}
+.profile-search input{
+    padding: 0.5rem 4rem 0.5rem;
+    border: solid 1px #6549F6;
+    font-size: small;
+    border-radius: 3rem !important;
+    /* width: 10rem !important; */
+}
+.profile-search input::placeholder{
+    font-size: small;
+}
+.profile-search-icon{
+    position: absolute;
+    font-size: 2rem !important;
+    left: 10px;
+    top: 10px;
+    z-index: 1000;
+    color: #6549F6;
 }

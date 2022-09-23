@@ -1,0 +1,37 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+// @import "bootstrap/scss/root";
+// @import "bootstrap/scss/reboot";
+// @import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+// @import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+.customrow {
+
+    // @include row-cols(5);
+
+    @include media-breakpoint-up(xs){
+        @include row-cols(1);
+    }
+
+    @include media-breakpoint-up(sm){
+        @include row-cols(2);
+    }
+
+    @include media-breakpoint-up(md){
+        @include row-cols(3);
+    }
+
+    @include media-breakpoint-up(xl){
+        @include row-cols(5);
+    }
+}
