@@ -7,6 +7,28 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
+
+
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import SendIcon from '@mui/icons-material/Send';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+
+
+import ViewCompactIcon from '@mui/icons-material/ViewCompact';
+import GridViewIcon from '@mui/icons-material/GridView';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+
+
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
@@ -470,6 +492,33 @@ const Profile = () => {
 
     const [modalShow, setModalShow] = useState(false);
 
+    const [alignment, setAlignment] = React.useState(true);
+
+    const handleChange = (event, newAlignment) => {
+      setAlignment(newAlignment);
+    };
+
+      const [open, setOpen] = React.useState(true);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+    const children = [
+        <ToggleButton value={true} aria-label="left aligned">
+            <GridViewIcon />
+        </ToggleButton>,
+        <ToggleButton value={false} aria-label="right aligned">
+            <ViewCompactIcon />
+        </ToggleButton>
+    ];
+
+    const control = {
+        value: alignment,
+        onChange: handleChange,
+        exclusive: true,
+    };
+    
     return (
         <div className='authors-2'>
             <Header />
@@ -527,21 +576,19 @@ const Profile = () => {
                             <div className="row">
                             {
                                 panelTab.map((item, index) => (
-
                                     (index != 2)?(<TabPanel key={index}>
-                                        <div className="col-md-12 wrap-inner load-more voomio-pb-5 voomio-flex"> 
+                                        <div className="col-md-12 wrap-inner load-more voomio-pb-5 voomio-flex voomio-just-between"> 
                                             <div className="flex">
                                                 <IconButton color="primary" component="label" size="large">
                                                     <TuneIcon fontSize='inherit'/>
                                                 </IconButton>
                                                 <div className="input-group flex-nowrap profile-search">
-            
                                                     <input type="text" class="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
                                                     <SearchIcon className='profile-search-icon'/>
                                                 </div>
                                             </div>
-                                            <div>
-                                                <div className="seclect-box style3 voomio-pl-1 ">
+                                            <div className='flex'>
+                                                <div className="seclect-box style3 voomio-pl-1 voomio-mta">
                                                     <div id="artworks" className="dropdown">
                                                         <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
                                                         <ul className='voomio-zindex'>
@@ -549,11 +596,17 @@ const Profile = () => {
                                                             <li><span>Past 24 hours</span></li>
                                                             <li><span>Past 24 hours</span></li>
                                                         </ul>
-                                                    </div>  
-                                                </div>   
+                                                    </div>
+                                                </div>
+                                                <div className='voomio-mta'>
+                                                <ToggleButtonGroup size="large" {...control} aria-label="Align">
+                                                    {children}
+                                                </ToggleButtonGroup>
+                                                </div>
                                             </div>
                                         </div>
                                         {
+                                            (alignment)?
                                             item.dataContent.slice(0,visible).map((data,index) => (
                                                 <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
                                                     <ProfileCard 
@@ -562,9 +615,24 @@ const Profile = () => {
                                                         checkicon={check_icon} 
                                                         etheriumicon={etherium_icon} 
                                                         price={data.price}
+                                                        type={alignment}
                                                     />
                                                 </div>
-                                            ))
+                                            )):(
+                                                <div className='row voomio-5-col'>
+                                                {item.dataContent.slice(0,visible).map((data,index) => (
+                                                    <div key={index} className="col">
+                                                        <ProfileCard 
+                                                            mainimg={data.img} 
+                                                            title={data.title} 
+                                                            checkicon={check_icon} 
+                                                            etheriumicon={etherium_icon} 
+                                                            price={data.price}
+                                                        />
+                                                    </div>
+                                                ))}
+                                                </div>
+                                            )
                                         }
                                         {
                                             visible < item.dataContent.length && 
@@ -581,7 +649,50 @@ const Profile = () => {
                                     </TabPanel>):(
                                         <TabPanel key={index}>
                                         {
-                                            <div>Activity</div>
+                                            <div className="row w-100">
+                                                <div className='col-xl-3 col-md-3 col-sm-12 v-sidebar'>
+                                                <List
+                                                sx={{ width: '100%', bgcolor: 'background.paper' }}
+                                                component="nav"
+                                                aria-labelledby="nested-list-subheader"
+                                                subheader={
+                                                    <ListSubheader component="div" id="nested-list-subheader">
+                                                    Nested List Items
+                                                    </ListSubheader>
+                                                }
+                                                >
+                                                <ListItemButton>
+                                                    <ListItemIcon>
+                                                    <SendIcon />
+                                                    </ListItemIcon>
+                                                    <ListItemText primary="Sent mail" />
+                                                </ListItemButton>
+                                                <ListItemButton>
+                                                    <ListItemIcon>
+                                                    <DraftsIcon />
+                                                    </ListItemIcon>
+                                                    <ListItemText primary="Drafts" />
+                                                </ListItemButton>
+                                                <ListItemButton onClick={handleClick}>
+                                                    <ListItemIcon>
+                                                    <InboxIcon />
+                                                    </ListItemIcon>
+                                                    <ListItemText primary="Inbox" />
+                                                    {open ? <ExpandLess /> : <ExpandMore />}
+                                                </ListItemButton>
+                                                <Collapse in={open} timeout="auto" unmountOnExit>
+                                                    <List component="div" disablePadding>
+                                                    <ListItemButton sx={{ pl: 4 }}>
+                                                        <ListItemIcon>
+                                                        <StarBorder />
+                                                        </ListItemIcon>
+                                                        <ListItemText primary="Starred" />
+                                                    </ListItemButton>
+                                                    </List>
+                                                </Collapse>
+                                                </List>
+                                                </div>
+                                            </div>
                                         }
                                     </TabPanel>
                                     )

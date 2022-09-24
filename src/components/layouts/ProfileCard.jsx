@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import Faviconimg from '../../assets/images/icon/Favicon.png'
 
 export function ProfileCard(props){
 
@@ -8,6 +8,11 @@ export function ProfileCard(props){
         <div className="sc-card-product collection-card">
             <div className="card-media">
                 <Link to="/item-details-01"><img src={props.mainimg} alt="axies" /></Link>
+                {!props.type&&
+                <div className="faviconmark">
+                    <img src={Faviconimg} alt="Faviconimg"></img>
+                </div>
+                }
             </div>
             <div className="card-title voomio-pl-1 voomio-just-left">
                 <h5>{props.title}</h5>

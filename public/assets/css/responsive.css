@@ -158,9 +158,9 @@
   .authors-2 .react-tabs__tab-list {
     padding: 0 2% 0 4.5%;
   }
-  .tab-authors .author-profile {
+  /* .tab-authors .author-profile {
     padding-bottom: 6.5%;
-  }
+  } */
 }
 @media only screen and (max-width: 1366px) {
   .swiper-button-next,
@@ -899,6 +899,9 @@
 }
 .home-8 .side-bar.item {
   height: 100%;
+}
+.v-sidebar{
+  width: 100% !important;
 }
 
   .right .mainslider.home .wrap-heading .content {

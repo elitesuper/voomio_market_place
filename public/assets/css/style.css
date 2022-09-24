@@ -1968,6 +1968,9 @@ header{
     display: none;
 }
 @media only screen and (max-width: 767px) {
+    .profile-search{
+        display: none;
+    }
     .info-panel{
         position: inherit;
     }
@@ -3489,6 +3492,9 @@ header{
 .voomio-pb-10{
     padding-bottom: 10rem;
 }
+.voomio-pt-20{
+    padding-top: 20px;
+}
 .voomio-pb-5{
     padding-bottom: 5rem;
 }
@@ -3605,7 +3611,7 @@ header{
     margin:auto !important;
 }
 .voomio-mta{
-    margin: auto 0;
+    margin: auto 0 !important;
 }
 .mode_switcher{
     top: 100px !important;
@@ -3845,7 +3851,20 @@ header{
     position: absolute;
     font-size: 2rem !important;
     left: 10px;
-    top: 10px;
+    top: 15px;
     z-index: 1000;
     color: #6549F6;
+}
+.faviconmark{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    border-bottom-right-radius: 30%;
+}
+.faviconmark img{
+    position: relative;
+    padding: 10px;
 }

@@ -213,7 +213,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='row'>
+                    <div className='row text-center voomio-pt-20'>
                         <h6 className='voomio-end'>© 2022 Voomio, LLC. All rights reserved.</h6>
                     </div>
                 </div>
