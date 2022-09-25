@@ -3926,3 +3926,12 @@ header{
     border-radius: 8px !important;
     margin-left: 1rem !important;
 }
+.activity-tab{
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tab-container ul{
+    margin: auto;
+    max-width: 1920px;
+}

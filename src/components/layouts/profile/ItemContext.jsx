@@ -79,7 +79,6 @@ const ItemContext = (props) => {
                         <div className='filter-tag voomio-mta'><span>Transfers</span></div>
                     </div>
                 </div>
-                <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="table-ranking">
@@ -155,7 +154,6 @@ const ItemContext = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
         </div>
     );

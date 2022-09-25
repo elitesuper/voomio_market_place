@@ -552,6 +552,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <Tabs>
+                <div className='tab-container'>
                     <TabList>
                         {
                             menuTab.map((item,index) => (
@@ -559,6 +560,7 @@ const Profile = () => {
                             ))
                         }
                     </TabList>
+                </div>
                     <div className="content-tab">
                         {
                             panelTab.map((item, index) => (
@@ -641,9 +643,9 @@ const Profile = () => {
                                 </div>
                                 </div>
                                 ):(
-                                    <TabPanel key={index}>
+                                    <TabPanel key={index} className="voomio-just-center">
                                     {
-                                        <div className="row w-100">
+                                        <div className="row w-100 activity-tab">
                                             <div className='col-xl-2 col-md-3 col-sm-12 v-sidebar'>
                                                 <SideBar />
                                             </div>

@@ -309,7 +309,7 @@ const Header = (props) => {
                                         </div>
                                     </div>
                                     <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <button onClick={()=>{onConnect()}} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                                        <button onClick={onConnect} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
                                         </span></button>
                                     </div>
 

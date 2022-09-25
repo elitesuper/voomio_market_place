@@ -343,7 +343,7 @@ const HeaderStyle2 = (props) => {
                                 <div className="flat-search-btn flex">
                                     {
                                         !accountid ? <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <button onClick={()=>{onConnect()}} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                                        <button onClick={()=>onConnect()} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
                                         </span></button>
                                         </div> : <div className="sc-btn-top mg-r-12" id="site-header">
                                         <button onClick={()=> setModalShow(true)} className="sc-button header-slider style style-1 fl-button pri-1"><span>{accountid?.substr(0, 6) + '....' + accountid?.substr(accountid?.length - 4, accountid?.length)}
