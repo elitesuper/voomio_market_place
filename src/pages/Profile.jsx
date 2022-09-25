@@ -7,22 +7,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
-
-
-import ListSubheader from '@mui/material/ListSubheader';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
-
-
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ToggleButton from '@mui/material/ToggleButton';
@@ -33,6 +17,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
 import { ProfileCard } from '../components/layouts/ProfileCard';
+import SideBar from '../components/layouts/profile/SideBar';
 
 import '../scss/style.scss'
 
@@ -53,6 +38,7 @@ import img7 from '../assets/images/avatar/character3.png'
 import img8 from '../assets/images/avatar/character4.png'
 import etherium_icon from '../assets/images/icon/etherium_icon.png'
 import check_icon from '../assets/images/icon/check_icon.png' 
+import ItemContext from '../components/layouts/profile/ItemContext';
 
 const Profile = () => {
     const [menuTab] = useState(
@@ -498,12 +484,6 @@ const Profile = () => {
       setAlignment(newAlignment);
     };
 
-      const [open, setOpen] = React.useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
     const children = [
         <ToggleButton value={true} aria-label="left aligned">
             <GridViewIcon />
@@ -571,135 +551,103 @@ const Profile = () => {
                             ))
                         }
                     </TabList>
-                    <div className="themesflat-container content-tab">
-                        <div className="content-inner">
-                            <div className="row">
-                            {
-                                panelTab.map((item, index) => (
-                                    (index != 2)?(<TabPanel key={index}>
-                                        <div className="col-md-12 wrap-inner load-more voomio-pb-5 voomio-flex voomio-just-between"> 
-                                            <div className="flex">
-                                                <IconButton color="primary" component="label" size="large">
-                                                    <TuneIcon fontSize='inherit'/>
-                                                </IconButton>
-                                                <div className="input-group flex-nowrap profile-search">
-                                                    <input type="text" class="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
-                                                    <SearchIcon className='profile-search-icon'/>
-                                                </div>
-                                            </div>
-                                            <div className='flex'>
-                                                <div className="seclect-box style3 voomio-pl-1 voomio-mta">
-                                                    <div id="artworks" className="dropdown">
-                                                        <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
-                                                        <ul className='voomio-zindex'>
-                                                            <li><span>Past 24 hours</span></li>
-                                                            <li><span>Past 24 hours</span></li>
-                                                            <li><span>Past 24 hours</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className='voomio-mta'>
-                                                <ToggleButtonGroup size="large" {...control} aria-label="Align">
-                                                    {children}
-                                                </ToggleButtonGroup>
-                                                </div>
+                    <div className="content-tab">
+                        {
+                            panelTab.map((item, index) => (
+                                (index != 2)?(
+                                <div className='themesflat-container'>
+                                <div className='content-inner'>
+                                    <div className='row'>
+                                    <TabPanel key={index}>
+                                    <div className="col-md-12 wrap-inner load-more voomio-pb-5 voomio-flex voomio-just-between"> 
+                                        <div className="flex">
+                                            <IconButton color="primary" component="label" size="large">
+                                                <TuneIcon fontSize='inherit'/>
+                                            </IconButton>
+                                            <div className="input-group flex-nowrap profile-search">
+                                                <input type="text" class="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
+                                                <SearchIcon className='profile-search-icon'/>
                                             </div>
                                         </div>
-                                        {
-                                            (alignment)?
-                                            item.dataContent.slice(0,visible).map((data,index) => (
-                                                <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
+                                        <div className='flex'>
+                                            <div className="seclect-box style3 voomio-pl-1 voomio-mta">
+                                                <div id="artworks" className="dropdown">
+                                                    <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
+                                                    <ul className='voomio-zindex'>
+                                                        <li><span>Past 24 hours</span></li>
+                                                        <li><span>Past 24 hours</span></li>
+                                                        <li><span>Past 24 hours</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div className='voomio-mta'>
+                                            <ToggleButtonGroup size="large" {...control} aria-label="Align">
+                                                {children}
+                                            </ToggleButtonGroup>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {
+                                        (alignment)?
+                                        item.dataContent.slice(0,visible).map((data,index) => (
+                                            <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
+                                                <ProfileCard 
+                                                    mainimg={data.img} 
+                                                    title={data.title} 
+                                                    checkicon={check_icon} 
+                                                    etheriumicon={etherium_icon} 
+                                                    price={data.price}
+                                                    type={alignment}
+                                                />
+                                            </div>
+                                        )):(
+                                            <div className='row voomio-5-col'>
+                                            {item.dataContent.slice(0,visible).map((data,index) => (
+                                                <div key={index} className="col">
                                                     <ProfileCard 
                                                         mainimg={data.img} 
                                                         title={data.title} 
                                                         checkicon={check_icon} 
                                                         etheriumicon={etherium_icon} 
                                                         price={data.price}
-                                                        type={alignment}
                                                     />
                                                 </div>
-                                            )):(
-                                                <div className='row voomio-5-col'>
-                                                {item.dataContent.slice(0,visible).map((data,index) => (
-                                                    <div key={index} className="col">
-                                                        <ProfileCard 
-                                                            mainimg={data.img} 
-                                                            title={data.title} 
-                                                            checkicon={check_icon} 
-                                                            etheriumicon={etherium_icon} 
-                                                            price={data.price}
-                                                        />
-                                                    </div>
-                                                ))}
-                                                </div>
-                                            )
-                                        }
-                                        {
-                                            visible < item.dataContent.length && 
-                                            <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
-                                                <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
+                                            ))}
                                             </div>
-                                        }
-                                        {
-                                            index == 1 &&
-                                            <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
-                                                <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>+ Create New</span></Link>
+                                        )
+                                    }
+                                    {
+                                        visible < item.dataContent.length && 
+                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
+                                            <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
+                                        </div>
+                                    }
+                                    {
+                                        index == 1 &&
+                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
+                                            <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>+ Create New</span></Link>
+                                        </div>
+                                    }
+                                </TabPanel>
+                                </div>
+                                </div>
+                                </div>
+                                ):(
+                                    <TabPanel key={index}>
+                                    {
+                                        <div className="row w-100">
+                                            <div className='col-xl-2 col-md-3 col-sm-12 v-sidebar'>
+                                                <SideBar />
                                             </div>
-                                        }
-                                    </TabPanel>):(
-                                        <TabPanel key={index}>
-                                        {
-                                            <div className="row w-100">
-                                                <div className='col-xl-3 col-md-3 col-sm-12 v-sidebar'>
-                                                <List
-                                                sx={{ width: '100%', bgcolor: 'background.paper' }}
-                                                component="nav"
-                                                aria-labelledby="nested-list-subheader"
-                                                subheader={
-                                                    <ListSubheader component="div" id="nested-list-subheader">
-                                                    Nested List Items
-                                                    </ListSubheader>
-                                                }
-                                                >
-                                                <ListItemButton>
-                                                    <ListItemIcon>
-                                                    <SendIcon />
-                                                    </ListItemIcon>
-                                                    <ListItemText primary="Sent mail" />
-                                                </ListItemButton>
-                                                <ListItemButton>
-                                                    <ListItemIcon>
-                                                    <DraftsIcon />
-                                                    </ListItemIcon>
-                                                    <ListItemText primary="Drafts" />
-                                                </ListItemButton>
-                                                <ListItemButton onClick={handleClick}>
-                                                    <ListItemIcon>
-                                                    <InboxIcon />
-                                                    </ListItemIcon>
-                                                    <ListItemText primary="Inbox" />
-                                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                                </ListItemButton>
-                                                <Collapse in={open} timeout="auto" unmountOnExit>
-                                                    <List component="div" disablePadding>
-                                                    <ListItemButton sx={{ pl: 4 }}>
-                                                        <ListItemIcon>
-                                                        <StarBorder />
-                                                        </ListItemIcon>
-                                                        <ListItemText primary="Starred" />
-                                                    </ListItemButton>
-                                                    </List>
-                                                </Collapse>
-                                                </List>
-                                                </div>
+                                            <div className='col-xl-10 col-md-9 col-sm-12'>
+                                                <ItemContext/>
                                             </div>
-                                        }
-                                    </TabPanel>
-                                    )
-                                ))
-                            }
-                            </div>
-                        </div>
+                                        </div>
+                                    }
+                                </TabPanel>
+                                )
+                            ))
+                        }
                     </div>
                 </Tabs>
             </section>

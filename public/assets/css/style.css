@@ -3868,3 +3868,26 @@ header{
     position: relative;
     padding: 10px;
 }
+.MuiListItemText-root span{
+    font-size: 1.5rem;
+}
+.header-filter span{
+    font-weight: 600;
+}
+
+.profile-item-text span, .profile-item-text p{
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+}
+
+.spec-color-1{
+    color: #6549F6 !important;
+}
+
+.spec-color-2{
+    color: #1465DD !important;
+}
+
+.spec-color-3{
+    color: #909090 !important;
+}
