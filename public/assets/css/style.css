@@ -997,6 +997,10 @@ label.error { color: red; }
 .pad-t-4 {
     padding-top: 4px;
 }
+.pad-t-8 {
+    padding-top: 8px;
+}
+
 
 .pad-b-60 {
     padding-bottom: 60px !important;
@@ -3569,7 +3573,7 @@ header{
     background: transparent !important;
 }
 .creator-btn{
-    width: 50%;
+    width: 50% !important;
     margin: auto;
     margin-bottom: 1rem;
     padding: 0.5rem 1rem !important;
@@ -3890,4 +3894,35 @@ header{
 
 .spec-color-3{
     color: #909090 !important;
+}
+
+.itemcontext-header{
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #E6E6E6;
+    border-radius: 0% !important;
+    margin-bottom: 2rem;
+}
+.mb-0{
+    margin-bottom: 0px !important;
+}
+.filter-view{
+    height: 80px;
+}
+.profile-list-item{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    box-shadow: none !important;
+}
+.fl-item2:nth-child(2n-1) .profile-list-item{
+    background-color: #F0F0F0 !important;
+}
+
+.filter-tag{
+    font-size: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #6549F6;
+    color: white;
+    border-radius: 8px !important;
+    margin-left: 1rem !important;
 }

@@ -65,8 +65,9 @@ const SideBar = () => {
     };
 
 
-    return(                                                
-    <List
+    return(                                 
+        <div className='tf-section'>
+               <List
         sx={{ width: '100%', bgcolor: 'background.paper' }}
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -162,6 +163,7 @@ const SideBar = () => {
             <Divider />
         </Collapse>
     </List>
+        </div>               
     )
 }
 

@@ -13,7 +13,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 
-import Header from '../components/header/Header';
+import HeaderStyle2 from '../components/header/HeaderStyle2';
 import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
 import { ProfileCard } from '../components/layouts/ProfileCard';
@@ -41,6 +41,14 @@ import check_icon from '../assets/images/icon/check_icon.png'
 import ItemContext from '../components/layouts/profile/ItemContext';
 
 const Profile = () => {
+
+    const [currentAccount, setCurrentAccount] = useState(null);    
+    const setAccount = (_account) => {
+        setCurrentAccount(_account);
+    }
+
+    const [web3Api, setWeb3Api] = useState(null);   
+
     const [menuTab] = useState(
         [
             {
@@ -501,7 +509,7 @@ const Profile = () => {
     
     return (
         <div className='authors-2'>
-            <Header />
+            <HeaderStyle2 setAccount={setAccount} setWeb3Api={setWeb3Api} />
             <section className="flat-title-page inner profile-inner">
                 <div className="overlay"></div>                   
             </section>
@@ -559,7 +567,7 @@ const Profile = () => {
                                 <div className='content-inner'>
                                     <div className='row'>
                                     <TabPanel key={index}>
-                                    <div className="col-md-12 wrap-inner load-more voomio-pb-5 voomio-flex voomio-just-between"> 
+                                    <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-5 voomio-flex voomio-just-between"> 
                                         <div className="flex">
                                             <IconButton color="primary" component="label" size="large">
                                                 <TuneIcon fontSize='inherit'/>
@@ -640,7 +648,7 @@ const Profile = () => {
                                                 <SideBar />
                                             </div>
                                             <div className='col-xl-10 col-md-9 col-sm-12'>
-                                                <ItemContext/>
+                                                <ItemContext checkicon={check_icon} etheriumicon={etherium_icon} />
                                             </div>
                                         </div>
                                     }
