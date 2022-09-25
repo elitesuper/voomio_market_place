@@ -13,8 +13,6 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 
-import HeaderStyle2 from '../components/header/HeaderStyle2';
-import Footer from '../components/footer/Footer';
 import CardModal from '../components/layouts/CardModal';
 import { ProfileCard } from '../components/layouts/ProfileCard';
 import SideBar from '../components/layouts/profile/SideBar';
@@ -41,13 +39,6 @@ import check_icon from '../assets/images/icon/check_icon.png'
 import ItemContext from '../components/layouts/profile/ItemContext';
 
 const Profile = () => {
-
-    const [currentAccount, setCurrentAccount] = useState(null);    
-    const setAccount = (_account) => {
-        setCurrentAccount(_account);
-    }
-
-    const [web3Api, setWeb3Api] = useState(null);   
 
     const [menuTab] = useState(
         [
@@ -509,7 +500,6 @@ const Profile = () => {
     
     return (
         <div className='authors-2'>
-            <HeaderStyle2 setAccount={setAccount} setWeb3Api={setWeb3Api} />
             <section className="flat-title-page inner profile-inner">
                 <div className="overlay"></div>                   
             </section>
@@ -665,7 +655,6 @@ const Profile = () => {
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
-            <Footer />
         </div>
     );
 }

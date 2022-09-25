@@ -3502,6 +3502,9 @@ header{
 .voomio-pb-5{
     padding-bottom: 5rem;
 }
+.voomio-pb-1{
+    padding-bottom: 1rem;
+}
 .voomio-pd-none{
     padding: 0px !important;
 }
@@ -3587,6 +3590,9 @@ header{
 }
 .voomio-pd-t-4{
     padding-top: 4rem;
+}
+.voomio-py-1{
+    padding: 1rem 0;
 }
 .voomio-select{
     color: #6549F6 !important;
@@ -3934,4 +3940,25 @@ header{
 .tab-container ul{
     margin: auto;
     max-width: 1920px;
+}
+.detail-card{
+    padding: 0px;
+    margin: 2rem;
+}
+.detail-card-title{
+    padding-left: 1rem;
+    display: block !important;
+    width: 50%;
+}
+.verified-icon{
+    font-size: 2rem !important;
+    color: #6549F6;
+}
+.detail-card-meta{
+    align-items: flex-start !important;
+}
+.detail-meta-icon{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5rem;
 }

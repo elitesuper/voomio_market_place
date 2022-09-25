@@ -1,11 +1,22 @@
 import './App.css';
+import React, {useState} from 'react';
 import {   Routes , Route } from 'react-router-dom';
 import routes from './pages/index'
+import Footer from './components/footer/Footer';
+import HeaderStyle2 from './components/header/HeaderStyle2';
 
 
 function App() {
+    const [currentAccount, setCurrentAccount] = useState(null);    
+    const setAccount = (_account) => {
+        setCurrentAccount(_account);
+    }
+
+    const [web3Api, setWeb3Api] = useState(null);   
 
     return (
+        <>
+        <HeaderStyle2 setAccount={setAccount} setWeb3Api={setWeb3Api} />
         <Routes >
             {
             routes.map((data,index) => (
@@ -13,6 +24,8 @@ function App() {
             ))
             }
       </Routes>
+      <Footer/>
+      </>
     );
 }
 
