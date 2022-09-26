@@ -77,7 +77,7 @@ const Trending = props => {
                                                                         <div className="author">
                                                                             <div className="info voomio-flex">
                                                                                 <span>Vol</span>
-                                                                                <h6><img src={item.etherium_icon} alt={item.etherium_icon}></img>{item.nameAuthor}</h6>
+                                                                                <h6><img src={item.etherium_icon} alt={item.etherium_icon}></img>{item.vol}</h6>
                                                                             </div>
                                                                         </div>
                                                                         <div className="info voomio-flex">

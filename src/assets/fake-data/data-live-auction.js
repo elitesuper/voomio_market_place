@@ -30,6 +30,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "100",
+        vol:"657.2k",
         imgCollection: imgCollection1,
         nameCollection: "Colorful Abstract"
     },
@@ -44,6 +45,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "220",
+        vol:"657.2k",
         imgCollection: imgCollection2,
         nameCollection: "Colorful Abstract"
     },
@@ -58,6 +60,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "90",
+        vol:"657.2k",
         imgCollection: imgCollection3,
         nameCollection: "Colorful Abstract"
     },
@@ -72,6 +75,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "145",
+        vol:"657.2k",
         imgCollection: imgCollection1,
         nameCollection: "Colorful Abstract"
     },
@@ -86,6 +90,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "100",
+        vol:"657.2k",
         imgCollection: imgCollection2,
         nameCollection: "Colorful Abstract"
     },
@@ -100,6 +105,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "220",
+        vol:"657.2k",
         imgCollection: imgCollection3,
         nameCollection: "Colorful Abstract"
     },
@@ -114,6 +120,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "90",
+        vol:"657.2k",
         imgCollection: imgCollection1,
         nameCollection: "Colorful Abstract"
     },
@@ -128,6 +135,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "100",
+        vol:"657.2k",
         imgCollection: imgCollection1,
         nameCollection: "Colorful Abstract"
     },
@@ -142,6 +150,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "220",
+        vol:"657.2k",
         imgCollection: imgCollection2,
         nameCollection: "Colorful Abstract"
     },
@@ -156,6 +165,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "90",
+        vol:"657.2k",
         imgCollection: imgCollection3,
         nameCollection: "Colorful Abstract"
     },
@@ -170,6 +180,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "145",
+        vol:"657.2k",
         imgCollection: imgCollection1,
         nameCollection: "Colorful Abstract"
     },
@@ -184,6 +195,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "100",
+        vol:"657.2k",
         imgCollection: imgCollection2,
         nameCollection: "Colorful Abstract"
     },
@@ -198,6 +210,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "220",
+        vol:"657.2k",
         imgCollection: imgCollection3,
         nameCollection: "Colorful Abstract"
     },
@@ -212,6 +225,7 @@ const liveAuctionData = [
         price: "4.89 ETH",
         priceChange: "$12.246",
         wishlist: "90",
+        vol:"657.2k",
         imgCollection: imgCollection1,
         nameCollection: "Colorful Abstract"
     }
