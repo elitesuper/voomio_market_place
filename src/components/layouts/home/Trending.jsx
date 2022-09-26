@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import Countdown from "react-countdown";
 import CardModal from '../CardModal';
 
 import 'swiper/swiper.scss';

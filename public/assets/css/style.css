@@ -855,7 +855,7 @@ label.error { color: red; }
 }
 
 .mg-bottom-0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 .mg-t16{
@@ -923,7 +923,7 @@ label.error { color: red; }
 }
 
 .mg-t-15{
-    margin-top: 15px;
+    margin-top: 15px !important;
 }
 
 .mg-t-21{
@@ -3982,9 +3982,38 @@ header{
 }
 .detailcard-1{
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: rebeccapurple;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 0px;
     border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.unit-name{
+    display: flex;
+    align-items: end;
+    margin-bottom: 0.5rem !important;
+    margin-left: 1rem !important;
+}
+.detail-card-1{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.trait-card{
+    box-shadow: none !important;
+    border:solid 2px #7B61FF !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.about-detail-name{
+    display: flex;
+    align-items: end;
+    margin-bottom: 0px !important;
+    margin-left: 1rem !important;
+}
+.detail-about-card{
+    padding: 5px 5px;
+}
+.about-verified{
+    margin-bottom: 0.3rem;
 }

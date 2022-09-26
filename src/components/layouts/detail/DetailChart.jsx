@@ -48,7 +48,7 @@ function DetailChart(){
                         </ul>
                     </div>
                     <div>
-                        <h5>All time avg. price</h5>
+                        <h6>All time avg. price</h6>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,8 @@ import check_icon from '../assets/images/icon/check_icon.png'
 import { DetailCard } from '../components/layouts/ProfileCard';
 import DetailChart from '../components/layouts/detail/DetailChart';
 import Widget1 from '../components/layouts/detail/Widget1';
+import Traits from '../components/layouts/detail/Traits';
+import DetailAbout from '../components/layouts/detail/DetailAbout';
 
 function Detail(){
     return(
@@ -24,6 +26,8 @@ function Detail(){
                                 view="7.3k"
                                 favor="46"
                             />
+                            <Traits/>
+                            <DetailAbout/>
                         </div>
                         <div className='col-sm-12 col-md-7 voomio-pl-1'>
                             <div className='col-sm-12 col-md-12'>
