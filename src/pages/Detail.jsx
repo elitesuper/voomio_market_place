@@ -11,6 +11,7 @@ import DetailAbout from '../components/layouts/detail/DetailAbout';
 import Widget2 from '../components/layouts/detail/Widget2';
 import Listings from '../components/layouts/detail/Listings';
 import Offers from '../components/layouts/detail/Offers';
+import ItemActivity from '../components/layouts/detail/ItemActivity';
 
 function Detail(){
     return(
@@ -46,6 +47,9 @@ function Detail(){
                             <div className='col-sm-12 col-md-12'>
                                 <Offers></Offers>
                             </div>
+                        </div>
+                        <div className='col-12'>
+                            <ItemActivity/>
                         </div>
                     </div>
                 </section>

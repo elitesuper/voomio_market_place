@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import ViewListIcon from '@mui/icons-material/ViewList';
-import Button from '@mui/material/Button';
 import ethereum_icon from '../../../assets/images/icon/ethereum.svg';
 import { Link } from 'react-router-dom';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import Collapse from '@mui/material/Collapse';
 
 
 function Offers(){
@@ -65,13 +67,21 @@ function Offers(){
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
     }
+
+    const [open, setOpen] = useState(true);
+
+    const handleClick = () => () => {
+        setOpen(!open)
+    };
     
     return(<>
     <div className='w-100 mg-t-20'>
-        <div className='chart-header flex mg-bt-10'>
+        <div className='chart-header flex mg-bt-10' onClick={handleClick()}>
             <ViewListIcon className="detail-meta-icon" style={{fontSize:'20px'}}></ViewListIcon>
             <h5>Offers</h5>
+            {open ? <ExpandLess className="detail-meta-icon" style={{fontSize:'20px'}}/> : <ExpandMore className="detail-meta-icon" style={{fontSize:'20px'}}/>}
         </div>
+        <Collapse className="w-100" in={open} timeout="auto" unmountOnExit>
         <div className='chart-panel row detail-about-card voomio-just-center'>
             <div className="table-ranking">
                 <div className="item flex itemcontext-header">
@@ -129,6 +139,7 @@ function Offers(){
                 }
             </div>
         </div>
+        </Collapse>
     </div>
     </>)
 }

@@ -1085,7 +1085,7 @@ label.error { color: red; }
 }
 
 .mg-r-8 {
-    margin-right: 10px;
+    margin-right: 10px !important;
 }
 
 .mg-t-11 {
@@ -1768,6 +1768,9 @@ header{
     }
     .info-panel{
         right: 18rem;
+    }
+    .detail-header{
+        display: block;
     }
 }
 
