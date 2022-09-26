@@ -8,6 +8,9 @@ import DetailChart from '../components/layouts/detail/DetailChart';
 import Widget1 from '../components/layouts/detail/Widget1';
 import Traits from '../components/layouts/detail/Traits';
 import DetailAbout from '../components/layouts/detail/DetailAbout';
+import Widget2 from '../components/layouts/detail/Widget2';
+import Listings from '../components/layouts/detail/Listings';
+import Offers from '../components/layouts/detail/Offers';
 
 function Detail(){
     return(
@@ -28,6 +31,7 @@ function Detail(){
                             />
                             <Traits/>
                             <DetailAbout/>
+                            <Widget2/>
                         </div>
                         <div className='col-sm-12 col-md-7 voomio-pl-1'>
                             <div className='col-sm-12 col-md-12'>
@@ -35,6 +39,12 @@ function Detail(){
                             </div>
                             <div className='col-sm-12 col-md-12'>
                                 <Widget1 />
+                            </div>
+                            <div className='col-sm-12 col-md-12'>
+                                <Listings/>
+                            </div>
+                            <div className='col-sm-12 col-md-12'>
+                                <Offers></Offers>
                             </div>
                         </div>
                     </div>

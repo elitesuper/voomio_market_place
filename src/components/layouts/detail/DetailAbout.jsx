@@ -37,8 +37,8 @@ function DetailAbout(){
     ]
 
     return(<>
-    <div className='w-100 mg-t-15'>
-        <div className='chart-header flex'>
+    <div className='w-100 mg-t-20'>
+        <div className='chart-header flex mg-bt-10'>
             <LabelOutlinedIcon className="detail-meta-icon" style={{fontSize:'20px'}}></LabelOutlinedIcon>
             <h5>About</h5>
         </div>

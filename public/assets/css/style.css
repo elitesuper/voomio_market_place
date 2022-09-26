@@ -915,7 +915,7 @@ label.error { color: red; }
 }
 
 .mg-t-20{
-    margin-top: 20px;
+    margin-top: 20px !important;
 }
 
 .mg-t-22{
@@ -3977,7 +3977,8 @@ header{
 .chart-panel{
     background-color: #F8F7FD;
     padding: 1rem;
-    margin-top: 1rem;
+    margin: auto !important;
+    margin-top: 1rem !important;
     border-radius: 5px;
 }
 .detailcard-1{
@@ -4012,8 +4013,16 @@ header{
     margin-left: 1rem !important;
 }
 .detail-about-card{
-    padding: 5px 5px;
+    padding: 1rem 1rem;
 }
 .about-verified{
     margin-bottom: 0.3rem;
+}
+.fl-item2 .listing{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.listing-ethereum{
+    width: 1.5rem;
+    height: 1.5rem;
 }

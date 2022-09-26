@@ -37,7 +37,7 @@ function Traits(){
 
     return(<>
     <div className='w-100'>
-        <div className='chart-header flex'>
+        <div className='chart-header flex mg-bt-10'>
             <LabelOutlinedIcon className="detail-meta-icon" style={{fontSize:'20px'}}></LabelOutlinedIcon>
             <h5>Traits</h5>
         </div>
