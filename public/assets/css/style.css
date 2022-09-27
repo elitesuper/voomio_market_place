@@ -3910,6 +3910,12 @@ header{
 .spec-color-3{
     color: #909090 !important;
 }
+.spec-color-4{
+  color: #00A825 !important;
+}
+.spec-color-5{
+  color: #FF0000 !important;
+}
 
 .itemcontext-header{
     background: transparent !important;
@@ -4060,4 +4066,10 @@ header{
   border-left: none;
   border-right: none;
   font-size: 1.5rem;
+}
+.collection-stat-item{
+  box-shadow: none !important;
+}
+.item-header{
+  background-color: #F0F0F0 !important;
 }
