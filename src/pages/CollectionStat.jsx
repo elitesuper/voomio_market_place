@@ -39,7 +39,7 @@ function CollectionStat(){
                      </Box>
                      <div className="flex mg-t-24">
                        <div className="seclect-box style3">
-                           <div id="artworks" className="dropdown mg-r-8">
+                           <div id="artworks" className="dropdown mg-r-8 mg-t-11">
                                <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
                                <ul className='voomio-zindex'>
                                    <li><span>Past 24 hours</span></li>
@@ -47,7 +47,7 @@ function CollectionStat(){
                                    <li><span>Past 24 hours</span></li>
                                </ul>
                            </div>
-                           <div id="artworks" className="dropdown mg-r-8">
+                           <div id="artworks" className="dropdown mg-r-8 mg-t-11">
                                <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
                                <ul className='voomio-zindex'>
                                    <li><span>Past 24 hours</span></li>
@@ -55,8 +55,8 @@ function CollectionStat(){
                                    <li><span>Past 24 hours</span></li>
                                </ul>
                            </div>
-                           <div id="artworks" className="dropdown">
-                               <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
+                           <div id="artworks" className="dropdown mg-t-11">
+                               <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
                                <ul className='voomio-zindex'>
                                    <li><span>Past 24 hours</span></li>
                                    <li><span>Past 24 hours</span></li>
@@ -66,10 +66,10 @@ function CollectionStat(){
                        </div>
                      </div>
                      <TabPanel value="1">
-                      <CollectionStatRanking/>
+                      <CollectionStatRanking value="1"/>
                      </TabPanel>
                      <TabPanel value="2">
-                      <CollectionStatRanking/>
+                      <CollectionStatRanking value="2"/>
                      </TabPanel>
                    </TabContext>
                  </Box>

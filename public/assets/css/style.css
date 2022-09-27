@@ -1081,9 +1081,11 @@ label.error { color: red; }
 }
 
 .mg-l-8 {
-    margin-left: 10px;
+    margin-left: 10px !important;
 }
-
+.mg-l-25 {
+    margin-left: 25px !important;
+}
 .mg-r-8 {
     margin-right: 10px !important;
 }
@@ -4072,4 +4074,8 @@ header{
 }
 .item-header{
   background-color: #F0F0F0 !important;
+}
+.collection-stat-table{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }

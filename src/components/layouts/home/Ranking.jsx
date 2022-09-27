@@ -9,7 +9,7 @@ import img6 from '../../../assets/images/box-item/img2rank.jpg'
 import imga1 from '../../../assets/images/avatar/author_rank.jpg'
 
 import etherium_icon from '../../../assets/images/icon/etherium_icon.png'
-import check_icon from '../../../assets/images/icon/check_icon.png' 
+import check_icon from '../../../assets/images/icon/check_icon.png'
 
 const Ranking = () => {
     const [data] = useState(
@@ -185,8 +185,8 @@ const Ranking = () => {
                                         <li><span>Past 24 hours</span></li>
                                         <li><span>Past 24 hours</span></li>
                                     </ul>
-                                </div>  
-                            </div>                        
+                                </div>
+                            </div>
                             <div className="seclect-box style3 voomio-pl-1 ">
                                 <div id="artworks" className="dropdown">
                                     <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
@@ -195,8 +195,8 @@ const Ranking = () => {
                                         <li><span>All Categories</span></li>
                                         <li><span>All Categories</span></li>
                                     </ul>
-                                </div>  
-                            </div>                        
+                                </div>
+                            </div>
                             <div className="seclect-box style3 voomio-pl-1">
                                 <div id="artworks" className="dropdown">
                                     <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
@@ -205,7 +205,7 @@ const Ranking = () => {
                                         <li><span>All Chains</span></li>
                                         <li><span>All Chains</span></li>
                                     </ul>
-                                </div>  
+                                </div>
                             </div>
                                 </div>
                         </div>
@@ -249,10 +249,10 @@ const Ranking = () => {
                                                     <span>{item.volume}</span>
                                                 </div>
                                                 <div className="column voomio-text-center">
-                                                    <span className='voomio-span-1'>{item.day}</span>
+                                                    <span className='voomio-span-1 spec-color-4'>{item.day}</span>
                                                 </div>
                                                 <div className="column voomio-text-center">
-                                                    <span className='voomio-span-2' >{item.week}</span>
+                                                    <span className='voomio-span-2 spec-color-5' >{item.week}</span>
                                                 </div>
                                                 <div className="column voomio-text-center voomio-text-col1 flex voomio-just-center">
                                                     <div className='nft-icon-margin-auto'><img className='rankingetherium-imgs' src={etherium_icon} alt={etherium_icon}></img></div>
@@ -263,8 +263,8 @@ const Ranking = () => {
                                     ))
                                 }
                                 {
-                                    visible < data.length && 
-                                    <div className="col-md-12 wrap-inner load-more text-center voomio-mt-40 voomio-mb-40"> 
+                                    visible < data.length &&
+                                    <div className="col-md-12 wrap-inner load-more text-center voomio-mt-40 voomio-mb-40">
                                         <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                     </div>
                                 }

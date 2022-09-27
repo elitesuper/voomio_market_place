@@ -1,5 +1,9 @@
 import React , { useState } from 'react';
 import { Link } from 'react-router-dom';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+
 import img1 from '../../assets/images/box-item/img3rank.jpg'
 import img2 from '../../assets/images/box-item/img4rank.jpg'
 import img3 from '../../assets/images/box-item/img5rank.jpg'
@@ -11,12 +15,12 @@ import imga1 from '../../assets/images/avatar/author_rank.jpg'
 import etherium_icon from '../../assets/images/icon/etherium_icon.png'
 import check_icon from '../../assets/images/icon/check_icon.png'
 
-const CollectionStatRanking = () => {
-    const [data] = useState(
+const CollectionStatRanking = (props) => {
+    const data =
         [
             {
                 img: img1,
-                title: "Sample Collection",
+                title: "Sample Collection 1",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -24,11 +28,12 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'1',
                 assets: '23k'
             },
             {
                 img: img2,
-                title: "Sample Collection",
+                title: "Sample Collection 2",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -36,11 +41,13 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
             {
                 img: img3,
-                title: "Sample Collection",
+                title: "Sample Collection 3",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -48,11 +55,13 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
             {
                 img: img4,
-                title: "Sample Collection",
+                title: "Sample Collection 4",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -60,11 +69,12 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'1',
                 assets: '23k'
             },
             {
                 img: img5,
-                title: "Sample Collection",
+                title: "Sample Collection 5",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -72,11 +82,13 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
             {
                 img: img6,
-                title: "Sample Collection",
+                title: "Sample Collection 6",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -84,11 +96,13 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'1',
                 assets: '23k'
+
             },
             {
                 img: img1,
-                title: "Sample Collection",
+                title: "Sample Collection 7",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -96,11 +110,13 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
             {
                 img: img2,
-                title: "Sample Collection",
+                title: "Sample Collection 8",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -108,11 +124,13 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'1',
                 assets: '23k'
+
             },
             {
                 img: img3,
-                title: "Sample Collection",
+                title: "Sample Collection 9",
                 imgAuthor: imga1,
                 nameAuthor: 'SalvadorDali',
                 volume: '134',
@@ -120,7 +138,9 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
             {
                 img: img4,
@@ -132,7 +152,9 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'1',
                 assets: '23k'
+
             },
             {
                 img: img5,
@@ -144,7 +166,9 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
             {
                 img: img6,
@@ -156,49 +180,59 @@ const CollectionStatRanking = () => {
                 week: '-564%',
                 price: '134',
                 owners: '3.3k',
+                state:'2',
                 assets: '23k'
+
             },
         ]
-    )
+    const filtereddata = data.filter(item=>item.state === props.value)
     const [visible , setVisible] = useState(6);
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
     }
+    const [open, setOpen] = useState(true);
+
+    const handleClick = () => () => {
+        setOpen(!open)
+    };
+
     return (
         <div>
             <section className="tf-rank mgt-15">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="table-ranking">
+                            <div className="table-ranking collection-stat-table">
                                         <div className="fl-item2">
                                             <div className="item flex voomio-just-center collection-stat-item item-header">
                                                 <div className="infor-item flex column1">
                                                     <div className="content-collection pad-t-4 voomio-flex">
-                                                        <h3>Collection</h3>
+                                                        <h4>Collection</h4>
                                                     </div>
                                                 </div>
-                                                <div className="column voomio-text-center flex voomio-just-center">
-                                                    <h3>Volume</h3>
+                                                <div className="column voomio-text-center flex voomio-just-center" >
+                                                    <h4>Volume</h4>
+                                                    {open ? <ExpandLess className="detail-meta-icon mg-l-25" onClick={handleClick()} style={{fontSize:'20px'}}/> : <ExpandMore className="detail-meta-icon mg-l-25" onClick={handleClick()} style={{fontSize:'20px'}}/>}
                                                 </div>
                                                 <div className="column voomio-text-center">
-                                                    <h3>24h</h3>
+                                                    <h4>24h</h4>
                                                 </div>
                                                 <div className="column voomio-text-center">
-                                                    <h3>7d</h3>
+                                                    <h4>7d</h4>
                                                 </div>
                                                 <div className="column voomio-text-right flex voomio-just-center">
-                                                    <h3>Floor Price</h3>
+                                                    <h4>Floor Price</h4>
                                                 </div>
                                             </div>
                                         </div>
                                 {
-                                    data.slice(0,visible).map((item,index) => (
+                                    filtereddata.slice(0,visible).map((item,index) => (
                                         <div key={index} className="fl-item2 nfts-list-item">
                                             <div className="item flex voomio-just-center collection-stat-item">
                                                 <div className="infor-item flex column1">
                                                     <div className="content-collection pad-t-4 voomio-flex">
-                                                        <h5 className="title mb-15"><Link to="/item-detail">"{item.title}"</Link></h5>
-                                                        <img className='ranking-imgs' src={check_icon} alt={check_icon}></img>
+                                                        <RadioButtonUncheckedIcon className="mg-r-8" style={{fontSize:'30px'}}/>
+                                                        <h5 className="title voomio-mta"><Link to="/item-detail">{item.title}</Link></h5>
+                                                        <img className='ranking-imgs voomio-mta' src={check_icon} alt={check_icon}></img>
                                                     </div>
                                                 </div>
                                                 <div className="column voomio-text-center voomio-text-col1 flex voomio-just-center">
