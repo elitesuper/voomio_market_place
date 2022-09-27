@@ -30,7 +30,7 @@ function init() {
             },
             chainId:4
         }
-        },           
+        },
     };
 
     web3Modal = new Web3Modal({
@@ -46,7 +46,7 @@ async function fetchAccountData() {
     const web3Provider = new ethers.providers.Web3Provider(provider);
     const signer = web3Provider.getSigner();
     selectedAccount = await signer.getAddress();
-    console.log(selectedAccount);    
+    console.log(selectedAccount);
     return selectedAccount;
 }
 
@@ -94,7 +94,7 @@ async function disconnet() {
     } catch (e) {
         console.log("Could not get a wallet connection", e);
         return;
-    }   
+    }
 }
 
 const HeaderStyle2 = (props) => {
@@ -106,7 +106,7 @@ const HeaderStyle2 = (props) => {
    const [acc,setacc] = useState()
    const [accountid, setaccountid] = useState();
    const [web3, setWeb3] = useState();
-   
+
    // iniit web3 provider
    useEffect(async () => {
        if (acc) {
@@ -130,7 +130,7 @@ const HeaderStyle2 = (props) => {
        if (web3Modal.cachedProvider) {
            setacc(true)
        }
-   }, []); 
+   }, []);
 
    function setProviderEvent() {
        provider.on("accountsChanged", (accounts) => {
@@ -138,12 +138,12 @@ const HeaderStyle2 = (props) => {
            fetchAccountData();
            window.location.reload();
        });
-   
+
        provider.on("chainChanged", (chainId) => {
            fetchAccountData();
            window.location.reload();
        });
-   
+
        provider.on("networkChanged", (networkId) => {
            fetchAccountData();
        });
@@ -179,11 +179,11 @@ const HeaderStyle2 = (props) => {
                            params: data,
                        });
                    } catch (addError) {
-                       
+
                    }
                }
            }
-       } 
+       }
    }
 
    /****************************  wallet connection end *************************/
@@ -202,7 +202,7 @@ const HeaderStyle2 = (props) => {
          //Get The ABI
          const nFTAbi = convertNftContratFileToJson.abi;
          const netWorkId = await web3.eth.net.getId();
-         const nftNetWorkObject = convertNftContratFileToJson.networks[netWorkId];        
+         const nftNetWorkObject = convertNftContratFileToJson.networks[netWorkId];
 
          if (nftNetWorkObject) {
              const nftAddress = nftNetWorkObject.address;
@@ -214,7 +214,7 @@ const HeaderStyle2 = (props) => {
              setTokensSmall(tokensSmall);
              setTokensMedium(tokensMedium);
              setTokensLarge(tokensLarge);
-             
+
          } else {
              window.alert("You are at Wrong Netweok, Connect with Rinkeby Please")
          }
@@ -236,7 +236,7 @@ const HeaderStyle2 = (props) => {
     });
     useEffect(() => {
         init();
-    }, []); 
+    }, []);
     const isSticky = (e) => {
         const header = document.querySelector('.js-header');
         const scrollTop = window.scrollY;
@@ -259,10 +259,10 @@ const HeaderStyle2 = (props) => {
 
     const [activeIndex, setActiveIndex] = useState(null);
     const handleOnClick = index => {
-        setActiveIndex(index); 
+        setActiveIndex(index);
     };
 
-        
+
     const onHideModal = () => {
         setModalShow(false);
     }
@@ -271,8 +271,8 @@ const HeaderStyle2 = (props) => {
         <header id="header_main" className="header_1 header_2 style2 js-header" ref={headerRef}>
             <div className="themesflat-container">
                 <div className="row">
-                    <div className="col-md-12">                              
-                        <div id="site-header-inner"> 
+                    <div className="col-md-12">
+                        <div id="site-header-inner">
                             <div className="wrap-box flex">
                                 <div id="site-logo" className="clearfix">
                                     <div id="site-logo-inner">
@@ -311,7 +311,7 @@ const HeaderStyle2 = (props) => {
                                                     <li><span>ADA</span></li>
                                                     <li><span>SOL</span></li>
                                                 </ul>
-                                            </div>  
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -343,7 +343,7 @@ const HeaderStyle2 = (props) => {
                                 <div className="flat-search-btn flex">
                                     {
                                         !accountid ? <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <button onClick={()=>onConnect()} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                                        <button onClick={onConnect} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
                                         </span></button>
                                         </div> : <div className="sc-btn-top mg-r-12" id="site-header">
                                         <button onClick={()=> setModalShow(true)} className="sc-button header-slider style style-1 fl-button pri-1"><span>{accountid?.substr(0, 6) + '....' + accountid?.substr(accountid?.length - 4, accountid?.length)}
@@ -351,7 +351,7 @@ const HeaderStyle2 = (props) => {
                                         </div>
                                     }
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -366,7 +366,7 @@ const HeaderStyle2 = (props) => {
                 <div className="modal-body space-y-20 pd-40">
                 <h2>My Account</h2>
                     <div className="" id="header_admin">
-                        
+
                         <div className="header_avatar">
                             <div className="flex justify-content-between">
                                 <span className='fs-16'> {accountid?.substr(0, 6) + '....' + accountid?.substr(accountid?.length - 4, accountid?.length)}</span>
@@ -379,7 +379,7 @@ const HeaderStyle2 = (props) => {
                                 /> */}
                             <div className="avatar_popup mt-20">
                                 <div className="d-flex align-items-center copy-text justify-content-between">
-                                    
+
                                 </div>
                                 <div className='item-title'>
                                     <span className='fs-18'> My Land NFTs ( {totalNfts} )</span>
@@ -391,9 +391,9 @@ const HeaderStyle2 = (props) => {
                                                 <div className='mg-t-10'>
                                                     <img src={img1} className='ic-nft-item'></img>
                                                     <span className='fs-16'>Small #{tokenid}</span>
-                                                </div>                                            
+                                                </div>
                                             ))}
-                                        </div>                                        
+                                        </div>
                                     }
 
                                     {
@@ -402,7 +402,7 @@ const HeaderStyle2 = (props) => {
                                                 <div className='mg-t-10'>
                                                     <img src={img2} className='ic-nft-item'></img>
                                                     <span className='fs-16'>Medium #{tokenid}</span>
-                                                </div>                                            
+                                                </div>
                                             ))}
                                         </div>
                                     }
@@ -413,14 +413,14 @@ const HeaderStyle2 = (props) => {
                                                 <div className='mg-t-10'>
                                                     <img src={img3} className='ic-nft-item'></img>
                                                     <span className='fs-16'>Large #{tokenid}</span>
-                                                </div>                                            
+                                                </div>
                                             ))}
                                         </div>
                                     }
 
                                 </div>
                                 <div className="hr"></div>
-                                <div className='card-bottom flex justify-content-center'>                                    
+                                <div className='card-bottom flex justify-content-center'>
                                     {/* <button className="mt-10" href="/edit-profile">
                                         <i className="fas fa-pencil-alt"></i> <span> Edit Profile</span>
                                     </button> */}

@@ -35,7 +35,7 @@ import imgCollection6 from '../assets/images/avatar/avt-18.jpg'
 import img7 from '../assets/images/avatar/character3.png'
 import img8 from '../assets/images/avatar/character4.png'
 import etherium_icon from '../assets/images/icon/etherium_icon.png'
-import check_icon from '../assets/images/icon/check_icon.png' 
+import check_icon from '../assets/images/icon/check_icon.png'
 import ItemContext from '../components/layouts/profile/ItemContext';
 
 const Profile = () => {
@@ -497,11 +497,11 @@ const Profile = () => {
         onChange: handleChange,
         exclusive: true,
     };
-    
+
     return (
         <div className='authors-2'>
             <section className="flat-title-page inner profile-inner">
-                <div className="overlay"></div>                   
+                <div className="overlay"></div>
             </section>
             <section className="tf-section authors">
                 <div className="themesflat-container">
@@ -536,7 +536,7 @@ const Profile = () => {
                                     <li><Link to="#"><i className="fas fa-ellipsis-v"></i></Link></li>
                                     <li className='v-mobile-btn'><Link to="#"><i className="fas fa-plus"></i></Link></li>
                                     <li className='v-mobile-btn'><Link to="#"><i className="fas fa-info v-mobile-btn"></i></Link></li>
-                                </ul>    
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -559,7 +559,7 @@ const Profile = () => {
                                 <div className='content-inner'>
                                     <div className='row'>
                                     <TabPanel key={index}>
-                                    <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-5 voomio-flex voomio-just-between"> 
+                                    <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-5 voomio-flex voomio-just-between">
                                         <div className="flex">
                                             <IconButton color="primary" component="label" size="large">
                                                 <TuneIcon fontSize='inherit'/>
@@ -591,11 +591,11 @@ const Profile = () => {
                                         (alignment)?
                                         item.dataContent.slice(0,visible).map((data,index) => (
                                             <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
-                                                <ProfileCard 
-                                                    mainimg={data.img} 
-                                                    title={data.title} 
-                                                    checkicon={check_icon} 
-                                                    etheriumicon={etherium_icon} 
+                                                <ProfileCard
+                                                    mainimg={data.img}
+                                                    title={data.title}
+                                                    checkicon={check_icon}
+                                                    etheriumicon={etherium_icon}
                                                     price={data.price}
                                                     type={alignment}
                                                 />
@@ -604,11 +604,11 @@ const Profile = () => {
                                             <div className='row voomio-5-col'>
                                             {item.dataContent.slice(0,visible).map((data,index) => (
                                                 <div key={index} className="col">
-                                                    <ProfileCard 
-                                                        mainimg={data.img} 
-                                                        title={data.title} 
-                                                        checkicon={check_icon} 
-                                                        etheriumicon={etherium_icon} 
+                                                    <ProfileCard
+                                                        mainimg={data.img}
+                                                        title={data.title}
+                                                        checkicon={check_icon}
+                                                        etheriumicon={etherium_icon}
                                                         price={data.price}
                                                     />
                                                 </div>
@@ -617,14 +617,14 @@ const Profile = () => {
                                         )
                                     }
                                     {
-                                        visible < item.dataContent.length && 
-                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
+                                        visible < item.dataContent.length &&
+                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5">
                                             <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                         </div>
                                     }
                                     {
                                         index == 1 &&
-                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5"> 
+                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5">
                                             <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>+ Create New</span></Link>
                                         </div>
                                     }
