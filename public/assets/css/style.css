@@ -3516,6 +3516,9 @@ header{
 .voomio-pb-1{
     padding-bottom: 1rem;
 }
+.voomio-pb-2{
+    padding-bottom: 2rem;
+}
 .voomio-pd-none{
     padding: 0px !important;
 }
@@ -3756,6 +3759,9 @@ header{
 }
 .voomio-m-r-1{
     margin-right: 1rem !important;
+}
+.voomio-m-r-2{
+    margin-right: 2rem !important;
 }
 .pl2{
     padding-left: 2rem;

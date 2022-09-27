@@ -16,19 +16,6 @@ const ExploreCollection = () => {
 
       const data = popularCollectionData;
 
-      const [menuTab] = useState(
-          [
-              {
-                  class: 'active',
-                  name: 'Top'
-              },
-              {
-                  class: '',
-                  name: 'Trending'
-              },
-          ]
-      )
-
       const [value, setValue] = React.useState('1');
 
       const handleChange = (event, newValue) => {

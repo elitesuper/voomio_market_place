@@ -9,8 +9,6 @@
 
 .voomio-5-col {
 
-    // @include row-cols(5);
-
     @include media-breakpoint-up(xs){
         @include row-cols(1);
     }

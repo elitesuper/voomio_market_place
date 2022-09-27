@@ -9,10 +9,9 @@ import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 import GridViewIcon from '@mui/icons-material/GridView';
+import CachedIcon from '@mui/icons-material/Cached';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import CachedIcon from '@mui/icons-material/Cached';
-
 
 
 import CardModal from '../components/layouts/CardModal';
@@ -40,7 +39,7 @@ import etherium_icon from '../assets/images/icon/etherium_icon.png'
 import check_icon from '../assets/images/icon/check_icon.png'
 import ItemContext from '../components/layouts/profile/ItemContext';
 
-const Profile = () => {
+const Aggregator = () => {
 
     const [menuTab] = useState(
         [
@@ -50,19 +49,11 @@ const Profile = () => {
             },
             {
                 class: '',
-                name: 'Created'
+                name: 'Community'
             },
             {
                 class: '',
                 name: 'Activity'
-            },
-            {
-                class: '',
-                name: 'Favorited'
-            },
-            {
-                class: '',
-                name: 'More'
             },
         ]
     )
@@ -513,31 +504,24 @@ const Profile = () => {
                                 <img src={avt} alt="Axies" className="avatar" />
                             </div>
                             <div className="infor-profile">
-                                <h2 className="title">Extrasoho</h2>
-                                <div className='title-info flex'>
-                                    <h5>@extrasoho</h5>
-                                    <span>JOINED MAY 2022</span>
-                                </div>
-                                <p className="content profile-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
-                                <div className='info-panel flex'>
-                                    <div className='voomio-mta voomio-m-r-1'><h6>Following</h6><h5>12</h5></div>
-                                    <div className='voomio-mta voomio-m-r-1'><h6>Followers</h6><h5>1.2m</h5></div>
-                                    <IconButton color="primary" aria-label="Twitter" component="label" size="large">
-                                        <TwitterIcon fontSize="inherit"/>
-                                    </IconButton>
-                                    <IconButton color="primary" aria-label="Instagram" component="label" size="large">
-                                        <InstagramIcon fontSize="inherit"/>
-                                    </IconButton>
+                                <h2 className="title">Mutant Ape Yatch Club</h2>
+                                <p className="content profile-content">
+                                The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale.
+                                </p>
+                                <div className='detail-info flex'>
+                                    <div className='voomio-mta voomio-m-r-2'><h6>Items</h6><h4>10.0K</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2'><h6>Owners</h6><h4>6.3K</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Total</h6><h4>433.3k</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Floor</h6><h4>87</h4></div>
+
                                 </div>
                             </div>
-                            <div className="widget-social style-3">
-                                <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow profile-btn profile-out v-desktop-btn">0x007..373xys..</Link></div>
-                                <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow profile-btn profile-fill v-desktop-btn"> + Follow</Link></div>
+                            <div className="widget-social style-3 voomio-justend">
                                 <ul>
-                                    <li><Link to="#"><i className="fas fa-envelope"></i></Link></li>
+                                    <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
+                                    <li><Link to="#"><i className="fab fa-instagram-square"></i></Link></li>
+                                    <li><Link to="#"><i className="fab fa-discord"></i></Link></li>
                                     <li><Link to="#"><i className="fas fa-ellipsis-v"></i></Link></li>
-                                    <li className='v-mobile-btn'><Link to="#"><i className="fas fa-plus"></i></Link></li>
-                                    <li className='v-mobile-btn'><Link to="#"><i className="fas fa-info v-mobile-btn"></i></Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -561,7 +545,7 @@ const Profile = () => {
                                 <div className='content-inner'>
                                     <div className='row'>
                                     <TabPanel key={index}>
-                                    <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-5 voomio-flex voomio-just-between">
+                                    <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-2 voomio-flex voomio-just-between">
                                         <div className="flex">
                                             <IconButton color="primary" component="label" size="large">
                                                 <TuneIcon fontSize='inherit'/>
@@ -582,15 +566,22 @@ const Profile = () => {
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div className="col-md-12 flex voomio-pb-2">
-                                              <CachedIcon className="mg-r-8"/> <h6>{item.dataContent.length} items</h6>
-                                            </div>
                                             <div className='voomio-mta'>
                                             <ToggleButtonGroup size="large" {...control} aria-label="Align">
                                                 {children}
                                             </ToggleButtonGroup>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="col-md-12 flex voomio-pb-2">
+                                      <CachedIcon className="voomio-mta mg-r-8"/> <h6 className="voomio-mta">{item.dataContent.length} items</h6>
+                                      <div className="flex">
+                                        <h5 className="spec-color-1 mg-l-8" > Filters : </h5>
+                                        <div className='filter-tag voomio-mta'><span>Sales</span></div>
+                                        <div className='filter-tag voomio-mta'><span>Listings</span></div>
+                                        <div className='filter-tag voomio-mta'><span>Offers</span></div>
+                                        <div className='filter-tag voomio-mta'><span>Transfers</span></div>
+                                      </div>
                                     </div>
                                     {
                                         (alignment)?
@@ -602,7 +593,7 @@ const Profile = () => {
                                                     checkicon={check_icon}
                                                     etheriumicon={etherium_icon}
                                                     price={data.price}
-                                                    type={alignment}
+                                                    // type={alignment}
                                                 />
                                             </div>
                                         )):(
@@ -627,18 +618,12 @@ const Profile = () => {
                                             <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                         </div>
                                     }
-                                    {
-                                        index == 1 &&
-                                        <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5">
-                                            <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>+ Create New</span></Link>
-                                        </div>
-                                    }
                                 </TabPanel>
                                 </div>
                                 </div>
                                 </div>
                                 ):(
-                                <TabPanel key={index} className="voomio-just-center">
+                                    <TabPanel key={index} className="voomio-just-center">
                                     {
                                         <div className="row w-100 activity-tab">
                                             <div className='col-xl-2 col-md-3 col-sm-12 v-sidebar'>
@@ -664,4 +649,4 @@ const Profile = () => {
     );
 }
 
-export default Profile;
+export default Aggregator;
