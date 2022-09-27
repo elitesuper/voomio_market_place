@@ -38,6 +38,7 @@ import img6right3 from '../images/box-item/img-collection20.jpg'
 
 const popularCollectionData = [
     {
+        collectiontype:"1",
         title: "Bored Ape Yacht Club",
         imgAuthor: imgAuthor1,
         name: "Ralph Garraway",
@@ -51,6 +52,7 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
+        collectiontype:"2",
         title: "CryptoPunks",
         imgAuthor: imgAuthor2,
         name: "Mason Woodward",
@@ -64,6 +66,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"1",
         title: "Doodles",
         imgAuthor: imgAuthor3,
         name: "Freddie Carpenter",
@@ -77,6 +80,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"2",
         title: "Moonbirds",
         imgAuthor: imgAuthor1,
         name: "Ralph Garraway",
@@ -90,6 +94,7 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
+        collectiontype:"1",
         title: "Doodles",
         imgAuthor: imgAuthor2,
         name: "Mason Woodward",
@@ -103,6 +108,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"2",
         title: "CryptoPunks",
         imgAuthor: imgAuthor3,
         name: "Freddie Carpenter",
@@ -116,6 +122,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"1",
         title: "Bored Ape Yacht Club",
         imgAuthor: imgAuthor1,
         name: "Ralph Garraway",
@@ -129,6 +136,7 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
+        collectiontype:"2",
         title: "Doodles",
         imgAuthor: imgAuthor2,
         name: "Mason Woodward",
@@ -142,6 +150,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"1",
         title: "Bored Ape Yacht Club",
         imgAuthor: imgAuthor3,
         name: "Freddie Carpenter",
@@ -155,6 +164,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"2",
         title: "Creative Art Collection",
         imgAuthor: imgAuthor1,
         name: "Ralph Garraway",
@@ -168,6 +178,7 @@ const popularCollectionData = [
         count: '12 item products'
     },
     {
+        collectiontype:"1",
         title: "Colorful Abstract",
         imgAuthor: imgAuthor2,
         name: "Mason Woodward",
@@ -181,6 +192,7 @@ const popularCollectionData = [
         count: '26 item products'
     },
     {
+        collectiontype:"2",
         title: "Modern Art Collection",
         imgAuthor: imgAuthor3,
         name: "Freddie Carpenter",

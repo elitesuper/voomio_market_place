@@ -1180,7 +1180,7 @@ label.error { color: red; }
     padding-bottom: 24px !important;
 }
 .mt-21 {
-    margin-top: 21px;
+    margin-top: 21px !important;
 }
 .mt-29 {
     margin-top: 29px;
@@ -4046,4 +4046,18 @@ header{
 .morecollection-data{
   padding: 10px 5px 10px 5px;
   background: #F8F7FD;
+}
+.profileinfo span{
+  font-size: 1.5rem !important;
+}
+.profileinfo .tag{
+  padding: 2px 3px;
+  color: #6549F6 !important;
+  background-color: #F4EEFF !important;
+}
+.exp-col-tab button{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1.5rem;
 }
