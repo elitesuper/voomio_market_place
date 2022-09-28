@@ -582,15 +582,15 @@ const Profile = () => {
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div className="col-md-12 flex voomio-pb-2">
-                                              <CachedIcon className="mg-r-8"/> <h6>{item.dataContent.length} items</h6>
-                                            </div>
                                             <div className='voomio-mta'>
                                             <ToggleButtonGroup size="large" {...control} aria-label="Align">
                                                 {children}
                                             </ToggleButtonGroup>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="col-md-12 flex voomio-pb-2">
+                                      <CachedIcon className="mg-r-8"/> <h6>{item.dataContent.length} items</h6>
                                     </div>
                                     {
                                         (alignment)?
