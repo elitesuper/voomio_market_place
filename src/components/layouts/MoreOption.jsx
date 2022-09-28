@@ -304,7 +304,7 @@ function MoreOption(){
       </div>
       <div className="col-md-12 mt-3">
         <div className="flex">
-          <h5 className="spec-color-1 mg-l-8" > Traits : </h5>
+          <h5 className="spec-color-1 mg-l-8" > Traits: </h5>
           <div className='filter-tag traits-tag voomio-mta flex'>
             <span className="my-auto spec-color-1">Traits</span>
             <CloseIcon className="mg-l-8 spec-color-1" sx={{fontSize:'small'}}/>

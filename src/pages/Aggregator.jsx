@@ -471,6 +471,8 @@ const Aggregator = () => {
     }
 
     const [modalShow, setModalShow] = useState(false);
+    const [options, setOptions] = useState(false);
+
 
     const [alignment, setAlignment] = React.useState(true);
 
@@ -478,6 +480,9 @@ const Aggregator = () => {
       setAlignment(newAlignment);
     };
 
+    const optionexpand = () => {
+      setOptions(!options)
+    }
     const children = [
         <ToggleButton value={true} aria-label="left aligned">
             <GridViewIcon />
@@ -549,7 +554,7 @@ const Aggregator = () => {
                                     <TabPanel key={index}>
                                     <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-2 voomio-flex voomio-just-between">
                                         <div className="flex">
-                                            <IconButton color="primary" component="label" size="large">
+                                            <IconButton onClick={()=>optionexpand()} color="primary" component="label" size="large">
                                                 <TuneIcon fontSize='inherit'/>
                                             </IconButton>
                                             <div className="input-group flex-nowrap profile-search">
@@ -578,7 +583,7 @@ const Aggregator = () => {
                                     <div className="col-md-12 flex voomio-pb-2">
                                       <CachedIcon className="voomio-mta mg-r-8"/> <h6 className="voomio-mta">{item.dataContent.length} items</h6>
                                       <div className="flex">
-                                        <h5 className="spec-color-1 mg-l-8" > Filters : </h5>
+                                        <h5 className="spec-color-1 mg-l-8" > Filters: </h5>
                                         <div className='filter-tag voomio-mta flex'>
                                           <span className="my-auto">Sales</span>
                                           <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
@@ -597,9 +602,7 @@ const Aggregator = () => {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className="col-md-12">
-                                      <MoreOption/>
-                                    </div>
+                                    {options&&(<div className="col-md-12"><MoreOption/></div>)}
                                     {
                                         (alignment)?
                                         item.dataContent.slice(0,visible).map((data,index) => (
