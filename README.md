@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### `build option`
+
+package.json => "homepage": "/voomio-front-end-jeni",
+index.js => <BrowserRouter basename={'/voomio-front-end-jeni'}>
+htaccess in public folder
+  RewriteBase /subdirectory => RewriteBase /voomio-front-end-jeni/
+  RewriteRule . /index.html [L] => RewriteRule . /voomio-front-end-jeni/index.html [L]
+
+### Reference URL
+This is built url here: [https://sdrive.ai/voomio-front-end-jeni/]
+
+### Figma Design here
+https://www.figma.com/file/uPI6AAE2aVnc7M374saxym/Voomio-Testing-Ground-(Pat)?node-id=277%3A17181
