@@ -1724,7 +1724,15 @@ header{
     right: 22rem;
     top: 12rem;
 }
+@media only screen and (min-width: 1920px){
+  .aggregator-container{
+    width: 1650px;
+  }
+}
 @media only screen and (max-width: 1920px){
+    .aggregator-container{
+      width: 1650px;
+    }
     .header_1.header_2 #main-nav {
         left: 50%;
     }
@@ -3545,7 +3553,7 @@ header{
     justify-content:space-between !important
 }
 .voomio-zindex{
-    z-index: 999 !important;
+    z-index: -999 !important;
 }
 #scroll-top{
     z-index: 1000 !important;
@@ -4103,4 +4111,40 @@ header{
 }
 .searchcard-checkicon{
   min-width: 20px !important;
+}
+.search-input label{
+  font-size: 1.5rem;
+}
+.search-input div fieldset{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+.search-input div fieldset:hover{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+.search-input div fieldset:focus{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+.search-input div input{
+  border:none;
+}
+.search-input div input:hover{
+  border:none;
+}
+.search-input div input:focus{
+  border:none;
+}
+.search-card{
+  border: 2px solid #D6C3FA;
+}
+
+.dropdown:hover .voomio-zindex {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 999 !important
 }

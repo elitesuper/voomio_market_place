@@ -542,7 +542,7 @@ const Aggregator = () => {
                         {
                             panelTab.map((item, index) => (
                                 (index != 2)?(
-                                <div className='themesflat-container'>
+                                <div className='themesflat-container aggregator-container'>
                                 <div className='content-inner'>
                                     <div className='row'>
                                     <TabPanel key={index}>

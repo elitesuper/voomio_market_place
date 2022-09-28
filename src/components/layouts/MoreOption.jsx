@@ -10,6 +10,13 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
+import TextField from '@mui/material/TextField';
+
+
+import 'swiper/swiper.scss';
+import 'swiper/modules/navigation/navigation.scss';
+import 'swiper/modules/pagination/pagination.scss';
+import 'swiper/modules/scrollbar/scrollbar.scss';
 
 
 const data = [
@@ -200,7 +207,7 @@ export const SearchCard = (props) => {
     const name = props.name
     const data = props.filters;
 
-    const [checked, setChecked] = React.useState([0]);
+    const [checked, setChecked] = useState([0]);
 
     const handleToggle = (value) => () => {
      const currentIndex = checked.indexOf(value);
@@ -220,9 +227,10 @@ export const SearchCard = (props) => {
         <div className="swiper-wrapper">
             <div className="swiper-slide">
                 <div className="slider-item">
-                  <Card sx={{ minWidth: 275 }}>
+                  <Card className="search-card" sx={{ minWidth: 200,boxShadow:'none'}}>
                      <CardContent>
-                       <List sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper' }}>
+                       <List className="mx-auto" sx={{ width: '100%', maxWidth: 220, bgcolor: 'background.paper' }}>
+                       <TextField id="outlined-search" className="search-input" label="Search field" type="search" />
                       {data.map((item) => {
                         const labelId = `checkbox-list-label-${item.id}`;
 
@@ -273,11 +281,11 @@ function MoreOption(){
           <div className="flex mg-l-8 mg-r-8">
             <h5 className="voomio-mta spec-color-1">Price</h5>
             <div class="input-group min-max-btn mg-l-8 mg-r-8">
-              <input type="number" class="form-control" placeholder="Min" aria-label="min" aria-describedby="basic-addon1"/>
+              <input type="text" class="form-control" placeholder="Min" aria-label="min" aria-describedby="basic-addon1"/>
             </div>
             <h5 className="voomio-mta spec-color-1">to</h5>
             <div class="input-group min-max-btn mg-l-8 mg-r-8">
-              <input type="number" class="form-control" placeholder="Max" aria-label="max" aria-describedby="basic-addon1"/>
+              <input type="text" class="form-control" placeholder="Max" aria-label="max" aria-describedby="basic-addon1"/>
             </div>
           </div>
           <div className="seclect-box voomio-pl-1 voomio-mta">
@@ -311,21 +319,21 @@ function MoreOption(){
               500:{
                   slidesPerView: 2,
               },
-              771:{
+              800:{
                   slidesPerView: 3,
               },
               1200: {
                 slidesPerView: 4,
               },
-              1300: {
-                slidesPerView: 5,
-              },
               1600: {
                 slidesPerView: 5,
               },
+              1900: {
+                slidesPerView: 6,
+              },
             }}
           navigation
-          scrollbar={{ draggable: true }}
+          scrollbar={{ el: '.swiper-scrollbar', draggable: true }}
       >
           {
               data.map((item,index) => (
