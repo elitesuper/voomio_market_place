@@ -10,6 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 import GridViewIcon from '@mui/icons-material/GridView';
 import CachedIcon from '@mui/icons-material/Cached';
+import CloseIcon from '@mui/icons-material/Close';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
@@ -552,7 +553,7 @@ const Aggregator = () => {
                                                 <TuneIcon fontSize='inherit'/>
                                             </IconButton>
                                             <div className="input-group flex-nowrap profile-search">
-                                                <input type="text" class="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
+                                                <input type="text" className="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
                                                 <SearchIcon className='profile-search-icon'/>
                                             </div>
                                         </div>
@@ -578,10 +579,22 @@ const Aggregator = () => {
                                       <CachedIcon className="voomio-mta mg-r-8"/> <h6 className="voomio-mta">{item.dataContent.length} items</h6>
                                       <div className="flex">
                                         <h5 className="spec-color-1 mg-l-8" > Filters : </h5>
-                                        <div className='filter-tag voomio-mta'><span>Sales</span></div>
-                                        <div className='filter-tag voomio-mta'><span>Listings</span></div>
-                                        <div className='filter-tag voomio-mta'><span>Offers</span></div>
-                                        <div className='filter-tag voomio-mta'><span>Transfers</span></div>
+                                        <div className='filter-tag voomio-mta flex'>
+                                          <span className="my-auto">Sales</span>
+                                          <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
+                                        </div>
+                                        <div className='filter-tag voomio-mta flex'>
+                                          <span className="my-auto">Listings</span>
+                                          <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
+                                        </div>
+                                        <div className='filter-tag voomio-mta flex'>
+                                          <span className="my-auto">Offers</span>
+                                          <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
+                                        </div>
+                                        <div className='filter-tag voomio-mta flex'>
+                                          <span className="my-auto">Transfers</span>
+                                          <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
+                                        </div>
                                       </div>
                                     </div>
                                     <div className="col-md-12">

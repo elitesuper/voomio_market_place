@@ -567,7 +567,7 @@ const Profile = () => {
                                                 <TuneIcon fontSize='inherit'/>
                                             </IconButton>
                                             <div className="input-group flex-nowrap profile-search">
-                                                <input type="text" class="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
+                                                <input type="text" className="form-control" placeholder="Search by name or attribute" aria-label="Username" aria-describedby="addon-wrapping"/>
                                                 <SearchIcon className='profile-search-icon'/>
                                             </div>
                                         </div>

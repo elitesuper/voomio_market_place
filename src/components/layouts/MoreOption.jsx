@@ -11,6 +11,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 import 'swiper/swiper.scss';
@@ -230,7 +231,7 @@ export const SearchCard = (props) => {
                   <Card className="search-card" sx={{ minWidth: 200,boxShadow:'none'}}>
                      <CardContent>
                        <List className="mx-auto" sx={{ width: '100%', maxWidth: 220, bgcolor: 'background.paper' }}>
-                       <TextField id="outlined-search" className="search-input" label="Search field" type="search" />
+                       <TextField id="outlined-search" className="search-input" label={`Search ${name}`} type="search" />
                       {data.map((item) => {
                         const labelId = `checkbox-list-label-${item.id}`;
 
@@ -249,7 +250,9 @@ export const SearchCard = (props) => {
                                     inputProps={{ 'aria-labelledby': labelId }}
                                   />
                                 </ListItemIcon>
-                                <ListItemText id={labelId} primary={`${item.name +"("+ item.value + ")"}`} />
+                                <ListItemText id={labelId}>
+                                  {item.name}<span className="spec-color-3">{item.value}</span>
+                                </ListItemText>
                               </ListItemButton>
                             </ListItem>
                           );
@@ -280,12 +283,12 @@ function MoreOption(){
           </div>
           <div className="flex mg-l-8 mg-r-8">
             <h5 className="voomio-mta spec-color-1">Price</h5>
-            <div class="input-group min-max-btn mg-l-8 mg-r-8">
-              <input type="text" class="form-control" placeholder="Min" aria-label="min" aria-describedby="basic-addon1"/>
+            <div className="input-group min-max-btn mg-l-8 mg-r-8">
+              <input type="text" className="form-control" placeholder="Min" aria-label="min" aria-describedby="basic-addon1"/>
             </div>
             <h5 className="voomio-mta spec-color-1">to</h5>
-            <div class="input-group min-max-btn mg-l-8 mg-r-8">
-              <input type="text" class="form-control" placeholder="Max" aria-label="max" aria-describedby="basic-addon1"/>
+            <div className="input-group min-max-btn mg-l-8 mg-r-8">
+              <input type="text" className="form-control" placeholder="Max" aria-label="max" aria-describedby="basic-addon1"/>
             </div>
           </div>
           <div className="seclect-box voomio-pl-1 voomio-mta">
@@ -301,11 +304,23 @@ function MoreOption(){
       </div>
       <div className="col-md-12 mt-3">
         <div className="flex">
-          <h5 className="spec-color-1 mg-l-8" > Filters : </h5>
-          <div className='filter-tag voomio-mta'><span>Sales</span></div>
-          <div className='filter-tag voomio-mta'><span>Listings</span></div>
-          <div className='filter-tag voomio-mta'><span>Offers</span></div>
-          <div className='filter-tag voomio-mta'><span>Transfers</span></div>
+          <h5 className="spec-color-1 mg-l-8" > Traits : </h5>
+          <div className='filter-tag traits-tag voomio-mta flex'>
+            <span className="my-auto spec-color-1">Traits</span>
+            <CloseIcon className="mg-l-8 spec-color-1" sx={{fontSize:'small'}}/>
+          </div>
+          <div className='filter-tag traits-tag voomio-mta flex'>
+            <span className="my-auto spec-color-1">Traits</span>
+            <CloseIcon className="mg-l-8 spec-color-1" sx={{fontSize:'small'}}/>
+          </div>
+          <div className='filter-tag traits-tag voomio-mta flex'>
+            <span className="my-auto spec-color-1">Traits</span>
+            <CloseIcon className="mg-l-8 spec-color-1" sx={{fontSize:'small'}}/>
+          </div>
+          <div className='filter-tag traits-tag voomio-mta flex'>
+            <span className="my-auto spec-color-1">Traits</span>
+            <CloseIcon className="mg-l-8 spec-color-1" sx={{fontSize:'small'}}/>
+          </div>
         </div>
       </div>
       <div className="col-md-12 mt-5 mb-5">
@@ -333,7 +348,7 @@ function MoreOption(){
               },
             }}
           navigation
-          scrollbar={{ el: '.swiper-scrollbar', draggable: true }}
+          scrollbar={{ draggable: true }}
       >
           {
               data.map((item,index) => (

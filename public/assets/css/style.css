@@ -3969,6 +3969,9 @@ header{
     border-radius: 8px !important;
     margin-left: 1rem !important;
 }
+.traits-tag{
+  background-color: #F4EEFF;
+}
 .activity-tab{
     max-width: 1920px;
     margin-left: auto;
@@ -4104,6 +4107,7 @@ header{
 }
 .min-max-btn input{
   border: 2px solid #6549F6;
+  padding: 0.5rem 0.75rem !important;
 }
 .searchcard-checkbox{
   padding-left: 0px !important;
