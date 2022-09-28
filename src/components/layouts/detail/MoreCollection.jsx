@@ -41,7 +41,7 @@ function MoreCollection(props){
               }}
               navigation
               pagination={{ clickable: true }}
-              scrollbar={{ draggable: true }}
+              scrollbar={{ el:'none',draggable: true }}
           >
                   {
                       data.slice(0,7).map((item,index) => (
