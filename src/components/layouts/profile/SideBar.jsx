@@ -54,20 +54,20 @@ const SideBar = () => {
 
       const currentIndex = checked.indexOf(value);
       const newChecked = [...checked];
-  
+
       if (currentIndex === -1) {
         newChecked.push(value);
       } else {
         newChecked.splice(currentIndex, 1);
       }
-  
+
       setChecked(newChecked);
     };
 
 
-    return(                                 
+    return(
         <div className='tf-section'>
-               <List
+        <List
         sx={{ width: '100%', bgcolor: 'background.paper' }}
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -163,7 +163,7 @@ const SideBar = () => {
             <Divider />
         </Collapse>
     </List>
-        </div>               
+        </div>
     )
 }
 

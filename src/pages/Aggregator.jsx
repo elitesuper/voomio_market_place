@@ -16,6 +16,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 import CardModal from '../components/layouts/CardModal';
 import { ProfileCard } from '../components/layouts/ProfileCard';
+import MoreOption from '../components/layouts/MoreOption';
 import SideBar from '../components/layouts/profile/SideBar';
 
 import '../scss/style.scss'
@@ -567,9 +568,9 @@ const Aggregator = () => {
                                                 </div>
                                             </div>
                                             <div className='voomio-mta'>
-                                            <ToggleButtonGroup size="large" {...control} aria-label="Align">
-                                                {children}
-                                            </ToggleButtonGroup>
+                                              <ToggleButtonGroup size="large" {...control} aria-label="Align">
+                                                  {children}
+                                              </ToggleButtonGroup>
                                             </div>
                                         </div>
                                     </div>
@@ -582,6 +583,9 @@ const Aggregator = () => {
                                         <div className='filter-tag voomio-mta'><span>Offers</span></div>
                                         <div className='filter-tag voomio-mta'><span>Transfers</span></div>
                                       </div>
+                                    </div>
+                                    <div className="col-md-12">
+                                      <MoreOption/>
                                     </div>
                                     {
                                         (alignment)?

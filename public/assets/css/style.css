@@ -1980,6 +1980,12 @@ header{
     display: none;
 }
 @media only screen and (max-width: 767px) {
+    .more-option{
+      display: block !important;
+    }
+    .more-option div{
+      margin-bottom: 1rem;
+    }
     .profile-search{
         display: none;
     }
@@ -4084,4 +4090,17 @@ header{
 .collection-stat-table{
   padding-left: 0px !important;
   padding-right: 0px !important;
+}
+.min-max-btn{
+  width: 8rem;
+}
+.min-max-btn input{
+  border: 2px solid #6549F6;
+}
+.searchcard-checkbox{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.searchcard-checkicon{
+  min-width: 20px !important;
 }
