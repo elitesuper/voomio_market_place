@@ -47,7 +47,7 @@ const Creator = props => {
                                 }}
                                 navigation
                                 pagination={{ clickable: true }}
-                                scrollbar={{ draggable: true }}
+                                scrollbar={{ el:'none', draggable: true }}
                             >
                                     {
                                         data.slice(0,7).map((item,index) => (
@@ -55,7 +55,7 @@ const Creator = props => {
                                                 <div className="swiper-container show-shadow carousel auctions">
                                                     <div className="swiper-wrapper">
                                                         <div className="swiper-slide">
-                                                            <div className="slider-item">										
+                                                            <div className="slider-item">
                                                                 <div className="sc-card-product voomio-pd-none">
                                                                     <div className="card-media voomio-creator-card">
                                                                         <Link to="/item-details-01"><img className='voomio-radius-1' src={item.img} alt="axies" /></Link>
@@ -92,7 +92,7 @@ const Creator = props => {
                                                                     <div className='row'>
                                                                         <button className="sc-button fl-button pri-3 no-bg creator-btn"><span>0x007..373xys..</span></button>
                                                                     </div>
-                                                                </div>    	
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

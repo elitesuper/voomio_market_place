@@ -32,7 +32,7 @@ const Trending = props => {
                                         <li><span>Past 24 hours</span></li>
                                         <li><span>Past 24 hours</span></li>
                                     </ul>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                         <div className="col-md-12">
@@ -56,7 +56,7 @@ const Trending = props => {
                                 }}
                                 navigation
                                 pagination={{ clickable: true }}
-                                scrollbar={{ draggable: true }}
+                                scrollbar={{ el:'none', draggable: true }}
                             >
                                     {
                                         data.slice(0,7).map((item,index) => (
@@ -64,7 +64,7 @@ const Trending = props => {
                                                 <div className="swiper-container show-shadow carousel auctions">
                                                     <div className="swiper-wrapper">
                                                         <div className="swiper-slide">
-                                                            <div className="slider-item">										
+                                                            <div className="slider-item">
                                                                 <div className="sc-card-product collection-card">
                                                                     <div className="card-media">
                                                                         <Link to="/profile"><img src={item.img} alt="axies" /></Link>
@@ -85,7 +85,7 @@ const Trending = props => {
                                                                             <h6><img src={item.etherium_icon} alt={item.etherium_icon}></img>{item.price}</h6>
                                                                         </div>
                                                                     </div>
-                                                                </div>    	
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

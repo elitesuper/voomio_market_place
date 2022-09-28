@@ -39,7 +39,7 @@ const Alpha = props => {
                                 },
                               }}
                             navigation
-                            scrollbar={{ draggable: true }}
+                            scrollbar={{el:'none', draggable: true }}
                         >
                             {
                                 data.map((item,index) => (
@@ -49,7 +49,7 @@ const Alpha = props => {
                                 ))
                             }
                         </Swiper>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,10 +84,10 @@ const PopularCollectionItem = props => (
                             </div>
                             {/* <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link> */}
                         </div>
-                    </div>										
+                    </div>
                 </div>
             </div>
-        </div>                            
+        </div>
     </div>
 )
 // const PopularCollectionItem = props => (
@@ -124,10 +124,10 @@ const PopularCollectionItem = props => (
 //                             </div>
 //                             <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link>
 //                         </div>
-//                     </div>										
+//                     </div>
 //                 </div>
 //             </div>
-//         </div>                            
+//         </div>
 //     </div>
 // )
 

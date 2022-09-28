@@ -23,7 +23,7 @@ const PopularCollection = props => {
                                     <li><span>All Categories</span></li>
                                     <li><span>All Categories</span></li>
                                 </ul>
-                            </div>  
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-12">
@@ -46,7 +46,7 @@ const PopularCollection = props => {
                                 },
                               }}
                             navigation
-                            scrollbar={{ draggable: true }}
+                            scrollbar={{el:'none', draggable: true }}
                         >
                             {
                                 data.map((item,index) => (
@@ -56,7 +56,7 @@ const PopularCollection = props => {
                                 ))
                             }
                         </Swiper>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,10 +97,10 @@ const PopularCollectionItem = props => (
                             </div>
                             {/* <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link> */}
                         </div>
-                    </div>										
+                    </div>
                 </div>
             </div>
-        </div>                            
+        </div>
     </div>
 )
 // const PopularCollectionItem = props => (
@@ -137,10 +137,10 @@ const PopularCollectionItem = props => (
 //                             </div>
 //                             <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link>
 //                         </div>
-//                     </div>										
+//                     </div>
 //                 </div>
 //             </div>
-//         </div>                            
+//         </div>
 //     </div>
 // )
 
