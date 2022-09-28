@@ -1,9 +1,9 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /subdirectory
+RewriteBase /voomio-front-end-jeni/
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule . /index.html [L]
+RewriteRule . /voomio-front-end-jeni/index.html [L]
 </IfModule>
