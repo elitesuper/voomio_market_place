@@ -4170,3 +4170,8 @@ header{
     max-width: 520px !important;
     justify-content: space-between !important;
 }
+
+.aggregator-container{
+  width: 95%;
+  max-width: 1600px;
+}
