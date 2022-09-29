@@ -3,6 +3,9 @@ import Button from '@mui/material/Button';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import Collapse from '@mui/material/Collapse';
+import ChatList from './ChatList';
+import OnlineUserList from './OnlineUserList';
+import {chatdata, onlineusers} from '../../../assets/fake-data/data-chattrending';
 
 function ChatTrending(){
   const [chatvisible, chatVisibleset] = useState(true);
@@ -23,13 +26,13 @@ function ChatTrending(){
         </div>
         <div className="chattrending-body w-100">
           <div className="row">
-            <div className="col-sm-12 col-md-8">
+            <div className="col-sm-12 col-md-9">
               <div className="col-md-12 text-center">
                   <Button className="chattending-accordion" onClick={chatviewclick()} variant="outlined" endIcon={(chatvisible)?(<RemoveOutlinedIcon/>):(<AddOutlinedIcon/>)}>Collection Chat</Button>
               </div>
-              <div className="col-md-12 text-center">
-                  <Collapse className="w-100" in={chatvisible} timeout="auto" unmountOnExit>
-                  ffff
+              <div className="col-md-12 text-center flex voomio-just-center">
+                  <Collapse className="chat-detail-view" in={chatvisible} timeout="auto" unmountOnExit>
+                      <ChatList data={chatdata}/>
                   </Collapse>
               </div>
               <div className="col-md-12 text-center mt-3">
@@ -37,12 +40,12 @@ function ChatTrending(){
               </div>
               <div className="col-md-12 text-center">
                   <Collapse className="w-100" in={trendvisible} timeout="auto" unmountOnExit>
-                  gggg
+
                   </Collapse>
               </div>
             </div>
-            <div className="col-sm-12 col-md-4">
-              fffffffffffffffffffffffffffffdddddddddddd
+            <div className="col-sm-12 col-md-3">
+                  <OnlineUserList/>
             </div>
           </div>
         </div>
