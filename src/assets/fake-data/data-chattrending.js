@@ -10,43 +10,53 @@ export const chatdata = [
     username:"@user123789",
     useravatar:imgavatar,
     time:"Today @ 4:10",
-    usermessage:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    usermessage:"dog bless",
     specnum: 33,
-    imgs:[
-      sampleimg,
-    ]
+    imgs:null,
+    belong:null,
   },{
     chatid:2,
     username:"@user123789",
     useravatar:imgavatar,
     time:"Today @ 4:10",
-    usermessage:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgs:[],
+    usermessage:"Lorem ipsum dolor",
+    imgs:null,
+    specnum: null,
+    belong:null,
   },{
     chatid:3,
     username:"@user123789",
     useravatar:imgavatar,
     time:"Today @ 4:10",
     usermessage:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgs:[],
+    imgs:null,
+    specnum: null,
+    belong:{
+      name:"@user327",
+      avatar:imgavatar2,
+      usermessage:"That's Ok!"
+    },
+
   },{
     chatid:4,
     username:"@user123789",
     useravatar:imgavatar,
     time:"Today @ 4:10",
-    belongid:2,
     usermessage:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgs:[],
+    imgs:null,
+    specnum: null,
+    belong:null,
+
   },{
     chatid:5,
     username:"@user123789",
     useravatar:imgavatar,
     time:"Today @ 4:10",
-    usermessage:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    usermessage:"dog bless",
     specnum: 33,
-    imgs:[
-      sampleimg,
-    ]
+    imgs:sampleimg,
+    specnum: null,
+    belong:null,
   }
 ]
 
@@ -92,4 +102,73 @@ export const onlineusers=[
     username:'@user123789',
     verified:true
   },
+]
+
+export const threads = [
+  {
+    username:"@user1234567",
+    comments:"44 comments",
+    messages:[
+      {
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget justo nec nisi blandit feugiat. Vestibulum vel ex nec neque varius pharetra.",
+        time:"2 days ago"
+      },{
+        message:"This is test version.",
+        time:"2 days ago"
+      },{
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        time:"3 days ago"
+      },{
+        message:"Si alicui credis, credet et tibi.",
+        time:"4 days ago"
+      },{
+        message:"Illic res est usquam. Quaeso ne dubita.",
+        time:"5 days ago"
+      }
+    ]
+  },
+  {
+    username:"@user1234567",
+    comments:"44 comments",
+    messages:[
+      {
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget justo nec nisi blandit feugiat. Vestibulum vel ex nec neque varius pharetra.",
+        time:"2 days ago"
+      },{
+        message:"This is test version.",
+        time:"2 days ago"
+      },{
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        time:"3 days ago"
+      },{
+        message:"Si alicui credis, credet et tibi.",
+        time:"4 days ago"
+      },{
+        message:"Illic res est usquam. Quaeso ne dubita.",
+        time:"5 days ago"
+      }
+    ]
+  },
+  {
+    username:"@user1234567",
+    comments:"44 comments",
+    messages:[
+      {
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget justo nec nisi blandit feugiat. Vestibulum vel ex nec neque varius pharetra.",
+        time:"2 days ago"
+      },{
+        message:"This is test version.",
+        time:"2 days ago"
+      },{
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        time:"3 days ago"
+      },{
+        message:"Si alicui credis, credet et tibi.",
+        time:"4 days ago"
+      },{
+        message:"Illic res est usquam. Quaeso ne dubita.",
+        time:"5 days ago"
+      }
+    ]
+  }
 ]

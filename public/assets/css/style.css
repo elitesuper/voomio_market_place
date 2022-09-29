@@ -1725,6 +1725,13 @@ header{
     top: 12rem;
 }
 @media only screen and (max-width: 1920px){
+    #site-logo-inner{
+      left:10%;
+    }
+    .question-form{
+      width: 25%;
+      left:24%;
+    }
     .header_1.header_2 #main-nav {
         left: 50%;
     }
@@ -1737,6 +1744,9 @@ header{
     }
 }
 @media only screen and (max-width: 1600px) {
+    #site-logo-inner{
+      left: 5%;
+    }
     .sign-up{
         width: 60%;
         margin: auto;
@@ -1756,6 +1766,9 @@ header{
 }
 
 @media only screen and (max-width: 1366px){
+    #site-logo-inner{
+      left:6%
+    }
     .header_1.header_2 #main-nav {
         left: 40%;
     }
@@ -3969,9 +3982,12 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
+.tab-container{
+  max-width: 1920px;
+}
 .tab-container ul{
     margin: auto;
-    max-width: 1920px;
+    max-width: 1800px;
 }
 .detail-card{
     padding: 0px;
@@ -4101,6 +4117,29 @@ header{
   border: 2px solid #6549F6;
   padding: 0.5rem 0.75rem !important;
 }
+.chat-input input{
+  border: 2px solid #6549F6;
+  padding: 0.5rem 6rem 0.5rem 0.7rem !important;
+  border-radius: 10px !important;
+  position: relative;
+  z-index: 10;
+}
+.chat-input input:focus{
+  background-color: transparent !important;
+}
+.chat-spec-btn{
+  position: absolute;
+  right: 5px;
+  top:8px;
+}
+.left-chat{
+  right: 35px;
+}
+.chat-send-btn{
+  background-color: #6549F6 !important;
+  border: solid 2px #6549F6 !important;
+  margin-left: 1rem !important;
+}
 .searchcard-checkbox{
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -4150,31 +4189,48 @@ header{
 .belong-border::before{
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 15px;
+    left: 4px;
+    bottom: -10px;
+    height: 20px;
     width: 30px;
     background-color: transparent;
-    margin: 0 -7.5px;
+    /* margin: 0 -7.5px; */
     border: solid 2px #6549F6;
     border-top-left-radius: 5px;
     border-right: none;
     border-bottom: none;
 }
+.belong-border{
+  margin-left: 40px !important;
+}
 .chattending-accordion{
     width: 75%;
     text-transform: none !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
     font-size: 1.5rem !important;
+    font-weight: 600 !important;
     color: black !important;
     border: 2px solid #6549F6 !important;
+    border-radius: 15px !important;
     max-width: 520px !important;
     justify-content: space-between !important;
 }
 .chat-detail-view{
-  width: 75%;
+  width: 100%;
   max-width: 520px !important;
 }
 .aggregator-container{
   width: 95%;
   max-width: 1600px;
+}
+.chat-message{
+  font-size: 1.5rem;
+}
+.chat-specnum{
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  background-color: #F4EEFF;
+}
+.belong-id{
+  margin: auto 10px auto 10px;
 }

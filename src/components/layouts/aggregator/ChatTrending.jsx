@@ -5,7 +5,8 @@ import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import Collapse from '@mui/material/Collapse';
 import ChatList from './ChatList';
 import OnlineUserList from './OnlineUserList';
-import {chatdata, onlineusers} from '../../../assets/fake-data/data-chattrending';
+import Thread from './Thread';
+import {chatdata, onlineusers, threads} from '../../../assets/fake-data/data-chattrending';
 
 function ChatTrending(){
   const [chatvisible, chatVisibleset] = useState(true);
@@ -19,11 +20,8 @@ function ChatTrending(){
       trendVisibleset(!trendvisible)
   };
   return(
-    <div className="mt-3 mb-3">
-      <div className="themesflat-container ">
-        <div className="ml-5 chattrending-header w-100">
-            <h4 className="ml-5 belong-border">Hey guys!</h4>
-        </div>
+    <div className="mt-5 mb-5">
+      <div className="themesflat-container">
         <div className="chattrending-body w-100">
           <div className="row">
             <div className="col-sm-12 col-md-9">
@@ -38,9 +36,9 @@ function ChatTrending(){
               <div className="col-md-12 text-center mt-3">
                   <Button className="chattending-accordion" onClick={trendviewclick()}  variant="outlined" endIcon={(trendvisible)?(<RemoveOutlinedIcon/>):(<AddOutlinedIcon/>)}>Collection Threads</Button>
               </div>
-              <div className="col-md-12 text-center">
-                  <Collapse className="w-100" in={trendvisible} timeout="auto" unmountOnExit>
-
+              <div className="col-md-12 text-center flex voomio-just-center">
+                  <Collapse className="chat-detail-view" in={trendvisible} timeout="auto" unmountOnExit>
+                    <Thread threads={threads}/>
                   </Collapse>
               </div>
             </div>
