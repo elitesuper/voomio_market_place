@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Button from '@mui/material/Button';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
+import Collapse from '@mui/material/Collapse';
 
 function ChatTrending(){
   const [chatvisible, chatVisibleset] = useState(true);
@@ -11,7 +12,7 @@ function ChatTrending(){
       chatVisibleset(!chatvisible)
   };
 
-  const handleClick = () => () => {
+  const trendviewclick = () => () => {
       trendVisibleset(!trendvisible)
   };
   return(
@@ -26,8 +27,18 @@ function ChatTrending(){
               <div className="col-md-12 text-center">
                   <Button className="chattending-accordion" onClick={chatviewclick()} variant="outlined" endIcon={(chatvisible)?(<RemoveOutlinedIcon/>):(<AddOutlinedIcon/>)}>Collection Chat</Button>
               </div>
+              <div className="col-md-12 text-center">
+                  <Collapse className="w-100" in={chatvisible} timeout="auto" unmountOnExit>
+                  ffff
+                  </Collapse>
+              </div>
               <div className="col-md-12 text-center mt-3">
-                  <Button className="chattending-accordion" onClick={chatviewclick()}  variant="outlined" endIcon={(trendvisible)?(<RemoveOutlinedIcon/>):(<AddOutlinedIcon/>)}>Collection Threads</Button>
+                  <Button className="chattending-accordion" onClick={trendviewclick()}  variant="outlined" endIcon={(trendvisible)?(<RemoveOutlinedIcon/>):(<AddOutlinedIcon/>)}>Collection Threads</Button>
+              </div>
+              <div className="col-md-12 text-center">
+                  <Collapse className="w-100" in={trendvisible} timeout="auto" unmountOnExit>
+                  gggg
+                  </Collapse>
               </div>
             </div>
             <div className="col-sm-12 col-md-4">
