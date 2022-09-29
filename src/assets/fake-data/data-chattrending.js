@@ -49,34 +49,42 @@ export const chatdata = [
 
 export const onlineusers=[
   {
+    userid:1,
     useravatar:imgavatar,
     username:'@user123789',
     verified:true
   },{
+    userid:2,
     useravatar:imgavatar,
     username:'@LoremIpsum',
     verified:true
   },{
+    userid:3,
     useravatar:imgavatar,
     username:'@user12334532',
     verified:false
   },{
+    userid:4,
     useravatar:imgavatar,
     username:'@user123789',
     verified:true
   },{
+    userid:5,
     useravatar:imgavatar,
     username:'@user123789',
     verified:false
   },{
+    userid:6,
     useravatar:imgavatar,
     username:'@user123789',
     verified:true
   },{
+    userid:7,
     useravatar:imgavatar,
     username:'@user123789',
     verified:false
   },{
+    userid:8,
     useravatar:imgavatar,
     username:'@user123789',
     verified:true

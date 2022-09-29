@@ -45,7 +45,7 @@ function ChatTrending(){
               </div>
             </div>
             <div className="col-sm-12 col-md-3">
-                  <OnlineUserList/>
+                  <OnlineUserList users={onlineusers}/>
             </div>
           </div>
         </div>

@@ -7,27 +7,30 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Checkbox from '@mui/material/Checkbox';
 import Avatar from '@mui/material/Avatar';
 
-export default function CheckboxListSecondary() {
+export default function CheckboxListSecondary(props) {
+  const data = props.users;
   return (
-    <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      {[0, 1, 2, 3].map((value) => {
-        return (
-          <ListItem
-            key={value}
-            disablePadding
-          >
-            <ListItemButton>
-              <ListItemAvatar>
-                <Avatar
-                  alt={`Avatar n°${value + 1}`}
-                  src={`/static/images/avatar/${value + 1}.jpg`}
-                />
-              </ListItemAvatar>
-              <ListItemText id={value} primary={`Line item ${value + 1}`} />
-            </ListItemButton>
-          </ListItem>
-        );
-      })}
-    </List>
+    <>
+      <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        {data.map((item) => {
+          return (
+            <ListItem
+              key={item.userid}
+              disablePadding
+            >
+              <ListItemButton>
+                <ListItemAvatar>
+                  <Avatar
+                    alt={item.userid}
+                    src={item.useravatar}
+                  />
+                </ListItemAvatar>
+                <ListItemText id={item.userid} primary={item.username} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+    </>
   );
 }
