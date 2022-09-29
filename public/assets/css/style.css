@@ -1724,15 +1724,7 @@ header{
     right: 22rem;
     top: 12rem;
 }
-@media only screen and (min-width: 1920px){
-  .aggregator-container{
-    width: 1650px;
-  }
-}
 @media only screen and (max-width: 1920px){
-    .aggregator-container{
-      width: 1650px;
-    }
     .header_1.header_2 #main-nav {
         left: 50%;
     }
@@ -4151,4 +4143,30 @@ header{
     opacity: 1;
     transform: translateY(0);
     z-index: 999 !important
+}
+.chattrending-header{
+  position: relative;
+}
+.belong-border::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 15px;
+    width: 30px;
+    background-color: transparent;
+    margin: 0 -7.5px;
+    border: solid 2px #6549F6;
+    border-top-left-radius: 5px;
+    border-right: none;
+    border-bottom: none;
+}
+.chattending-accordion{
+    width: 75%;
+    text-transform: none !important;
+    font-size: 1.5rem !important;
+    color: black !important;
+    border: 2px solid #6549F6 !important;
+    max-width: 520px !important;
+    justify-content: space-between !important;
 }

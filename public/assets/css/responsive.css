@@ -152,7 +152,7 @@
   .sc-box-icon-inner.style3 {
     padding-left: 80px;
 }
-  
+
 }
 @media only screen and (max-width :1430px) {
   .authors-2 .react-tabs__tab-list {
@@ -241,7 +241,7 @@
   .widget-subcribe{
     padding-left: 0;
   }
-  
+
   .header_1 .header_avatar .price{
     display: none;
   }
@@ -295,7 +295,7 @@
   .tf-item-details .content-left .media img{
     width: 100% !important;
   }
-  
+
   .explore-tab .content-tab .content-inner .sc-card-product,
   .style-3 .sc-box-icon {
     width: calc(33.3% - 30px);
@@ -304,7 +304,7 @@
   .box-epxlore .sc-card-product {
     width: 48%;
   }
-  
+
   .sub-title.pad-400{
     padding: 0 100px;
   }
@@ -318,7 +318,7 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-  
+
   .tab-authors .menu-tab {
     padding-left: 0;
     padding-right: 0;
@@ -359,16 +359,16 @@
 
   .tab-authors .menu-tab {
     justify-content: center;
-  } 
+  }
 
 
-    
+
   .inner-post .image-box img {
     width: 100%;
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
+
   .mainslider.home3 .image .img-bg{
     max-width: 50%;
     right: 15px;
@@ -528,7 +528,7 @@
 .home-5 .live-auctions .sc-card-product,.home-5 .sc-card-collection.style-2.home5 {
   margin-bottom: 0;
 }
-.home-6 .flat-cart-item 
+.home-6 .flat-cart-item
 {
   padding: 190px 0 73px;
 }
@@ -814,7 +814,7 @@
   .tf-item-details.style-2 .meta-item .left {
     margin-bottom: 15px;
   }
-  
+
   #footer .widget.widget-subcribe,
   .sc-card-product.explode.style2  {
     margin-bottom: 0;
@@ -834,7 +834,7 @@
   .flat-title-page.style-3,
   .is_dark .flat-title-page{
     border-bottom: 1px solid #343444;
-  } 
+  }
 
   .header_1.header_2.is-fixed .mode_switcher{
     display: none !important;
@@ -844,7 +844,7 @@
   }
   .sc-explore-2 .react-tabs__tab-panel .sc-card-product {
     width: calc(50% - 30px);
-  } 
+  }
   .authors-2 .react-tabs__tab {
     padding: 2.2% 33px 2.5%;
   }
@@ -955,7 +955,7 @@
   .home-6 .flat-cart-item {
     padding: 190px 0 45px;
   }
-  .home-6 .live-auctions .sc-card-product 
+  .home-6 .live-auctions .sc-card-product
   {
     margin-bottom: 0;
   }
@@ -1212,7 +1212,7 @@
   }
 
   .themesflat-container {
-      width: 750px;
+      width: 650px;
   }
 
   .style-2 .sc-box-icon,
@@ -1238,7 +1238,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-    
+
   .tab-authors .author-profile .infor-profile {
     padding-left: 0;
   }
@@ -1381,7 +1381,7 @@
   .authors-2 .react-tabs__tab.react-tabs__tab--selected::after {
     display: none;
   }
-  
+
   .home-7 .flat-title-page.style3 {
     padding: 120px 0 90px;
 }
@@ -1419,7 +1419,7 @@
   .header-search {
     margin-right: 10px !important;
 }
-  
+
   .uploadFile input[type=file],
   .tab-authors .menu-tab .tablinks.active::after {
     display: none;
@@ -1431,7 +1431,7 @@
   }
 
   .themesflat-container {
-    width: 750px;
+    width: 500px;
   }
 
   .style-3 .sc-box-icon {
@@ -1509,7 +1509,12 @@
   .tf-box .box-item{
     width: 100% !important;
   }
-
+  .chattending-accordion{
+    width: 100% !important;
+  }
+  .themesflat-container{
+    width: 360px;
+  }
   .sc-card-activity .button-active.icon{
     margin: 10px auto 0;
   }
