@@ -13,6 +13,7 @@ import CachedIcon from '@mui/icons-material/Cached';
 import CloseIcon from '@mui/icons-material/Close';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
 
 import CardModal from '../components/layouts/CardModal';
@@ -95,15 +96,19 @@ const Aggregator = () => {
                                 <img src={avt} alt="Axies" className="avatar" />
                             </div>
                             <div className="infor-profile">
-                                <h2 className="title">Mutant Ape Yatch Club</h2>
+                                <div className="flex">
+                                    <h2 className="title">Mutant Ape Yatch Club</h2>
+                                    <VerifiedIcon className="spec-color-1" sx={{fontSize:"20px"}}/> 
+                                </div>
                                 <p className="content profile-content">
                                 The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale.
                                 </p>
                                 <div className='detail-info flex'>
                                     <div className='voomio-mta voomio-m-r-2'><h6>Items</h6><h4>10.0K</h4></div>
                                     <div className='voomio-mta voomio-m-r-2'><h6>Owners</h6><h4>6.3K</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Total</h6><h4>433.3k</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Floor</h6><h4>87</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Total</h6><h4><img src={etherium_icon}></img>433.3k</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Floor</h6><h4><img src={etherium_icon}></img>87</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Best Offer</h6><h4><img src={etherium_icon}></img>88</h4></div>
 
                                 </div>
                             </div>

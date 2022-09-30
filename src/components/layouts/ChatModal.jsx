@@ -45,8 +45,7 @@ export default function ChatModal(props) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={props.onHide}>Cancel</Button>
-          <Button onClick={props.onHide}>Subscribe</Button>
+          <Button onClick={props.onHide}>Close</Button>
         </DialogActions>
       </Dialog>
     </div>
