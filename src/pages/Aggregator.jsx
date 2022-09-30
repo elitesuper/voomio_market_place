@@ -98,7 +98,7 @@ const Aggregator = () => {
                             <div className="infor-profile">
                                 <div className="flex">
                                     <h2 className="title">Mutant Ape Yatch Club</h2>
-                                    <VerifiedIcon className="spec-color-1" sx={{fontSize:"20px"}}/> 
+                                    <VerifiedIcon className="spec-color-1" sx={{fontSize:"20px"}}/>
                                 </div>
                                 <p className="content profile-content">
                                 The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale.
@@ -169,7 +169,7 @@ const Aggregator = () => {
                                               </div>
                                           </div>
                                       </div>
-                                      <div className="col-md-12 flex voomio-pb-2">
+                                      <div className="col-md-12 flex voomio-pb-2 itemnumbers-filters">
                                         <CachedIcon className="voomio-mta mg-r-8"/> <h6 className="voomio-mta">{item.dataContent.length} items</h6>
                                         <div className="flex">
                                           <h5 className="spec-color-1 mg-l-8" > Filters: </h5>

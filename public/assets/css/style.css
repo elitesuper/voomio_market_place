@@ -2020,6 +2020,9 @@ header{
 }
 
 @media only screen and (max-width:500px){
+    .itemnumbers-filters{
+      display: block;
+    }
     .chat-detail-view{
       width: 100% !important;
     }
@@ -4106,6 +4109,7 @@ header{
   border-left: none;
   border-right: none;
   font-size: 1.5rem;
+  text-transform: none !important;
 }
 .collection-stat-item{
   box-shadow: none !important;
