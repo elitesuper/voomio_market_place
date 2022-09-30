@@ -3988,6 +3988,10 @@ header{
 .tab-container ul{
     margin: auto;
     max-width: 1800px;
+    background: transparent !important;
+}
+.tab-container ul .react-tabs__tab--selected{
+  border-bottom: solid 0.5rem #6549F6 !important;
 }
 .detail-card{
     padding: 0px;

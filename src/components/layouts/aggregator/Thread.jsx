@@ -18,7 +18,7 @@ function Thread(props){
           </div>
           <div>
           <Typography className="mb-5" variant="h5" gutterBottom>
-            {data.username}
+            {data.username} <span></span>
           </Typography>
           {data.messages[0].message}
           {data.messages[0].time}

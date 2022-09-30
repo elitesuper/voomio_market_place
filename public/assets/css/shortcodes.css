@@ -189,7 +189,7 @@
   max-width: 100%;
 }
 
-/* button 
+/* button
 --------------------------------------------------*/
 .sc-button {
   display: inline-block;
@@ -583,7 +583,7 @@
   transform: rotateY(360deg);
 }
 
-/* sc card article 
+/* sc card article
 --------------------------------------------------*/
 .sc-card-article {
   background: var(--primary-color);
@@ -3529,7 +3529,7 @@ section.today-picks {
   padding-bottom: 14px;
 }
 
-/* Top Seller Authours 
+/* Top Seller Authours
 ------------------------------------------------------------ */
 .seller {
   margin-left: -3px !important;
@@ -3747,9 +3747,10 @@ section.today-picks {
   color: var(--primary-color3);
   position: relative;
   background: transparent;
-  border: none;
+  border:none;
+  border-bottom: solid 0.5rem #6549F6 !important;;
 }
-.authors-2 .react-tabs__tab.react-tabs__tab--selected::after {
+/* .authors-2 .react-tabs__tab.react-tabs__tab--selected::after {
   content: "";
   position: absolute;
   bottom: -7.5px;
@@ -3759,7 +3760,7 @@ section.today-picks {
   transform: rotate(45deg);
   background-color: var(--bg-section);
   margin: 0 -7.5px;
-}
+} */
 .authors-2 .react-tabs__tab:focus {
   box-shadow: none;
   border: none;
@@ -5750,7 +5751,7 @@ button.accordion-button {
 .live-auctions.style3.home4 .sc-card-product {
   margin-bottom: 30px;
 }
-/* 
+/*
 .dropdown-menu.show {
     display: block;
     -webkit-transform: translateY(0);
