@@ -4256,5 +4256,7 @@ header{
 .buttonpattern-1:focus{
   border: none !important;
   color: white !important;
-
+}
+.chat-modal{
+  z-index: 999999 !important;
 }

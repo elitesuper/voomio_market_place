@@ -172,3 +172,26 @@ export const threads = [
     ]
   }
 ]
+
+export const thread =  {
+    username:"@user1234567",
+    comments:"44 comments",
+    messages:[
+      {
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget justo nec nisi blandit feugiat. Vestibulum vel ex nec neque varius pharetra.",
+        time:"2 days ago"
+      },{
+        message:"This is test version.",
+        time:"2 days ago"
+      },{
+        message:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        time:"3 days ago"
+      },{
+        message:"Si alicui credis, credet et tibi.",
+        time:"4 days ago"
+      },{
+        message:"Illic res est usquam. Quaeso ne dubita.",
+        time:"5 days ago"
+      }
+    ]
+  }
