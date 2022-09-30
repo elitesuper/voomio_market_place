@@ -3727,13 +3727,8 @@ section.today-picks {
 /* title */
 .authors-2 .react-tabs__tab-list {
   padding: 0 2% 0 24.5%;
-  -webkit-border-radius: 0 0 12px 12px;
-  -ms-border-radius: 0 0 12px 12px;
-  -o-border-radius: 0 0 12px 12px;
-  -moz-border-radius: 0 0 12px 12px;
-  border-radius: 0 0 12px 12px;
-  background: var(--primary-color7);
-  border: none;
+  background: transparent;
+  /* border: none; */
 }
 
 .authors-2 .react-tabs__tab {
@@ -3741,6 +3736,8 @@ section.today-picks {
   line-height: 26px;
   font-weight: 700;
   padding: 1.2% 67px 1.5%;
+  border:none;
+  border-bottom: solid 0.5rem transparent !important;
 }
 
 .authors-2 .react-tabs__tab.react-tabs__tab--selected {
@@ -3748,7 +3745,7 @@ section.today-picks {
   position: relative;
   background: transparent;
   border:none;
-  border-bottom: solid 0.5rem #6549F6 !important;;
+  border-bottom: solid 0.5rem #6549F6 !important;
 }
 /* .authors-2 .react-tabs__tab.react-tabs__tab--selected::after {
   content: "";

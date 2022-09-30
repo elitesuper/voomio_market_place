@@ -146,7 +146,7 @@ const Profile = () => {
                                 <div className='content-inner'>
                                     <div className='row'>
                                     <TabPanel key={index}>
-                                    <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-5 voomio-flex voomio-just-between">
+                                    <div className="col-md-12 wrap-inner pad-t-8 load-more mt-3 voomio-flex voomio-just-between">
                                         <div className="flex">
                                             <IconButton color="primary" component="label" size="large">
                                                 <TuneIcon fontSize='inherit'/>
@@ -174,7 +174,7 @@ const Profile = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-12 flex voomio-pb-2">
+                                    <div className="col-md-12 flex voomio-pb-2 mt-2">
                                       <CachedIcon className="mg-r-8"/> <h6>{item.dataContent.length} items</h6>
                                     </div>
                                     {
