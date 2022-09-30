@@ -26,7 +26,7 @@ export default function ChatList(props) {
             </div>
           </div>
         )}
-        <ListItem alignItems="flex-start">
+        <ListItem alignItems="flex-start" key={index}>
           <ListItemAvatar>
             <Avatar alt="Remy Sharp" src={item.useravatar} />
           </ListItemAvatar>
@@ -58,10 +58,10 @@ export default function ChatList(props) {
         </>
       ))}
       <div className="flex">
-        <div className="input-group chat-input w-75 mx-auto flex">
+        <div className="input-group chat-input w-100 mx-auto flex">
           <input type="text" className="form-control" placeholder="Messages..." aria-label="max" aria-describedby="basic-addon1"/>
-          <GifBoxOutlinedIcon sx={{fontSize:'30px'}} className="chat-spec-btn left-chat"/>
-          <SentimentSatisfiedOutlinedIcon sx={{fontSize:'30px'}} className="chat-spec-btn"/>
+          <GifBoxOutlinedIcon sx={{fontSize:'30px', color:'#D9D9D9'}} className="chat-spec-btn left-chat"/>
+          <SentimentSatisfiedOutlinedIcon sx={{fontSize:'30px', color:'#D9D9D9'}} className="chat-spec-btn"/>
         </div>
         <IconButton className="chat-send-btn" aria-label="add an alarm">
           <ArrowUpwardIcon sx={{fontSize:'25px', color:'white'}} />

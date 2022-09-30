@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
@@ -7,11 +7,13 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import ReportProblemOutlinedIcon from '@mui/icons-material/ReportProblemOutlined';
 import Button from '@mui/material/Button';
+import ChatModal from '../ChatModal';
 
 
 function Thread(props){
 
-  const threads = props.threads
+  const threads = props.threads;
+  const [modalShow, setModalShow] = useState(false);
 
   return(<>
       <List className="my-3" sx={{ width: '100%', maxWidth: '520px', bgcolor: 'background.paper' }}>
@@ -35,7 +37,7 @@ function Thread(props){
             <div className="flex spec-color-1"><ForumOutlinedIcon className="voomio-mta"/><span className="voomio-mta">{data.comments}</span></div>
             <div className="ml-2 flex spec-color-3"><ReportProblemOutlinedIcon className="voomio-mta"/><span className="voomio-mta">Report</span></div>
           </Typography>
-          <Button className="buttonpattern-1" variant="contained">Comment</Button>
+          <Button onClick={() => setModalShow(true)} className="buttonpattern-1" variant="contained">Comment</Button>
           </div>
         </ListItem>
       ))}
