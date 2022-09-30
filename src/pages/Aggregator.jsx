@@ -228,7 +228,7 @@ const Aggregator = () => {
                                 </div>
                                 ):(
                                   <>
-                                <TabPanel className="voomio-just-center" key={1}>
+                                <TabPanel className="chattabpanel" key={1}>
                                   <ChatTrending/>
                                 </TabPanel>
                                 <TabPanel key={2} className="voomio-just-center">

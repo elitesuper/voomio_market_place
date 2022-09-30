@@ -2020,6 +2020,9 @@ header{
 }
 
 @media only screen and (max-width:500px){
+    .chat-detail-view{
+      width: 100% !important;
+    }
     .v-feature img{
         top: 0px !important;
     }
@@ -4221,8 +4224,11 @@ header{
     justify-content: space-between !important;
 }
 .chat-detail-view{
-  width: 100%;
+  width: 75%;
   max-width: 520px !important;
+}
+.chattabpanel{
+  display: block !important;
 }
 .aggregator-container{
   width: 95%;
@@ -4237,4 +4243,18 @@ header{
 }
 .belong-id{
   margin: auto 10px auto 10px;
+}
+.buttonpattern-1{
+  background-color: #6549F6;
+  font-size: 1rem !important;
+  border-radius: 15px !important;
+}
+.buttonpattern-1:hover{
+  border: none !important;
+  color: white !important;
+}
+.buttonpattern-1:focus{
+  border: none !important;
+  color: white !important;
+
 }

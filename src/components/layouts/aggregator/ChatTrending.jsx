@@ -21,7 +21,7 @@ function ChatTrending(){
   };
   return(
     <div className="mt-5 mb-5">
-      <div className="themesflat-container">
+      <div className="aggregator-container mx-auto">
         <div className="chattrending-body w-100">
           <div className="row">
             <div className="col-sm-12 col-md-9">
