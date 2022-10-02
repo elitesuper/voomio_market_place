@@ -1,10 +1,11 @@
 import Home from "./Home";
-import Profile from "./Profile"
-import Detail from "./Detail"
+import Profile from "./Profile";
+import Detail from "./Detail";
 import NoResult from "./NoResult";
-import ExploreCollection from "./ExploreCollection"
-import CollectionStat from "./CollectionStat"
-import Aggregator from "./Aggregator"
+import ExploreCollection from "./ExploreCollection";
+import CollectionStat from "./CollectionStat";
+import Aggregator from "./Aggregator";
+import NFTGeneratorMain from "./NFTGenerator";
 
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
   { path: '/explorecollection', component: <ExploreCollection />},
   { path: '/collectionstat', component:<CollectionStat/>},
   { path: '/aggregator', component:<Aggregator/>},
+  { path: '/nftgenerator', component:<NFTGeneratorMain/>},
 ]
 
 export default routes;

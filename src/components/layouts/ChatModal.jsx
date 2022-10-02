@@ -31,7 +31,7 @@ export default function ChatModal(props) {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">
+        <DialogTitle className='dialogtitle-header' id="scroll-dialog-title">
           <ChatHeader thread={thread}/>
         </DialogTitle>
         <DialogContent dividers={false}>
