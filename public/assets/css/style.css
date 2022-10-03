@@ -4297,3 +4297,25 @@ header{
 .voomio-btn:focus{
   color: white;
 }
+.wallet_icons{
+  width: 24px;
+  height: 24px;
+}
+.voomio-w-btn{
+  font-size: 1.4rem !important;
+  border-radius: 20px !important;
+  text-transform: none !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+.voomio-w-btn-filled{
+  background: #F4EEFF !important;
+  color: #8551E6 !important;
+  box-shadow: none !important;
+}
+.voomio-w-btn-filled:hover{
+  border: none !important;
+}
+.voomio-w-btn-filled:focus{
+  border: none !important;
+}

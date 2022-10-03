@@ -5,6 +5,7 @@ import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
 import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
+import WalletConnectModal from '../../components/layouts/WalletConnectModal';
 
 import img1 from '../../assets/images/avatar/ic_land_1.png'
 import img2 from '../../assets/images/avatar/ic_land_2.png'
@@ -101,6 +102,8 @@ const HeaderStyle2 = (props) => {
 
 
     const [modalShow, setModalShow] = useState(false);
+    const [walletmodalShow, setwalletModalShow] = useState(false);
+
 
    /*****************************  wallet connection ***************************/
    const [acc,setacc] = useState()
@@ -343,7 +346,7 @@ const HeaderStyle2 = (props) => {
                                 <div className="flat-search-btn flex">
                                     {
                                         !accountid ? <div className="sc-btn-top mg-r-12" id="site-header">
-                                        <button onClick={onConnect} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                                        <button onClick={() => setwalletModalShow(true)} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
                                         </span></button>
                                         </div> : <div className="sc-btn-top mg-r-12" id="site-header">
                                         <button onClick={()=> setModalShow(true)} className="sc-button header-slider style style-1 fl-button pri-1"><span>{accountid?.substr(0, 6) + '....' + accountid?.substr(accountid?.length - 4, accountid?.length)}
@@ -433,6 +436,7 @@ const HeaderStyle2 = (props) => {
                     </div>
                 </div>
             </Modal>
+            <WalletConnectModal show={walletmodalShow} onHide={() => setwalletModalShow(false)}/>
         </header>
     );
 }
