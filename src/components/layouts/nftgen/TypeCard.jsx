@@ -29,7 +29,7 @@ function TypeCard(props){
          </Typography>
        </CardContent>
        <CardActions>
-         <Button className="voomio-btn" variant="contained" size="large">Get Started</Button>
+         <Button className="voomio-btn btn-filled" variant="contained" size="large">Get Started</Button>
        </CardActions>
     </Box>
   )

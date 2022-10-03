@@ -70,7 +70,7 @@ function Listings(){
     const handleClick = () => () => {
         setOpen(!open)
     };
-    
+
     return(<>
     <div className='w-100 mg-t-20'>
         <div className='chart-header flex mg-bt-10' onClick={handleClick()}>
@@ -129,8 +129,8 @@ function Listings(){
                     ))
                 }
                 {
-                    visible < data.length && 
-                    <div className="col-md-12 wrap-inner load-more text-center"> 
+                    visible < data.length &&
+                    <div className="col-md-12 wrap-inner load-more text-center">
                         <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                     </div>
                 }
