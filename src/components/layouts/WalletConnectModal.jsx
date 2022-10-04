@@ -56,7 +56,7 @@ export default function WalletConnectModal(props) {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle className='dialogtitle-header flex mr-5 mt-3 mb-3' id="scroll-dialog-title">
+        <div className='dialogtitle-header flex mx-5 mt-5 mb-3' id="scroll-dialog-title">
           <div>
             <AccountBalanceWalletOutlinedIcon sx={{color:'#7B61FF', fontSize:'50px', mr:3}} />
           </div>
@@ -68,37 +68,29 @@ export default function WalletConnectModal(props) {
               Connect or Create a wallet
             </Typography>
           </div>
-        </DialogTitle>
+        </div>
          <Divider />
-        <DialogContent dividers={false} className="text-center">
-          <DialogContentText
-            className="d-flex justify-content-center"
-            id="scroll-dialog-description"
-            ref={descriptionElementRef}
-            tabIndex={-1}
-          >
-            <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-              {walletdata.slice(0,visible).map((item, index) => (
-                <>
-                <ListItem
-                  key={index}
-                  disableGutters
-                  secondaryAction={
-                    actionprepare(item.type)
-                  }
-                >
-                <ListItemAvatar>
-                  <Avatar>
-                    <img className="wallet_icons" src={item.img} alt={item.name}/>
-                  </Avatar>
+        <DialogContent dividers={false} className="text-center" ref={descriptionElementRef} tabIndex={-1}>
+          <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+            {walletdata.slice(0,visible).map((item, index) => (
+              <React.Fragment key={index}>
+              <ListItem
+                disableGutters
+                secondaryAction={
+                  actionprepare(item.type)
+                }
+              >
+              <ListItemAvatar>
+                <Avatar>
+                  <img className="wallet_icons" src={item.img} alt={item.name}/>
+                </Avatar>
                 </ListItemAvatar>
-                  <ListItemText sx={{fontWeight:'600'}} primary={item.name}/>
-                </ListItem>
-                <Divider />
-                </>
-              ))}
-            </List>
-          </DialogContentText>
+                <ListItemText sx={{fontWeight:'600'}} primary={item.name}/>
+              </ListItem>
+              <Divider />
+              </React.Fragment>
+            ))}
+          </List>
           {
               visible < walletdata.length &&
                   <Button className="voomio-w-btn mx-auto" variant="outlined" size="large" onClick={showMoreItems}>Show more</Button>

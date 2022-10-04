@@ -1986,7 +1986,7 @@ header{
         border: none;
     }
     .header_1.header_2 #main-nav {
-        left: 0;
+        left: -10px;
     }
 }
 .v-mobile-btn{
