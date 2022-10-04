@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import IconButton from '@mui/material/IconButton';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
@@ -106,9 +104,9 @@ const Aggregator = () => {
                                 <div className='detail-info flex'>
                                     <div className='voomio-mta voomio-m-r-2'><h6>Items</h6><h4>10.0K</h4></div>
                                     <div className='voomio-mta voomio-m-r-2'><h6>Owners</h6><h4>6.3K</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Total</h6><h4><img src={etherium_icon}></img>433.3k</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Floor</h6><h4><img src={etherium_icon}></img>87</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Best Offer</h6><h4><img src={etherium_icon}></img>88</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Total</h6><h4><img src={etherium_icon} alt="etherium_icon"></img>433.3k</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Floor</h6><h4><img src={etherium_icon} alt="etherium_icon"></img>87</h4></div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Best Offer</h6><h4><img src={etherium_icon} alt="etherium_icon"></img>88</h4></div>
 
                                 </div>
                             </div>
@@ -136,7 +134,7 @@ const Aggregator = () => {
                     <div className="content-tab">
                         {
                             panelTab.map((item, index) => (
-                                (index == 0)?(
+                                (index === 0)?(
                                 <div className='aggregator-container mx-auto'>
                                 <div className='content-inner'>
                                     <div className='row'>

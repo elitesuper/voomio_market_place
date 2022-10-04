@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import ReportProblemOutlinedIcon from '@mui/icons-material/ReportProblemOutlined';
 import Button from '@mui/material/Button';
 import ChatModal from '../ChatModal';

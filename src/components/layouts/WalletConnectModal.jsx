@@ -58,13 +58,13 @@ export default function WalletConnectModal(props) {
       >
         <DialogTitle className='dialogtitle-header flex mr-5 mt-3 mb-3' id="scroll-dialog-title">
           <div>
-            <AccountBalanceWalletOutlinedIcon sx={{color:'#7B61FF', fontSize:'50px', mr:5}} />
+            <AccountBalanceWalletOutlinedIcon sx={{color:'#7B61FF', fontSize:'50px', mr:3}} />
           </div>
-          <div>
-            <Typography variant="h4" sx={{mb:1}}>
+          <div className="mr-5">
+            <Typography className="font-termina" variant="h4" sx={{mb:1}}>
               My Wallet
             </Typography>
-            <Typography variant="h6" sx={{mb:1}}>
+            <Typography className="spec-color-3" variant="h6" sx={{mb:1}}>
               Connect or Create a wallet
             </Typography>
           </div>
@@ -92,7 +92,7 @@ export default function WalletConnectModal(props) {
                     <img className="wallet_icons" src={item.img} alt={item.name}/>
                   </Avatar>
                 </ListItemAvatar>
-                  <ListItemText primary={item.name} />
+                  <ListItemText sx={{fontWeight:'600'}} primary={item.name}/>
                 </ListItem>
                 <Divider />
                 </>
@@ -105,7 +105,7 @@ export default function WalletConnectModal(props) {
           }
         </DialogContent>
         <DialogActions>
-          <Button onClick={props.onHide}>Close</Button>
+          <Button className="voomio-w-btn" variant="outlined" onClick={props.onHide}>Close</Button>
         </DialogActions>
       </Dialog>
     </div>

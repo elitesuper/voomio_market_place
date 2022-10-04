@@ -4319,3 +4319,6 @@ header{
 .voomio-w-btn-filled:focus{
   border: none !important;
 }
+.font-termina{
+  font-family: "MyTermina" !important;
+}
