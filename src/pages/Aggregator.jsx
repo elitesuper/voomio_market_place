@@ -152,11 +152,10 @@ const Aggregator = () => {
                                           <div className='flex'>
                                               <div className="seclect-box style3 voomio-pl-1 voomio-mta">
                                                   <div id="artworks" className="dropdown">
-                                                      <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
+                                                      <Link to="#" className="btn-selector nolink voomio-select">Price low to high</Link>
                                                       <ul className='voomio-zindex'>
-                                                          <li><span>Past 24 hours</span></li>
-                                                          <li><span>Past 24 hours</span></li>
-                                                          <li><span>Past 24 hours</span></li>
+                                                          <li><span>Price high to low</span></li>
+                                                          <li><span>All</span></li>
                                                       </ul>
                                                   </div>
                                               </div>

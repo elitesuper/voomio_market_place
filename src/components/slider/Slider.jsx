@@ -25,7 +25,7 @@ const Slider = props => {
                         <SwiperSlide key={index} className={item.class}>
                             <SliderItem item={item} />
                         </SwiperSlide>
-                        
+
                     ))
                 }
         </Swiper>
@@ -58,8 +58,8 @@ const SliderItem = props => (
                             <div className="wrap-heading flat-slider flex">
                                 {/* {(props.item.)} */}
                                 <div className="content main-home">
-                                    <h2 className="heading">{props.item.title_1}</h2>	
-                                    <h1 className="heading mb-style"><span className="tf-text s1 voomio-text-col2">{props.item.title_2}</span>                                          
+                                    <h2 className="heading">{props.item.title_1}</h2>
+                                    <h1 className="heading mb-style"><span className="tf-text s1 voomio-text-col2">{props.item.title_2}</span>
                                     </h1>
                                     <h1 className="heading">{props.item.title_3}</h1>
                                     <p className="sub-heading voomio-text-col2">{props.item.description}
@@ -67,7 +67,7 @@ const SliderItem = props => (
                                     <div className="flat-bt-slider flex style2">
                                         <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
                                         </span></Link>
-                                        <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
+                                        <Link to="/nftgenerator" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
                                         </span></Link>
                                     </div>
                                 </div>
@@ -75,13 +75,13 @@ const SliderItem = props => (
                                     <img className="img-bg" src={props.item.imgbg} alt="axies" />
                                     <img src={props.item.img} alt="axies" />
                                 </div>
-                            </div>   
-                        </div>					                           
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
-    
+
 )
 export default Slider;

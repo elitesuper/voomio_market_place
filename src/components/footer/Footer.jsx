@@ -74,7 +74,7 @@ const Footer = () => {
             title: "Terms",
             link: "/faq"
         },
-    ] 
+    ]
     const socialList = [
 
         {
@@ -97,7 +97,7 @@ const Footer = () => {
             icon: "icon-fl-vt",
             link: "#"
         },
-        
+
 
     ]
 
@@ -109,7 +109,7 @@ const Footer = () => {
         behavior: "smooth"
       });
     };
-  
+
     useEffect(() => {
       const toggleVisibility = () => {
         if (window.pageYOffset > 500) {
@@ -118,18 +118,18 @@ const Footer = () => {
           setIsVisible(false);
         }
       };
-  
+
       window.addEventListener("scroll", toggleVisibility);
-  
+
       return () => window.removeEventListener("scroll", toggleVisibility);
     }, []);
 
-      
+
     return (
         <div>
             <footer id="footer" className="footer-light-style clearfix bg-style">
                 <div className="themesflat-container">
-                    <div className="row voomio-border-bottom">
+                    <div className="row voomio-border-bottom pb-5">
                         <div className="col-12 voomio-pb-3 voomio-border-bottom">
                             <div className="widget widget-subcribe sign-up">
                                 <h5 className="title-widget voomio-text-col1">Stay in the Loop</h5>
@@ -219,10 +219,10 @@ const Footer = () => {
                 </div>
             </footer>
             {
-                isVisible && 
+                isVisible &&
                 <Link onClick={scrollToTop}  to='#' id="scroll-top"></Link>
             }
-            
+
             <div className="modal fade popup" id="popup_bid" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">

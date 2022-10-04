@@ -28,7 +28,7 @@ const Mintingslider = props => {
                         <SwiperSlide key={index} className={item.class}>
                             <SliderItem item={item} />
                         </SwiperSlide>
-                        
+
                     ))
                 }
         </Swiper>
@@ -65,8 +65,8 @@ const SliderItem = props => (
                             <div className="wrap-heading flat-slider flex">
                                 {/* {(props.item.)} */}
                                 <div className="content minting-content">
-                                    <h2 className="heading voomio-text-center">{props.item.title_1}</h2>	
-                                    <h1 className="heading mb-style"><span className="tf-text s1">{props.item.title_2}</span>                                          
+                                    <h2 className="heading voomio-text-center">{props.item.title_1}</h2>
+                                    <h1 className="heading mb-style"><span className="tf-text s1">{props.item.title_2}</span>
                                     </h1>
                                     <h2 className="heading voomio-text-center">{props.item.title_3}</h2>
                                     <div className='col-md-12 flex voomio-mt-20'>
@@ -100,17 +100,17 @@ const SliderItem = props => (
                                     <div className="flat-bt-slider flex style2 voomio-mt-40">
                                         <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
                                         </span></Link>
-                                        <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
+                                        <Link to="/nftgenerator" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
                                         </span></Link>
                                     </div>
                                 </div>
-                            </div>   
-                        </div>					                           
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
-    
+
 )
 export default Mintingslider;

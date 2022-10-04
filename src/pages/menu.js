@@ -16,7 +16,7 @@ const menus = [
     {
         id: 4,
         name: 'Create',
-        links: '/create',
+        links: '/nftgenerator',
     },
 
 ]
