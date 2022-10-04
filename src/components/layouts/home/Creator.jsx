@@ -57,7 +57,7 @@ const Creator = props => {
                                                             <div className="slider-item">
                                                                 <div className="sc-card-product voomio-pd-none">
                                                                     <div className="card-media voomio-creator-card">
-                                                                        <Link to="/item-details-01"><img className='voomio-radius-1' src={item.img} alt="axies" /></Link>
+                                                                        <Link to="/profile"><img className='voomio-radius-1' src={item.img} alt="axies" /></Link>
                                                                         <div className='featured-countdown voomio-bottom-20'>
                                                                             Gordon Gonner
                                                                         </div>

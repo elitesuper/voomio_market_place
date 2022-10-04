@@ -323,7 +323,7 @@ const HeaderStyle2 = (props) => {
                                         {
                                             menus.map((data,index) => (
                                                 <li key={index} onClick={()=> handleOnClick(index)} className={`menu-item ${data.namesub ? 'menu-item-has-children' : '' } ${activeIndex === index ? 'active' : ''} ` }   >
-                                                    <Link to="#">{data.name}</Link>
+                                                    <Link to={data.links}>{data.name}</Link>
                                                     {
                                                         data.namesub &&
                                                         <ul className="sub-menu" >

@@ -67,7 +67,7 @@ const Trending = props => {
                                                             <div className="slider-item">
                                                                 <div className="sc-card-product collection-card">
                                                                     <div className="card-media">
-                                                                        <Link to="/profile"><img src={item.img} alt="axies" /></Link>
+                                                                        <Link to="/aggregator"><img src={item.img} alt="axies" /></Link>
                                                                     </div>
                                                                     <div className="card-title voomio-pl-1 voomio-just-left">
                                                                         <h5>{item.title}</h5>

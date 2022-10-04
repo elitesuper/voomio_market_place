@@ -2,23 +2,23 @@ const menus = [
     {
         id: 1,
         name: 'Explore',
-        links: '#',
+        links: '/explore',
     },
     {
         id: 2,
         name: 'Ranking',
-        links: '#',
+        links: '/ranking',
     },{
         id: 3,
         name: 'Resources',
-        links: '#',
+        links: '/resources',
     },
     {
         id: 4,
         name: 'Create',
-        links: '#',
+        links: '/create',
     },
-    
+
 ]
 
 export default menus;
