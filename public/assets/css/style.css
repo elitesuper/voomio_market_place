@@ -1730,7 +1730,7 @@ header{
     }
     .question-form{
       width: 25%;
-      left:24%;
+      left:24% !important;
     }
     .header_1.header_2 #main-nav {
         left: 50%;
