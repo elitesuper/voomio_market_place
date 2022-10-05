@@ -150,7 +150,7 @@ const HeaderStyle2 = (props) => {
     );
 }
 const WalletConnectManager = (props) => {
-  
+
   const getLibrary = (provider) => {
     const library = new ethers.providers.Web3Provider(provider);
     library.pollingInterval = 8000; // frequency provider is polling

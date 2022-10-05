@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import CardModal from '../CardModal';
+import {TimeFilter} from '../Filter';
 
 import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
@@ -24,16 +25,7 @@ const Trending = props => {
                                 <h2 className="tf-title">Trending</h2>
                                 <div className="heading-line"></div>
                             </div>
-                            <div className="seclect-box style3">
-                                <div id="artworks" className="dropdown">
-                                    <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
-                                    <ul className='voomio-zindex'>
-                                        <li><span>Past 24 hours</span></li>
-                                        <li><span>Past 24 hours</span></li>
-                                        <li><span>Past 24 hours</span></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <TimeFilter />
                         </div>
                         <div className="col-md-12">
                             <Swiper

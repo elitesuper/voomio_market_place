@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-
+import {ChainFilter, TimeFilter, CategoryFilter} from '../components/layouts/Filter';
 import CollectionStatRanking from '../components/layouts/CollectionStatRanking'
 
 function CollectionStat(){
@@ -38,32 +38,9 @@ function CollectionStat(){
                        </TabList>
                      </Box>
                      <div className="flex mg-t-24">
-                       <div className="seclect-box style3">
-                           <div id="artworks" className="dropdown mg-r-8 mg-t-11">
-                               <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
-                               <ul className='voomio-zindex'>
-                                   <li><span>Past 24 hours</span></li>
-                                   <li><span>Past 24 hours</span></li>
-                                   <li><span>Past 24 hours</span></li>
-                               </ul>
-                           </div>
-                           <div id="artworks" className="dropdown mg-r-8 mg-t-11">
-                               <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
-                               <ul className='voomio-zindex'>
-                                   <li><span>Past 24 hours</span></li>
-                                   <li><span>Past 24 hours</span></li>
-                                   <li><span>Past 24 hours</span></li>
-                               </ul>
-                           </div>
-                           <div id="artworks" className="dropdown mg-t-11">
-                               <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
-                               <ul className='voomio-zindex'>
-                                   <li><span>Past 24 hours</span></li>
-                                   <li><span>Past 24 hours</span></li>
-                                   <li><span>Past 24 hours</span></li>
-                               </ul>
-                           </div>
-                       </div>
+                      <CategoryFilter/>
+                      <ChainFilter/>
+                      <TimeFilter />
                      </div>
                      <TabPanel value="1">
                       <CollectionStatRanking value="1"/>

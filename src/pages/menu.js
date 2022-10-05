@@ -2,12 +2,12 @@ const menus = [
     {
         id: 1,
         name: 'Explore',
-        links: '/explore',
+        links: '/explorecollection',
     },
     {
         id: 2,
         name: 'Ranking',
-        links: '/ranking',
+        links: '/collectionstat',
     },{
         id: 3,
         name: 'Resources',

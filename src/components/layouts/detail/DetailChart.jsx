@@ -2,6 +2,8 @@ import React from 'react';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import { Link } from 'react-router-dom';
 import Chart from "react-apexcharts";
+import { TimeFilter} from '../Filter';
+
 
 function DetailChart(){
 
@@ -39,14 +41,7 @@ function DetailChart(){
         <div className='chart-panel'>
             <div className='chart-filter'>
                 <div className="seclect-box style3 voomio-pl-1 chart-select-box">
-                    <div id="artworks" className="dropdown mg-r-8">
-                        <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
-                        <ul className='voomio-zindex'>
-                            <li><span>Past 24 hours</span></li>
-                            <li><span>Past 24 hours</span></li>
-                            <li><span>Past 24 hours</span></li>
-                        </ul>
-                    </div>
+                    <TimeFilter/>
                     <div>
                         <h6>All time avg. price</h6>
                     </div>

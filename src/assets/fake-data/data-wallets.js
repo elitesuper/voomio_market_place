@@ -29,61 +29,73 @@ export const walletdata = [
     img:metamaskicon,
     avaliable:true,
     connector:connectors.injected,
-    type:'popular',
+    type:'web3react',
     environment:'0'
   },{
     name:"Coinbase Wallet",
     img:coinbaseicon,
     avaliable:true,
     connector:connectors.coinbaseWallet,
-    type:'normal',
+    type:'web3react',
     environment:'0'
   },{
     name:"WalletConnect",
     img:walletconnecticon,
     avaliable:true,
     connector:connectors.walletConnect,
-    type:'normal',
+    type:'web3react',
     environment:'0'
   },{
     name:"Authereum",
     img:authereumicon,
     avaliable:true,
     connector:connectors.authereum,
-    type:'normal',
+    type:'web3react',
     environment:'0'
   },{
     name:"Fortmatic",
     img:fortmaticicon,
     avaliable:true,
     connector:connectors.fortmatic,
-    type:'normal',
+    type:'web3react',
     environment:'0'
   },{
     name:"Portis",
     img:portisicon,
     avaliable:true,
     connector:connectors.portis,
-    type:'normal',
+    type:'web3react',
     environment:'0'
   },{
     name:"Torus",
     img:torusicon,
     avaliable:true,
     connector:connectors.torus,
-    type:'normal',
-    environment:'0'
-  },{
-    name:"Nami",
-    img:narmiicon,
-    avaliable:false,
-    type:'cardano',
+    type:'web3react',
     environment:'0'
   },{
     name:"Phantom",
     img:phantomicon,
     avaliable:false,
     type:'solana',
+    environment:'0'
+  },{
+    name:"Glow",
+    img:glowicon,
+    avaliable:false,
+    type:'solana',
+    environment:'0'
+  },{
+    name:"Solflare",
+    img:solflareicon,
+    avaliable:false,
+    type:'solana',
+    environment:'0'
+  },{
+    name:"Nami",
+    img:narmiicon,
+    avaliable:false,
+    type:'cardano',
     environment:'0'
   },{
     name:"Eternl",
@@ -110,12 +122,6 @@ export const walletdata = [
     type:'cardano',
     environment:'0'
   },{
-    name:"Glow",
-    img:glowicon,
-    avaliable:false,
-    type:'solana',
-    environment:'0'
-  },{
     name:"Kaikas",
     img:kaikasicon,
     avaliable:false,
@@ -126,12 +132,6 @@ export const walletdata = [
     img:bitskiicon,
     avaliable:false,
     type:'normal',
-    environment:'0'
-  },{
-    name:"Solflare",
-    img:solflareicon,
-    avaliable:false,
-    type:'solana',
     environment:'0'
   },{
     name:"Venly",

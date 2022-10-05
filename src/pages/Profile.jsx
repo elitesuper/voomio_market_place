@@ -17,6 +17,8 @@ import CachedIcon from '@mui/icons-material/Cached';
 
 import CardModal from '../components/layouts/CardModal';
 import { ProfileCard } from '../components/layouts/ProfileCard';
+import { PriceFilter } from '../components/layouts/Filter';
+
 import SideBar from '../components/layouts/profile/SideBar';
 
 
@@ -124,7 +126,7 @@ const Profile = () => {
                                 </div>
                             </div>
                             <div className="widget-social style-3">
-                                <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow profile-btn profile-out v-desktop-btn">0x007..373xys..</Link></div>
+                                <div className="btn-profile"><Link to="#" className="sc-button style-1 follow profile-btn profile-out v-desktop-btn">0x007..373xys..</Link></div>
                                 <div className="btn-profile"><Link to="/login" className="sc-button style-1 follow profile-btn profile-fill v-desktop-btn"> + Follow</Link></div>
                                 <ul>
                                     <li><Link to="#"><i className="fas fa-envelope"></i></Link></li>
@@ -165,15 +167,7 @@ const Profile = () => {
                                             </div>
                                         </div>
                                         <div className='flex'>
-                                            <div className="seclect-box style3 voomio-pl-1 voomio-mta">
-                                                <div id="artworks" className="dropdown">
-                                                    <Link to="#" className="btn-selector nolink voomio-select">Price low to high</Link>
-                                                    <ul className='voomio-zindex'>
-                                                        <li><span>Price high to low</span></li>
-                                                        <li><span>All</span></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                            <PriceFilter className="voomio-mta"/>
                                             <div className='voomio-mta'>
                                             <ToggleButtonGroup size="large" {...control} aria-label="Align">
                                                 {children}

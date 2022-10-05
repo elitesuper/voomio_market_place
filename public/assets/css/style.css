@@ -4322,3 +4322,7 @@ header{
 .font-termina{
   font-family: "MyTermina" !important;
 }
+.activefilter{
+  font-weight: 600 !important;
+  color: #6549F6 !important;
+}

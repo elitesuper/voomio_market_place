@@ -11,6 +11,8 @@ import imga1 from '../../../assets/images/avatar/author_rank.jpg'
 import etherium_icon from '../../../assets/images/icon/etherium_icon.png'
 import check_icon from '../../../assets/images/icon/check_icon.png'
 
+import {ChainFilter, TimeFilter, CategoryFilter} from '../Filter';
+
 const Ranking = () => {
     const [data] = useState(
         [
@@ -177,40 +179,9 @@ const Ranking = () => {
                         </div>
                         <div className='col-md-12 voomio-flex voomio-just-center voomio-pb-3'>
                         <div>
-                            <div className="seclect-box style3 voomio-pl-1">
-                                <div id="artworks" className="dropdown">
-                                    <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
-                                    <ul className='voomio-zindex'>
-                                        <li><span>0</span></li>
-                                        <li><span>1</span></li>
-                                        <li><span>2</span></li>
-                                        <li><span>ALL</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="seclect-box style3 voomio-pl-1 ">
-                                <div id="artworks" className="dropdown">
-                                    <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
-                                    <ul className='voomio-zindex'>
-                                        <li><span>monkey</span></li>
-                                        <li><span>king</span></li>
-                                        <li><span>queen</span></li>
-                                        <li><span>ALL</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="seclect-box style3 voomio-pl-1 ">
-                                <div id="artworks" className="dropdown">
-                                    <Link to="#" className="btn-selector nolink voomio-select">Past 24 hours</Link>
-                                    <ul className='voomio-zindex'>
-                                        <li><span>Past 24 hours</span></li>
-                                        <li><span>Past 24 hours</span></li>
-                                        <li><span>Past 24 hours</span></li>
-                                        <li><span>ALL</span></li>
-
-                                    </ul>
-                                </div>
-                            </div>
+                            <ChainFilter/>
+                            <CategoryFilter/>
+                            <TimeFilter />
                           </div>
                         </div>
                     </div>

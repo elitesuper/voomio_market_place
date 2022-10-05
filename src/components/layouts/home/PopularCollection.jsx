@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Scrollbar, A11y } from 'swiper';
+import {CategoryFilter} from '../Filter';
 
 const PopularCollection = props => {
     const data = props.data;
@@ -15,16 +16,7 @@ const PopularCollection = props => {
                             <h2 className="tf-title style2">Top Collections</h2>
                             <div className="heading-line"></div>
                         </div>
-                        <div className="seclect-box style3">
-                            <div id="artworks" className="dropdown">
-                                <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
-                                <ul className='voomio-zindex'>
-                                    <li><span>All Categories</span></li>
-                                    <li><span>All Categories</span></li>
-                                    <li><span>All Categories</span></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <CategoryFilter />
                     </div>
                     <div className="col-md-12">
                         <div className="collection">

@@ -6,7 +6,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { CollectionCard } from '../components/layouts/ProfileCard';
-
+import {ChainFilter, CategoryFilter} from '../components/layouts/Filter';
 
 import popularCollectionData from '../assets/fake-data/data-popular-collection';
 
@@ -47,24 +47,8 @@ const ExploreCollection = () => {
                              </TabList>
                            </Box>
                            <div className="flex mg-t-24">
-                             <div className="seclect-box style3">
-                                 <div id="artworks" className="dropdown mg-r-8">
-                                     <Link to="#" className="btn-selector nolink voomio-select">All Categories</Link>
-                                     <ul className='voomio-zindex'>
-                                         <li><span>Past 24 hours</span></li>
-                                         <li><span>Past 24 hours</span></li>
-                                         <li><span>Past 24 hours</span></li>
-                                     </ul>
-                                 </div>
-                                 <div id="artworks" className="dropdown">
-                                     <Link to="#" className="btn-selector nolink voomio-select">All Chains</Link>
-                                     <ul className='voomio-zindex'>
-                                         <li><span>Past 24 hours</span></li>
-                                         <li><span>Past 24 hours</span></li>
-                                         <li><span>Past 24 hours</span></li>
-                                     </ul>
-                                 </div>
-                             </div>
+                                 <CategoryFilter/>
+                                 <ChainFilter/>
                            </div>
                            <TabPanel value="1">
                              <div className="row">
