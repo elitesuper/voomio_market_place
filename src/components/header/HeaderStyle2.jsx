@@ -16,12 +16,6 @@ import img3 from '../../assets/images/avatar/ic_land_3.png'
 
 const HeaderStyle2 = (props) => {
 
-    const getLibrary = (provider) => {
-      const library = new ethers.providers.Web3Provider(provider);
-      library.pollingInterval = 8000; // frequency provider is polling
-      return library;
-    };
-
     const [modalShow, setModalShow] = useState(false);
     const [walletmodalShow, setwalletModalShow] = useState(false);
 
@@ -151,12 +145,23 @@ const HeaderStyle2 = (props) => {
                 </div>
             </div>
             <DarkMode />
-            <Web3ReactProvider getLibrary={getLibrary}>
-              <WalletConnectModal show={walletmodalShow} onHide={() => setwalletModalShow(false)}/>
-            </Web3ReactProvider>
-            
+            <WalletConnectManager show={walletmodalShow} hide={() => setwalletModalShow(false)}/>
         </header>
     );
+}
+const WalletConnectManager = (props) => {
+  
+  const getLibrary = (provider) => {
+    const library = new ethers.providers.Web3Provider(provider);
+    library.pollingInterval = 8000; // frequency provider is polling
+    return library;
+  };
+
+  return(
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <WalletConnectModal show={props.show} onHide={props.hide}/>
+    </Web3ReactProvider>
+  )
 }
 
 export default HeaderStyle2;
