@@ -67,6 +67,13 @@ export const walletdata = [
     type:'normal',
     environment:'0'
   },{
+    name:"Torus",
+    img:torusicon,
+    avaliable:true,
+    connector:connectors.torus,
+    type:'normal',
+    environment:'0'
+  },{
     name:"Nami",
     img:narmiicon,
     avaliable:false,
@@ -129,12 +136,6 @@ export const walletdata = [
   },{
     name:"Venly",
     img:venlyicon,
-    avaliable:false,
-    type:'normal',
-    environment:'0'
-  },{
-    name:"Torus",
-    img:torusicon,
     avaliable:false,
     type:'normal',
     environment:'0'

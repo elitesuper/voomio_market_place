@@ -28,8 +28,16 @@ import avt from '../assets/images/avatar/character1.png'
 import etherium_icon from '../assets/images/icon/etherium_icon.png'
 import check_icon from '../assets/images/icon/check_icon.png'
 import ItemContext from '../components/layouts/profile/ItemContext';
+import MoreOption from '../components/layouts/MoreOption';
+
 
 const Profile = () => {
+
+    const [options, setOptions] = useState(false);
+
+    const optionexpand = () => {
+      setOptions(!options)
+    }
 
     const [menuTab] = useState(
         [
@@ -148,7 +156,7 @@ const Profile = () => {
                                     <TabPanel key={index}>
                                     <div className="col-md-12 wrap-inner pad-t-8 load-more mt-3 voomio-flex voomio-just-between">
                                         <div className="flex">
-                                            <IconButton color="primary" component="label" size="large">
+                                            <IconButton color="primary" onClick={()=>optionexpand()} component="label" size="large">
                                                 <TuneIcon fontSize='inherit'/>
                                             </IconButton>
                                             <div className="input-group flex-nowrap profile-search">
@@ -176,6 +184,7 @@ const Profile = () => {
                                     <div className="col-md-12 flex voomio-pb-2 mt-2">
                                       <CachedIcon className="mg-r-8"/> <h6>{item.dataContent.length} items</h6>
                                     </div>
+                                    {options&&(<div className="col-md-12"><MoreOption/></div>)}
                                     {
                                         (alignment)?
                                         item.dataContent.slice(0,visible).map((data,index) => (

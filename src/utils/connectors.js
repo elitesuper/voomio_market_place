@@ -1,7 +1,7 @@
 import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { WalletLinkConnector } from "@web3-react/walletlink-connector";
-// import { TorusConnector } from "@web3-react/torus-connector";
+import { TorusConnector } from "@web3-react/torus-connector";
 import { FortmaticConnector } from "@web3-react/fortmatic-connector";
 import { PortisConnector } from "@web3-react/portis-connector";
 import { AuthereumConnector } from "@web3-react/authereum-connector";
@@ -33,7 +33,7 @@ const portis = new PortisConnector({
 
 const authereum = new AuthereumConnector({ chainId: 42 });
 
-// const torus = new TorusConnector({ chainId: 1 });
+const torus = new TorusConnector({ chainId: 1 });
 
 export const connectors = {
   injected: injected,
@@ -41,6 +41,6 @@ export const connectors = {
   coinbaseWallet: walletlink,
   fortmatic:fortmatic,
   portis:portis,
-  authereum:authereum
-  // torus:torus
+  authereum:authereum,
+  torus:torus
 };
