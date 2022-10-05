@@ -13,9 +13,12 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import { useWeb3React } from "@web3-react/core";
 import {walletdata} from '../../assets/fake-data/data-wallets';
 
 export default function WalletConnectModal(props) {
+
+  const { activate } = useWeb3React();
 
 
   const [visible , setVisible] = useState(6);
@@ -33,17 +36,17 @@ export default function WalletConnectModal(props) {
     }
   }, [props]);
 
-  const actionprepare = (type) =>{
-    if(type === "popular")
-    {
-      return <Button sx={{width:'80px'}} className="voomio-w-btn" variant="outlined" size="large">Connect</Button>
-    }
-    else if (type === "solana" || type==="cardano") {
-      return <Button sx={{width:'80px'}} className="voomio-w-btn voomio-w-btn-filled" variant="contained" size="large">{type}</Button>
-    }else{
-      return <></>;
-    }
-  }
+  // const actionprepare = (type) =>{
+  //   if(type === "popular")
+  //   {
+  //     return <Button sx={{width:'80px'}} onClick={() => {activate(connectors.injected)}} className="voomio-w-btn" variant="outlined" size="large">Connect</Button>
+  //   }
+  //   else if (type === "solana" || type==="cardano") {
+  //     return <Button sx={{width:'80px'}} className="voomio-w-btn voomio-w-btn-filled" variant="contained" size="large">{type}</Button>
+  //   }else{
+  //     return <></>;
+  //   }
+  // }
 
   return (
     <div>
@@ -77,7 +80,7 @@ export default function WalletConnectModal(props) {
               <ListItem
                 disableGutters
                 secondaryAction={
-                  actionprepare(item.type)
+                  (item.avaliable)?<Button sx={{width:'80px'}} onClick={() => {activate(item.connector)}} className="voomio-w-btn" variant="outlined" size="large">Connect</Button>:<></>
                 }
               >
               <ListItemAvatar>

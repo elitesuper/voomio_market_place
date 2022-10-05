@@ -19,6 +19,7 @@ import geroicon from '../images/wallet/gero.svg'
 import typhonicon from '../images/wallet/typhon.svg'
 import flinticon from '../images/wallet/flint.svg'
 import walletconnecticon from '../images/wallet/walletconnect.webp'
+import { connectors } from "../../utils/connectors";
 
 
 
@@ -26,101 +27,127 @@ export const walletdata = [
   {
     name:"MetaMask",
     img:metamaskicon,
+    avaliable:true,
+    connector:connectors.injected,
     type:'popular',
     environment:'0'
   },{
     name:"Coinbase Wallet",
     img:coinbaseicon,
+    avaliable:true,
+    connector:connectors.coinbaseWallet,
     type:'normal',
-    environment:'0'
-  },{
-    name:"Nami",
-    img:narmiicon,
-    type:'cardano',
-    environment:'0'
-  },{
-    name:"Phantom",
-    img:phantomicon,
-    type:'solana',
     environment:'0'
   },{
     name:"WalletConnect",
     img:walletconnecticon,
-    type:'normal',
-    environment:'0'
-  },{
-    name:"Eternl",
-    img:eternlicon,
-    type:'cardano',
-    environment:'0'
-  },{
-    name:"Flint Wallet",
-    img:flinticon,
-    type:'cardano',
-    environment:'0'
-  },{
-    name:"Gero Wallet",
-    img:geroicon,
-    type:'cardano',
-    environment:'0'
-  },{
-    name:"Typhon Wallet",
-    img:typhonicon,
-    type:'cardano',
-    environment:'0'
-  },{
-    name:"Glow",
-    img:glowicon,
-    type:'solana',
-    environment:'0'
-  },{
-    name:"Fortmatic",
-    img:fortmaticicon,
-    type:'normal',
-    environment:'0'
-  },{
-    name:"Kaikas",
-    img:kaikasicon,
-    type:'normal',
-    environment:'0'
-  },{
-    name:"Bitski",
-    img:bitskiicon,
-    type:'normal',
-    environment:'0'
-  },{
-    name:"Solflare",
-    img:solflareicon,
-    type:'solana',
-    environment:'0'
-  },{
-    name:"Venly",
-    img:venlyicon,
+    avaliable:true,
+    connector:connectors.walletConnect,
     type:'normal',
     environment:'0'
   },{
     name:"Authereum",
     img:authereumicon,
+    avaliable:true,
+    connector:connectors.authereum,
     type:'normal',
     environment:'0'
   },{
-    name:"Torus",
-    img:torusicon,
+    name:"Fortmatic",
+    img:fortmaticicon,
+    avaliable:true,
+    connector:connectors.fortmatic,
     type:'normal',
     environment:'0'
   },{
     name:"Portis",
     img:portisicon,
+    avaliable:true,
+    connector:connectors.portis,
+    type:'normal',
+    environment:'0'
+  },{
+    name:"Nami",
+    img:narmiicon,
+    avaliable:false,
+    type:'cardano',
+    environment:'0'
+  },{
+    name:"Phantom",
+    img:phantomicon,
+    avaliable:false,
+    type:'solana',
+    environment:'0'
+  },{
+    name:"Eternl",
+    img:eternlicon,
+    avaliable:false,
+    type:'cardano',
+    environment:'0'
+  },{
+    name:"Flint Wallet",
+    img:flinticon,
+    avaliable:false,
+    type:'cardano',
+    environment:'0'
+  },{
+    name:"Gero Wallet",
+    img:geroicon,
+    avaliable:false,
+    type:'cardano',
+    environment:'0'
+  },{
+    name:"Typhon Wallet",
+    img:typhonicon,
+    avaliable:false,
+    type:'cardano',
+    environment:'0'
+  },{
+    name:"Glow",
+    img:glowicon,
+    avaliable:false,
+    type:'solana',
+    environment:'0'
+  },{
+    name:"Kaikas",
+    img:kaikasicon,
+    avaliable:false,
+    type:'normal',
+    environment:'0'
+  },{
+    name:"Bitski",
+    img:bitskiicon,
+    avaliable:false,
+    type:'normal',
+    environment:'0'
+  },{
+    name:"Solflare",
+    img:solflareicon,
+    avaliable:false,
+    type:'solana',
+    environment:'0'
+  },{
+    name:"Venly",
+    img:venlyicon,
+    avaliable:false,
+    type:'normal',
+    environment:'0'
+  },{
+    name:"Torus",
+    img:torusicon,
+    avaliable:false,
     type:'normal',
     environment:'0'
   },{
     name:"OperaTouch",
     img:operatouchicon,
+    avaliable:false,
     type:'normal',
     environment:'1'
   },{
     name:"Trust",
     img:trusticon,
+    avaliable:false,
     type:'normal',
     environment:'1'
   }
