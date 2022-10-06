@@ -6,8 +6,6 @@ import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
 import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 import WalletConnectModal from '../../components/layouts/WalletConnectModal';
-import { Web3ReactProvider } from "@web3-react/core";
-import { ethers } from "ethers";
 
 import img1 from '../../assets/images/avatar/ic_land_1.png'
 import img2 from '../../assets/images/avatar/ic_land_2.png'
@@ -145,23 +143,9 @@ const HeaderStyle2 = (props) => {
                 </div>
             </div>
             <DarkMode />
-            <WalletConnectManager show={walletmodalShow} hide={() => setwalletModalShow(false)}/>
+            <WalletConnectModal show={walletmodalShow} onHide={() => setwalletModalShow(false)}/>
         </header>
     );
-}
-const WalletConnectManager = (props) => {
-
-  const getLibrary = (provider) => {
-    const library = new ethers.providers.Web3Provider(provider);
-    library.pollingInterval = 8000; // frequency provider is polling
-    return library;
-  };
-
-  return(
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <WalletConnectModal show={props.show} onHide={props.hide}/>
-    </Web3ReactProvider>
-  )
 }
 
 export default HeaderStyle2;

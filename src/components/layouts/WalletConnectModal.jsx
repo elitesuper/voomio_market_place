@@ -13,12 +13,25 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+
 import { useWeb3React } from "@web3-react/core";
+import { Web3ReactProvider } from "@web3-react/core";
+import { ethers } from "ethers";
+
+
+
 import {walletdata} from '../../assets/fake-data/data-wallets';
+
+
 
 export default function WalletConnectModal(props) {
 
-  const { activate } = useWeb3React();
+
+  const getLibrary = (provider) => {
+    const library = new ethers.providers.Web3Provider(provider);
+    library.pollingInterval = 8000; // frequency provider is polling
+    return library;
+  };
 
 
   const [visible , setVisible] = useState(6);
@@ -35,18 +48,6 @@ export default function WalletConnectModal(props) {
       }
     }
   }, [props]);
-
-  // const actionprepare = (type) =>{
-  //   if(type === "popular")
-  //   {
-  //     return <Button sx={{width:'80px'}} onClick={() => {activate(connectors.injected)}} className="voomio-w-btn" variant="outlined" size="large">Connect</Button>
-  //   }
-  //   else if (type === "solana" || type==="cardano") {
-  //     return <Button sx={{width:'80px'}} className="voomio-w-btn voomio-w-btn-filled" variant="contained" size="large">{type}</Button>
-  //   }else{
-  //     return <></>;
-  //   }
-  // }
 
   return (
     <div>
@@ -75,29 +76,10 @@ export default function WalletConnectModal(props) {
          <Divider />
         <DialogContent dividers={false} className="text-center" ref={descriptionElementRef} tabIndex={-1}>
           <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-            {walletdata.slice(0,visible).map((item, index) => (
-              <React.Fragment key={index}>
-              <ListItem
-                disableGutters
-                secondaryAction={
-                  (item.avaliable)?<Button sx={{width:'80px'}} onClick={() => {activate(item.connector)}} className="voomio-w-btn" variant="outlined" size="large">Connect</Button>:<></>
-                }
-              >
-              <ListItemAvatar>
-                <Avatar>
-                  <img className="wallet_icons" src={item.img} alt={item.name}/>
-                </Avatar>
-                </ListItemAvatar>
-                <ListItemText sx={{fontWeight:'600'}} primary={item.name}/>
-              </ListItem>
-              <Divider />
-              </React.Fragment>
-            ))}
+            <Web3ReactProvider getLibrary={getLibrary}>
+              <Web3ReactWalletList />
+            </Web3ReactProvider>
           </List>
-          {
-              visible < walletdata.length &&
-                  <Button className="voomio-w-btn mx-auto" variant="outlined" size="large" onClick={showMoreItems}>Show more</Button>
-          }
         </DialogContent>
         <DialogActions>
           <Button className="voomio-w-btn" variant="outlined" onClick={props.onHide}>Close</Button>
@@ -105,4 +87,33 @@ export default function WalletConnectModal(props) {
       </Dialog>
     </div>
   );
+}
+
+
+export function Web3ReactWalletList(props){
+
+    const { activate } = useWeb3React();
+
+    return(
+      <>
+        {walletdata.filter(item => item.type === 'web3react').map((item, index)=>(
+          <React.Fragment key={index}>
+            <ListItem
+              disableGutters
+              secondaryAction={
+                (item.avaliable)?<Button sx={{width:'80px'}} onClick={() => {activate(item.connector)}} className="voomio-w-btn" variant="outlined" size="large">Connect</Button>:<></>
+              }
+            >
+            <ListItemAvatar>
+              <Avatar>
+                <img className="wallet_icons" src={item.img} alt={item.name}/>
+              </Avatar>
+              </ListItemAvatar>
+              <ListItemText sx={{fontWeight:'600'}} primary={item.name}/>
+            </ListItem>
+            <Divider />
+          </React.Fragment>
+        ))}
+      </>
+    )
 }
