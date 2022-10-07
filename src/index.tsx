@@ -5,9 +5,11 @@ import {BrowserRouter} from 'react-router-dom'
 import ScrollToTop from './ScrollToTop';
 
 ReactDOM.render(
-  <BrowserRouter basename={'/voomio-front-end-jeni'}>
-    <ScrollToTop />
-    <App />
-  </BrowserRouter>,
+  <React.StrictMode>
+    <BrowserRouter basename={'/voomio-front-end-jeni'}>
+      <ScrollToTop />
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );

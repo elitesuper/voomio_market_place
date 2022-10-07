@@ -4262,7 +4262,7 @@ header{
   color: white !important;
 }
 .chat-modal{
-  z-index: 999999 !important;
+  z-index: 100 !important;
 }
 /* .dialogtitle-header{
   background: black !important;
