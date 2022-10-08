@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -19,73 +19,73 @@ import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 
 import {
-  ConnectionProvider,
-  WalletProvider,
+    ConnectionProvider,
+    WalletProvider,
 } from "@solana/wallet-adapter-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
-  getLedgerWallet,
-  getPhantomWallet,
-  getSlopeWallet,
-  getSolflareWallet,
-  getSolletExtensionWallet,
-  getSolletWallet,
-  getTorusWallet,
+    getLedgerWallet,
+    getPhantomWallet,
+    getSlopeWallet,
+    getSolflareWallet,
+    getSolletExtensionWallet,
+    getSolletWallet,
+    getTorusWallet,
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 
 import MyWallet from "./MyWallet";
 
-import {walletdata} from '../../assets/fake-data/data-wallets';
+import { walletdata } from '../../assets/fake-data/data-wallets';
 
 
 
 export default function WalletConnectModal(props) {
 
-  // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
-  const network = WalletAdapterNetwork.Mainnet;
+    // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
+    const network = WalletAdapterNetwork.Mainnet;
 
-  // You can also provide a custom RPC endpoint
-  const endpoint = React.useMemo(() => clusterApiUrl(network), [network]);
+    // You can also provide a custom RPC endpoint
+    const endpoint = React.useMemo(() => clusterApiUrl(network), [network]);
 
-  // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
-  // Only the wallets you configure here will be compiled into your application
-  const wallets = React.useMemo(
-    () => [
-      getPhantomWallet(),
-      getSlopeWallet(),
-      getSolflareWallet(),
-      getLedgerWallet(),
-      getSolletWallet({ network }),
-      getSolletExtensionWallet({ network }),
-    ],
-    [network]
-  );
+    // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
+    // Only the wallets you configure here will be compiled into your application
+    const wallets = React.useMemo(
+        () => [
+            getPhantomWallet(),
+            getSlopeWallet(),
+            getSolflareWallet(),
+            getLedgerWallet(),
+            getSolletWallet({ network }),
+            getSolletExtensionWallet({ network }),
+        ],
+        [network]
+    );
 
-  const getLibrary = (provider) => {
-    const library = new ethers.providers.Web3Provider(provider);
-    library.pollingInterval = 8000; // frequency provider is polling
-    return library;
-  };
+    const getLibrary = (provider) => {
+        const library = new ethers.providers.Web3Provider(provider);
+        library.pollingInterval = 8000; // frequency provider is polling
+        return library;
+    };
 
 
-  const [visible , setVisible] = useState(6);
-  const showMoreItems = () => {
-      setVisible((prevValue) => prevValue + 4);
-  }
-
-  const descriptionElementRef = React.useRef(null);
-  React.useEffect(() => {
-    if (props.show) {
-      const { current: descriptionElement } = descriptionElementRef;
-      if (descriptionElement !== null) {
-        descriptionElement.focus();
-      }
+    const [visible, setVisible] = useState(6);
+    const showMoreItems = () => {
+        setVisible((prevValue) => prevValue + 4);
     }
-  }, [props]);
 
-  return (
-    <div>
+    const descriptionElementRef = React.useRef(null);
+    React.useEffect(() => {
+        if (props.show) {
+            const { current: descriptionElement } = descriptionElementRef;
+            if (descriptionElement !== null) {
+                descriptionElement.focus();
+            }
+        }
+    }, [props]);
+
+    return (
+        <div>
       <Dialog
         sx={{Width:'600px'}}
         className="chat-modal"
@@ -126,18 +126,18 @@ export default function WalletConnectModal(props) {
         </DialogActions>
       </Dialog>
     </div>
-  );
+    );
 }
 
 
-export function Web3ReactWalletList(props){
+export function Web3ReactWalletList(props) {
 
     const { activate } = useWeb3React();
 
-    return(
-      <>
-        {walletdata.filter(item => item.type === 'web3react').map((item, index)=>(
-          <React.Fragment key={index}>
+    return ( 
+      <> {
+            walletdata.filter(item => item.type === 'web3react').map((item, index) => (
+                <React.Fragment key={index}>
             <ListItem
               disableGutters
               secondaryAction={
@@ -153,7 +153,7 @@ export function Web3ReactWalletList(props){
             </ListItem>
             <Divider />
           </React.Fragment>
-        ))}
-      </>
+            ))
+        } </>
     )
 }

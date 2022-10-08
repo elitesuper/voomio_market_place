@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -16,177 +16,175 @@ import etherium_icon from '../../assets/images/icon/etherium_icon.png'
 import check_icon from '../../assets/images/icon/check_icon.png'
 
 const CollectionStatRanking = (props) => {
-    const data =
-        [
-            {
-                img: img1,
-                title: "Sample Collection 1",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'1',
-                assets: '23k'
-            },
-            {
-                img: img2,
-                title: "Sample Collection 2",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+    const data = [{
+            img: img1,
+            title: "Sample Collection 1",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '1',
+            assets: '23k'
+        },
+        {
+            img: img2,
+            title: "Sample Collection 2",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-            {
-                img: img3,
-                title: "Sample Collection 3",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+        },
+        {
+            img: img3,
+            title: "Sample Collection 3",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-            {
-                img: img4,
-                title: "Sample Collection 4",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'1',
-                assets: '23k'
-            },
-            {
-                img: img5,
-                title: "Sample Collection 5",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+        },
+        {
+            img: img4,
+            title: "Sample Collection 4",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '1',
+            assets: '23k'
+        },
+        {
+            img: img5,
+            title: "Sample Collection 5",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-            {
-                img: img6,
-                title: "Sample Collection 6",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'1',
-                assets: '23k'
+        },
+        {
+            img: img6,
+            title: "Sample Collection 6",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '1',
+            assets: '23k'
 
-            },
-            {
-                img: img1,
-                title: "Sample Collection 7",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+        },
+        {
+            img: img1,
+            title: "Sample Collection 7",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-            {
-                img: img2,
-                title: "Sample Collection 8",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'1',
-                assets: '23k'
+        },
+        {
+            img: img2,
+            title: "Sample Collection 8",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '1',
+            assets: '23k'
 
-            },
-            {
-                img: img3,
-                title: "Sample Collection 9",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+        },
+        {
+            img: img3,
+            title: "Sample Collection 9",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-            {
-                img: img4,
-                title: "Sample Collection",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'1',
-                assets: '23k'
+        },
+        {
+            img: img4,
+            title: "Sample Collection",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '1',
+            assets: '23k'
 
-            },
-            {
-                img: img5,
-                title: "Sample Collection",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+        },
+        {
+            img: img5,
+            title: "Sample Collection",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-            {
-                img: img6,
-                title: "Sample Collection",
-                imgAuthor: imga1,
-                nameAuthor: 'SalvadorDali',
-                volume: '134',
-                day: '+3456%',
-                week: '-564%',
-                price: '134',
-                owners: '3.3k',
-                state:'2',
-                assets: '23k'
+        },
+        {
+            img: img6,
+            title: "Sample Collection",
+            imgAuthor: imga1,
+            nameAuthor: 'SalvadorDali',
+            volume: '134',
+            day: '+3456%',
+            week: '-564%',
+            price: '134',
+            owners: '3.3k',
+            state: '2',
+            assets: '23k'
 
-            },
-        ]
-    const filtereddata = data.filter(item=>item.state === props.value)
-    const [visible , setVisible] = useState(6);
+        },
+    ]
+    const filtereddata = data.filter(item => item.state === props.value)
+    const [visible, setVisible] = useState(6);
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
     }

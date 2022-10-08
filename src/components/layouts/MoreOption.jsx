@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Scrollbar, A11y } from 'swiper';
 import Card from '@mui/material/Card';
@@ -28,20 +28,20 @@ export const SearchCard = (props) => {
     const [checked, setChecked] = useState([0]);
 
     const handleToggle = (value) => () => {
-     const currentIndex = checked.indexOf(value);
-     const newChecked = [...checked];
+        const currentIndex = checked.indexOf(value);
+        const newChecked = [...checked];
 
-     if (currentIndex === -1) {
-       newChecked.push(value);
-     } else {
-       newChecked.splice(currentIndex, 1);
-     }
+        if (currentIndex === -1) {
+            newChecked.push(value);
+        } else {
+            newChecked.splice(currentIndex, 1);
+        }
 
-     setChecked(newChecked);
+        setChecked(newChecked);
     };
 
-  return(
-    <div className="swiper-container alpha-card show-shadow carousel4 button-arow-style">
+    return (
+        <div className="swiper-container alpha-card show-shadow carousel4 button-arow-style">
         <div className="swiper-wrapper">
             <div className="swiper-slide">
                 <div className="slider-item">
@@ -81,12 +81,13 @@ export const SearchCard = (props) => {
           </div>
         </div>
       </div>
-  )
+    )
 }
-function MoreOption(){
-  return(
-    <>
-    <div className="row">
+
+function MoreOption() {
+    return ( <
+        >
+        <div className="row">
       <div className="col-md-12 flex more-option">
           <div className="seclect-box voomio-pl-1 voomio-mta">
               <div id="artworks" className="dropdown">
@@ -176,9 +177,9 @@ function MoreOption(){
           }
         </Swiper>
       </div>
-    </div>
-    </>
-  )
+    </div> <
+        />
+    )
 }
 
 export default MoreOption;

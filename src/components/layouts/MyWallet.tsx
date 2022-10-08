@@ -23,21 +23,21 @@ const MyWallet: React.FC = () => {
         walletAddress = wallet.publicKey.toString()
     }
 
-    return (
-        <>
-            {wallet.connected &&
-                <p>Your wallet is {walletAddress}</p> ||
-                <p>Hello! Click the button to connect</p>
-            }
-
-            <div className="multi-wrapper">
-                <span className="button-wrapper">
-                    <WalletModalProvider>
-                        <WalletMultiButton />
-                    </WalletModalProvider>
-                </span>
-                {wallet.connected && <WalletDisconnectButton />}
-            </div>
+    return ( 
+        <> 
+        {
+            wallet.connected &&
+            <p>Your wallet is {walletAddress}</p> ||
+            <p>Solana Wallet Connect</p>
+        }
+        <div className="multi-wrapper">
+            <span className="button-wrapper d-flex voomio-just-center">
+                <WalletModalProvider>
+                    <WalletMultiButton />
+                </WalletModalProvider>
+            </span>
+            {wallet.connected && <WalletDisconnectButton />}
+        </div> 
         </>
     );
 };

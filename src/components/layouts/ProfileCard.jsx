@@ -5,9 +5,9 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Verified } from "@mui/icons-material";
 
-export function ProfileCard(props){
+export function ProfileCard(props) {
 
-    return(
+    return (
         <div className="sc-card-product collection-card">
             <div className="card-media">
                 <Link to="/item-details-01"><img src={props.mainimg} alt="axies" /></Link>
@@ -37,8 +37,8 @@ export function ProfileCard(props){
     )
 }
 
-export function DetailCard(props){
-    return(
+export function DetailCard(props) {
+    return (
         <div className="sc-card-product detail-card">
             <div className="card-media">
                 <Link to="/item-details-01"><img src={props.mainimg} alt="axies" /></Link>
@@ -66,10 +66,10 @@ export function DetailCard(props){
     )
 }
 
-export function CollectionCard(props){
-  return(
-    <>
-      <div className="slider-item">
+export function CollectionCard(props) {
+    return ( <
+        >
+        <div className="slider-item">
           <div className="sc-card-collection collection-card">
               <Link to="/authors-01">
                   <div className="media-images-box">
@@ -95,7 +95,7 @@ export function CollectionCard(props){
                   {/* <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link> */}
               </div>
           </div>
-      </div>
-    </>
-  )
+      </div> <
+        />
+    )
 }
