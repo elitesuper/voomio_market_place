@@ -10,7 +10,7 @@ import {
     WalletMultiButton,
 } from '@solana/wallet-adapter-react-ui';
 
-const MyWallet: React.FC = () => {
+const SolanaWallet: React.FC = () => {
     const { connection } = useConnection();
     let walletAddress = "";
 
@@ -42,4 +42,4 @@ const MyWallet: React.FC = () => {
     );
 };
 
-export default MyWallet;
+export default SolanaWallet;

@@ -34,7 +34,7 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 
-import MyWallet from "./MyWallet";
+import SolanaWallet from "./SolanaWallet";
 
 import { walletdata } from '../../assets/fake-data/data-wallets';
 
@@ -85,47 +85,47 @@ export default function WalletConnectModal(props) {
     }, [props]);
 
     return (
-        <div>
-      <Dialog
-        sx={{Width:'600px'}}
-        className="chat-modal"
-        open={props.show}
-        onClose={props.onHide}
-        scroll={'body'}
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
-      >
-        <div className='dialogtitle-header flex mx-5 mt-5 mb-3' id="scroll-dialog-title">
-          <div>
-            <AccountBalanceWalletOutlinedIcon sx={{color:'#7B61FF', fontSize:'50px', mr:3}} />
+      <div>
+        <Dialog
+          sx={{Width:'600px'}}
+          className="chat-modal"
+          open={props.show}
+          onClose={props.onHide}
+          scroll={'body'}
+          aria-labelledby="scroll-dialog-title"
+          aria-describedby="scroll-dialog-description"
+        >
+          <div className='dialogtitle-header flex mx-5 mt-5 mb-3' id="scroll-dialog-title">
+            <div>
+              <AccountBalanceWalletOutlinedIcon sx={{color:'#7B61FF', fontSize:'50px', mr:3}} />
+            </div>
+            <div className="mr-5">
+              <Typography className="font-termina" variant="h4" sx={{mb:1}}>
+                My Wallet
+              </Typography>
+              <Typography className="spec-color-3" variant="h6" sx={{mb:1}}>
+                Connect or Create a wallet
+              </Typography>
+            </div>
           </div>
-          <div className="mr-5">
-            <Typography className="font-termina" variant="h4" sx={{mb:1}}>
-              My Wallet
-            </Typography>
-            <Typography className="spec-color-3" variant="h6" sx={{mb:1}}>
-              Connect or Create a wallet
-            </Typography>
-          </div>
-        </div>
-         <Divider />
-        <DialogContent dividers={false} className="text-center" ref={descriptionElementRef} tabIndex={-1}>
-          <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-            <Web3ReactProvider getLibrary={getLibrary}>
-              <Web3ReactWalletList />
-            </Web3ReactProvider>
-            <ConnectionProvider endpoint={endpoint}>
-              <WalletProvider wallets={wallets}>
-                  <MyWallet />
-              </WalletProvider>
-            </ConnectionProvider>
-          </List>
-        </DialogContent>
-        <DialogActions>
-          <Button className="voomio-w-btn" variant="outlined" onClick={props.onHide}>Close</Button>
-        </DialogActions>
-      </Dialog>
-    </div>
+           <Divider />
+          <DialogContent dividers={false} className="text-center" ref={descriptionElementRef} tabIndex={-1}>
+            <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+              <Web3ReactProvider getLibrary={getLibrary}>
+                <Web3ReactWalletList />
+              </Web3ReactProvider>
+              <ConnectionProvider endpoint={endpoint}>
+                <WalletProvider wallets={wallets}>
+                    <SolanaWallet />
+                </WalletProvider>
+              </ConnectionProvider>
+            </List>
+          </DialogContent>
+          <DialogActions>
+            <Button className="voomio-w-btn" variant="outlined" onClick={props.onHide}>Close</Button>
+          </DialogActions>
+        </Dialog>
+      </div>
     );
 }
 
