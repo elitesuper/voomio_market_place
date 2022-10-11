@@ -157,7 +157,7 @@ const Aggregator = () => {
                                 <div className='content-inner'>
                                     <div className='row'>
                                     <TabPanel key={index}>
-                                      <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-2 voomio-flex voomio-just-between">
+                                      <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-2 voomio-flex voomio-just-between mt-4">
                                           <div className="flex">
                                               <IconButton onClick={()=>optionexpand()} color="primary" component="label" size="large">
                                                   <TuneIcon fontSize='inherit'/>
