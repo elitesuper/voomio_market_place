@@ -13,8 +13,6 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
-
-import CardModal from '../components/layouts/CardModal';
 import { ProfileCard } from '../components/layouts/ProfileCard';
 import { PriceFilter } from '../components/layouts/Filter';
 import ChatTrending from '../components/layouts/aggregator/ChatTrending';
@@ -50,12 +48,14 @@ const Aggregator = () => {
     const [panelTab] = useState(profiledata)
 
     const [visible , setVisible] = useState(8);
+
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 4);
     }
 
-    const [modalShow, setModalShow] = useState(false);
     const [options, setOptions] = useState(false);
+
+    const [filters, setFilters] = useState(["Sales","Listings","Offers","Transfers"]);
 
 
     const [alignment, setAlignment] = React.useState(true);
@@ -160,26 +160,23 @@ const Aggregator = () => {
                                           </div>
                                       </div>
                                       <div className="col-md-12 flex voomio-pb-2 itemnumbers-filters">
-                                        <CachedIcon className="voomio-mta mg-r-8"/> <h6 className="voomio-mta">{item.dataContent.length} items</h6>
-                                        <div className="flex">
-                                          <h5 className="spec-color-1 mg-l-8" > Filters: </h5>
-                                          <div className='filter-tag voomio-mta flex'>
-                                            <span className="my-auto">Sales</span>
-                                            <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
-                                          </div>
-                                          <div className='filter-tag voomio-mta flex'>
-                                            <span className="my-auto">Listings</span>
-                                            <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
-                                          </div>
-                                          <div className='filter-tag voomio-mta flex'>
-                                            <span className="my-auto">Offers</span>
-                                            <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
-                                          </div>
-                                          <div className='filter-tag voomio-mta flex'>
-                                            <span className="my-auto">Transfers</span>
-                                            <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
-                                          </div>
-                                        </div>
+                                            <div className="flex">
+                                                <CachedIcon className="voomio-mta mg-r-8"/> 
+                                                <h6 className="voomio-mta">{item.dataContent.length} items</h6>
+                                            </div>
+                                            <div className="widget widget-filter style-2 mgbt-0 flex ml-3">
+                                                <h5 className="title-widget voomio-mta spec-color-1">Filters:</h5>
+                                                <ul className="box-check">
+                                                    {filters.map(item => (
+                                                        <li key={item} className="voomio-mta">
+                                                            <div className='filter-tag voomio-mta flex'>
+                                                                <span className="my-auto">{item}</span>
+                                                                <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>
+                                                            </div>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
                                       </div>
                                       {options&&(<div className="col-md-12"><MoreOption/></div>)}
                                       {
@@ -245,10 +242,6 @@ const Aggregator = () => {
                     </div>
                 </Tabs>
             </section>
-            <CardModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-            />
         </div>
     );
 }

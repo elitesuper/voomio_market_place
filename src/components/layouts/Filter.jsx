@@ -33,7 +33,7 @@ const pricefilterdata = [
 export const CategoryFilter = () => {
     const [state, setState] = useState("All Categories")
     return (
-        <div className="seclect-box style3 voomio-pl-1">
+        <div className="seclect-box style3 voomio-pl-1 voomio-mta">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -47,7 +47,7 @@ export const CategoryFilter = () => {
 export const ChainFilter = () => {
     const [state, setState] = useState("All Chains")
     return (
-        <div className="seclect-box style3 voomio-pl-1">
+        <div className="seclect-box style3 voomio-mta voomio-pl-1">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -61,7 +61,7 @@ export const ChainFilter = () => {
 export const TimeFilter = () => {
     const [state, setState] = useState("Past 24 hours")
     return (
-        <div className="seclect-box style3 voomio-pl-1">
+        <div className="seclect-box style3 voomio-mta voomio-pl-1">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -75,7 +75,7 @@ export const TimeFilter = () => {
 export const PriceFilter = () => {
     const [state, setState] = useState("Price low to high")
     return (
-        <div className="seclect-box style3 voomio-pl-1">
+        <div className="seclect-box style3 voomio-mta voomio-pl-1">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
