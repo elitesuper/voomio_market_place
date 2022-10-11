@@ -3949,7 +3949,9 @@ header{
 .spec-color-5{
   color: #FF0000 !important;
 }
-
+.spec-color-6{
+    color:  #687280 !important;
+}
 .itemcontext-header{
     background: transparent !important;
     box-shadow: none !important;
@@ -4271,6 +4273,7 @@ header{
 .pricing-data{
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), #F4EEFF;
 }
 
 .nft-card-icon{

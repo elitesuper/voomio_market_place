@@ -27,7 +27,7 @@ function PricingCard(props){
        <Box className="pricing-data" sx={{bgcolor:'#F4EEFF', p:'16px'}}>
        {
          props.data.functions.map((item, index) =>(
-           <Typography sx={{ fontSize: '16px', mb: 1.5 }}  className="flex" key={index}  component='div'>
+           <Typography sx={{ fontSize: '16px', mb: 1.5, color:'#687280' }}  className="flex" key={index}  component='div'>
             <CheckIcon sx={{color:'#10B981'}} className="my-auto mr-1"/>{item}
            </Typography>
          ))
