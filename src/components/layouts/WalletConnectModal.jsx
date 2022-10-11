@@ -34,6 +34,8 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 
+import CardanoWallet from "./CardanoWallet";
+
 import SolanaWallet from "./SolanaWallet";
 
 import { walletdata } from '../../assets/fake-data/data-wallets';
@@ -111,14 +113,18 @@ export default function WalletConnectModal(props) {
            <Divider />
           <DialogContent dividers={false} className="text-center" ref={descriptionElementRef} tabIndex={-1}>
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+
               <Web3ReactProvider getLibrary={getLibrary}>
                 <Web3ReactWalletList />
               </Web3ReactProvider>
+
               <ConnectionProvider endpoint={endpoint}>
                 <WalletProvider wallets={wallets}>
                     <SolanaWallet />
                 </WalletProvider>
               </ConnectionProvider>
+
+              <CardanoWallet walletdata={walletdata.filter(item => item.type === 'cardano')}/>
             </List>
           </DialogContent>
           <DialogActions>

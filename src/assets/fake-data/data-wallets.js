@@ -13,7 +13,7 @@ import solflareicon from '../images/wallet/solflare.png'
 import torusicon from '../images/wallet/torus.webp'
 import trusticon from '../images/wallet/trust.webp'
 import venlyicon from '../images/wallet/venly.svg'
-import narmiicon from '../images/wallet/narmi.svg'
+import namiicon from '../images/wallet/narmi.svg'
 import eternlicon from '../images/wallet/eternl.svg'
 import geroicon from '../images/wallet/gero.svg'
 import typhonicon from '../images/wallet/typhon.svg'
@@ -74,31 +74,15 @@ export const walletdata = [
     type:'web3react',
     environment:'0'
   },{
-    name:"Phantom",
-    img:phantomicon,
-    avaliable:false,
-    type:'solana',
-    environment:'0'
-  },{
-    name:"Glow",
-    img:glowicon,
-    avaliable:false,
-    type:'solana',
-    environment:'0'
-  },{
-    name:"Solflare",
-    img:solflareicon,
-    avaliable:false,
-    type:'solana',
-    environment:'0'
-  },{
     name:"Nami",
-    img:narmiicon,
+    key:"nami",
+    img:namiicon,
     avaliable:false,
     type:'cardano',
     environment:'0'
   },{
     name:"Eternl",
+    key:"eternl",
     img:eternlicon,
     avaliable:false,
     type:'cardano',
@@ -106,6 +90,7 @@ export const walletdata = [
   },{
     name:"Flint Wallet",
     img:flinticon,
+    key:"flint",
     avaliable:false,
     type:'cardano',
     environment:'0'
