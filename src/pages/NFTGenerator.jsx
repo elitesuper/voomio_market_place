@@ -41,10 +41,10 @@ function NFTGeneratorMain(){
                   </div>
                   <div className="col-sm12 col-md-6">
                   <div className="flex">
-                    <Typography variant="h4" sx={{mb:1}}>
+                    <Typography className="voomio-mta" variant="h4" sx={{mb:1}}>
                      Basic
                     </Typography>
-                    <Typography className="spec-color-1" variant="h5" sx={{mb:1, ml:2, fontWeight:'600'}}>
+                    <Typography className="spec-color-1 voomio-mta voomio-m-l-1" variant="h5" sx={{mb:1, ml:2, fontWeight:'600'}}>
                      Free
                     </Typography>
                   </div>
