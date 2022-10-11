@@ -105,10 +105,27 @@ const Aggregator = () => {
                                 <div className='detail-info flex'>
                                     <div className='voomio-mta voomio-m-r-2'><h6>Items</h6><h4>10.0K</h4></div>
                                     <div className='voomio-mta voomio-m-r-2'><h6>Owners</h6><h4>6.3K</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Total</h6><h4><img src={etherium_icon} alt="etherium_icon"></img>433.3k</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Floor</h6><h4><img src={etherium_icon} alt="etherium_icon"></img>87</h4></div>
-                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'><h6>Best Offer</h6><h4><img src={etherium_icon} alt="etherium_icon"></img>88</h4></div>
-
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'>
+                                        <h6>Total</h6>
+                                        <div className="flex">
+                                            <img src={etherium_icon} alt="etherium_icon"></img>
+                                            <h4>433.3K</h4>
+                                        </div>
+                                    </div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'>
+                                        <h6>Floor</h6>
+                                        <div className="flex">
+                                            <img src={etherium_icon} alt="etherium_icon"></img>
+                                            <h4>87</h4>
+                                        </div>
+                                    </div>
+                                    <div className='voomio-mta voomio-m-r-2 spec-color-1'>
+                                        <h6>Best Offer</h6>
+                                        <div className="flex">
+                                            <img src={etherium_icon} alt="etherium_icon"></img>
+                                            <h4>88</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="widget-social style-3 voomio-justend">
@@ -166,7 +183,7 @@ const Aggregator = () => {
                                             </div>
                                             <div className="widget widget-filter style-2 mgbt-0 flex ml-3">
                                                 <h5 className="title-widget voomio-mta spec-color-1">Filters:</h5>
-                                                <ul className="box-check">
+                                                <ul className="box-check voomio-mta">
                                                     {filters.map(item => (
                                                         <li key={item} className="voomio-mta">
                                                             <div className='filter-tag voomio-mta flex'>

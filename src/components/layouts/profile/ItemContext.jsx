@@ -67,16 +67,22 @@ const ItemContext = (props) => {
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 3);
     }
+
+    const [filters, setFilters] = useState(["Sales","Listings","Offers","Transfers"]);
+
     return (
         <div>
             <section className="tf-rank">
                 <div className='container-fluid filter-view pd-t-20'>
-                    <div className='flex'>
-                        <h5 className="spec-color-1" > Filters : </h5>
-                        <div className='filter-tag voomio-mta'><span>Sales</span></div>
-                        <div className='filter-tag voomio-mta'><span>Listings</span></div>
-                        <div className='filter-tag voomio-mta'><span>Offers</span></div>
-                        <div className='filter-tag voomio-mta'><span>Transfers</span></div>
+                    <div className="widget widget-filter style-2 mgbt-0 flex ml-3">
+                        <h5 className="title-widget voomio-mta spec-color-1">Filters:</h5>
+                        <ul className="box-check voomio-mta">
+                            {filters.map(item => (
+                                <li key={item} className="voomio-mta">
+                                    <div className='filter-tag voomio-mta'><span>{item}</span></div>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
                     <div className="row">
