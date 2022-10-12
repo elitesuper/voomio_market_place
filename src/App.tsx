@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {   Routes , Route } from 'react-router-dom';
+import {useState} from 'react';
+import { Routes , Route } from 'react-router-dom';
 import './App.css';
 import routes from './pages/index'
 import Footer from './components/footer/Footer';
@@ -21,9 +21,9 @@ function App() {
           <HeaderStyle2 setAccount={setAccount} setWeb3Api={setWeb3Api} />
           <Routes >
               {
-              routes.map((data,index) => (
-                  <Route onUpdate={() => window.scrollTo(0, 0)} exact={true} path={data.path} element={data.component} key={index} />
-              ))
+                routes.map((data,index) => (
+                    <Route onUpdate={() => window.scrollTo(0, 0)} exact={true} path={data.path} element={data.component} key={index} />
+                ))
               }
           </Routes>
           <Footer/>

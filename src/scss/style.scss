@@ -29,3 +29,16 @@
         @include row-cols(5);
     }
 }
+
+.nft-setting{
+    
+
+    @include media-breakpoint-up(xs)
+    {
+        margin-top: 2rem;
+    }
+    @include media-breakpoint-up(md)
+    {
+        margin-top: 10rem;
+    }
+}
