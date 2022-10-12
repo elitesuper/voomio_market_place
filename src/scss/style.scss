@@ -42,3 +42,53 @@
         margin-top: 10rem;
     }
 }
+
+.MuiTabs-flexContainer button {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none !important;
+}
+
+.nftgenerator-container {
+    margin: auto;
+
+    @include media-breakpoint-up(xs)
+    {
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(xs)
+    {
+        width: 95%;
+    }
+
+    @include media-breakpoint-up(xl)
+    {
+       width: 90%
+    }
+}
+
+.nftgenerator-tabs .MuiTabs-scroller .MuiTabs-flexContainer{
+
+    justify-content:center;
+    display: block !important;
+
+    @include media-breakpoint-up(md)
+    {
+        display: flex !important;
+
+    }
+}
+
+.nftgenerator-tabs{
+
+
+    @include media-breakpoint-up(sm)
+    {
+        margin-top: 0px;
+    }
+    @include media-breakpoint-up(md)
+    {
+        margin-top: -5rem !important;
+    }
+}
