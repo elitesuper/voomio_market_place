@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 function PricingCard(props){
   return(
     <Box sx={{m:1, border: 2, borderColor:'#7B61FF', borderRadius: 3}}>
-      <CardContent>
+      <CardContent className={`${props.data.type.toLowerCase()}-card`}>
          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
            {props.data.type}
          </Typography>

@@ -4332,3 +4332,18 @@ header{
   font-weight: 600 !important;
   color: #6549F6 !important;
 }
+.popular-card{
+    background-color: #F4EEFF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.type-pad{
+    position: relative;
+}
+.disable-pad{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.6;
+}

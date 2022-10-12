@@ -37,7 +37,7 @@ function NFTGeneratorMain(){
                   </div>
                   <div className="row my-3">
                   <div className="col-sm-12 col-md-3">
-                    <Button className="voomio-btn" sx={{width:'90%'}} variant="contained" size="large">Selected</Button>
+                    <Button className="voomio-btn" sx={{width:'90%'}} variant="contained" size="large">Select</Button>
                   </div>
                   <div className="col-sm12 col-md-6">
                   <div className="flex">
@@ -53,25 +53,28 @@ function NFTGeneratorMain(){
                   </Typography>
                   </div>
                   </div>
-                  <div className="row mt-5">
-                    <h4 className="spec-color-1">NFT Type</h4>
-                    <p className="mt-3 mb-5">Select a subscription for the PFP & Collection Generator.</p>
-                  </div>
-                  <div className="row">
-                    <div className="col-sm-1 col-md-5">
-                      <TypeCard
-                        type="1"
-                        title="Create a Single NFT"
-                        desc="This will generate a tokenset based on the preview you have seen in the gallery. What you’ve seen is what you get. Voomio adds randomization to the token number."
-                      />
+                  <div className="row mt-5 type-pad">
+                    <div className="row">
+                      <h4 className="spec-color-1">NFT Type</h4>
+                      <p className="mt-3 mb-5">Select a subscription for the PFP & Collection Generator.</p>
                     </div>
-                    <div className="col-sm-1 col-md-5">
-                      <TypeCard
-                        type="2"
-                        title="Create an NFT Set"
-                        desc="This will create a set based on your rules and rarity settings, but isn’t what you saw in the gallery. This will guarantee higher randomization and less bias."
-                      />
+                    <div className="row">
+                      <div className="col-sm-1 col-md-5">
+                        <TypeCard
+                          type="1"
+                          title="Create a Single NFT"
+                          desc="This will generate a tokenset based on the preview you have seen in the gallery. What you’ve seen is what you get. Voomio adds randomization to the token number."
+                        />
+                      </div>
+                      <div className="col-sm-1 col-md-5">
+                        <TypeCard
+                          type="2"
+                          title="Create an NFT Set"
+                          desc="This will create a set based on your rules and rarity settings, but isn’t what you saw in the gallery. This will guarantee higher randomization and less bias."
+                        />
+                      </div>
                     </div>
+                    <div className="disable-pad"></div>
                   </div>
                 </div>
               </section>

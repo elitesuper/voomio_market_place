@@ -19,7 +19,6 @@ function TypeCard(props){
             <HiOutlineViewGridAdd className="nft-card-icon mb-3" />
           ))
         }
-
          <Typography variant="h4" sx={{mb:1}}>
           {props.title}
          </Typography>
