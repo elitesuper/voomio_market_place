@@ -9,6 +9,7 @@ import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import CollectionUpload from '../components/layouts/nftgen/CollectionUpload';
+import CollectionPreview from '../components/layouts/nftgen/CollectionPreview';
 import '../scss/style.scss';
 
 
@@ -34,7 +35,7 @@ function NFTGeneratorUpload(props){
 		              	</div>
 		            </div>
 		            <div className="row">
-		            	<div className="col-xs-12 col-sm-3">
+		            	<div className="col-xs-12 col-sm-3 col-lg-2">
 		            		<div className="col-12 mb-5">
 		            			<h4 className="mb-4 spec-color-7">Current NFT</h4>
 		            			<h5 className="spec-color-2">Single-item</h5>
@@ -46,19 +47,21 @@ function NFTGeneratorUpload(props){
 		            			<h5 className="spec-color-2 mb-3">Rules</h5>
 		            		</div>
 		            	</div>
-		            	<div className="col-xs-12 col-sm-9">
+		            	<div className="col-xs-12 col-sm-9 col-lg-10">
 			            	<Box sx={{ width: '100%', typography: 'body1' }}>
 				            	<TabContext value={tabvalue}>
 								    <Tabs className="nftgenerator-tabs" value={tabvalue} onChange={handleChange}  variant="scrollable" scrollButtons="auto" aria-label="icon label tabs example">
-								      <Tab icon={<CloudUploadOutlinedIcon sx={{fontSize:30}} />} label="Upload" value="0"/>
-								      <Tab icon={<RemoveRedEyeOutlinedIcon sx={{fontSize:30}} />} label="Preview" value="1"/>
-								      <Tab icon={<SettingsOutlinedIcon sx={{fontSize:30}} />} label="Manage" value="2"/>
-								      <Tab icon={<AutoAwesomeOutlinedIcon sx={{fontSize:30}} />} label="Generate" value="3"/>
+								      <Tab sx={{fontSize:15}} icon={<CloudUploadOutlinedIcon sx={{fontSize:30}} />} label="Upload" value="0"/>
+								      <Tab sx={{fontSize:15}} icon={<RemoveRedEyeOutlinedIcon sx={{fontSize:30}} />} label="Preview" value="1"/>
+								      <Tab sx={{fontSize:15}} icon={<SettingsOutlinedIcon sx={{fontSize:30}} />} label="Manage" value="2"/>
+								      <Tab sx={{fontSize:15}} icon={<AutoAwesomeOutlinedIcon sx={{fontSize:30}} />} label="Generate" value="3"/>
 								    </Tabs>
 								    <TabPanel value="0">
 								    	<CollectionUpload />
 								    </TabPanel>
-							        <TabPanel value="1">Item Two</TabPanel>
+							        <TabPanel value="1">
+							        	<CollectionPreview />
+							        </TabPanel>
 							        <TabPanel value="2">Item Three</TabPanel>
 							        <TabPanel value="3">Item Four</TabPanel>
 				            	</TabContext>

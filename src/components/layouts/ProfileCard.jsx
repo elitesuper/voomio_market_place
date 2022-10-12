@@ -5,6 +5,13 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Verified } from "@mui/icons-material";
 
+
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+
+
 export function ProfileCard(props) {
 
     return (
@@ -97,5 +104,25 @@ export function CollectionCard(props) {
           </div>
       </div> <
         />
+    )
+}
+
+export function TokenCard(props){
+
+    return(
+        <Card sx={{marginBottom:1}}>
+            <CardMedia
+                sx={{ maxHeight: 150 }}
+                component="img"
+                height="150"
+                image={props.tokenimg}
+                alt="token img"
+            />
+            <CardContent className="tokencard-content">
+                <Typography gutterBottom variant="h5" component="div">
+                    {`#${props.tokenid}`}
+                </Typography>
+            </CardContent>
+        </Card>
     )
 }

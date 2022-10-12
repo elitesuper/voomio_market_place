@@ -7,12 +7,12 @@ import UploadButton from "@rpldy/upload-button";
 
 function CollectionUpload(props){
 
-	const indicatorRef = useRef(null);
+	const customIsSuccess = (xhr) => [308, 418].includes(xhr.status);
 
 	return(
 		<div className="row">
 			<div className="row">
-			    <Uploady destination={{url: "http://localhost:3000/upload"}}>
+			    <Uploady isSuccessfulCall={customIsSuccess} destination={{url: "http://localhost:3000/voomio-front-end-jeni/upload"}}>
 			        <UploadDropZone
 			          className="collection-upload-field"
 			          onDragOverClassName="drag-over"
@@ -25,7 +25,7 @@ function CollectionUpload(props){
 	         			</div>    
 			        </div>    
 			        </UploadDropZone>
-			        <UploadPreview/>
+{/*			        <UploadPreview/>*/}
 			    </Uploady>
 			</div>
 		</div>

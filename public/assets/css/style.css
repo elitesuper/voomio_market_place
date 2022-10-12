@@ -4294,7 +4294,6 @@ header{
 }
 
 .voomio-btn{
-  border: solid 2px #7B61FF !important;
   color: #7B61FF !important;
   font-size: 14px !important;
   border-radius: 20px !important;
@@ -4306,11 +4305,18 @@ header{
   background: linear-gradient(98.79deg, #9B53E0 20.34%, #8551E6 77.89%) !important;
   border: solid 2px transparent !important;
 }
+.btn-gen-filled{
+  color: white !important;
+  background: linear-gradient(93.69deg, #7B61FF 0%, #00DAD9 107.12%) !important;
+  width: 90% !important;
+}
 .voomio-btn:hover{
   color: white;
+  border: none !important;
 }
 .voomio-btn:focus{
   color: white;
+  border: none !important;
 }
 .wallet_icons{
   width: 24px;

@@ -57,14 +57,9 @@
         width: 100%;
     }
 
-    @include media-breakpoint-up(xs)
-    {
-        width: 95%;
-    }
-
     @include media-breakpoint-up(xl)
     {
-       width: 90%
+       width: 95%
     }
 }
 
@@ -109,4 +104,15 @@
     width: 100%;
     height: 100%;
     display: flex;
+}
+.MuiButtonBase-root{
+    text-transform: none !important;
+}
+
+.tokencard-content{
+    padding: 5px !important;
+}
+
+.token-gallery-view{
+    max-width: 900px;
 }
