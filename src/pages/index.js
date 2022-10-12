@@ -6,6 +6,7 @@ import ExploreCollection from "./ExploreCollection";
 import CollectionStat from "./CollectionStat";
 import Aggregator from "./Aggregator";
 import NFTGeneratorMain from "./NFTGeneratorMain";
+import NFTGeneratorUpload from "./NFTGeneratorUpload";
 
 
 const routes = [
@@ -17,6 +18,8 @@ const routes = [
   { path: '/collectionstat', component:<CollectionStat/>},
   { path: '/aggregator', component:<Aggregator/>},
   { path: '/nftgenerator', component:<NFTGeneratorMain/>},
+  { path: '/nftgenerator/upload', component:<NFTGeneratorUpload/>},
+
 ]
 
 export default routes;
