@@ -10,7 +10,11 @@ import TypeCard from '../components/layouts/nftgen/TypeCard';
 function NFTGeneratorMain(){
 
   const pcarddata = pricingcards;
-  const{typeactive, setTypeactive} = useState(false);
+  const[typeactive, setTypeactive] = useState(false);
+
+  const activeTypeCards = () => {
+    setTypeactive(true);
+  }
 
   return(<>
       <div className='detail-page pad-t-24'>
@@ -31,16 +35,16 @@ function NFTGeneratorMain(){
                   </div>
                   <div className="row mb-3">
                     {pcarddata.map((item, index)=>(
-                      <div key={index} className="col-sm-1 col-md-4">
-                        <PricingCard data={item} />
+                      <div key={index} className="col-sm-12 col-md-6 col-xl-4">
+                        <PricingCard data={item} padactive={()=>activeTypeCards()} />
                       </div>
                     ))}
                   </div>
                   <div className="row my-3">
                   <div className="col-sm-12 col-md-3">
-                    <Button className="voomio-btn" sx={{width:'90%'}} variant="contained" size="large">Select</Button>
+                    <Button className={`voomio-btn ${typeactive&&"btn-filled"}`} sx={{width:'90%'}} variant="contained" size="large">{typeactive?"Selected":"Select"}</Button>
                   </div>
-                  <div className="col-sm12 col-md-6">
+                  <div className="col-sm-12 col-md-6 selectedcard-info">
                   <div className="flex">
                     <Typography className="voomio-mta" variant="h4" sx={{mb:1}}>
                      Basic

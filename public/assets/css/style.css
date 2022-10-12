@@ -2020,6 +2020,12 @@ header{
 }
 
 @media only screen and (max-width:500px){
+    .selectedcard-info{
+        padding-top: 20px;
+    }
+    .mainslider.home .wrap-heading .content{
+        padding-top: 0px !important;
+    }
     .itemnumbers-filters{
       display: block;
     }

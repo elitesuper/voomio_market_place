@@ -33,7 +33,7 @@ function PricingCard(props){
          ))
        }
        <CardActions className="justify-center">
-         <Button className="voomio-btn" sx={{width:'100%'}} variant="contained" size="large">Select</Button>
+         <Button className="voomio-btn" onClick={props.padactive} sx={{width:'100%'}} variant="contained" size="large">Select</Button>
        </CardActions>
        </Box>
     </Box>

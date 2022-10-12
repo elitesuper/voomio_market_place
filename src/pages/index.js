@@ -5,7 +5,7 @@ import NoResult from "./NoResult";
 import ExploreCollection from "./ExploreCollection";
 import CollectionStat from "./CollectionStat";
 import Aggregator from "./Aggregator";
-import NFTGeneratorMain from "./NFTGenerator";
+import NFTGeneratorMain from "./NFTGeneratorMain";
 
 
 const routes = [
