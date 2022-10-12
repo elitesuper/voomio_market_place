@@ -8,14 +8,15 @@ import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+import CollectionUpload from '../components/layouts/nftgen/CollectionUpload';
 import '../scss/style.scss';
 
 
 function NFTGeneratorUpload(props){
 
-	const [tabvalue, setTabValue] = React.useState(0);
+	const [tabvalue, setTabValue] = React.useState("0");
 
-	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
 	   setTabValue(newValue);
 	};
 
@@ -49,15 +50,17 @@ function NFTGeneratorUpload(props){
 			            	<Box sx={{ width: '100%', typography: 'body1' }}>
 				            	<TabContext value={tabvalue}>
 								    <Tabs className="nftgenerator-tabs" value={tabvalue} onChange={handleChange}  variant="scrollable" scrollButtons="auto" aria-label="icon label tabs example">
-								      <Tab icon={<CloudUploadOutlinedIcon sx={{fontSize:30}} />} label="Upload" />
-								      <Tab icon={<RemoveRedEyeOutlinedIcon sx={{fontSize:30}} />} label="Preview" />
-								      <Tab icon={<SettingsOutlinedIcon sx={{fontSize:30}} />} label="Manage" />
-								      <Tab icon={<AutoAwesomeOutlinedIcon sx={{fontSize:30}} />} label="Generate" />
+								      <Tab icon={<CloudUploadOutlinedIcon sx={{fontSize:30}} />} label="Upload" value="0"/>
+								      <Tab icon={<RemoveRedEyeOutlinedIcon sx={{fontSize:30}} />} label="Preview" value="1"/>
+								      <Tab icon={<SettingsOutlinedIcon sx={{fontSize:30}} />} label="Manage" value="2"/>
+								      <Tab icon={<AutoAwesomeOutlinedIcon sx={{fontSize:30}} />} label="Generate" value="3"/>
 								    </Tabs>
-								    <TabPanel value={0}>Item One</TabPanel>
-							        <TabPanel value={1}>Item Two</TabPanel>
-							        <TabPanel value={2}>Item Three</TabPanel>
-							        <TabPanel value={3}>Item Four</TabPanel>
+								    <TabPanel value="0">
+								    	<CollectionUpload />
+								    </TabPanel>
+							        <TabPanel value="1">Item Two</TabPanel>
+							        <TabPanel value="2">Item Three</TabPanel>
+							        <TabPanel value="3">Item Four</TabPanel>
 				            	</TabContext>
 				            </Box>
 		            	</div>

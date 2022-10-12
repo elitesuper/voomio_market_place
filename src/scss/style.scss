@@ -31,7 +31,7 @@
 }
 
 .nft-setting{
-    
+
 
     @include media-breakpoint-up(xs)
     {
@@ -91,4 +91,17 @@
     {
         margin-top: -5rem !important;
     }
+}
+
+.collection-upload-field{
+    max-width: 600px;
+    margin: auto;
+    border: 5px dashed #F4EEFF;
+    border-radius: 48px;
+    height: 70vh;
+}
+.upload-info{
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
 }
