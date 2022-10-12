@@ -1,15 +1,24 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Faviconimg from '../../assets/images/icon/Favicon.png'
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { Verified } from "@mui/icons-material";
-
+import PropTypes from 'prop-types';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Verified } from "@mui/icons-material";
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+
+import Faviconimg from '../../assets/images/icon/Favicon.png'
 
 
 export function ProfileCard(props) {
@@ -107,22 +116,132 @@ export function CollectionCard(props) {
     )
 }
 
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {
+    padding: theme.spacing(2),
+  },
+  '& .MuiDialogActions-root': {
+    padding: theme.spacing(1),
+  },
+}));
+
+const BootstrapDialogTitle = (props) => {
+  const { children, onClose, ...other } = props;
+
+  return (
+    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+      {children}
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </DialogTitle>
+  );
+};
+
+BootstrapDialogTitle.propTypes = {
+  children: PropTypes.node,
+  onClose: PropTypes.func.isRequired,
+};
+
 export function TokenCard(props){
 
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return(
-        <Card sx={{marginBottom:1}}>
-            <CardMedia
-                sx={{ maxHeight: 150 }}
-                component="img"
-                height="150"
-                image={props.tokenimg}
-                alt="token img"
-            />
-            <CardContent className="tokencard-content">
-                <Typography gutterBottom variant="h5" component="div">
-                    {`#${props.tokenid}`}
-                </Typography>
-            </CardContent>
-        </Card>
+        <>
+            <Card onClick={handleClickOpen} sx={{marginBottom:1}}>
+                <CardMedia
+                    sx={{ maxHeight: 150 }}
+                    component="img"
+                    height="150"
+                    image={props.tokenimg}
+                    alt="token img"
+                />
+                <CardContent className="tokencard-content">
+                    <Typography gutterBottom variant="h5" component="div">
+                        {`#${props.tokenid}`}
+                    </Typography>
+                </CardContent>
+            </Card>
+            <BootstrapDialog
+            sx={{minWidth:'300px'}}
+            onClose={handleClose}
+            aria-labelledby="customized-dialog-title"
+            open={open}
+            >
+                <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
+                    <h4>{`#${props.tokenid}`}</h4>
+                </BootstrapDialogTitle>
+                <DialogContent sx={{width:'500px'}}>
+                    <div className="row">
+                        <div className="col-sm-12 col-md-5">
+                            <CardMedia
+                                component="img"
+                                height="180"
+                                image={props.tokenimg}
+                                alt="token img"
+                            />
+                        </div>
+                        <div className="col-sm-12 col-md-7">
+                            <h5>Attributes</h5>
+                            <div className="mt-3">
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Clothers</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Hair</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Texture</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Eyes</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Mouth</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Color Background</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                                <div className="w-100 flex voomio-just-between attribute-info">
+                                    <h6>Body</h6>
+                                    <p>Lorem Ipsum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </DialogContent>
+                <DialogActions>
+                    <Button className="voomio-btn" autoFocus onClick={handleClose}>
+                        Save changes
+                    </Button>
+                </DialogActions>
+            </BootstrapDialog>
+        </>
     )
 }
