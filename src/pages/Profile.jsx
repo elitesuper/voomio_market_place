@@ -151,7 +151,7 @@ const Profile = () => {
                     <div className="content-tab">
                         {
                             panelTab.map((item, index) => (
-                                (index != 2)?(
+                                (index !== 2)?(
                                 <div className='themesflat-container'>
                                 <div className='content-inner'>
                                     <div className='row'>
@@ -215,7 +215,7 @@ const Profile = () => {
                                         </div>
                                     }
                                     {
-                                        index == 1 &&
+                                        index === 1 &&
                                         <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5">
                                             <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>+ Create New</span></Link>
                                         </div>

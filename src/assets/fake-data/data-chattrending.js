@@ -55,7 +55,6 @@ export const chatdata = [
     usermessage:"dog bless",
     specnum: 33,
     imgs:sampleimg,
-    specnum: null,
     belong:null,
   }
 ]

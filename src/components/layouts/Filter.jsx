@@ -37,7 +37,7 @@ export const CategoryFilter = () => {
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
-                  {categoryfilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state==item)?"activefilter":""}>{item}</span></li>))}
+                  {categoryfilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
               </ul>
           </div>
       </div>
@@ -51,7 +51,7 @@ export const ChainFilter = () => {
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
-                  {chainfilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state==item)?"activefilter":""}>{item}</span></li>))}
+                  {chainfilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
               </ul>
           </div>
       </div>
@@ -65,7 +65,7 @@ export const TimeFilter = () => {
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
-                  {timefilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state==item)?"activefilter":""}>{item}</span></li>))}
+                  {timefilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
               </ul>
           </div>
       </div>
@@ -79,7 +79,7 @@ export const PriceFilter = () => {
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
-                  {pricefilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state==item)?"activefilter":""}>{item}</span></li>))}
+                  {pricefilterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
               </ul>
           </div>
       </div>

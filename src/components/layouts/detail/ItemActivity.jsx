@@ -111,7 +111,7 @@ function ItemActivity(){
                                 <div className="infor-item flex column1">
                                     <div className="content-collection voomio-mta">
                                         <div className='flex'>
-                                            {(item.title=="Sale")?(
+                                            {(item.title==="Sale")?(
                                                 <ShoppingCartOutlinedIcon className="detail-meta-icon" style={{fontSize:'15px'}}/>
                                             ):(
                                                 <SyncAltIcon className="detail-meta-icon" style={{fontSize:'15px'}}/>

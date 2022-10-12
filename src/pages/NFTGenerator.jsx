@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
@@ -10,6 +10,7 @@ import TypeCard from '../components/layouts/nftgen/TypeCard';
 function NFTGeneratorMain(){
 
   const pcarddata = pricingcards;
+  const{typeactive, setTypeactive} = useState(false);
 
   return(<>
       <div className='detail-page pad-t-24'>
@@ -74,7 +75,7 @@ function NFTGeneratorMain(){
                         />
                       </div>
                     </div>
-                    <div className="disable-pad"></div>
+                    {!typeactive&&<div className="disable-pad"></div>}
                   </div>
                 </div>
               </section>

@@ -45,7 +45,7 @@ const SideBar = () => {
     const [open, setOpen] = useState([]);
 
     const handleClick = (val) => () => {
-      (open.includes(val))?(setOpen(open => open.filter(item => item != val))):setOpen(open => [...open, val]);
+      (open.includes(val))?(setOpen(open => open.filter(item => item !== val))):setOpen(open => [...open, val]);
     };
 
     const [checked, setChecked] = useState([]);

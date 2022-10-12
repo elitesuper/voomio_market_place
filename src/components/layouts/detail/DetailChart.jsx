@@ -1,6 +1,5 @@
 import React from 'react';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
-import { Link } from 'react-router-dom';
 import Chart from "react-apexcharts";
 import { TimeFilter} from '../Filter';
 

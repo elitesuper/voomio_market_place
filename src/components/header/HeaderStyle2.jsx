@@ -1,15 +1,10 @@
 import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
-import { Modal } from "react-bootstrap";
 import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
 import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 import WalletConnectModal from '../../components/layouts/WalletConnectModal';
-
-import img1 from '../../assets/images/avatar/ic_land_1.png'
-import img2 from '../../assets/images/avatar/ic_land_2.png'
-import img3 from '../../assets/images/avatar/ic_land_3.png'
 
 
 const HeaderStyle2 = (props) => {
