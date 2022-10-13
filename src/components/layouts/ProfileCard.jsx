@@ -17,6 +17,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import Collapse from '@mui/material/Collapse';
 
 import Faviconimg from '../../assets/images/icon/Favicon.png'
 
@@ -157,6 +158,12 @@ BootstrapDialogTitle.propTypes = {
 
 export function TokenCard(props){
 
+    const [create, setCreate] = React.useState(false);
+
+    const handleCreate = () =>{
+        setCreate(!create)
+    }
+    
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -183,7 +190,7 @@ export function TokenCard(props){
                 </CardContent>
             </Card>
             <BootstrapDialog
-            sx={{minWidth:'300px'}}
+            sx={{minWidth:'500px'}}
             onClose={handleClose}
             aria-labelledby="customized-dialog-title"
             open={open}
@@ -191,7 +198,7 @@ export function TokenCard(props){
                 <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
                     <h4>{`#${props.tokenid}`}</h4>
                 </BootstrapDialogTitle>
-                <DialogContent sx={{width:'500px'}}>
+                <DialogContent sx={{width:'500px', height:'400px'}}>
                     <div className="row">
                         <div className="col-sm-12 col-md-5">
                             <CardMedia
@@ -204,27 +211,27 @@ export function TokenCard(props){
                         <div className="col-sm-12 col-md-7">
                             <h5>Attributes</h5>
                             <div className="mt-3">
-                                <div className="w-100 flex voomio-just-between attribute-info">
+                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
                                     <h6>Clothers</h6>
                                     <p>Lorem Ipsum</p>
                                 </div>
-                                <div className="w-100 flex voomio-just-between attribute-info">
+                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
                                     <h6>Hair</h6>
                                     <p>Lorem Ipsum</p>
                                 </div>
-                                <div className="w-100 flex voomio-just-between attribute-info">
+                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
                                     <h6>Texture</h6>
                                     <p>Lorem Ipsum</p>
                                 </div>
-                                <div className="w-100 flex voomio-just-between attribute-info">
+                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
                                     <h6>Eyes</h6>
                                     <p>Lorem Ipsum</p>
                                 </div>
-                                <div className="w-100 flex voomio-just-between attribute-info">
+                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
                                     <h6>Mouth</h6>
                                     <p>Lorem Ipsum</p>
                                 </div>
-                                <div className="w-100 flex voomio-just-between attribute-info">
+                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
                                     <h6>Color Background</h6>
                                     <p>Lorem Ipsum</p>
                                 </div>
@@ -236,11 +243,24 @@ export function TokenCard(props){
                         </div>
                     </div>
                 </DialogContent>
-                <DialogActions>
-                    <Button className="voomio-btn" autoFocus onClick={handleClose}>
-                        Save changes
-                    </Button>
-                </DialogActions>
+                <div className="row">
+                    <div className="row"> 
+                        <div className={`btn-profile rule-btn ${create&&"rule-outlined"}`} onClick={handleCreate}>
+                            <Link to="#" className="sc-button style-1 follow profile-btn profile-fill v-desktop-btn">{create?"Close":"+ Create Rule"}</Link>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <Collapse className="w-100" in={create} timeout="auto" unmountOnExit>
+                            <div>
+                                <h4 className="spec-color-1"> Create A Rule</h4>
+                                <h5>After you create a rule any existing tokens will be regenerated.</h5>
+                            </div>
+                            <div className="flex">
+
+                            </div>
+                        </Collapse>
+                    </div>
+                </div>
             </BootstrapDialog>
         </>
     )

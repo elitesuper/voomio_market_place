@@ -118,5 +118,16 @@
 }
 .attribute-info p{
     font-size: 15px !important;
-    line-height: 20px !important;
+    line-height: 15px !important;
+}
+.rule-btn{
+    font-size: 1.5rem;
+    margin-top: -10px;
+}
+.rule-btn .sc-button {
+    padding: 11px;
+}
+.rule-outlined .sc-button{
+    background: none !important;
+    color: #6549F6 !important;
 }

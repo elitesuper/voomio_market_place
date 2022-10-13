@@ -27,7 +27,13 @@ function TypeCard(props){
          </Typography>
        </CardContent>
        <CardActions>
-         <Button className="voomio-btn btn-filled" variant="contained" size="large">Get Started</Button>
+       {props.buttontype==2?(
+         <div className="w-100 flex">
+          <Button className="voomio-btn btn-filled" variant="contained" size="large">Generate Preview Set</Button>
+          <Button className="voomio-btn" variant="contained" size="large">View Preview</Button>
+         </div>
+       ):<Button className="voomio-btn btn-filled" variant="contained" size="large">Get Started</Button>}
+
        </CardActions>
     </Box>
   )

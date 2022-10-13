@@ -4299,11 +4299,12 @@ header{
   border-radius: 20px !important;
   text-transform: none !important;
   background: white !important;
+  border: none !important;
 }
 .btn-filled{
   color: white !important;
   background: linear-gradient(98.79deg, #9B53E0 20.34%, #8551E6 77.89%) !important;
-  border: solid 2px transparent !important;
+  border: none !important;
 }
 .btn-gen-filled{
   color: white !important;
