@@ -83,3 +83,8 @@ export const filter_tokens = [
 		default:"Transparent"
 	}
 ]
+
+export const token_manage_filter = {
+	type:['By Design','By Price','By Rate'],
+	default:"By Design"
+}

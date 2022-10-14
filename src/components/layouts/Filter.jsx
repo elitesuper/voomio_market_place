@@ -99,3 +99,17 @@ export const TokenFilter = (props) => {
       </div>
     )
 }
+
+export const ManageTokenFilter = (props) => {
+    const [state, setState] = useState(props.defaultvalue)
+    return (
+        <div className="seclect-box style3 voomio-mta voomio-pl-1">
+          <div id="artworks" className="dropdown">
+              <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
+              <ul className='voomio-zindex'>
+                  {props.filterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
+              </ul>
+          </div>
+      </div>
+    )
+}

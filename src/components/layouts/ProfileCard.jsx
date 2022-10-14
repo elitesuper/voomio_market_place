@@ -190,59 +190,56 @@ export function TokenCard(props){
                 </CardContent>
             </Card>
             <BootstrapDialog
-            sx={{minWidth:'500px'}}
+            sx={{width:'600px',height:'500px'}}
             onClose={handleClose}
-            aria-labelledby="customized-dialog-title"
             open={open}
             >
                 <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
                     <h4>{`#${props.tokenid}`}</h4>
                 </BootstrapDialogTitle>
-                <DialogContent sx={{width:'500px', height:'400px'}}>
-                    <div className="row">
-                        <div className="col-sm-12 col-md-5">
-                            <CardMedia
-                                component="img"
-                                height="180"
-                                image={props.tokenimg}
-                                alt="token img"
-                            />
-                        </div>
-                        <div className="col-sm-12 col-md-7">
-                            <h5>Attributes</h5>
-                            <div className="mt-3">
-                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
-                                    <h6>Clothers</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
-                                    <h6>Hair</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
-                                    <h6>Texture</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
-                                    <h6>Eyes</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
-                                    <h6>Mouth</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                                <div className="w-100 flex voomio-just-between attribute-info mb-1">
-                                    <h6>Color Background</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-                                <div className="w-100 flex voomio-just-between attribute-info">
-                                    <h6>Body</h6>
-                                    <p>Lorem Ipsum</p>
-                                </div>
+                <div className="row">
+                    <div className="col-sm-12 col-md-5">
+                        <CardMedia
+                            component="img"
+                            height="180"
+                            image={props.tokenimg}
+                            alt="token img"
+                        />
+                    </div>
+                    <div className="col-sm-12 col-md-7">
+                        <h5>Attributes</h5>
+                        <div className="mt-3">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                                <h6>Clothers</h6>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                                <h6>Hair</h6>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                                <h6>Texture</h6>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                                <h6>Eyes</h6>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                                <h6>Mouth</h6>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                                <h6>Color Background</h6>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                            <div className="w-100 flex voomio-just-between attribute-info">
+                                <h6>Body</h6>
+                                <p>Lorem Ipsum</p>
                             </div>
                         </div>
                     </div>
-                </DialogContent>
+                </div>
                 <div className="row">
                     <div className="row"> 
                         <div className={`btn-profile rule-btn ${create&&"rule-outlined"}`} onClick={handleCreate}>

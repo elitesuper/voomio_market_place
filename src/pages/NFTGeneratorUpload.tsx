@@ -10,6 +10,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import CollectionUpload from '../components/layouts/nftgen/CollectionUpload';
 import CollectionPreview from '../components/layouts/nftgen/CollectionPreview';
+import CollectionManage from '../components/layouts/nftgen/CollectionManage';
 import CollectionGenerate from '../components/layouts/nftgen/CollectionGenerate';
 import '../scss/style.scss';
 
@@ -63,7 +64,9 @@ function NFTGeneratorUpload(props){
 							        <TabPanel value="1">
 							        	<CollectionPreview />
 							        </TabPanel>
-							        <TabPanel value="2">Item Three</TabPanel>
+							        <TabPanel value="2">
+							        	<CollectionManage />
+							        </TabPanel>
 							        <TabPanel value="3">
 							        	<CollectionGenerate />
 							        </TabPanel>
