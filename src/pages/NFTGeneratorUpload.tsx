@@ -22,8 +22,8 @@ function NFTGeneratorUpload(props){
 	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
 	   setTabValue(newValue);
 	};
-	const otherTabsClick = (event: React.SyntheticEvent, newValue: string) => {
-	   setTabValue(newValue);
+	const otherTabsClick = (value: string) => {
+	   setTabValue(value);
 	};
 
 	return(
@@ -46,9 +46,9 @@ function NFTGeneratorUpload(props){
 		            		</div>
 		            		<div className="col-12 nft-setting">
 		            			<h4 className="mb-4 spec-color-7">Settings</h4>
-		            			<h5 className="spec-color-2 mb-3">General</h5>
-		            			<h5 className="spec-color-2 mb-3">Layers</h5>
-		            			<h5 className="spec-color-2 mb-3">Rules</h5>
+		            			<h5 className="spec-color-2 mb-3 virtual-tab" onClick={()=>otherTabsClick("4")}>General</h5>
+		            			<h5 className="spec-color-2 mb-3 virtual-tab" onClick={()=>otherTabsClick("5")}>Layers</h5>
+		            			<h5 className="spec-color-2 mb-3 virtual-tab" onClick={()=>otherTabsClick("6")}>Rules</h5>
 		            		</div>
 		            	</div>
 		            	<div className="col-xs-12 col-sm-9 col-lg-10">

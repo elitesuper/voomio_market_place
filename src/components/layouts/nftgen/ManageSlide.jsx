@@ -45,7 +45,7 @@ const ManageSlide = props => {
                         scrollbar={{ el:'none', draggable: true }}
                     >
                             {
-                                data.slice(0,7).map((item,index) => (
+                                data.map((item,index) => (
                                     <SwiperSlide key={index}>
                                         <div className="swiper-container show-shadow carousel auctions">
                                             <div className="swiper-wrapper">
