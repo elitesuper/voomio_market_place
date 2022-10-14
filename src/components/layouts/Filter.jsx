@@ -44,6 +44,18 @@ export const CategoryFilter = () => {
     )
 }
 
+export const TestFilter = () => {
+    const [state, setState] = useState("Select a Component")
+    return (
+        <div className="seclect-box col-lg-3">
+          <div id="artworks" className="dropdown voomio-ma">
+              <Link to="#" className="btn-selector nolink voomio-select rule-component ">{state}</Link>
+          </div>
+      </div>
+    )
+}
+
+
 export const ChainFilter = () => {
     const [state, setState] = useState("All Chains")
     return (

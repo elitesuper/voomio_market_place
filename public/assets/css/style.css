@@ -1794,6 +1794,9 @@ header{
 
 /* Mobile Menu */
 @media only screen and (max-width: 991px) {
+    .rule-component{
+        width: 70vw !important;
+    }
     .info-panel{
         right: 5rem;
     }

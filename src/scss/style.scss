@@ -29,7 +29,6 @@
         @include row-cols(5);
     }
 }
-
 .nft-setting{
 
 
@@ -141,4 +140,37 @@
 }
 .virtual-tab{
     cursor: pointer;
+}
+
+.collection-container{
+    max-width: 800px;
+}
+
+.collection-form div label{
+    padding-left: 1rem !important;
+}
+
+.collection-logo{
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+    background: #F4EEFF;
+    display: flex;
+}
+.collection-inner{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border:dashed 3px #7B61FF;
+    margin:auto;
+}
+
+.collection-upload-btn{
+    background: #F4EEFF;
+    color: #7B61FF;
+    padding: 1rem 4rem;
+}
+
+.collection-upload-group{
+    margin-top: auto;
 }

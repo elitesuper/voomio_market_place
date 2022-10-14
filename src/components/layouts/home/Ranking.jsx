@@ -178,11 +178,11 @@ const Ranking = () => {
                                 <div>
                         </div>
                         <div className='col-md-12 voomio-flex voomio-just-center voomio-pb-3'>
-                        <div>
-                            <ChainFilter/>
-                            <CategoryFilter/>
-                            <TimeFilter />
-                          </div>
+                            <div>
+                                <ChainFilter/>
+                                <CategoryFilter/>
+                                <TimeFilter />
+                            </div>
                         </div>
                     </div>
                         </div>

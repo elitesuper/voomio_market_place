@@ -12,6 +12,10 @@ import CollectionUpload from '../components/layouts/nftgen/CollectionUpload';
 import CollectionPreview from '../components/layouts/nftgen/CollectionPreview';
 import CollectionManage from '../components/layouts/nftgen/CollectionManage';
 import CollectionGenerate from '../components/layouts/nftgen/CollectionGenerate';
+import CollectionGeneral from '../components/layouts/nftgen/CollectionGeneral';
+import CollectionRule from '../components/layouts/nftgen/CollectionRule';
+import CollectionLayer from '../components/layouts/nftgen/CollectionLayer';
+
 import '../scss/style.scss';
 
 
@@ -39,7 +43,7 @@ function NFTGeneratorUpload(props){
 		              	</div>
 		            </div>
 		            <div className="row">
-		            	<div className="col-xs-12 col-sm-3 col-lg-2">
+		            	<div className="col-xs-12 col-sm-2">
 		            		<div className="col-12 mb-5">
 		            			<h4 className="mb-4 spec-color-7">Current NFT</h4>
 		            			<h5 className="spec-color-2">Single-item</h5>
@@ -51,7 +55,7 @@ function NFTGeneratorUpload(props){
 		            			<h5 className="spec-color-2 mb-3 virtual-tab" onClick={()=>otherTabsClick("6")}>Rules</h5>
 		            		</div>
 		            	</div>
-		            	<div className="col-xs-12 col-sm-9 col-lg-10">
+		            	<div className="col-xs-12 col-sm-10">
 			            	<Box sx={{ width: '100%', typography: 'body1' }}>
 				            	<TabContext value={tabvalue}>
 								    <Tabs className="nftgenerator-tabs" value={tabvalue} onChange={handleChange}  variant="scrollable" scrollButtons="auto" aria-label="icon label tabs example">
@@ -73,13 +77,13 @@ function NFTGeneratorUpload(props){
 							        	<CollectionGenerate />
 							        </TabPanel>
 							    	<TabPanel value="4">
-							        	TabPanel 4
+							        	<CollectionGeneral />
 							        </TabPanel>
 							        <TabPanel value="5">
-							        	TabPanel 5
+								        <CollectionLayer />
 							        </TabPanel>
 							        <TabPanel value="6">
-							        	TabPanel 6
+							        	<CollectionRule />
 							        </TabPanel>
 				            	</TabContext>
 				            </Box>

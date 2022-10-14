@@ -12,7 +12,7 @@ export default function CollectionGenerate(){
 				<h6>Ready to generate your assets? Let’s get started!</h6>
 			</div>
 			<div className="row">
-				<div className="col-sm-1 col-md-6">
+				<div className="col-sm-12 col-md-6">
 					<TypeCard
 					  type="1"
 					  title="Generate from Preview"
@@ -20,7 +20,7 @@ export default function CollectionGenerate(){
 					  buttontype="2"
 					/>
 				</div>
-				<div className="col-sm-1 col-md-6">
+				<div className="col-sm-12 col-md-6">
 					<TypeCard
 					  type="2"
 					  title="Generate New"
