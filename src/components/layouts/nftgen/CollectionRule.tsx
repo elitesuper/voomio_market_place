@@ -1,5 +1,7 @@
 import * as React from 'react';
 import {TestFilter} from '../Filter';
+import IconButton from '@mui/material/IconButton';
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 
 export default function CollectionRule(props){
@@ -33,7 +35,12 @@ export default function CollectionRule(props){
 				                    <TestFilter />
 				                    <TestFilter />
 				                    <TestFilter />
-				               		<button className="button collection-upload-btn voomio-ma col-lg-2 ruleaddbutton">Delete</button>
+				               		<button className="button collection-upload-btn voomio-ma col-lg-2 ruleaddbutton autoshowbtn">Delete</button>
+				               		<div className="autohidebtn col-lg-1 ml-3" >
+					               		<IconButton aria-label="delete ">
+										  <DeleteForeverOutlinedIcon sx={{fontSize:'4rem'}} />
+										</IconButton>
+				               		</div>
 				                </div>
 			                </div>
 						)

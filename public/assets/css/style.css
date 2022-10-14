@@ -1791,7 +1791,9 @@ header{
         display: block;
     }
 }
-
+.autoshowbtn{
+    display: none;
+}
 /* Mobile Menu */
 @media only screen and (max-width: 991px) {
     .rule-component{
@@ -1800,6 +1802,12 @@ header{
     }
     .ruleaddbutton{
         width: 70vw !important;
+    }
+    .autoshowbtn{
+        display: block;
+    }
+    .autohidebtn{
+        display: none;
     }
     .info-panel{
         right: 5rem;
