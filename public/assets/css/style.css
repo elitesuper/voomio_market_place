@@ -2020,6 +2020,10 @@ header{
 }
 
 @media only screen and (max-width:500px){
+    .voomio-title{
+        display: block !important;
+        justify-content: center !important;
+    }
     .selectedcard-info{
         padding-top: 20px;
     }
@@ -3532,6 +3536,9 @@ header{
 .voomio-p-1{
     padding: 1rem;
 }
+.voomio-pb-1{
+    padding-bottom: 1rem !important;
+}
 .voomio-pb-3{
     padding-bottom: 3rem;
 }
@@ -3763,6 +3770,9 @@ header{
 }
 .voomio-mt-40{
     margin-top: 40px !important;
+}
+.voomio-mb-0{
+    margin-bottom: 0px !important;
 }
 .voomio-mb-40{
     margin-bottom: 40px !important;
@@ -4362,4 +4372,7 @@ header{
     height: 100%;
     background-color: white;
     opacity: 0.6;
+}
+.minting-shape{
+    width: 10vh;
 }

@@ -70,30 +70,36 @@ const SliderItem = props => (
                                     </h1>
                                     <h2 className="heading voomio-text-center">{props.item.title_3}</h2>
                                     <div className='col-md-12 flex voomio-mt-20'>
-                                        <div className='col-md-3 col-sm-3 voomio-ma'>
-                                            <div className='flex'><img className='voomio-ma' src={shape1}></img></div>
-                                        </div>
-                                        <div className='col-md-8 col-sm-9'>
-                                            <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_1}</h5>
-                                            <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_1}</p>
-                                        </div>
-                                    </div>
-                                    <div className='col-md-12 flex voomio-mt-20'>
-                                        <div className='col-md-3 col-sm-3 voomio-ma'>
-                                            <div className='flex'><img className='voomio-ma' src={shape2}></img></div>
-                                        </div>
-                                        <div className='col-md-8 col-sm-9 '>
-                                            <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_2}</h5>
-                                            <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_2}</p>
+                                        <div className="row">
+                                            <div className='col-2 voomio-ma flex'>
+                                                <img className="voomio-ma minting-shape" src={shape1}></img>
+                                            </div>
+                                            <div className='col-8'>
+                                                <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_1}</h5>
+                                                <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_1}</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className='col-md-12 flex voomio-mt-20'>
-                                        <div className='col-md-3 col-sm-3 voomio-ma'>
-                                            <div className='flex'><img className='voomio-ma' src={shape3}></img></div>
+                                        <div className="row">
+                                            <div className='col-2 voomio-ma flex'>
+                                                <img className="voomio-ma minting-shape" src={shape2}></img>
+                                            </div>
+                                            <div className='col-8'>
+                                                <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_2}</h5>
+                                                <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_2}</p>
+                                            </div>
                                         </div>
-                                        <div className='col-md-8 col-sm-9'>
-                                            <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_3}</h5>
-                                            <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_3}</p>
+                                    </div>
+                                    <div className='col-md-12 flex voomio-mt-20'>
+                                        <div className="row">
+                                            <div className='col-2 voomio-ma flex'>
+                                                <img className="voomio-ma minting-shape" src={shape3}></img>
+                                            </div>
+                                            <div className='col-8'>
+                                                <h5 className="voomio-font-1 voomio-text-col2">{props.item.subtitle_3}</h5>
+                                                <p className="sub-heading minting-subhead voomio-mt-10 voomio-text-col2">{props.item.description_3}</p>
+                                            </div>
                                         </div>
                                     </div>
 

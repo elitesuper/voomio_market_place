@@ -22,7 +22,9 @@ function NFTGeneratorUpload(props){
 	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
 	   setTabValue(newValue);
 	};
-
+	const otherTabsClick = (event: React.SyntheticEvent, newValue: string) => {
+	   setTabValue(newValue);
+	};
 
 	return(
 		<div className='detail-page pad-t-24'>
@@ -69,6 +71,15 @@ function NFTGeneratorUpload(props){
 							        </TabPanel>
 							        <TabPanel value="3">
 							        	<CollectionGenerate />
+							        </TabPanel>
+							    	<TabPanel value="4">
+							        	TabPanel 4
+							        </TabPanel>
+							        <TabPanel value="5">
+							        	TabPanel 5
+							        </TabPanel>
+							        <TabPanel value="6">
+							        	TabPanel 6
 							        </TabPanel>
 				            	</TabContext>
 				            </Box>
