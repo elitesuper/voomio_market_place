@@ -63,6 +63,10 @@ function NFTGeneratorUpload(props){
 								      <Tab sx={{fontSize:15}} icon={<RemoveRedEyeOutlinedIcon sx={{fontSize:30}} />} label="Preview" value="1"/>
 								      <Tab sx={{fontSize:15}} icon={<SettingsOutlinedIcon sx={{fontSize:30}} />} label="Manage" value="2"/>
 								      <Tab sx={{fontSize:15}} icon={<AutoAwesomeOutlinedIcon sx={{fontSize:30}} />} label="Generate" value="3"/>
+								      <Tab sx={{display:"none"}} value="4"/>
+								      <Tab sx={{display:"none"}} value="5"/>
+								      <Tab sx={{display:"none"}} value="6"/>
+
 								    </Tabs>
 								    <TabPanel value="0">
 								    	<CollectionUpload />

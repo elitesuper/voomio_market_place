@@ -174,3 +174,23 @@
 .collection-upload-group{
     margin-top: auto;
 }
+
+.shuffle-button{
+    font-size: 15px !important;
+}
+.shuffle-button:focus{
+    border:none;
+    color: white;
+}
+.shuffle-button:hover{
+    border:none;
+    color: white;
+}
+.attribute-item{
+    color: #7B61FF;
+    border: solid 2px #7B61FF;
+    border-radius: 5px;    
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+    margin-bottom: 0.5rem;
+}
