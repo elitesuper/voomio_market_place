@@ -38,7 +38,7 @@ export default function CollectionRule(props){
 				               		<button className="button collection-upload-btn voomio-ma col-lg-2 ruleaddbutton autoshowbtn">Delete</button>
 				               		<div className="autohidebtn col-lg-1 ml-3" >
 					               		<IconButton aria-label="delete ">
-										  <DeleteForeverOutlinedIcon sx={{fontSize:'4rem'}} />
+										  <DeleteForeverOutlinedIcon sx={{fontSize:'3rem'}} />
 										</IconButton>
 				               		</div>
 				                </div>
