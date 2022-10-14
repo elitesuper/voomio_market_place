@@ -3,21 +3,41 @@ import {TestFilter} from '../Filter';
 
 
 export default function CollectionRule(props){
+	const [value, setValue] = React.useState(["data"])
+
+	const addValue = () =>{
+		setValue((value) => [...value, "fff",]);
+	}
 	return(
 		<div className="collection-container">
 			<div className="row mb-5">
 				<h4 className="spec-color-1">Rules</h4>
 			</div>
 			<div className="row mt-5 mb-5">
-				<h4 className="mb-5">Create a Rule</h4>
+				<h4 className="mb-3">Create a Rule</h4>
                 <div className='col-md-12 voomio-just-center voomio-pb-3'>
 	                <div className='row'>
 	                    <TestFilter />
 	                    <TestFilter />
 	                    <TestFilter />
-	               		<button className="button collection-upload-btn voomio-ma col-lg-2">+ Add</button>
+	               		<button className="button collection-upload-btn voomio-ma col-lg-2 ruleaddbutton" onClick={addValue}>+ Add</button>
 	                </div>
                 </div>
+			</div>
+			<div className="row mt-5 mb-5">
+				<h4 className="mb-3">Rules</h4>
+				{
+					value.map((item, index) =>
+							<div className='col-md-12 voomio-just-center voomio-pb-1' key={index}>
+				                <div className='row'>
+				                    <TestFilter />
+				                    <TestFilter />
+				                    <TestFilter />
+				               		<button className="button collection-upload-btn voomio-ma col-lg-2 ruleaddbutton">Delete</button>
+				                </div>
+			                </div>
+						)
+				}
 			</div>
 		</div>
 		)

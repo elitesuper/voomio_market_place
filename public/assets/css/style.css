@@ -1796,6 +1796,10 @@ header{
 @media only screen and (max-width: 991px) {
     .rule-component{
         width: 70vw !important;
+        margin-bottom: 1rem;
+    }
+    .ruleaddbutton{
+        width: 70vw !important;
     }
     .info-panel{
         right: 5rem;
