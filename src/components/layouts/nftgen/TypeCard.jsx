@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -9,6 +10,12 @@ import {MdOutlineAutoAwesome} from "react-icons/md";
 
 
 function TypeCard(props){
+  const navigate = useNavigate();
+
+  const nextpage = () => {
+    navigate("/nftgenerator/upload");
+  }
+  
   return(
     <Box sx={{m:1, border: 2, borderColor:'#7B61FF', borderRadius: 3}}>
       <CardContent>
@@ -32,8 +39,7 @@ function TypeCard(props){
           <Button className="voomio-btn btn-filled mr-3" variant="contained" size="large">Generate Preview Set</Button>
           <Button className="voomio-btn" variant="contained" size="large">View Preview</Button>
          </div>
-       ):<Button className="voomio-btn btn-filled" variant="contained" size="large">Get Started</Button>}
-
+       ):<Button onClick={()=>nextpage()} className="voomio-btn btn-filled" variant="contained" size="large">Get Started</Button>}
        </CardActions>
     </Box>
   )
