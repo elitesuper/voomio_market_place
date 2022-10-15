@@ -175,7 +175,7 @@ export function TokenCard(props){
 
     return(
         <>
-            <Card onClick={handleClickOpen} sx={{marginBottom:1}}>
+            <Card sx={{marginBottom:1}}>
                 <CardMedia
                     sx={{ maxHeight: 150 }}
                     component="img"

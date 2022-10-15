@@ -2033,7 +2033,15 @@ header{
         width: 65%;
     }
 }
-
+@media only screen and (max-width:575px){
+    .sub-tab div{
+        text-align: center;
+    }
+    .sub-tab div h5{
+        padding: 5px 0px;
+        background-color: #F4EEFF;
+    }
+}
 @media only screen and (max-width:500px){
     .voomio-title{
         display: block !important;

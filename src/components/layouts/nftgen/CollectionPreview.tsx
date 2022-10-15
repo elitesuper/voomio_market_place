@@ -7,6 +7,8 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Button from '@mui/material/Button';
 
+import {MdOutlineAutoAwesome} from "react-icons/md";
+
 import { TokenCard } from '../ProfileCard';
 import { TokenFilter } from '../Filter';
 
@@ -34,7 +36,7 @@ export default function CollectionPreview(){
 		        			<div className="row mb-5">
 		        				<h5 className="mb-2">Tokens</h5>
 		        				<div className="w-100 flex voomio-just-center">
-		        					<Button className="voomio-btn btn-gen-filled" variant="contained">Regenerate Tokens</Button>
+		        					<Button startIcon={<MdOutlineAutoAwesome />} className="voomio-btn btn-gen-filled" variant="contained">Regenerate Tokens</Button>
 		        				</div>
 		        			</div>
 		        			<div className="row mt-5">

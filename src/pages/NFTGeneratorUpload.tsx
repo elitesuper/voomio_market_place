@@ -43,7 +43,7 @@ function NFTGeneratorUpload(props){
 		              	</div>
 		            </div>
 		            <div className="row">
-		            	<div className="col-xs-12 col-sm-2">
+		            	<div className="col-xs-12 col-sm-2 sub-tab">
 		            		<div className="col-12 mb-5">
 		            			<h4 className="mb-4 spec-color-7">Current NFT</h4>
 		            			<h5 className="spec-color-2">Single-item</h5>
