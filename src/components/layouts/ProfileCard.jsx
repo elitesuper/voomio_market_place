@@ -167,6 +167,19 @@ export function TokenCard(props){
             >
                 <DialogTitle id="scroll-dialog-title">
                     <h4>{`#1267`}</h4>
+                        <IconButton
+
+                            aria-label="close"
+                            onClick={handleClose}
+                            sx={{
+                                position: 'absolute',
+                                right: 15,
+                                top: 8,
+                                color: (theme) => theme.palette.grey[500],
+                            }}
+                        >
+                            <CloseIcon sx={{fontSize:'20px'}}/>
+                        </IconButton>
                 </DialogTitle>
                 <DialogContent className="collection-modal" dividers={scroll === 'paper'} sx={{width:'700px'}}>
                 <div className="row">
@@ -181,27 +194,27 @@ export function TokenCard(props){
                     <div className="col-sm-12 col-md-7">
                         <h5>Attributes</h5>
                         <div className="mt-3">
-                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-2">
                                 <h6>Clothers</h6>
                                 <p>Lorem Ipsum</p>
                             </div>
-                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-2">
                                 <h6>Hair</h6>
                                 <p>Lorem Ipsum</p>
                             </div>
-                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-2">
                                 <h6>Texture</h6>
                                 <p>Lorem Ipsum</p>
                             </div>
-                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-2">
                                 <h6>Eyes</h6>
                                 <p>Lorem Ipsum</p>
                             </div>
-                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-2">
                                 <h6>Mouth</h6>
                                 <p>Lorem Ipsum</p>
                             </div>
-                            <div className="w-100 flex voomio-just-between attribute-info mb-1">
+                            <div className="w-100 flex voomio-just-between attribute-info mb-2">
                                 <h6>Color Background</h6>
                                 <p>Lorem Ipsum</p>
                             </div>
