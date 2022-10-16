@@ -3974,29 +3974,6 @@ header{
     font-weight: 500 !important;
 }
 
-.spec-color-1{
-    color: #6549F6 !important;
-}
-
-.spec-color-2{
-    color: #1465DD !important;
-}
-
-.spec-color-3{
-    color: #909090 !important;
-}
-.spec-color-4{
-  color: #00A825 !important;
-}
-.spec-color-5{
-  color: #FF0000 !important;
-}
-.spec-color-6{
-    color:  #687280 !important;
-}
-.spec-color-7{
-    color: #250C50 !important;
-}
 .itemcontext-header{
     background: transparent !important;
     box-shadow: none !important;
@@ -4398,4 +4375,33 @@ header{
 }
 .minting-shape{
     width: 10vh;
+}
+
+
+.spec-color-1{
+    color: #6549F6 !important;
+}
+
+.spec-color-2{
+    color: #1465DD !important;
+}
+
+.spec-color-3{
+    color: #909090 !important;
+}
+.spec-color-4{
+  color: #00A825 !important;
+}
+.spec-color-5{
+  color: #FF0000 !important;
+}
+.spec-color-6{
+    color:  #687280 !important;
+}
+.spec-color-7{
+    color: #250C50 !important;
+}
+
+.spec-bcolor-1{
+    background-color: #F4EEFF;
 }

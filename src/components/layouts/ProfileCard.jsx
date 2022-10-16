@@ -18,6 +18,7 @@ import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Collapse from '@mui/material/Collapse';
+import {ModalFilter} from './Filter';
 
 import Faviconimg from '../../assets/images/icon/Favicon.png'
 
@@ -118,44 +119,6 @@ export function CollectionCard(props) {
 }
 
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
-
-const BootstrapDialogTitle = (props) => {
-  const { children, onClose, ...other } = props;
-
-  return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  );
-};
-
-BootstrapDialogTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
-
 export function TokenCard(props){
 
     const [create, setCreate] = React.useState(false);
@@ -165,17 +128,21 @@ export function TokenCard(props){
     }
     
     const [open, setOpen] = React.useState(false);
+    const [scroll, setScroll] = React.useState('paper');
 
-    const handleClickOpen = () => {
+    const handleClickOpen = (scrollType) => () => {
         setOpen(true);
+        setScroll(scrollType);
     };
+
     const handleClose = () => {
         setOpen(false);
     };
 
+
     return(
         <>
-            <Card sx={{marginBottom:1}}>
+            <Card  onClick={handleClickOpen('body')} sx={{marginBottom:1}}>
                 <CardMedia
                     sx={{ maxHeight: 150 }}
                     component="img"
@@ -189,14 +156,19 @@ export function TokenCard(props){
                     </Typography>
                 </CardContent>
             </Card>
-            <BootstrapDialog
-            sx={{width:'600px',height:'500px'}}
-            onClose={handleClose}
-            open={open}
+
+            <Dialog
+                maxWidth={'1000px'}
+                open={open}
+                onClose={handleClose}
+                scroll={scroll}
+                aria-labelledby="scroll-dialog-title"
+                aria-describedby="scroll-dialog-description"
             >
-                <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-                    <h4>{`#${props.tokenid}`}</h4>
-                </BootstrapDialogTitle>
+                <DialogTitle id="scroll-dialog-title">
+                    <h4>{`#1267`}</h4>
+                </DialogTitle>
+                <DialogContent className="collection-modal" dividers={scroll === 'paper'} sx={{width:'700px'}}>
                 <div className="row">
                     <div className="col-sm-12 col-md-5">
                         <CardMedia
@@ -240,25 +212,28 @@ export function TokenCard(props){
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className={`row mt-3`}>
                     <div className="row"> 
-                        <div className={`btn-profile rule-btn ${create&&"rule-outlined"}`} onClick={handleCreate}>
-                            <Link to="#" className="sc-button style-1 follow profile-btn profile-fill v-desktop-btn">{create?"Close":"+ Create Rule"}</Link>
+                        <div className={`btn-profile rule-btn ${create&&"rule-outlined"} d-flex justify-content-end`}>
+                            <Link onClick={handleCreate} to="#" className="sc-button style-1 follow profile-btn profile-fill spec-bcolor-2">{create?"Close":"+ Create Rule"}</Link>
                         </div>
                     </div>
                     <div className="row">
-                        <Collapse className="w-100" in={create} timeout="auto" unmountOnExit>
+                        <Collapse in={create} timeout="auto" unmountOnExit>
                             <div>
-                                <h4 className="spec-color-1"> Create A Rule</h4>
+                                <h4 className="spec-color-1 mb-2"> Create A Rule</h4>
                                 <h5>After you create a rule any existing tokens will be regenerated.</h5>
                             </div>
-                            <div className="flex">
-
+                            <div className='row mt-3 mb-3'>
+                                <ModalFilter value="Cowboy vest" />
+                                <ModalFilter value="Doesn’t mix with" />
+                                <ModalFilter value="Captain Hat" />
                             </div>
                         </Collapse>
                     </div>
                 </div>
-            </BootstrapDialog>
+                </DialogContent>
+            </Dialog>
         </>
     )
 }

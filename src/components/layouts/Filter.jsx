@@ -55,6 +55,18 @@ export const TestFilter = () => {
     )
 }
 
+export const ModalFilter = (props) => {
+    const [state, setState] = useState(props.value)
+    return (
+        <div className="seclect-box col-md-4">
+          <div id="artworks" className="dropdown voomio-ma">
+              <Link to="#" className="btn-selector nolink voomio-select rule-component ">{state}</Link>
+          </div>
+      </div>
+    )
+}
+
+
 
 export const ChainFilter = () => {
     const [state, setState] = useState("All Chains")
