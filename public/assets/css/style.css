@@ -2007,6 +2007,13 @@ header{
 .v-mobile-btn{
     display: none;
 }
+
+
+@media only screen and (max-width: 835px) {
+    .ranking-filter-group{
+        display: block !important;
+    }
+}
 @media only screen and (max-width: 767px) {
     .more-option{
       display: block !important;

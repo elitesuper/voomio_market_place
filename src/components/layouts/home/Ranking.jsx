@@ -178,7 +178,7 @@ const Ranking = () => {
                                 <div>
                         </div>
                         <div className='col-md-12 voomio-flex voomio-just-center voomio-pb-3'>
-                            <div>
+                            <div className="d-flex ranking-filter-group">
                                 <ChainFilter/>
                                 <CategoryFilter/>
                                 <TimeFilter />

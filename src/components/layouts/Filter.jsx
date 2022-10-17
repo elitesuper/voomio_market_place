@@ -33,7 +33,7 @@ const pricefilterdata = [
 export const CategoryFilter = () => {
     const [state, setState] = useState("All Categories")
     return (
-        <div className="seclect-box style3 voomio-pl-1 voomio-mta justify-content-center">
+        <div className="seclect-box voomio-pl-1 voomio-mta justify-content-center">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -71,7 +71,7 @@ export const ModalFilter = (props) => {
 export const ChainFilter = () => {
     const [state, setState] = useState("All Chains")
     return (
-        <div className="seclect-box style3 voomio-mta voomio-pl-1 justify-content-center">
+        <div className="seclect-box voomio-mta voomio-pl-1 justify-content-center">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -85,7 +85,7 @@ export const ChainFilter = () => {
 export const TimeFilter = () => {
     const [state, setState] = useState("Past 24 hours")
     return (
-        <div className="seclect-box style3 voomio-mta voomio-pl-1 justify-content-center">
+        <div className="seclect-box voomio-mta voomio-pl-1 justify-content-center">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -99,7 +99,7 @@ export const TimeFilter = () => {
 export const PriceFilter = () => {
     const [state, setState] = useState("Price low to high")
     return (
-        <div className="seclect-box style3 voomio-mta voomio-pl-1 justify-content-center">
+        <div className="seclect-box voomio-mta voomio-pl-1 justify-content-center">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
@@ -113,7 +113,7 @@ export const PriceFilter = () => {
 export const TokenFilter = (props) => {
     const [state, setState] = useState(props.defaultvalue)
     return (
-        <div className="seclect-box style3 voomio-mta voomio-pl-1 w-100">
+        <div className="seclect-box voomio-mta voomio-pl-1 w-100">
           <div id="artworks" className="w-100 dropdown">
               <Link to="#" className="w-100 btn-selector nolink voomio-select">{`${props.name}-${state}`}</Link>
               <ul className='voomio-zindex'>
@@ -127,7 +127,7 @@ export const TokenFilter = (props) => {
 export const ManageTokenFilter = (props) => {
     const [state, setState] = useState(props.defaultvalue)
     return (
-        <div className="seclect-box style3 voomio-mta voomio-pl-1">
+        <div className="seclect-box voomio-mta voomio-pl-1">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
