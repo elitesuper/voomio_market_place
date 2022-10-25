@@ -1713,6 +1713,9 @@ header{
 .mobilesignbtn{
     display: none;
 }
+.mobile-show{
+    display: none;
+}
 .flat-slider .heading{
     font-family: 'MyTermina';
     font-size: 10rem !important;
@@ -2041,6 +2044,12 @@ header{
     }
 }
 @media only screen and (max-width:575px){
+    .mobile-show{
+        display: block;
+    }
+    .mobile-hidden{
+        display: none;
+    }
     .sub-tab div{
         text-align: center;
     }
