@@ -7,6 +7,7 @@ import CollectionStat from "./CollectionStat";
 import Aggregator from "./Aggregator";
 import NFTGeneratorMain from "./NFTGeneratorMain";
 import NFTGeneratorUpload from "./NFTGeneratorUpload";
+import Ranking from "./Ranking";
 
 
 const routes = [
@@ -19,6 +20,7 @@ const routes = [
   { path: '/aggregator', component:<Aggregator/>},
   { path: '/nftgenerator', component:<NFTGeneratorMain/>},
   { path: '/nftgenerator/upload', component:<NFTGeneratorUpload/>},
+  {path: '/ranking', component:<Ranking/>},
 
 ]
 
