@@ -52,13 +52,13 @@ const ExploreCollection = () => {
                            <TabPanel value="1">
                              <div className="row">
                                {data.filter(item => item.collectiontype==="1").map((item,index) => (
-                                 <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                 <CollectionCard
-                                  imgtop = {item.imgtop}
-                                  imgAuthor = {item.imgAuthor}
-                                  title = {item.title}
-                                  name= {item.name}
-                                 />
+                                 <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3" key={index}>
+                                   <CollectionCard
+                                    imgtop = {item.imgtop}
+                                    imgAuthor = {item.imgAuthor}
+                                    title = {item.title}
+                                    name= {item.name}
+                                   />
                                  </div>
                                ))}
                             </div>
@@ -66,7 +66,7 @@ const ExploreCollection = () => {
                            <TabPanel value="2">
                              <div className="row">
                                {data.filter(item => item.collectiontype==="2").map((item,index) => (
-                                 <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                 <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3" key={index}>
                                  <CollectionCard
                                   imgtop = {item.imgtop}
                                   imgAuthor = {item.imgAuthor}

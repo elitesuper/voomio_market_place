@@ -7,7 +7,7 @@ const menus = [
     {
         id: 2,
         name: 'Ranking',
-        links: '/collectionstat',
+        links: '/ranking',
     },{
         id: 3,
         name: 'Resources',
