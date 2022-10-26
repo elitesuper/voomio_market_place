@@ -153,7 +153,7 @@ export function TokenCard(props:any){
             </Card>
 
             <Dialog
-                maxWidth={'1000px'}
+                maxWidth='md'
                 open={open}
                 onClose={handleClose}
                 scroll={scroll}

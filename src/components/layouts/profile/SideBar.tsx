@@ -42,18 +42,19 @@ const filtervalues =[
 ]
 const SideBar = () => {
 
-    const [open, setOpen] = useState([]);
+    const template:Array<any> = [];
+    const [open, setOpen] = useState(template);
 
     const handleClick = (val:any) => () => {
       (open.includes(val))?(setOpen(open => open.filter(item => item !== val))):setOpen(open => [...open, val]);
     };
 
-    const [checked, setChecked] = useState([]);
+    const [checked, setChecked] = useState(template);
 
-    const handleToggle = (value:number) => () => {
+    const handleToggle = (value:any) => () => {
 
-      const currentIndex = checked.indexOf(value);
-      const newChecked = [...checked];
+      const currentIndex:any = checked.indexOf(value);
+      const newChecked:any[] = [...checked];
 
       if (currentIndex === -1) {
         newChecked.push(value);
@@ -87,7 +88,6 @@ const SideBar = () => {
                         <Checkbox
                             edge="end"
                             onChange={handleToggle(value)}
-                            // checked={checked.indexOf(value) !== -1}
                             inputProps={{ 'aria-labelledby': labelId }}
                         />
                         }

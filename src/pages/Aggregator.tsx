@@ -60,7 +60,7 @@ const Aggregator = () => {
 
     const [alignment, setAlignment] = React.useState(true);
 
-    const handleChange = (newAlignment:boolean) => {
+    const handleChange = (event: React.MouseEvent<HTMLElement>, newAlignment:boolean) => {
       setAlignment(newAlignment);
     };
 
