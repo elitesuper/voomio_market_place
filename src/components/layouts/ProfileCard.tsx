@@ -144,7 +144,6 @@ export function TokenCard(props){
         <>
             <Card  onClick={handleClickOpen('body')} sx={{marginBottom:1}}>
                 <CardMedia
-                    sx={{ maxHeight: 150 }}
                     component="img"
                     height="150"
                     image={props.tokenimg}

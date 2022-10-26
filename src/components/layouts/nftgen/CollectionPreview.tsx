@@ -32,7 +32,7 @@ export default function CollectionPreview(){
 		        </Box>
 		        <TabPanel value="1">
 		        	<div className="row">
-		        		<div className="col-md-5 col-lg-4 col-xl-3">
+		        		<div className="col-md-5 col-lg-4 col-xl-3 mt-3">
 		        			<div className="row mb-5">
 		        				<h5 className="mb-2">Tokens</h5>
 		        				<div className="w-100 flex voomio-just-center">
@@ -48,7 +48,7 @@ export default function CollectionPreview(){
 		        				))}
 		        			</div>
 		        		</div>
-		        		<div className="col-md-7 col-lg-8 col-xl-9 token-gallery-view">
+		        		<div className="col-md-7 col-lg-8 col-xl-9 token-gallery-view mt-3">
 			        		<div className="row">
 				        		{gallery_tokens.map((item, index) => (
 				        			<div key={index} className="col-sm-6 col-md-6 col-xl-3">

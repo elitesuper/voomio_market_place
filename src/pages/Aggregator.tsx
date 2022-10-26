@@ -144,9 +144,7 @@ const Aggregator = () => {
                     <TabList>
                         {
                             menuTab.map((item,index) => (
-                                <div key={index}>
                                 <Tab key={index}>{item.name}</Tab>
-                                </div>
                             ))
                         }
                     </TabList>
@@ -183,8 +181,8 @@ const Aggregator = () => {
                                             <div className="widget widget-filter style-2 mgbt-0 flex ml-3">
                                                 <h5 className="title-widget voomio-mta spec-color-1">Filters:</h5>
                                                 <ul className="box-check voomio-mta">
-                                                    {filters.map(item => (
-                                                        <li key={item} className="voomio-mta">
+                                                    {filters.map((item, index) => (
+                                                        <li key={index} className="voomio-mta">
                                                             <div className='filter-tag voomio-mta flex'>
                                                                 <span className="my-auto">{item}</span>
                                                                 <CloseIcon className="mg-l-8" sx={{fontSize:'small'}}/>

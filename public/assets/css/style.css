@@ -2106,6 +2106,9 @@ header{
     .itemnumbers-filters{
       display: block;
     }
+    .itemnumbers-filters div{
+        margin-top: 1rem;
+    }
     .chat-detail-view{
       width: 100% !important;
     }

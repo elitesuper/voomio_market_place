@@ -30,7 +30,7 @@ export const gallery_tokens = [
 		img:img5		
 	},{
 		id:6,
-		img:img6		
+		img:img1		
 	},{
 		id:7,
 		img:img7		
@@ -45,7 +45,7 @@ export const gallery_tokens = [
 		img:img10		
 	},{
 		id:11,
-		img:img11		
+		img:img4		
 	},{
 		id:12,
 		img:img12		
