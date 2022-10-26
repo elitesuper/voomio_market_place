@@ -14,7 +14,10 @@ export default function LevelCard(props){
 					<h4 className="voomio-mta">{data.name}</h4>
 				</div>
 				<div className="col-4 flex justify-content-end">
-					<h5 className="voomio-mta fw-500">{data.PTS/1000}K PTS</h5>
+					<div className="text-end">
+						<h6 className="voomio-mta fw-500">Lvl.{data.id}</h6>
+						<h5 className="voomio-mta fw-500">{data.PTS/1000}K PTS</h5>
+					</div>
 				</div>
 			</div>
 		</div>

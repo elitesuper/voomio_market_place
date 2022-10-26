@@ -85,7 +85,7 @@ htaccess in public folder
 This is built url here: <https://sdrive.ai/voomio-front-end-jeni>
 
 ### Figma Design here
-<https://www.figma.com/file/uPI6AAE2aVnc7M374saxym/Voomio-Testing-Ground-(Pat)?node-id=277%3A17181>
+<https://www.figma.com/file/uPI6AAE2aVnc7M374saxym/Voomio-Testing-Ground-(Pat)>
 
 ### Theme Resources
 
