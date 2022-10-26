@@ -177,8 +177,8 @@ function MoreOption() {
           }
         </Swiper>
       </div>
-    </div> <
-        />
+    </div> 
+    </>
     )
 }
 

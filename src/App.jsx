@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React from 'react';
 import { Routes , Route } from 'react-router-dom';
 import './App.css';
 import routes from './pages/index'
@@ -6,20 +6,17 @@ import Footer from './components/footer/Footer';
 import HeaderStyle2 from './components/header/HeaderStyle2';
 
 
-function App() {
+interface IAppComponentProps extends React.Props<any> {
+  onUpdate: any
+}
 
-    const [currentAccount, setCurrentAccount] = useState(null);
-    const setAccount = (_account) => {
-        setCurrentAccount(_account);
-    }
+class App extends React.Component<IAppComponentProps, any>{
 
-
-    const [web3Api, setWeb3Api] = useState(null);
-
-    return (
-      <>
-          <HeaderStyle2 setAccount={setAccount} setWeb3Api={setWeb3Api} />
-          <Routes >
+    render() {
+      return(
+        <>
+          <HeaderStyle2 />
+          <Routes>
               {
                 routes.map((data,index) => (
                     <Route onUpdate={() => window.scrollTo(0, 0)} exact={true} path={data.path} element={data.component} key={index} />
@@ -28,7 +25,8 @@ function App() {
           </Routes>
           <Footer/>
       </>
-    );
+      )
+    };
 }
 
 export default App;

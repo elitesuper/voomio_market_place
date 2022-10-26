@@ -113,8 +113,8 @@ export function CollectionCard(props) {
                   {/* <Link to="/login" className="wishlist-button public heart"><span className="number-like">{props.item.wishlist}</span></Link> */}
               </div>
           </div>
-      </div> <
-        />
+      </div> 
+      </>
     )
 }
 
