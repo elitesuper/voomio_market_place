@@ -9,7 +9,7 @@ import { HiOutlineViewGridAdd } from "react-icons/hi";
 import {MdOutlineAutoAwesome} from "react-icons/md";
 
 
-function TypeCard(props){
+function TypeCard(props:any){
   const navigate = useNavigate();
 
   const nextpage = () => {

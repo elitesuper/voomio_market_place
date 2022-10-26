@@ -17,7 +17,7 @@ const ExploreCollection = () => {
 
       const [value, setValue] = React.useState('1');
 
-      const handleChange = (event, newValue) => {
+      const handleChange = (event:any, newValue:string) => {
         setValue(newValue);
       };
 

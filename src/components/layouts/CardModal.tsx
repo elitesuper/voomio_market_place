@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { Modal } from "react-bootstrap";
 
-const CardModal = (props) => {
+const CardModal = (props:any) => {
     
 return (
 

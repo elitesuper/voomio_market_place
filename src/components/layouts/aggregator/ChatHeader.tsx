@@ -5,7 +5,7 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
-function ChatHeader(props){
+function ChatHeader(props:any){
 
   const data = props.thread;
 

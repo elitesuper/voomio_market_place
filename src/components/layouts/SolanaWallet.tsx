@@ -31,7 +31,7 @@ export default function SolanaWallet () {
         walletAddress = wallet.publicKey.toString()
     }
 
-    const handleWalletClick = (walletname) =>{
+    const handleWalletClick = (walletname:any) =>{
         console.log(walletname);
         wallet.select(walletname);
         wallet.connect();

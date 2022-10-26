@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LevelCard(props){
+export default function LevelCard(props:any){
 	const data = props.data
 	return(
 		<>

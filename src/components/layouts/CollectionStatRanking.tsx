@@ -15,7 +15,7 @@ import imga1 from '../../assets/images/avatar/author_rank.jpg'
 import etherium_icon from '../../assets/images/icon/etherium_icon.png'
 import check_icon from '../../assets/images/icon/check_icon.png'
 
-const CollectionStatRanking = (props) => {
+const CollectionStatRanking = (props:any) => {
     const data = [{
             img: img1,
             title: "Sample Collection 1",

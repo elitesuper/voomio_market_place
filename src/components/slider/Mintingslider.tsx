@@ -12,7 +12,7 @@ import shape3 from '../../assets/images/icon/Vector2.png'
 import imgbg from '../../assets/images/backgroup-secsion/img_bg_page_title.jpg'
 
 
-const Mintingslider = props => {
+const Mintingslider = (props:any) => {
     const data = props.data
     return (
         <div className="mainslider" >
@@ -24,7 +24,7 @@ const Mintingslider = props => {
                     scrollbar={{ draggable: true }}
                 >
                 {
-                    data.map((item, index) => (
+                    data.map((item:any, index:any) => (
                         <SwiperSlide key={index} className={item.class}>
                             <SliderItem item={item} />
                         </SwiperSlide>
@@ -42,7 +42,7 @@ Mintingslider.propTypes = {
     auto: PropTypes.bool,
     timeOut: PropTypes.number
 }
-const SliderItem = props => (
+const SliderItem = (props:any) => (
     <div className="flat-title-page mintingslide" style={{backgroundImage: `url(${imgbg})`}}>
         <div className="overlay"></div>
         <div className="swiper-container mainslider home minting-home">

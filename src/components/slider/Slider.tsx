@@ -9,7 +9,7 @@ import 'swiper/modules/pagination/pagination.scss';
 import imgbg from '../../assets/images/backgroup-secsion/img_bg_page_title.jpg'
 
 
-const Slider = props => {
+const Slider = (props:any) => {
     const data = props.data
     return (
         <div className="mainslider" >
@@ -21,7 +21,7 @@ const Slider = props => {
                     scrollbar={{ draggable: true }}
                 >
                 {
-                    data.map((item, index) => (
+                    data.map((item:any, index:any) => (
                         <SwiperSlide key={index} className={item.class}>
                             <SliderItem item={item} />
                         </SwiperSlide>
@@ -39,7 +39,7 @@ Slider.propTypes = {
     auto: PropTypes.bool,
     timeOut: PropTypes.number
 }
-const SliderItem = props => (
+const SliderItem = (props:any) => (
     <div className="flat-title-page" style={{backgroundImage: `url(${imgbg})`}}>
         <div className="overlay"></div>
         <div className="swiper-container mainslider home">

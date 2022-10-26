@@ -76,7 +76,7 @@ const Profile = () => {
 
     const [alignment, setAlignment] = React.useState(true);
 
-    const handleChange = (event, newAlignment) => {
+    const handleChange = (event:any, newAlignment:any) => {
       setAlignment(newAlignment);
     };
 
@@ -167,7 +167,7 @@ const Profile = () => {
                                             </div>
                                         </div>
                                         <div className='flex'>
-                                            <PriceFilter className="voomio-mta"/>
+                                            <PriceFilter/>
                                             <div className='voomio-mta'>
                                             <ToggleButtonGroup size="large" {...control} aria-label="Align">
                                                 {children}

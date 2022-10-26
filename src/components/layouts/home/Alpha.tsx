@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Scrollbar, A11y } from 'swiper';
 
-const Alpha = props => {
+const Alpha = (props:any) => {
     const data = props.data;
     return (
         <section className="tf-section popular-collection bg-home-3">
@@ -61,7 +61,7 @@ Alpha.propTypes = {
 }
 
 
-const PopularCollectionItem = props => (
+const PopularCollectionItem = (props:any) => (
     <div className="swiper-container alpha-card show-shadow carousel4 button-arow-style">
         <div className="swiper-wrapper">
             <div className="swiper-slide">

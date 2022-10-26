@@ -9,7 +9,7 @@ import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
 
-const Creator = props => {
+const Creator = (props:any) => {
     const data = props.data;
 
     const [modalShow, setModalShow] = useState(false);
@@ -49,7 +49,7 @@ const Creator = props => {
                                 scrollbar={{ el:'none', draggable: true }}
                             >
                                     {
-                                        data.slice(0,7).map((item,index) => (
+                                        data.slice(0,7).map((item:any,index:any) => (
                                             <SwiperSlide key={index}>
                                                 <div className="swiper-container show-shadow carousel auctions">
                                                     <div className="swiper-wrapper">

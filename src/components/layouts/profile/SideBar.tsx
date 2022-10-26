@@ -44,13 +44,13 @@ const SideBar = () => {
 
     const [open, setOpen] = useState([]);
 
-    const handleClick = (val) => () => {
+    const handleClick = (val:any) => () => {
       (open.includes(val))?(setOpen(open => open.filter(item => item !== val))):setOpen(open => [...open, val]);
     };
 
     const [checked, setChecked] = useState([]);
 
-    const handleToggle = (value) => () => {
+    const handleToggle = (value:any) => () => {
 
       const currentIndex = checked.indexOf(value);
       const newChecked = [...checked];

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const TopSeller = props => {
+const TopSeller = (props:any) => {
     const data = props.data;
     return (
         <section className="tf-section top-seller bg-home-3">
@@ -15,7 +15,7 @@ const TopSeller = props => {
                         </div>
                     </div>
                     {
-                        data.map((item,index) => (
+                        data.map((item:any,index:any) => (
                             <TopSellerItem key={index} item={item} />
                         ))
                     }
@@ -25,7 +25,7 @@ const TopSeller = props => {
     );
 }
 
-const TopSellerItem = props => (
+const TopSellerItem = (props:any) => (
     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
         <div className="sc-author-box">
             <div className="author-avatar">

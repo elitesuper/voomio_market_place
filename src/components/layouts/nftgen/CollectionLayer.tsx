@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import DensityLargeIcon from '@mui/icons-material/DensityLarge';
 import IconButton from '@mui/material/IconButton';
 
-export default function CollectionLayer(props){
+export default function CollectionLayer(props:any){
 	return(
 		<div className="collection-layer">
 			<div className="row">

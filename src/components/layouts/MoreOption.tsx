@@ -20,14 +20,14 @@ import 'swiper/modules/pagination/pagination.scss';
 import 'swiper/modules/scrollbar/scrollbar.scss';
 
 const data = moreoptiondata;
-export const SearchCard = (props) => {
+export const SearchCard = (props:any) => {
 
     const name = props.name
     const data = props.filters;
 
     const [checked, setChecked] = useState([0]);
 
-    const handleToggle = (value) => () => {
+    const handleToggle = (value:number) => () => {
         const currentIndex = checked.indexOf(value);
         const newChecked = [...checked];
 
@@ -49,7 +49,7 @@ export const SearchCard = (props) => {
                      <CardContent>
                        <List className="mx-auto" sx={{ width: '100%', maxWidth: 220, bgcolor: 'background.paper' }}>
                        <TextField id="outlined-search" className="search-input" label={`Search ${name}`} type="search" />
-                      {data.map((item) => {
+                      {data.map((item:any) => {
                         const labelId = `checkbox-list-label-${item.id}`;
 
                         return (

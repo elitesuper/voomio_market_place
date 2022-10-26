@@ -60,7 +60,7 @@ const Aggregator = () => {
 
     const [alignment, setAlignment] = React.useState(true);
 
-    const handleChange = (event, newAlignment) => {
+    const handleChange = (newAlignment:boolean) => {
       setAlignment(newAlignment);
     };
 
@@ -165,7 +165,7 @@ const Aggregator = () => {
                                               </div>
                                           </div>
                                           <div className='flex'>
-                                              <PriceFilter className="voomio-mta"/>
+                                              <PriceFilter />
                                               <div className='voomio-mta'>
                                                 <ToggleButtonGroup size="large" {...control} aria-label="Align">
                                                     {children}

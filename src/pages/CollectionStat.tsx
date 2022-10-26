@@ -11,7 +11,7 @@ function CollectionStat(){
 
   const [value, setValue] = useState('1');
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event:any, newValue:string) => {
     setValue(newValue);
   };
 

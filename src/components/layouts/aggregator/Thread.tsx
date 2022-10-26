@@ -10,14 +10,14 @@ import Button from '@mui/material/Button';
 import ChatModal from '../ChatModal';
 
 
-function Thread(props){
+function Thread(props:any){
 
   const threads = props.threads;
   const [modalShow, setModalShow] = useState(false);
 
   return(<>
       <List className="my-3" sx={{ width: '100%', maxWidth: '520px', bgcolor: 'background.paper' }}>
-      {threads.map((data, index)=>(
+      {threads.map((data:any, index:any)=>(
         <ListItem className="mb-3" key={index} alignItems="flex-start" disablePadding>
           <div>
           <Typography className="mb-5 spec-color-1" variant="h4" gutterBottom>

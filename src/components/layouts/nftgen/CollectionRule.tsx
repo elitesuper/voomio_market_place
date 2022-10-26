@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 
-export default function CollectionRule(props){
+export default function CollectionRule(props:any){
 	const [value, setValue] = React.useState(["data"])
 
 	const addValue = () =>{

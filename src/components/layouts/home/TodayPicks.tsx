@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import CardModal from '../CardModal';
 
-const TodayPicks = props => {
+const TodayPicks = (props:any) => {
     const data = props.data;
     
     const [visible , setVisible] = useState(8);
@@ -23,7 +23,7 @@ const TodayPicks = props => {
                             </div>
                         </div>
                         {
-                            data.slice(0,visible).map((item,index) => (
+                            data.slice(0,visible).map((item:any,index:any) => (
                                 <div key={index} className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                     <div className={`sc-card-product style2 mg-bt ${item.feature ? 'comingsoon' : '' } `}>                               
                                         <div className="card-media">

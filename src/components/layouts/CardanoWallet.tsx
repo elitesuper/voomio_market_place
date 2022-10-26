@@ -7,7 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 
-function CardanoWallet(props){
+function CardanoWallet(props:any){
 
 	const {
 	    connect,
@@ -36,10 +36,10 @@ function CardanoWallet(props){
                 >
                 <ListItemAvatar>
                   <Avatar>
-                    <img className="wallet_icons" src={props.walletdata.filter(item => item.key === walletName)[0].img} alt={walletName}/>
+                    <img className="wallet_icons" src={props.walletdata.filter((item:any) => item.key === walletName)[0].img} alt={walletName}/>
                   </Avatar>
                   </ListItemAvatar>
-                  <ListItemText sx={{fontWeight:'600'}} primary={props.walletdata.filter(item => item.key === walletName)[0].name}/>
+                  <ListItemText sx={{fontWeight:'600'}} primary={props.walletdata.filter((item:any) => item.key === walletName)[0].name}/>
                 </ListItem>
                 <Divider />
             </React.Fragment>

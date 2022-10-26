@@ -19,7 +19,7 @@ import CollectionLayer from '../components/layouts/nftgen/CollectionLayer';
 import '../scss/style.scss';
 
 
-function NFTGeneratorUpload(props){
+function NFTGeneratorUpload(props:any){
 
 	const [tabvalue, setTabValue] = React.useState("0");
 

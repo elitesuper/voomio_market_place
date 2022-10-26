@@ -9,9 +9,9 @@ import ChatList from './aggregator/ChatList';
 import ChatHeader from './aggregator/ChatHeader';
 import { chatdata, thread } from '../../assets/fake-data/data-chattrending';
 
-export default function ChatModal(props) {
+export default function ChatModal(props:any) {
 
-    const descriptionElementRef = React.useRef(null);
+    const descriptionElementRef:any = React.useRef(null);
     React.useEffect(() => {
         if (props.show) {
             const { current: descriptionElement } = descriptionElementRef;

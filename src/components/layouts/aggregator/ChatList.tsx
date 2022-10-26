@@ -11,7 +11,7 @@ import GifBoxOutlinedIcon from '@mui/icons-material/GifBoxOutlined';
 import SentimentSatisfiedOutlinedIcon from '@mui/icons-material/SentimentSatisfiedOutlined';
 
 
-export default function ChatList(props) {
+export default function ChatList(props:any) {
   const data = props.data
   return (
     <List sx={{ width: '100%', maxWidth: '520px', bgcolor: 'background.paper' }}>

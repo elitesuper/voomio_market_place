@@ -40,7 +40,7 @@ import { walletdata } from '../../assets/fake-data/data-wallets';
 
 
 
-export default function WalletConnectModal(props) {
+export default function WalletConnectModal(props:any) {
 
     // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
     const network = WalletAdapterNetwork.Mainnet;
@@ -58,12 +58,11 @@ export default function WalletConnectModal(props) {
             getLedgerWallet(),
             getSolletWallet({ network }),
             getSolletExtensionWallet({ network }),
-            getTorusWallet(),
         ],
         [network]
     );
 
-    const getLibrary = (provider) => {
+    const getLibrary = (provider:any) => {
         const library = new ethers.providers.Web3Provider(provider);
         library.pollingInterval = 8000; // frequency provider is polling
         return library;
@@ -75,7 +74,7 @@ export default function WalletConnectModal(props) {
         setVisible((prevValue) => prevValue + 4);
     }
 
-    const descriptionElementRef = React.useRef(null);
+    const descriptionElementRef:any = React.useRef(null);
     React.useEffect(() => {
         if (props.show) {
             const { current: descriptionElement } = descriptionElementRef;
@@ -135,13 +134,13 @@ export default function WalletConnectModal(props) {
 }
 
 
-export function Web3ReactWalletList(props) {
+export function Web3ReactWalletList(props:any) {
 
     const { activate } = useWeb3React();
 
     return ( 
       <> {
-            walletdata.filter(item => item.type === 'web3react').map((item, index) => (
+            walletdata.filter((item:any) => item.type === 'web3react').map((item:any, index) => (
                 <React.Fragment key={index}>
             <ListItem
               disableGutters

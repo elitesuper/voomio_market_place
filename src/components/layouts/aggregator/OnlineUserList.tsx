@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
-export default function CheckboxListSecondary(props) {
+export default function CheckboxListSecondary(props:any) {
   const data = props.users;
   return (
     <>

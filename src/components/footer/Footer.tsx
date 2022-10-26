@@ -223,7 +223,7 @@ const Footer = () => {
                 <Link onClick={scrollToTop}  to='#' id="scroll-top"></Link>
             }
 
-            <div className="modal fade popup" id="popup_bid" tabIndex="-1" role="dialog" aria-hidden="true">
+            <div className="modal fade popup" id="popup_bid" tabIndex={-1} role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">

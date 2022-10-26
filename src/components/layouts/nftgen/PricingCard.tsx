@@ -7,7 +7,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
 
 
-function PricingCard(props){
+function PricingCard(props:any){
   return(
     <Box sx={{m:1, border: 2, borderColor:'#7B61FF', borderRadius: 3}}>
       <CardContent className={`${props.data.type.toLowerCase()}-card`}>
@@ -26,7 +26,7 @@ function PricingCard(props){
        </CardContent>
        <Box className="pricing-data" sx={{bgcolor:'#F4EEFF', p:'16px'}}>
        {
-         props.data.functions.map((item, index) =>(
+         props.data.functions.map((item:any, index:any) =>(
            <Typography sx={{ fontSize: '16px', mb: 1.5, color:'#687280' }}  className="flex" key={index}  component='div'>
             <CheckIcon sx={{color:'#10B981'}} className="my-auto mr-1"/>{item}
            </Typography>

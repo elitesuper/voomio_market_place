@@ -11,7 +11,7 @@ import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
 
-const ManageSlide = props => {
+const ManageSlide = (props:any) => {
     const data = props.data;
     const title = props.title;
 
@@ -45,7 +45,7 @@ const ManageSlide = props => {
                         scrollbar={{ el:'none', draggable: true }}
                     >
                             {
-                                data.map((item,index) => (
+                                data.map((item:any,index:any) => (
                                     <SwiperSlide key={index}>
                                         <div className="swiper-container show-shadow carousel auctions">
                                             <div className="swiper-wrapper">

@@ -23,7 +23,7 @@ import {ModalFilter} from './Filter';
 import Faviconimg from '../../assets/images/icon/Favicon.png'
 
 
-export function ProfileCard(props) {
+export function ProfileCard(props:any) {
 
     return (
         <div className="sc-card-product collection-card">
@@ -55,7 +55,7 @@ export function ProfileCard(props) {
     )
 }
 
-export function DetailCard(props) {
+export function DetailCard(props:any) {
     return (
         <div className="sc-card-product detail-card">
             <div className="card-media">
@@ -84,7 +84,7 @@ export function DetailCard(props) {
     )
 }
 
-export function CollectionCard(props) {
+export function CollectionCard(props:any) {
     return ( <
         >
         <div className="slider-item">
@@ -119,7 +119,7 @@ export function CollectionCard(props) {
 }
 
 
-export function TokenCard(props){
+export function TokenCard(props:any){
 
     const [create, setCreate] = React.useState(false);
 
@@ -130,7 +130,7 @@ export function TokenCard(props){
     const [open, setOpen] = React.useState(false);
     const [scroll, setScroll] = React.useState('paper');
 
-    const handleClickOpen = (scrollType) => () => {
+    const handleClickOpen = (scrollType:string) => () => {
         setOpen(true);
         setScroll(scrollType);
     };

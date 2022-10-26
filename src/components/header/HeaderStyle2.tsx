@@ -7,7 +7,7 @@ import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 import WalletConnectModal from '../../components/layouts/WalletConnectModal';
 
 
-const HeaderStyle2 = (props) => {
+const HeaderStyle2 = (props:any) => {
 
     const [modalShow, setModalShow] = useState(false);
     const [walletmodalShow, setwalletModalShow] = useState(false);
@@ -22,15 +22,15 @@ const HeaderStyle2 = (props) => {
         };
     });
 
-    const isSticky = (e) => {
-        const header = document.querySelector('.js-header');
+    const isSticky = () => {
+        const header:any = document.querySelector('.js-header');
         const scrollTop = window.scrollY;
         scrollTop >= 300 ? header.classList.add('is-fixed') : header.classList.remove('is-fixed');
         scrollTop >= 400 ? header.classList.add('is-small') : header.classList.remove('is-small');
     };
 
-    const menuLeft = useRef(null)
-    const btnToggle = useRef(null)
+    const menuLeft:any = useRef(null)
+    const btnToggle:any = useRef(null)
 
     const menuToggle = () => {
         menuLeft.current.classList.toggle('active');
@@ -39,7 +39,7 @@ const HeaderStyle2 = (props) => {
 
 
     const [activeIndex, setActiveIndex] = useState(null);
-    const handleOnClick = index => {
+    const handleOnClick = (index:any) => {
         setActiveIndex(index);
     };
 
@@ -106,7 +106,7 @@ const HeaderStyle2 = (props) => {
                                                         data.namesub &&
                                                         <ul className="sub-menu" >
                                                         {
-                                                            data.namesub.map((submenu) => (
+                                                            data.namesub.map((submenu:any) => (
                                                                 <li key={submenu.id} className={
                                                                     pathname === submenu.links
                                                                       ? "menu-item current-item"

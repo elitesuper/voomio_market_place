@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Scrollbar, A11y } from 'swiper';
 import {CategoryFilter} from '../Filter';
 
-const PopularCollection = props => {
+const PopularCollection = (props:any) => {
     const data = props.data;
     return (
         <section className="tf-section popular-collection bg-home-3">
@@ -41,7 +41,7 @@ const PopularCollection = props => {
                             scrollbar={{el:'none', draggable: true }}
                         >
                             {
-                                data.map((item,index) => (
+                                data.map((item:any,index:any) => (
                                     <SwiperSlide key={index}>
                                         <PopularCollectionItem item={item} />
                                     </SwiperSlide>
@@ -60,7 +60,7 @@ PopularCollection.propTypes = {
 }
 
 
-const PopularCollectionItem = props => (
+const PopularCollectionItem = (props:any) => (
     <div className="swiper-container show-shadow carousel4 button-arow-style">
         <div className="swiper-wrapper">
             <div className="swiper-slide">

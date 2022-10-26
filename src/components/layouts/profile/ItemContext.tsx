@@ -6,7 +6,7 @@ import img3 from '../../../assets/images/avatar/character3.png'
 import img4 from '../../../assets/images/avatar/character4.png'
 import imga1 from '../../../assets/images/avatar/author_rank.jpg'
 
-const ItemContext = (props) => {
+const ItemContext = (props:any) => {
     const [data] = useState(
         [
             {

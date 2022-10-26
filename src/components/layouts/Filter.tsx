@@ -55,7 +55,7 @@ export const TestFilter = () => {
     )
 }
 
-export const ModalFilter = (props) => {
+export const ModalFilter = (props:any) => {
     const [state, setState] = useState(props.value)
     return (
         <div className="seclect-box col-md-4">
@@ -110,28 +110,28 @@ export const PriceFilter = () => {
     )
 }
 
-export const TokenFilter = (props) => {
+export const TokenFilter = (props:any) => {
     const [state, setState] = useState(props.defaultvalue)
     return (
         <div className="seclect-box voomio-mta voomio-pl-1 w-100">
           <div id="artworks" className="w-100 dropdown">
               <Link to="#" className="w-100 btn-selector nolink voomio-select">{`${props.name}-${state}`}</Link>
               <ul className='voomio-zindex'>
-                  {props.filterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
+                  {props.filterdata.map((item:any) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
               </ul>
           </div>
       </div>
     )
 }
 
-export const ManageTokenFilter = (props) => {
+export const ManageTokenFilter = (props:any) => {
     const [state, setState] = useState(props.defaultvalue)
     return (
         <div className="seclect-box voomio-mta voomio-pl-1">
           <div id="artworks" className="dropdown">
               <Link to="#" className="btn-selector nolink voomio-select">{state}</Link>
               <ul className='voomio-zindex'>
-                  {props.filterdata.map((item, index) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
+                  {props.filterdata.map((item:any) =>(<li key={item} onClick={()=>setState(item)}><span className={(state===item)?"activefilter":""}>{item}</span></li>))}
               </ul>
           </div>
       </div>
