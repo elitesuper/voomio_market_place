@@ -45,7 +45,7 @@ const ExploreCollection = () => {
                                <Tab label="Trending" value="2" />
                              </TabList>
                            </Box>
-                           <div className="flex mg-t-24">
+                           <div className="flex mg-t-24 filters-group">
                                  <CategoryFilter/>
                                  <ChainFilter/>
                            </div>

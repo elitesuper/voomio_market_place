@@ -144,19 +144,18 @@ const Aggregator = () => {
                     <TabList>
                         {
                             menuTab.map((item,index) => (
+                                <div key={index}>
                                 <Tab key={index}>{item.name}</Tab>
+                                </div>
                             ))
                         }
                     </TabList>
                 </div>
                     <div className="content-tab">
-                        {
-                            panelTab.map((item, index) => (
-                                (index === 0)?(
-                                <div className='aggregator-container mx-auto' key={index}>
-                                <div className='content-inner'>
-                                    <div className='row'>
-                                    <TabPanel key={index}>
+                        <div className='aggregator-container mx-auto'>
+                            <div className='content-inner'>
+                                <div className='row'>
+                                    <TabPanel key={0}>
                                       <div className="col-md-12 wrap-inner pad-t-8 load-more voomio-pb-2 voomio-flex voomio-just-between mt-4">
                                           <div className="flex">
                                               <IconButton onClick={()=>optionexpand()} color="primary" component="label" size="large">
@@ -179,7 +178,7 @@ const Aggregator = () => {
                                       <div className="col-md-12 flex voomio-pb-2 itemnumbers-filters">
                                             <div className="flex">
                                                 <CachedIcon className="voomio-mta mg-r-8"/> 
-                                                <h6 className="voomio-mta">{item.dataContent.length} items</h6>
+                                                <h6 className="voomio-mta">{panelTab[0].dataContent.length} items</h6>
                                             </div>
                                             <div className="widget widget-filter style-2 mgbt-0 flex ml-3">
                                                 <h5 className="title-widget voomio-mta spec-color-1">Filters:</h5>
@@ -198,7 +197,7 @@ const Aggregator = () => {
                                       {options&&(<div className="col-md-12"><MoreOption/></div>)}
                                       {
                                           (alignment)?
-                                          item.dataContent.slice(0,visible).map((data,index) => (
+                                            panelTab[0].dataContent.slice(0,visible).map((data,index) => (
                                               <div key={index} className="col-xl-3 col-md-4 col-sm-6 col-12">
                                                   <ProfileCard
                                                       mainimg={data.img}
@@ -206,12 +205,11 @@ const Aggregator = () => {
                                                       checkicon={check_icon}
                                                       etheriumicon={etherium_icon}
                                                       price={data.price}
-                                                      // type={alignment}
                                                   />
                                               </div>
                                           )):(
                                               <div className='row voomio-5-col'>
-                                              {item.dataContent.slice(0,visible).map((data,index) => (
+                                              {panelTab[0].dataContent.slice(0,visible).map((data,index) => (
                                                   <div key={index} className="col">
                                                       <ProfileCard
                                                           mainimg={data.img}
@@ -226,36 +224,30 @@ const Aggregator = () => {
                                           )
                                       }
                                       {
-                                          visible < item.dataContent.length &&
+                                          visible < panelTab[0].dataContent.length &&
                                           <div className="col-md-12 wrap-inner load-more text-center voomio-pb-5">
                                               <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                           </div>
                                       }
-                                </TabPanel>
+                                    </TabPanel>
                                 </div>
+                            </div>
+                        </div>
+                        <TabPanel className="chattabpanel" key={1}>
+                          <ChatTrending/>
+                        </TabPanel>
+                        <TabPanel key={2} className="voomio-just-center">
+                            {
+                                <div className="row w-100 activity-tab">
+                                    <div className='col-xl-2 col-md-3 col-sm-12 v-sidebar'>
+                                        <SideBar />
+                                    </div>
+                                    <div className='col-xl-10 col-md-9 col-sm-12'>
+                                        <ItemContext checkicon={check_icon} etheriumicon={etherium_icon} />
+                                    </div>
                                 </div>
-                                </div>
-                                ):(
-                                  <>
-                                <TabPanel className="chattabpanel" key={1}>
-                                  <ChatTrending/>
-                                </TabPanel>
-                                <TabPanel key={2} className="voomio-just-center">
-                                    {
-                                        <div className="row w-100 activity-tab">
-                                            <div className='col-xl-2 col-md-3 col-sm-12 v-sidebar'>
-                                                <SideBar />
-                                            </div>
-                                            <div className='col-xl-10 col-md-9 col-sm-12'>
-                                                <ItemContext checkicon={check_icon} etheriumicon={etherium_icon} />
-                                            </div>
-                                        </div>
-                                    }
-                                </TabPanel>
-                                </>
-                                )
-                            ))
-                        }
+                            }
+                        </TabPanel>
                     </div>
                 </Tabs>
             </section>

@@ -1727,6 +1727,25 @@ header{
     right: 22rem;
     top: 12rem;
 }
+
+.voomio-border-bottom{
+    border-bottom: solid 1px #E5E7EB;
+    justify-content: center;
+}
+.voomio-end{
+    margin: 4rem auto 2rem auto;
+}
+.voomio-justend{
+    justify-content: end !important;
+}
+.voomio-ma{
+    margin:auto !important;
+}
+.voomio-mta{
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
 @media only screen and (max-width: 1920px){
     #site-logo-inner{
       left:10%;
@@ -2053,6 +2072,9 @@ header{
     .mobile-show{
         display: block;
     }
+    .mobile-show div{
+        margin-top: 1rem !important;
+    }
     .mobile-hidden{
         display: none;
     }
@@ -2065,6 +2087,12 @@ header{
     }
 }
 @media only screen and (max-width:500px){
+    .filters-group{
+        display: block;
+    }
+    .filters-group div{
+        margin-top: 1rem !important;
+    }
     .voomio-title{
         display: block !important;
         justify-content: center !important;
@@ -3704,22 +3732,6 @@ header{
     background: #250C50 !important;
 }
 
-.voomio-border-bottom{
-    border-bottom: solid 1px #E5E7EB;
-    justify-content: center;
-}
-.voomio-end{
-    margin: 4rem auto 2rem auto;
-}
-.voomio-justend{
-    justify-content: end !important;
-}
-.voomio-ma{
-    margin:auto !important;
-}
-.voomio-mta{
-    margin: auto 0 !important;
-}
 .mode_switcher{
     top: 100px !important;
 }

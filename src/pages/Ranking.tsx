@@ -21,13 +21,13 @@ const Ranking = () =>{
 					  <p>Earn points to level up in your ranking</p>
 					</div>
 					<div className="row">
-						<div className="col-md-6 col-sm-12">
+						<div className="col-md-6 col-sm-12 mt-3">
 							{levels.map(item =>
 								<LevelCard data={item} key={item.id}/>
 								)}
 						</div>
 						<div className="col-md-1"></div>
-						<div className="col-md-5 col-sm-12">
+						<div className="col-md-5 col-sm-12 mt-3">
 							<div className="row">
 								<h3 className="spec-color-1">Point System</h3>
 								<p>Earn points for your activity in different ways</p>
