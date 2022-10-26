@@ -1797,6 +1797,12 @@ header{
 .autoshowbtn{
     display: none;
 }
+@media only screen and (max-width: 1024px) and (min-width: 991px) {
+    .content{
+        padding-right: 70px;
+    }
+    
+}
 /* Mobile Menu */
 @media only screen and (max-width: 991px) {
     .rule-component{
