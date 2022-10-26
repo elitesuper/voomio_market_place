@@ -15,7 +15,7 @@ export default function ChatList(props:any) {
   const data = props.data
   return (
     <List sx={{ width: '100%', maxWidth: '520px', bgcolor: 'background.paper' }}>
-      {data.map((item, index) => (
+      {data.map((item:any, index:any) => (
         <>
         {(item.belong != null)&&(
           <div className="ml-5 chattrending-header w-100 text-left">

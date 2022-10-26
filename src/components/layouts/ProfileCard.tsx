@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
+import Dialog, { DialogProps } from '@mui/material/Dialog';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -9,12 +9,8 @@ import Typography from '@mui/material/Typography';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Verified } from "@mui/icons-material";
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Collapse from '@mui/material/Collapse';
@@ -128,9 +124,9 @@ export function TokenCard(props:any){
     }
     
     const [open, setOpen] = React.useState(false);
-    const [scroll, setScroll] = React.useState('paper');
+    const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');;
 
-    const handleClickOpen = (scrollType:string) => () => {
+    const handleClickOpen = (scrollType:any) => () => {
         setOpen(true);
         setScroll(scrollType);
     };

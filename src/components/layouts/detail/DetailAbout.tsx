@@ -68,7 +68,7 @@ function DetailAbout(){
                     <div className="widget-social style-1 voomio-mta">
                         <ul>
                             {
-                                socialList.map((item,index) =>(
+                                socialList.map((item:any,index:any) =>(
                                     <li className='mg-bottom-0' key={index}><Link to={item.link}><i className={item.icon}></i></Link></li>
                                 ))
                             }

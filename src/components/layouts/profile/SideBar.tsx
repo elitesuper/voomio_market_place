@@ -50,7 +50,7 @@ const SideBar = () => {
 
     const [checked, setChecked] = useState([]);
 
-    const handleToggle = (value:any) => () => {
+    const handleToggle = (value:number) => () => {
 
       const currentIndex = checked.indexOf(value);
       const newChecked = [...checked];

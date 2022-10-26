@@ -22,27 +22,27 @@ const Alpha = (props:any) => {
                             modules={[Navigation, Scrollbar, A11y]}
                             spaceBetween={30}
                             breakpoints={{
-                                0: {
+                                0:{
                                     slidesPerView: 1,
-                                  },
+                                },
                                 500:{
-                                    slidesPerview: 2,
+                                    slidesPerView: 2,
                                 },
                                 771:{
                                     slidesPerView: 3,
                                 },
                                 1000:{
-                                    slidesPerview:4
+                                    slidesPerView: 4,
                                 },
                                 1200: {
-                                  slidesPerView: 6,
+                                    slidesPerView: 6,
                                 },
                               }}
                             navigation
                             scrollbar={{el:'none', draggable: true }}
                         >
                             {
-                                data.map((item,index) => (
+                                data.map((item:any,index:any) => (
                                     <SwiperSlide key={index}>
                                         <PopularCollectionItem item={item} />
                                     </SwiperSlide>

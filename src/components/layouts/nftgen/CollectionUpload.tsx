@@ -5,9 +5,9 @@ import UploadDropZone from "@rpldy/upload-drop-zone";
 import UploadPreview from "@rpldy/upload-preview";
 import UploadButton from "@rpldy/upload-button";
 
-function CollectionUpload(props){
+function CollectionUpload(props:any){
 
-	const customIsSuccess = (xhr) => [308, 418].includes(xhr.status);
+	const customIsSuccess = (xhr:any) => [308, 418].includes(xhr.status);
 
 	return(
 		<div className="row">

@@ -48,7 +48,7 @@ function DetailChart(){
             </div>
             <Chart
                 className="chart-main"
-                options={chartdata.options}
+                options:any={chartdata.options}
                 series={chartdata.series}
                 height="200"
                 type="line"

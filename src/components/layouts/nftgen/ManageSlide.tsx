@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Rating from '@mui/material/Rating';
 
-import CardModal from '../CardModal';
 
 import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
@@ -13,7 +12,7 @@ import 'swiper/modules/pagination/pagination.scss';
 
 const ManageSlide = (props:any) => {
     const data = props.data;
-    const title = props.title;
+    const title = props.managetitle;
 
     return (
         <Fragment>
@@ -78,6 +77,7 @@ const ManageSlide = (props:any) => {
 
 ManageSlide.propTypes = {
     data: PropTypes.array.isRequired,
+    managetitle: PropTypes.string.isRequired
 }
 
 export default ManageSlide;

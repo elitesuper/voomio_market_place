@@ -16,7 +16,7 @@ export default function CheckboxListSecondary(props:any) {
         <Typography className="mb-5" variant="h4" gutterBottom>
           Users Online
         </Typography>
-        {data.map((item) => {
+        {data.map((item:any) => {
           return (
             <ListItem
               key={item.userid}

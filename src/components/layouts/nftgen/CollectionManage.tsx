@@ -39,8 +39,8 @@ export default function CollectionManage(){
 	        <div className="w-100 d-flex justify-content-end">
 	        	<ManageTokenFilter defaultvalue={data.default} filterdata={data.type} />
 	        </div>
-			    <ManageSilde title="Clothes" data={liveAuctionData} />
-			    <ManageSilde title="Texture" data={texturedata} />
+			    <ManageSilde managetitle={"Clothes"} data={liveAuctionData} />
+			    <ManageSilde managetitle={"Texture"} data={texturedata} />
 	        </TabPanel>
 	        <TabPanel value="2">
 	        	<div className='row'>

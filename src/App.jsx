@@ -6,13 +6,9 @@ import Footer from './components/footer/Footer';
 import HeaderStyle2 from './components/header/HeaderStyle2';
 
 
-interface IAppComponentProps extends React.Props<any> {
-  onUpdate: any
-}
 
-class App extends React.Component<IAppComponentProps, any>{
+export default function App() {
 
-    render() {
       return(
         <>
           <HeaderStyle2 />
@@ -26,7 +22,5 @@ class App extends React.Component<IAppComponentProps, any>{
           <Footer/>
       </>
       )
-    };
 }
 
-export default App;
