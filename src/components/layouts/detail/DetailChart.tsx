@@ -1,13 +1,14 @@
 import React from 'react';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import Chart from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
+
 import { TimeFilter} from '../Filter';
 
 
 function DetailChart(){
 
-    const chartdata = {
-        options: {
+    const options: ApexOptions  = {
             chart: {
               id: "basic-bar",
               toolbar: {
@@ -21,8 +22,8 @@ function DetailChart(){
             stroke: {
                 curve: 'smooth'
             },
-
-          },
+    }
+    const chartdata = {
           series: [
             {
               name: "series-1",
@@ -48,7 +49,7 @@ function DetailChart(){
             </div>
             <Chart
                 className="chart-main"
-                options:any={chartdata.options}
+                options={options}
                 series={chartdata.series}
                 height="200"
                 type="line"
