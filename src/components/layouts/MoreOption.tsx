@@ -85,9 +85,9 @@ export const SearchCard = (props:any) => {
 }
 
 function MoreOption() {
-    return ( <
-        >
-        <div className="row">
+    return ( 
+    <>
+      <div className="row">
       <div className="col-md-12 flex more-option">
           <div className="seclect-box voomio-pl-1 voomio-mta">
               <div id="artworks" className="dropdown">
