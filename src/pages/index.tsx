@@ -19,7 +19,7 @@ const routes = [
   { path: '/collectionstat', component:<CollectionStat/>},
   { path: '/aggregator', component:<Aggregator/>},
   { path: '/nftgenerator', component:<NFTGeneratorMain/>},
-  { path: '/nftgenerator/upload', component:<NFTGeneratorUpload/>},
+  { path: '/nftgenerator/upload/:step', component:<NFTGeneratorUpload/>},
   { path: '/ranking', component:<Ranking/>},
 
 ]

@@ -65,9 +65,9 @@ const SliderItem = (props:any) => (
                                     <p className="sub-heading voomio-text-col2">{props.item.description}
                                     </p>
                                     <div className="flat-bt-slider flex style2">
-                                        <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
+                                        <Link to="/explorecollection" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
                                         </span></Link>
-                                        <Link to="/nftgenerator" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
+                                        <Link to="/nftgenerator/upload/4" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
                                         </span></Link>
                                     </div>
                                 </div>

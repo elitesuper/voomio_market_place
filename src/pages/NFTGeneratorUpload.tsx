@@ -4,6 +4,7 @@ import TabContext from '@mui/lab/TabContext';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import TabPanel from '@mui/lab/TabPanel';
+import {useParams} from 'react-router-dom';
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
@@ -21,7 +22,11 @@ import '../scss/style.scss';
 
 function NFTGeneratorUpload(props:any){
 
-	const [tabvalue, setTabValue] = React.useState("0");
+	const params:any = useParams();
+
+	const step:string = params.step;
+
+	const [tabvalue, setTabValue] = React.useState(step);
 
 	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
 	   setTabValue(newValue);

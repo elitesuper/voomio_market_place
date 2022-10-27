@@ -13,7 +13,7 @@ function TypeCard(props:any){
   const navigate = useNavigate();
 
   const nextpage = () => {
-    navigate("/nftgenerator/upload");
+    navigate("/nftgenerator/upload/0");
   }
   
   return(

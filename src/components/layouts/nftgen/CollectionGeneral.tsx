@@ -1,8 +1,16 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 
 export default function CollectionGeneral(props:any){
+
+	const navigate = useNavigate();
+
+	const nextpage = () => {
+	  navigate("/nftgenerator/upload/1");
+	}
+	
 
 	return(
 		<div className="collection-container">
@@ -55,7 +63,7 @@ export default function CollectionGeneral(props:any){
 	               			<input id="royal-percent" name="royalpercent" tabIndex={7} aria-required="true" required type="text" placeholder="%" />
 	            		</div>
 	            	</div>
-	                <button className="submit">+ Add</button>
+	                <button onClick={()=>nextpage()}>+ Add</button>
 	            </form>
 	        </div>
 		</div>
