@@ -51,7 +51,7 @@ export default function CollectionPreview(){
 		        		<div className="col-md-7 col-lg-8 col-xl-9 token-gallery-view mt-3">
 			        		<div className="row">
 				        		{gallery_tokens.map((item, index) => (
-				        			<div key={index} className="col-sm-6 col-md-6 col-xl-3">
+				        			<div key={index} className="col-sm-6 col-md-6 col-xl-3 p-2">
 				        				<TokenCard tokenimg={item.img} tokenid={item.id}/>
 				        			</div>
 				        		))}

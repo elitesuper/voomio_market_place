@@ -17,7 +17,7 @@ function TypeCard(props:any){
   }
   
   return(
-    <Box sx={{m:1, border: 2, borderColor:'#7B61FF', borderRadius: 3}}>
+    <Box sx={{m:1, border: 2, borderColor:'#7B61FF', borderRadius: 3}} className="animation-card">
       <CardContent>
         {
           ((props.type==="1")?(

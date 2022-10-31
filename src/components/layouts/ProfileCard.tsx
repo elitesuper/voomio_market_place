@@ -138,7 +138,7 @@ export function TokenCard(props:any){
 
     return(
         <>
-            <Card  onClick={handleClickOpen('body')} sx={{marginBottom:1}}>
+            <Card className="animation-card" onClick={handleClickOpen('body')} sx={{marginBottom:1}}>
                 <CardMedia
                     component="img"
                     height="150"
