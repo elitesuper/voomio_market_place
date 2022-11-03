@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import Button from '@mui/material/Button';
-import Uploady from "@rpldy/uploady";
+import Uploady, {useItemProgressListener} from "@rpldy/uploady";
 import UploadDropZone from "@rpldy/upload-drop-zone";
 import UploadPreview from "@rpldy/upload-preview";
 import UploadButton from "@rpldy/upload-button";
@@ -9,6 +9,14 @@ function CollectionUpload(props:any){
 
 	const customIsSuccess = (xhr:any) => [308, 418].includes(xhr.status);
 
+	const LogProgress = (item:any) =>{
+		useItemProgressListener((item:any) => {
+			console.log(item)
+		});
+
+		return null;
+	}
+
 	return(
 		<div className="row">
 			<div className="row">
@@ -16,7 +24,7 @@ function CollectionUpload(props:any){
 			        <UploadDropZone
 			          className="collection-upload-field"
 			          onDragOverClassName="drag-over"
-			          htmlDirContentParams={{ recursive: true }}
+			          htmlDirContentParams={{ recursive: true, withFullPath: true }}
 			        >
 			        <div className="upload-drop-zone">
 				        <div className="upload-info">
@@ -25,7 +33,7 @@ function CollectionUpload(props:any){
 	         			</div>    
 			        </div>    
 			        </UploadDropZone>
-{/*			        <UploadPreview/>*/}
+					<LogProgress />
 			    </Uploady>
 			</div>
 		</div>
