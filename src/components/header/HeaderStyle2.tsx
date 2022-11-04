@@ -1,7 +1,6 @@
 import React , { useRef , useState , useEffect } from 'react';
 import { Link , useLocation } from "react-router-dom";
 import menus from "../../pages/menu";
-import DarkMode from './DarkMode';
 import voomio_logo from '../../assets/images/logo/voomio_logo.png'
 import voomio_logo2x from '../../assets/images/logo/voomio_logo@2x.png'
 import WalletConnectModal from '../../components/layouts/WalletConnectModal';
@@ -123,7 +122,6 @@ const HeaderStyle2 = (props:any) => {
                     </div>
                 </div>
             </div>
-            <DarkMode />
             <WalletConnectModal show={walletmodalShow} onHide={() => setwalletModalShow(false)}/>
         </header>
     );
