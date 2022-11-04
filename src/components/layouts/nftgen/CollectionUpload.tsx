@@ -20,7 +20,7 @@ function CollectionUpload(props:any){
 	return(
 		<div className="row">
 			<div className="row">
-			    <Uploady isSuccessfulCall={customIsSuccess} destination={{url: "http://localhost:3000/voomio-front-end-jeni/upload"}}>
+			    <Uploady isSuccessfulCall={customIsSuccess} destination={{url: "http://localhost:5000/upload"}} >
 			        <UploadDropZone
 			          className="collection-upload-field"
 			          onDragOverClassName="drag-over"
