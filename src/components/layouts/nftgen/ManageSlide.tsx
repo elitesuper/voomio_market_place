@@ -50,7 +50,7 @@ const ManageSlide = (props:any) => {
                                             <div className="swiper-wrapper">
                                                 <div className="swiper-slide">
                                                     <div className="slider-item">
-                                                        <div className="sc-card-product collection-card voomio-pb-1">
+                                                        <div className="sc-card-product collection-card voomio-pb-1 animate-zoomin">
                                                             <div className="card-media voomio-mb-0">
                                                                 <Link to="/aggregator"><img src={item.img} alt="axies" /></Link>
                                                             </div>

@@ -4442,3 +4442,32 @@ header{
 .spec-bcolor-1{
     background-color: #F4EEFF;
 }
+
+
+.animation-card:hover {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.animate-zoomin:hover{
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+    -ms-transform: scale3d(1.02,1.02,1.02);
+    -o-transform: scale3d(1.02,1.02,1.02);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}

@@ -84,7 +84,7 @@ export function CollectionCard(props:any) {
     return ( <
         >
         <div className="slider-item">
-          <div className="sc-card-collection collection-card">
+          <div className="sc-card-collection collection-card animate-zoomin">
               <Link to="/authors-01">
                   <div className="media-images-box">
                       <img src={props.imgtop} alt="Axies" />
