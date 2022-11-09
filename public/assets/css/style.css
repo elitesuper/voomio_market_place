@@ -4471,3 +4471,7 @@ header{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.react-tabs__tab-panel--selected { animation: slideeffect 500ms ease-out; opacity: 1; }
+
+@keyframes slideeffect { 0% { opacity: 0; transform: translateY(100%); } 100% { opacity: 1; transform: translateY(0); } }
