@@ -1,5 +1,6 @@
 import React, {useCallback} from 'react';
 import Button from '@mui/material/Button';
+import axios from "axios";
 import {useDropzone} from 'react-dropzone';
 
 function CollectionUpload(props:any){
@@ -8,7 +9,28 @@ function CollectionUpload(props:any){
 
 	const onDrop = useCallback((acceptedFiles:any)=> {
 		// Do something with the files
-		console.log(acceptedFiles);
+		acceptedFiles.map((file:any)=>{
+
+
+			console.log(`file: ${file.name}, ${file.path}, ${file.type}, (${file.size} bytes)`);
+
+            const formData = new FormData();
+            formData.append("file", file);
+			formData.append("filepath",file.path);
+
+			axios.post("/upload", formData,  {headers: {
+				'Content-Type': 'multipart/form-data'
+			  }}).then(
+				(res:any) =>{
+					// console.log(res);
+				}
+			).catch(
+				(res:any) => {
+					console.log(res)
+				}
+			)
+		})
+
 	  }, [])
 	const {getRootProps, getInputProps, isDragActive} = useDropzone({useFsAccessApi: false ,onDrop})
 
