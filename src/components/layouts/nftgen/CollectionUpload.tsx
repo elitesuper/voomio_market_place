@@ -1,19 +1,25 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import axios from "axios";
 import {useDropzone} from 'react-dropzone';
 import { Button } from '@mui/material';
 
+interface fileinfo {
+	filename:string,
+	filepath:string
+}
+
 function CollectionUpload(props:any){
 
-	// const [files, setFiles] = useState([{filename:String, filepath:String}]);
+	const [files, setFiles] = useState<{filename:string, filepath:string}[]>([],);
+	const [uploaded, setUploaded] = useState(false);
 
 	const nativeProps:any = { webkitdirectory: 'true' };
 
 	const onDrop = useCallback((acceptedFiles:any)=> {
 
-		const uploadedfiles = [{filename:String, filepath:String}]; 
+		let uploadedfiles: fileinfo[] = []; 
 		// Do something with the files
-		acceptedFiles.map((file:any)=>{
+		acceptedFiles.map((file:any, index:number)=>{
 
 			console.log(`file: ${file.name}, ${file.path}, ${file.type}, (${file.size} bytes)`);
 
@@ -26,17 +32,23 @@ function CollectionUpload(props:any){
 			  }}).then(
 				(res:any) =>{
 					console.log(res);
+					// uploadedfiles.push({filename:res.data.fileName, filepath:res.data.filePath});
+					setFiles(files=>[...files, {filename:res.data.fileName, filepath:res.data.filePath}]);
 				}
 			).catch(
 				(res:any) => {
 					console.log(res)
 				}
 			)
-			
 		})
-		// console.log(uploadedfiles);
-		// setFiles(uploadedfiles);
+		// console.log("uploadedfiles", uploadedfiles);
+		// console.log("uploadedfiles length", uploadedfiles.length);
+		// setFiles([...uploadedfiles]);
 	  }, [])
+
+	  useEffect(()=>{
+		console.log(files);
+	  },[files])
 	  
 	const {getRootProps, getInputProps, isDragActive} = useDropzone({useFsAccessApi: false ,onDrop})
 
@@ -54,6 +66,13 @@ function CollectionUpload(props:any){
 					</div> 
                 }
             </div>
+			</div>
+			<div className='row'>
+				{
+					files.map((item:any) =>
+						<img src={process.env.PUBLIC_URL + item.filepath} key={item.filepath}></img>
+					)
+				}
 			</div>
 		</div>
 	)
