@@ -24,11 +24,20 @@ app.post("/upload", (req, res) => {
  
   const file = req.files.file;
 
-  const filepath = req.body.filepath;
 
-  console.log(filepath);
+  file.mv(`${__dirname}/public/assets/uploads/${file.name}`, (err) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send(err);
+    }
 
-  // file.mv(`${__dirname}/public/uploads/${file.name}`, (err) => {
+    res.json({ fileName: file.name, filePath: `/assets/uploads/${file.name}` });
+  });
+
+  // const filepath = req.body.filepath;
+
+
+  // file.mv(`${__dirname}/public/uploads/${filepath}`, (err) => {
   //   if (err) {
   //     console.error(err);
   //     return res.status(500).send(err);
