@@ -1,49 +1,10 @@
 
-import React, {useState} from 'react';
-import Uploady, {useItemProgressListener, useItemFinalizeListener, useItemStartListener } from "@rpldy/uploady";
+import React, {useEffect, useState} from 'react';
+import Uploady from "@rpldy/uploady";
 import UploadDropZone from "@rpldy/upload-drop-zone";
 import UploadButton from "@rpldy/upload-button";
-import Wave from "react-wavify";
 import { createMockSender } from "@rpldy/mock-sender";
-
-const UploadProgress = (props:any) => {
-	const {setupload} = props;
-	const [loading, setLoading] = useState(false);
-	const [progress, setProgess] = useState(0);
-	const progressData = useItemProgressListener();
-  
-	if (progressData && progressData.completed > progress) {
-	  setProgess(() => progressData.completed);
-	  setLoading(true);
-	  setupload(true);
-	}
-  
-	return (
-		<>
-		{
-		(loading==true)?
-			(<div  className="collection-upload-field wave-div">
-			<div className='upload-drop-zone'>
-				<div className='wave-upload-main'>
-					<Wave mask="url(#mask)" fill="#bbdbf8" options={{speed: 0.2, amplitude: 40 }} >
-						<defs>
-							<linearGradient id="gradient" gradientTransform="rotate(90)">
-								<stop offset="0" stopColor="white" />
-								<stop offset="0.5" stopColor="black" />
-							</linearGradient>
-							<mask id="mask">
-								<rect x="0" y="0" width="2000" height="300" fill="url(#gradient)"  />
-							</mask>
-						</defs>
-					</Wave>
-				</div>
-			</div>
-			<div className='wave-upload-title'>Uploading...</div>
-		</div>):null
-		}
-	  </>
-	  );
-  };
+import UploadProgress from './UploadProgress';
 
 function CollectionUpload(props:any){
 
@@ -74,7 +35,7 @@ function CollectionUpload(props:any){
 					  </div>    
 					  </UploadDropZone>):null	
 					}
-					<UploadProgress setupload={setLoading}/>
+					<UploadProgress uploadstat={loading} setupload={setLoading}/>
 			    </Uploady>
 			</div>
 		</div>
