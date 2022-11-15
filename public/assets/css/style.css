@@ -4444,6 +4444,30 @@ header{
 }
 
 
+.wave-div{
+    padding: 0px !important;
+    border: 5px solid #6549F6 !important;
+    border-radius: 48px !important;
+    position:relative;
+}
+.wave-upload-main{
+    display: flex;
+    width: 100%;
+}
+.wave-upload-title{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #D6C3FA;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+.wave-upload-main div{
+    height: 70%;
+    margin-top: auto;
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+}
 .animation-card:hover {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
