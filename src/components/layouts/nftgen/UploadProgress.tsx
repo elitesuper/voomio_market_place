@@ -13,8 +13,14 @@ export default function UploadProgress (props:any){
   
 	if (progressData && progressData.completed > progress) {
 	  setProgess(() => progressData.completed);
-	  setupload(true);
+	//   setupload(true);
 	}
+
+	useEffect(()=>{
+		if(progress>0){
+			setupload(true);
+		}
+	},[progress])
 
 	useEffect(()=>{
 		if(uploadstat==true){
