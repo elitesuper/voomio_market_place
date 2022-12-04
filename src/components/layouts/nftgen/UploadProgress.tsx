@@ -13,34 +13,43 @@ export default function UploadProgress (props:any){
   
 	if (progressData && progressData.completed > progress) {
 	  setProgess(() => progressData.completed);
+	  console.log(progressData);
 	//   setupload(true);
 	}
 
 	useEffect(()=>{
+		console.log('progress',progress)
 		if(progress>0){
 			setupload(true);
 		}
 	},[progress])
 
 	useEffect(()=>{
+		console.log("uploadstat", uploadstat);
 		if(uploadstat==true){
 			setstep(1);
+		}else if(uploadstat==false&&step===2){
+			setstep(0)
 		}
 	},[uploadstat])
 
 	useEffect(()=>{
-		if(step === 1){
+
+		if(step === 1 && uploadstat==true){
 			const interval = setInterval(() => {
 				setstep(2);
 			  }, 5000);
 			  return () => clearInterval(interval);
+		}else if( step===0&&progress===100){
+			setProgess(0);
 		}
+		
 	},[step])
-  
+
 	return (
 		<>
 		{
-		(step===1)?
+		(step===1 && uploadstat==true)?
 			(<div  className="collection-upload-field wave-div">
 			<div className='upload-drop-zone'>
 				<div className='wave-upload-main'>
@@ -70,7 +79,7 @@ export default function UploadProgress (props:any){
 					<p>Your upload has been completed</p>
 					<div className='row mt-5'>
                             <div className='col-md-6 col-sm-12'> 
-                                <ListItem className="attribute-item upload-attribute">
+                                <ListItem className="attribute-item upload-attribute" onClick={()=>{setupload(false)}}>
                                     <ListItemText primary="Upload More" />
                                 </ListItem>
                             </div>
@@ -79,7 +88,7 @@ export default function UploadProgress (props:any){
                                 className="attribute-item upload-attribute"
                                 secondaryAction={
                                     <IconButton aria-label={'sort-layer'}>
-                                    <DensityLargeIcon />
+                                    	<DensityLargeIcon />
                                     </IconButton>
                                 }
                                 >
